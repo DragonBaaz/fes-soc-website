@@ -1,0 +1,281 @@
+{
+  "department": "Animal Husbandry & Dairy Department",
+  "slug": "animal-husbandry",
+  "totalSchemes": 12,
+  "summary": {
+    "soc": 0,
+    "nearSoc": 1,
+    "nonSoc": 11
+  },
+  "dominantFailure": "11 of 12 Animal Husbandry schemes deliver individual livestock subsidies on private basis; all fail T1 fundamentally. Individual animals are inherently private excludable goods. Only the NLM-Fodder scheme achieves Near-SOC because it targets grazing commons rather than individual animal ownership.",
+  "structuralFindings": {
+    "dominantProblem": "The Individual Animal Subsidy Structural Mismatch Problem",
+    "socException": "National Livestock Mission (NLM) - Fodder Component (Near-SOC 3/4)",
+    "crossCuttingPriorities": [
+      "Formalize Grazing Commons Governance: State-wide survey of grazing commons; formal 'Grazing Community' registrations; codify sustainable grazing limits per block (cost ₹5-8 Cr, 18-24 months)",
+      "Implement Sustainable Grazing Monitoring System: Quarterly pasture health monitoring; Grazing Data Platform for real-time extraction+regeneration tracking (cost ₹6-10 Cr, 12-18 months)",
+      "Transform Individual Animal Subsidies to Community Livestock Commons: Pilot 100 village-level community dairy cooperatives (Phase 1); expand to 500+ units (Phase 2) — total ₹35-50 Cr, 3 years",
+      "Mandatory O&M Fund Earmarking: Reserve 10-15% of capital budgets for 5-year post-project maintenance; hold in community cooperative accounts with performance conditions"
+    ],
+    "contextualFactors": [
+      "AHD achieves 0% SOC — lowest among T1 departments — due to fundamental structural mismatch between livestock subsidy delivery model and commons governance requirements",
+      "The sole Near-SOC scheme (NLM-Fodder) demonstrates that livestock development CAN achieve SOC when organized around shared pasture resources rather than individual animal ownership",
+      "Chhattisgarh has significant grazing commons (>2 lakh ha degraded pasturelands) with pastoral communities maintaining traditional commons practices",
+      "AHD pathway to SOC requires a 3-year paradigm shift: Year 1 formalize grazing commons governance; Year 2 pilot community livestock cooperatives; Year 3 scale across all blocks"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "nlm-fodder-component",
+      "name": "National Livestock Mission (NLM) - Fodder Component",
+      "hindiName": null,
+      "objective": "Develop fodder production infrastructure on community grazing lands, supporting sustainable animal nutrition while maintaining commons-based pasture governance.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (community grazing commons); T1.2=1 (community use right formalized); T1.3~0.65 (≥65% on fodder commons infrastructure); T1.4=1 (non-excludable benefit)",
+        "t2": "T2.1~0.75 (locality: pastoral villages); T2.2~0.50 (landless pastoral HHs); T2.3=1 (Grazing Committee governance)",
+        "t3": "T3.1=1 (fodder income mandated); Delta-Y: Rs.4,000-6,000/HH/year; T3.3=2 (green fodder/storage/animal feed sale); T3.4=1 (institutional offtake via dairy cooperatives)",
+        "t4": "T4.1=0 (no mandatory grazing limits); T4.2: undefined; T4.3=0 (no monitoring framework); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Sustainable Grazing Limits: Survey pasture productivity; set carrying capacity per grazing block; establish E/R ≤1.2 (Atal Jal water budgeting model adapted to pastures) — estimated cost ₹8-12 Cr, 12-18 months",
+        "Pasture Health Monitoring: Quarterly vegetation assessments; mobile app tracking; early warning system for overgrazing",
+        "Replenishment Obligation: Mandatory pasture seeding post-grazing season ≥40% of extraction area annually; link to gram committee benefit disbursement",
+        "O&M Fund Earmarking: Reserve 12% of NLM capital for 5-year fodder system maintenance; penalty mechanism (withhold disbursement if quarterly monitoring targets missed)"
+      ]
+    },
+    {
+      "id": "government-livestock-poultry-farms",
+      "name": "Government Livestock & Poultry Farms",
+      "hindiName": null,
+      "objective": "Establish government-owned livestock and poultry breeding farms for genetic improvement and supply of quality breeding stock to individual farmers.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual animal breeding stock — private excludable good); T1.2=0; T1.3~0.05 (≥90% on breeding stock development); T1.4=0",
+        "t2": "T2.1~0.50 (dispersed beneficiaries); T2.2: absent; T2.3=0",
+        "t3": "T3.1=0 (no livelihood output mandated); Delta-Y: negligible (indirect benefit); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Community Livestock Commons Model: Form gram-level units (30-50 co-owned households); gram committee manages breeding bulls/buffalo as commons asset",
+        "Commons Grazing Integration: Community herd commons for genetics improvement; benefit-sharing through community revenue",
+        "Governance Mandate: Gram Sabha manages breeding program; SC/ST and women representation mandated",
+        "Income Target: Community breeding cooperative must achieve ₹5,000+/HH/year from milk/meat sales — estimated redesign cost ₹15-20 Cr"
+      ]
+    },
+    {
+      "id": "artificial-insemination-program",
+      "name": "Artificial Insemination (AI) Program",
+      "hindiName": null,
+      "objective": "Provide AI services to farmers for genetic improvement of livestock without on-farm breeding animals, improving milk yield and herd productivity.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual animal genetics — private good); T1.2=0; T1.3~0.10; T1.4=0",
+        "t2": "T2.1~0.60 (dispersed); T2.2: absent; T2.3=0",
+        "t3": "T3.1=0 (no income mandate); Delta-Y: Rs.1,000-2,000/year (indirect yield increase); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Redesign as Community Livestock Genetics Commons: Community AI service cooperatives with shared infrastructure; individual farmer participation through cooperative membership",
+        "Commons Governance: Gram cooperative manages AI center; all village livestock owners eligible; benefit-sharing through cooperative profit",
+        "Sustainability: Maintain genetic diversity through rotation protocols; quarterly animal health monitoring",
+        "Income Mandate: Cooperative must demonstrate ₹5,000+/member/year productivity gain within 3 years"
+      ]
+    },
+    {
+      "id": "backyard-poultry-scheme",
+      "name": "Backyard Poultry Scheme",
+      "hindiName": null,
+      "objective": "Provide low-cost poultry rearing support to small farmers and landless households for egg/meat production and household income.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual household poultry — private good); T1.2=0; T1.3~0.05; T1.4=0",
+        "t2": "T2.1~0.75 (village-level); T2.2~0.50; T2.3=0",
+        "t3": "T3.1=0 (no income mandate); Delta-Y: Rs.2,000-3,000/year; T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Transform to Community Poultry Commons: Village-level production units (30-50 households); gram committee manages breeding stock, vaccination, and feed commons",
+        "Benefit-Sharing: Community poultry cooperative distributes egg/meat income; SC/ST and women priority in committee leadership",
+        "Income Target: Cooperative must achieve ₹5,000+/member/year from poultry sales",
+        "Sustainability: Annual flock health monitoring; mandatory biosafety protocol compliance"
+      ]
+    },
+    {
+      "id": "dairy-development-scheme",
+      "name": "Dairy Development Scheme",
+      "hindiName": null,
+      "objective": "Provide subsidies for dairy unit construction (cattle shed, milk storage, processing equipment) enabling individual farmers to establish dairy operations.",
+      "tests": { "t1": false, "t2": false, "t3": true, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual dairy unit on private land); T1.2=0; T1.3~0.10; T1.4=0",
+        "t2": "T2.1~0.70 (village-level); T2.2: absent; T2.3=0",
+        "t3": "T3.1=1 (milk income mandated); Delta-Y: Rs.8,000-12,000/year from milk sales; T3.3=1 (single pathway); T3.4=1 (institutional offtake via dairy cooperatives)",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Transform to Community Dairy Commons: Establish village dairy cooperatives for 30-50 farmers; individual farmers provide milk; cooperative handles processing/marketing",
+        "Commons Governance: Benefit-sharing through cooperative profits; SC/ST and women representation mandated",
+        "Grazing Commons Integration: Link dairy subsidy to participation in community grazing commons management",
+        "Sustainability: Cooperative must maintain grazing commons health; annual pasture monitoring as continuation condition"
+      ]
+    },
+    {
+      "id": "veterinary-services",
+      "name": "Veterinary Services",
+      "hindiName": null,
+      "objective": "Provide government veterinary clinics and field services for livestock healthcare, disease diagnosis, vaccination, and extension services.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (healthcare is service to private livestock); T1.2=0; T1.3~0.15; T1.4=0",
+        "t2": "T2.1~0.80 (village-level access); T2.2~0.50; T2.3=0",
+        "t3": "T3.1=0 (public health service, not income mandate); Delta-Y: Rs.1,000-2,000/year (disease prevention savings); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Note: This is a PUBLIC HEALTH INPUT SERVICE, not a livelihood scheme. Falls outside direct SOC framework scope.",
+        "SOC Convergence: Link veterinary access to community grazing commons participation — condition priority service on Grazing Committee membership",
+        "Commons Monitoring Integration: Veterinary data (disease patterns) integrated with commons health monitoring platform",
+        "Community Health Extension: Train community livestock health workers (one per Grazing Committee) to reduce dependency on government vets"
+      ]
+    },
+    {
+      "id": "gaushan-palan-yojana",
+      "name": "Gaushan Palan Yojana",
+      "hindiName": "गौशाला पालन योजना",
+      "objective": "Provide financial support and training for individual farmers to adopt sustainable cattle rearing practices with emphasis on indigenous and heritage cattle breeds.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual cattle on private farm); T1.2=0; T1.3~0.10; T1.4=0",
+        "t2": "T2.1~0.65; T2.2~0.45; T2.3=0",
+        "t3": "T3.1=0 (no income mandate); Delta-Y: Rs.2,000-3,000/year; T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Transform to Community Cattle Commons: Gram-level community cattle units (30-40 cows) managed by community dairy cooperative; heritage breed conservation as commons responsibility",
+        "Commons Governance: Individual farmers provide labor and training participation; gram committee manages herd",
+        "Benefit-Sharing: Income through cooperative milk sales; heritage breed premium distribution",
+        "Cultural Conservation: Document indigenous breed knowledge; community-managed genetic preservation program"
+      ]
+    },
+    {
+      "id": "rajasthan-goat-breeding-scheme",
+      "name": "Rajasthan Goat Breeding Scheme (RGBS adapted)",
+      "hindiName": null,
+      "objective": "Promote goat rearing through subsidy and supply of improved breeding stock, supporting individual farmers in goat-rearing livelihoods.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual goat ownership); T1.2=0; T1.3~0.10; T1.4=0",
+        "t2": "T2.1~0.70; T2.2~0.50; T2.3=0",
+        "t3": "T3.1=0 (no income mandate); Delta-Y: Rs.3,000-5,000/year; T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Transform to Community Goat Commons: Gram-level community goat herds (50-100 goats) managed by pastoral group cooperative",
+        "Commons Governance: Individual participation in herding/management labor; grazing commons formalized",
+        "Benefit-Sharing: Through pastoral cooperative; SC/ST and women representation mandated",
+        "Sustainability: Grazing limits (E/R ≤1.2); quarterly pasture health monitoring; mandatory seeding post-grazing"
+      ]
+    },
+    {
+      "id": "rastriya-gokul-mission",
+      "name": "Rastriya Gokul Mission (State Implementation)",
+      "hindiName": null,
+      "objective": "Genetic up-gradation of bovine population through superior breeding stock and genetic improvement programs, supporting state cattle productivity goals.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual animal genetics); T1.2=0; T1.3~0.10; T1.4=0",
+        "t2": "T2.1~0.60; T2.2: absent; T2.3=0",
+        "t3": "T3.1=0 (no income mandate); Delta-Y: Rs.1,000-2,000/year (indirect); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Redesign as Community Cattle Genetics Commons: Gram-level cooperative breeding management; genetic improvement benefit becomes commons property",
+        "Commons Governance: Individual farmers participate through cooperative; all members benefit from improved genetics",
+        "Benefit-Sharing: Dairy cooperative distributes productivity gain; milk price premium from superior genetics",
+        "Sustainability: Genetic diversity protocols; maintain heritage breeds alongside improved stock in community herd"
+      ]
+    },
+    {
+      "id": "mukhyamantri-cow-shed-scheme",
+      "name": "Mukhyamantri Cow Shed Scheme",
+      "hindiName": "मुख्यमंत्री गौशाला योजना",
+      "objective": "Provide financial subsidy for construction of cattle shelters, enabling farmers to establish improved housing for dairy cattle.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private cattle shelter on individual land); T1.2=0; T1.3~0.05; T1.4=0",
+        "t2": "T2.1~0.65; T2.2: absent; T2.3=0",
+        "t3": "T3.1=0; Delta-Y: negligible (infrastructure, not income); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Transform to Community Cattle Housing Commons: Establish village-level community cattle facilities for 50-100 cattle; gram committee manages facilities",
+        "Commons Governance: Individual farmers contribute cattle and management labor; shelter becomes commons infrastructure",
+        "Income Integration: Community facility enables cooperative dairy operation; shared milk processing/storage",
+        "Sustainability: O&M fund (15% of construction cost); annual facility maintenance audit by gram committee"
+      ]
+    },
+    {
+      "id": "livestock-health-disease-control",
+      "name": "Livestock Health & Disease Control",
+      "hindiName": null,
+      "objective": "Implement disease surveillance, vaccination campaigns, and health monitoring programs across state livestock population, preventing livestock epidemics and productivity loss.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (healthcare to private livestock); T1.2=0; T1.3~0.15; T1.4=0",
+        "t2": "T2.1~0.85 (broad coverage); T2.2~0.50; T2.3=0",
+        "t3": "T3.1=0 (public health service); Delta-Y: Rs.2,000-3,000/year (loss prevention); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Note: This is a PUBLIC HEALTH SERVICE SCHEME. Falls outside direct SOC scope.",
+        "SOC Convergence: Integrate disease surveillance with grazing commons monitoring; condition priority vaccination access on Grazing Committee membership",
+        "Community Health Workers: Train community livestock health monitors (one per 200 animals per Grazing Committee)",
+        "Commons Data Integration: Animal health data feeds into commons sustainability dashboard"
+      ]
+    },
+    {
+      "id": "pastureland-development",
+      "name": "Pastureland Development (Nascent Initiative)",
+      "hindiName": null,
+      "objective": "Develop and improve community grazing lands through pasture seeding, water points, and fodder production, supporting sustainable pastoral livelihoods.",
+      "tests": { "t1": true, "t2": true, "t3": false, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=A (government/common grazing land); T1.2=1 (community use right); T1.3~0.70 (≥70% on commons pasture restoration); T1.4=2 (non-excludable benefit)",
+        "t2": "T2.1~0.80 (pastoral village beneficiaries); T2.2~0.55 (SC/ST dominant); T2.3=1 (Grazing Committee governance)",
+        "t3": "T3.1=0 (no livelihood income mandated — improvement only); Delta-Y: 0 (no income target set); T3.3=0; T3.4=0",
+        "t4": "T4.1=0 (no mandatory grazing limits); T4.2: undefined; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Livelihood Mandate: Every project must project livestock income ≥₹5,000/HH/year; annual income tracking as condition for continued development support",
+        "Sustainable Grazing Limits: Set carrying capacity per pasture block; codify E/R ≤1.2; link pasture access to compliance",
+        "Monitoring System: Quarterly pasture health assessments; grazing pressure tracking via mobile app — estimated cost ₹6-10 Cr, 12-18 months",
+        "O&M Fund: Earmark 10% of capital for 5-year pastureland maintenance; mandatory pasture seeding post-grazing ≥40% annually"
+      ]
+    }
+  ]
+}

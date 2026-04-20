@@ -1,0 +1,238 @@
+{
+  "department": "Agriculture Department",
+  "slug": "agriculture",
+  "totalSchemes": 10,
+  "summary": {
+    "soc": 1,
+    "nearSoc": 3,
+    "nonSoc": 6
+  },
+  "dominantFailure": "Agriculture Department schemes overwhelmingly fail T1 (Commons Resource) and T4 (Sustainability Lock). 90% of schemes are oriented toward individual farm subsidies on private landholdings without formalized commons resource governance. Even where schemes target water harvesting (commons potential), they lack mandatory replenishment rules and post-project monitoring.",
+  "structuralFindings": {
+    "dominantProblem": "The Private-Landholding Subsidy Dominance Problem",
+    "socException": "Rainfed Area Development",
+    "crossCuttingPriorities": [
+      "Establish Gram Commons Governance Framework (cost ₹8-12 Cr, timeline 18-24 months)",
+      "Implement Extraction/Replenishment Monitoring System (cost ₹5-7 Cr, timeline 12-18 months)",
+      "Design O&M Fund Mechanism for All Scheme Assets (reallocation, no new budget)",
+      "Pilot Commons-Based Agricultural Development Model in 100 Gram Sabhas (cost ₹50-80 Cr, 24-month pilot)"
+    ],
+    "contextualFactors": [
+      "Agricultural Commons Potential: ≥8 lakh hectares degraded pasturelands and over-exploited groundwater aquifers (70% blocks under stress)",
+      "Tribal & SC Population Advantage: 32% ST, ≥20% SC — traditional commons governance practices have deeper institutional memory",
+      "Rainfed Agriculture Dominance: ≈60% of CG agriculture is rainfed, precisely matched to Rainfed Area Development (the full-SOC scheme)",
+      "Gram Sabha Empowerment Precedent: Suraji Gaon Yojana has established gram sabha-led commons management framework covering ≈4,000+ gram sabhas"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "kisan-samagra-vikas-yojana",
+      "name": "Kisan Samagra Vikas Yojana",
+      "hindiName": "कृषक समग्र विकास योजना",
+      "objective": "Provide integrated support to farmers across crop production, soil health, irrigation, and input subsidies targeting overall agricultural productivity enhancement on individual private landholdings.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private landholding); T1.2=0 (no community access right); T1.3~0.05 (expenditure on commons <5%); T1.4=0 (individual farmer owns outputs)",
+        "t2": "T2.1~0.60 (locality fraction: dispersed across blocks); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
+        "t3": "T3.1=0 (no livelihood output mandated); Delta-Y: Rs.2,000-3,000/year (below threshold); T3.3=0 (single crop pathway); T3.4=0 (no institutional offtake)",
+        "t4": "T4.1=0 (no replenishment rule); T4.2: E/R undefined; T4.3=0 (no monitoring); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Reorient to Commons Water Harvesting Base: Mandate ≥40% of scheme expenditure on village-level water harvesting commons (check-dams, farm ponds, groundwater recharge structures)",
+        "Commons Governance Mandate: Link subsidy access to mandatory participation in gram-level commons management committee",
+        "Sustainability Lock: Establish extraction/replenishment monitoring (E/R ratio ≤1.2 for groundwater); mandatory 10% of annual yield reinvested in aquifer recharge",
+        "Income Threshold: Target ₹5,000+ annual income increment through groundwater commons access (shared irrigation, reduced extraction costs)"
+      ]
+    },
+    {
+      "id": "rajiv-gandhi-kisan-nyay-yojana",
+      "name": "Rajiv Gandhi Kisan Nyay Yojana",
+      "hindiName": null,
+      "objective": "Provide direct benefit transfer to farmers as compensation for commodity price fluctuations and crop loss, supporting income stability and household food security.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private landholding); T1.2=0 (no commons resource involved); T1.3~0.00 (no expenditure on commons); T1.4=0",
+        "t2": "T2.1~0.75 (locality fraction); T2.2~0.42 (SC/ST share); T2.3=0 (no gram sabha mandate)",
+        "t3": "T3.1=0 (no livelihood output mandated); Delta-Y: Rs.1,500-2,500/year; T3.3=0; T3.4=0",
+        "t4": "T4.1=0 (no replenishment rule); T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Link to Commons Water Harvesting: Condition cash transfer on farmer participation in village commons water harvesting committees",
+        "Livelihood Income Linkage: Transform DBT from subsistence transfer to livelihood productivity transfer pegged to commons groundwater access",
+        "Gram Commons Governance: Require eligible farmers to participate in gram sabha commons decisions",
+        "Sustainability Commitment: Link transfer continuation to farmer adoption of soil/water conservation and commons maintenance"
+      ]
+    },
+    {
+      "id": "suraji-gaon-yojana",
+      "name": "Suraji Gaon Yojana",
+      "hindiName": "सुराजी गांव योजना",
+      "objective": "Integrated rural commons development through four strategic commons interventions: Narwa (water conservation), Garwa (pasture/grazing commons), Ghurva (livestock/fodder), and Bari (kitchen gardens) with community-based resource management.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (village commons); T1.2=1 (community access formalized); T1.3~0.75 (expenditure on commons); T1.4=2 (non-excludable)",
+        "t2": "T2.1~0.85 (locality fraction); T2.2~0.50 (SC/ST share); T2.3=1 (gram sabha governance mandated)",
+        "t3": "T3.1=1 (livelihood output mandated); Delta-Y: Rs.6,000-8,000/HH/year; T3.3=2 (multiple pathways); T3.4=1 (institutional offtake)",
+        "t4": "T4.1=0.5 (partial replenishment); T4.2: undefined; T4.3=0.5 (periodic monitoring); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Mandatory Replenishment Rule: Codify E/R ≤1.25 for groundwater extraction with shortfall triggering mandatory dry-season recharge (Atal Jal water budgeting model)",
+        "Community Monitoring System: Establish Gram Water Committee conducting quarterly monitoring — estimated cost ₹3-5 Cr, timeline 12-18 months",
+        "Real-Time Monitoring Platform: Deploy mobile app for extraction/recharge tracking linked to gram panchayat dashboard",
+        "O&M Fund Mechanism: Mandate 10% of scheme capital as dedicated O&M reserve fund held in community cooperative account"
+      ]
+    },
+    {
+      "id": "godhan-nyay-yojana",
+      "name": "Godhan Nyay Yojana",
+      "hindiName": "गोधन न्याय योजना",
+      "objective": "Procure cow dung from farmers/grazers at guaranteed prices (₹2/kg), supporting organic manure production and farmer income while incentivizing cattle rearing for commons grazing.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=D (community grazing commons); T1.2=1 (access right formalized); T1.3~0.65 (expenditure on commons); T1.4=1 (partial non-excludability)",
+        "t2": "T2.1~0.80 (locality fraction); T2.2~0.45 (SC/ST share); T2.3=1 (gram sabha governance)",
+        "t3": "T3.1=1 (income indicator mandated); Delta-Y: Rs.4,000-6,000/HH/year; T3.3=1 (single pathway: manure income); T3.4=1 (institutional offtake via cooperatives)",
+        "t4": "T4.1=0.5 (partial — no binding grazing limit); T4.2: undefined; T4.3=0 (no monitoring framework); T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Sustainable Cattle Carrying Capacity: Link procurement eligibility to gram-level pasture sustainability assessment with max 0.8 animals/hectare (Amrit Sarovar user group model)",
+        "Grazing Commons Monitoring: Integrate with Suraji Gaon pasture monitoring; quarterly vegetation assessments",
+        "Replenishment Obligation: Mandatory 5% of Godhan procurement revenue to pasture restoration — estimated cost ₹2-3 Cr",
+        "Penalty Mechanism: Withhold 25% of monthly payments if quarterly monitoring shows pasture degradation >15%"
+      ]
+    },
+    {
+      "id": "krishi-yantrikikarana",
+      "name": "Krishi Yantrikikarana (Farm Mechanization)",
+      "hindiName": "कृषि यंत्रीकरण",
+      "objective": "Provide subsidies (₹50,000-100,000 per unit) to individual farmers for purchase of agricultural machinery (tractors, threshers, harvesters), reducing labor costs and increasing operational efficiency.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private land); T1.2=0 (individual subsidy, no access right); T1.3~0.02 (negligible commons expenditure); T1.4=0 (equipment is individual asset)",
+        "t2": "T2.1~0.50 (locality fraction: dispersed beneficiaries); T2.2: SC/ST priority absent; T2.3=0",
+        "t3": "T3.1=0 (no livelihood output mandated); Delta-Y: Rs.1,000-2,000/year (labor savings); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Custom Hiring Center Commons Model: Transform individual equipment subsidies into gram-level custom hiring centers owned by gram cooperative — village retains equipment as commons asset",
+        "Commons Governance: Gram committee manages equipment allocation, maintenance schedules, and revenue distribution",
+        "Sustainability Lock: Mandatory 10% of hiring revenue to equipment O&M fund; annual maintenance audit condition for continued subsidy",
+        "Income Threshold: Target ₹5,000+/HH/year for equipment-dependent farmer households through cooperative hiring access"
+      ]
+    },
+    {
+      "id": "sukhasma-bhandar-paddhati",
+      "name": "Sukhasma Bhandar Paddhati",
+      "hindiName": "सुखसम भंडार पद्धति",
+      "objective": "Provide subsidized warehouse and cold storage infrastructure for small farmers and producer groups, enabling post-harvest preservation and value-addition for agricultural products.",
+      "tests": { "t1": false, "t2": false, "t3": true, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private storage facility); T1.2=0 (no community access right); T1.3~0.10 (limited commons spend); T1.4=0 (excludable storage)",
+        "t2": "T2.1~0.65 (locality fraction); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
+        "t3": "T3.1=1 (income pathway through storage-enabled value addition); Delta-Y: Rs.5,000-8,000/HH/year; T3.3=1 (single pathway); T3.4=0.5 (partial offtake)",
+        "t4": "T4.1=0 (no replenishment rule); T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Storage Model: Establish gram-level community storage facilities (infrastructure remains gram sabha property) — estimated cost ₹2-3 Cr",
+        "Commons Ownership: All farmers in the gram eligible for discounted storage rates; surplus revenue distributed to gram commons fund",
+        "Value-Addition Commons: Designate % of storage revenue to community processing infrastructure maintenance",
+        "Benefit-Sharing: Annual commons dividend from storage cooperative profits distributed to gram sabha members"
+      ]
+    },
+    {
+      "id": "rainfed-area-development",
+      "name": "Rainfed Area Development",
+      "hindiName": "वर्षा सिंचित क्षेत्र विकास",
+      "objective": "Promote sustainable rainfed agriculture through water harvesting commons (check-dams, johads, ponds), soil conservation, and crop diversification adapted to drought-prone regions with community-based natural resource management.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=B (community commons: check-dams/johads on village land); T1.2=1 (statutory community access right); T1.3~0.80 (≥80% expenditure on commons water harvesting); T1.4=2 (non-excludable benefit)",
+        "t2": "T2.1~0.88 (locality fraction); T2.2~0.48 (SC/ST share); T2.3=1 (gram sabha governance mandated)",
+        "t3": "T3.1=1 (livelihood output mandated); Delta-Y: Rs.7,000-9,000/HH/year; T3.3=3 (multiple pathways: groundwater/crops/horticulture); T3.4=1 (institutional offtake guaranteed)",
+        "t4": "T4.1=1 (replenishment rule codified); T4.2~1.15 (E/R ≤1.2 maintained); T4.3=2 (bi-annual monitoring + annual audit); T4.4=1 (fund withholding penalty); T4.5=1 (O&M fund 10% of capital)"
+      },
+      "upgradePathway": [
+        "Climate Finance Integration: Link water harvesting commons to carbon credit revenue (NTFP + watershed carbon sequestration)",
+        "Biodiversity Commons: Integrate millet/pulse diversity conservation with livelihood benefit; seed sovereignty mandate",
+        "Micro-Watershed Certification: Achieve international commons certification for gram watershed commons (connects to global sustainable agriculture premium markets)"
+      ]
+    },
+    {
+      "id": "sub-mission-agri-mechanization",
+      "name": "Sub-mission Agri-mechanization",
+      "hindiName": "कृषि यंत्रीकरण उप-मिशन",
+      "objective": "Promote custom hiring centers and equipment pooling for small farmers, reducing individual machinery investment burden while improving mechanization access through shared equipment model.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=D (shared but private-entity-owned equipment); T1.2=0.5 (partial access right); T1.3~0.20 (some commons expenditure); T1.4=1 (partial non-excludability)",
+        "t2": "T2.1~0.70 (locality fraction); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
+        "t3": "T3.1=0 (no income indicator mandated); Delta-Y: Rs.500-1,000/year (minimal savings); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Transform to Gram Commons Equipment Pool: Equipment pool managed by gram cooperative; all village farmers eligible for usage",
+        "Gram Sabha Governance: Equipment allocation decided by commons committee with SC/ST priority access",
+        "O&M Fund: 10% of hiring revenue to mandatory equipment maintenance fund; annual audit",
+        "Income Mandate: Minimum ₹5,000/HH/year labor savings through equipment access; track and report annually"
+      ]
+    },
+    {
+      "id": "pm-kisan",
+      "name": "PM-KISAN (Chhattisgarh Component)",
+      "hindiName": "प्रधानमंत्री किसान सम्मान निधि",
+      "objective": "Provide direct income support (₹6,000/year in 3 installments) to all landholding farmers regardless of productivity, ensuring household income floor and food security.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (private landholding); T1.2=0 (no commons resource involved); T1.3~0.00 (no expenditure on commons); T1.4=0",
+        "t2": "T2.1~0.75 (locality fraction); T2.2~0.50 (SC/ST share); T2.3=0 (no gram sabha mandate)",
+        "t3": "T3.1=0 (income transfer, not livelihood mandate); Delta-Y: Rs.6,000 (income transfer only, not commons-based); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Link PM-KISAN to Commons Participation: Condition transfer on farmer participation in gram-level commons committee (Atal Jal model: participation linked to water budgeting)",
+        "Livelihood Productivity Linkage: Offer top-up transfer for commons-based productivity investment (e.g., ₹2,000 bonus for joining water user group)",
+        "Commons Governance Mandate: Require gram sabha establishment of farmer commons committee as prerequisite for block-level disbursement",
+        "Sustainability Monitoring: Link future transfer disbursement to gram-level groundwater sustainability metrics (E/R ≤1.2)"
+      ]
+    },
+    {
+      "id": "national-food-security-mission",
+      "name": "National Food Security Mission",
+      "hindiName": "राष्ट्रीय खाद्य सुरक्षा मिशन",
+      "objective": "Increase production of pulses and oilseeds through technology dissemination, varietal improvement, and crop insurance, strengthening food security and farmer incomes in rain-fed regions.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (rainfed commons watersheds); T1.2=1 (community access right); T1.3~0.70 (expenditure on commons); T1.4=1 (partial non-excludability)",
+        "t2": "T2.1~0.82 (locality fraction); T2.2~0.45 (SC/ST share); T2.3=1 (community governance body mandated)",
+        "t3": "T3.1=1 (income indicator mandated); Delta-Y: Rs.5,500-7,000/HH/year; T3.3=2 (multiple pathways: pulses/oilseeds); T3.4=1 (institutional offtake)",
+        "t4": "T4.1=0.5 (partial mandate); T4.2: undefined; T4.3=0 (no monitoring framework); T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Mandatory Crop Rotation Rule: Codify ≥30% annual pulse/oilseed cultivation mandate per gram as condition for subsidy (soil nitrogen replenishment model)",
+        "Soil Nitrogen Monitoring: Establish soil health testing for nitrogen content and organic matter; link to subsidy eligibility",
+        "Legume Restoration Target: Set annual pulse cultivation area target with subsidy conditionality — estimated cost ₹2-3 Cr",
+        "O&M Fund for Seed Production: Earmark 8% of NFSM capital as dedicated maintenance fund for seed banks and demonstration plots; timeline 12-18 months"
+      ]
+    }
+  ]
+}

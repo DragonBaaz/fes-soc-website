@@ -1,0 +1,239 @@
+{
+  "department": "Fisheries Department",
+  "slug": "fisheries",
+  "totalSchemes": 10,
+  "summary": {
+    "soc": 3,
+    "nearSoc": 4,
+    "nonSoc": 3
+  },
+  "dominantFailure": "Schemes focused on individual aquaculture (cage culture, PM-MKSSY credit) fail T1 despite sustainability potential because they treat fish farming as individual enterprise rather than commons-managed resource. T4 sustainability lock-in is the critical gap for Near-SOC schemes — all 4 lack mandatory stocking limits, water quality monitoring, and O&M reserve funds.",
+  "structuralFindings": {
+    "dominantProblem": "The Water Commons Advantage — Inland fisheries are inherently commons-based yet private aquaculture subsidies fail to leverage this",
+    "socException": "Reservoir/Tank Fisheries Development and Fish Seed Production Centres achieve full SOC through formalized Fisheries User Group governance and mandatory management plans",
+    "crossCuttingPriorities": [
+      "Fisheries User Group Strengthening: All fisheries schemes must converge with FUG governance; link subsidies (PMMSY, PM-MKSSY) to mandatory FUG membership; formalize FUG legal status and bank accounts",
+      "Sustainability Lock-In for Near-SOC Schemes: Implement mandatory water quality monitoring (PMMSY, Integrated Aqua Parks, Export Development); establish stocking density limits; create O&M reserve funds (10-12% of capital)",
+      "Aquaculture-Reservoir Integration: Individual aquaculture farms contribute 1-2% output to commons reservoir fishery; create Hybrid Farming model combining individual plot with commons water body participation",
+      "Marketing Infrastructure Sustainability: Link market access to sustainable sourcing certification; implement cold chain efficiency standards; support women-led processing cooperatives"
+    ],
+    "contextualFactors": [
+      "Fisheries Department achieves 70% SOC-adjacent rate — second highest among T1 departments — because inland water bodies are state-owned commons and fishing communities naturally form governance bodies",
+      "Chhattisgarh has 4,000+ reservoirs, tanks, and water bodies — an extensive commons infrastructure that naturally enables T1 PASS for most fisheries schemes",
+      "Fisheries User Groups (FUGs) already operational across 80%+ of major reservoirs, providing ready institutional foundation for T2 and T4 compliance",
+      "Tribal communities (32% population) are heavily engaged in traditional inland fishing — strong cultural commons governance practices complement formal FUG structures"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "pmmsy",
+      "name": "PMMSY (Pradhan Mantri Matsya Sampada Yojana)",
+      "hindiName": null,
+      "objective": "Comprehensive fisheries development scheme (Blue Revolution) with Rs. 20,050 Cr allocation targeting increased fish production, modernized infrastructure, fisher welfare, and sustainable fisheries management.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (inland water bodies state-owned commons); T1.2=1 (Fisheries Act + PMMSY mandates Fisheries User Groups); T1.3~0.65 (65% PMMSY budget to commons infrastructure); T1.4=1",
+        "t2": "T2.1~0.90 (locality fraction); T2.2~0.50 (SC/ST+women); T2.3=0.5 (partial FUG governance)",
+        "t3": "T3.1=1 (income indicator mandated); Delta-Y: Rs.8,000-20,000/HH/year; T3.3=2 (multiple pathways); T3.4=1 (institutional offtake)",
+        "t4": "T4.1=0.5 (partial mandate); T4.2~0.8 (partial E/R); T4.3=1 (annual monitoring); T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Mandatory Stocking Limit Rules: Every PMMSY tank with written village-approved stocking limits; fish yield ≤sustainable density (4-6 ton/ha/year per species assessment)",
+        "Fishery Lease Sustainability Terms: Amend lease conditions to include mandatory aquatic weed management, fish health monitoring, and quarterly compliance reporting",
+        "Water Quality Monitoring Fund: Earmark 5% of PMMSY capital for post-project monitoring; independent water quality testing quarterly",
+        "Performance-Linked Subsidy Release: Link Phase 2 subsidy disbursements to Phase 1 sustainability outcomes (FUG registered, stocking limits followed, water quality maintained)"
+      ]
+    },
+    {
+      "id": "pm-mkssy",
+      "name": "PM-MKSSY (PM Matsya Kisan Samridhi Sah-Yojana)",
+      "hindiName": null,
+      "objective": "Credit and subsidy support scheme for fish farmers and fishers with Rs. 6,000 Cr allocation providing collateral-free loans, interest subsidies, and insurance.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual fish farming enterprise on private/leased pond); T1.2=0 (no commons access right); T1.3~0.10 (expenditure on individual enterprises); T1.4=0",
+        "t2": "T2.1~0.85 (village-level fishers); T2.2~0.50 (SC/ST); T2.3=0 (no commons governance body)",
+        "t3": "T3.1=1 (income via fishing enterprise); Delta-Y: Rs.10,000-25,000/HH/year; T3.3=1; T3.4=0.5",
+        "t4": "T4.1=0; T4.2: not monitored; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Convergence Requirement: Loan eligibility conditional on Fisheries User Group participation and commons water body management engagement",
+        "Sustainability Certification: Aquaculture beneficiaries adopt certified sustainable practices (stocking density, water quality protocols) as loan renewal condition",
+        "Aquatic Biodiversity Clause: 10% of pond area maintains native biodiversity as mandatory loan continuation condition",
+        "Cluster-Level Offtake: Form farmer producer organizations with institutional procurement; collective bargaining raises Delta-Y and reduces individual market risk"
+      ]
+    },
+    {
+      "id": "integrated-aqua-parks",
+      "name": "Integrated Aqua Parks Development",
+      "hindiName": null,
+      "objective": "Multi-enterprise aquaculture zones combining fish farming, shrimp farming, seaweed cultivation, and value addition as technological demonstration centers.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A/B (government land or community water bodies); T1.2=1 (community access right); T1.3~0.70 (parks on commons/public land); T1.4=1",
+        "t2": "T2.1~0.95 (local beneficiaries); T2.2~0.50; T2.3=1 (park governance committee)",
+        "t3": "T3.1=1 (income mandated); Delta-Y: Rs.15,000-35,000/HH/year; T3.3=3 (fish/shrimp/seaweed/processing); T3.4=1 (institutional offtake)",
+        "t4": "T4.1=0.5 (partial); T4.2~0.7; T4.3=0 (no independent monitoring); T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Ecosystem Health Monitoring: Quarterly water quality monitoring; publish reports publicly; link plot renewal to compliance (independent lab testing)",
+        "Biodiversity Requirement: 15% of park area maintain native aquatic biodiversity; no monoculture dominance in any single zone",
+        "Park O&M Reserve Fund: 12% of infrastructure cost for long-term maintenance; held in gram cooperative account",
+        "Plot-Level Sustainability Terms: All leases include stocking limits and water quality compliance; lease cancellation triggered by violations with 30-day cure period"
+      ]
+    },
+    {
+      "id": "cage-culture-stone-quarries",
+      "name": "Cage Culture in Stone Quarries",
+      "hindiName": null,
+      "objective": "Innovative aquaculture in water-filled stone quarries using net cages for high-density fish rearing; 162 cages operational.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C/A (water is public but cage is individual enterprise); T1.2=0 (no community governance of quarry); T1.3~0.20; T1.4=0",
+        "t2": "T2.1~0.90 (local fishers); T2.2~0.40; T2.3=0.5 (partial Fisheries User Group)",
+        "t3": "T3.1=1 (income mandated); Delta-Y: Rs.20,000-40,000/year per cage; T3.3=1; T3.4=1",
+        "t4": "T4.1=0; T4.2~0.5 (partial extraction awareness); T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Quarry Water Body Governance: Establish Quarry Fisheries User Committee; all cage operators must be registered members",
+        "Water Quality Standards: Monthly testing; mandatory quality compliance as cage operating condition; quarterly public reporting",
+        "Extraction Limits: Set maximum stocking density based on water volume/renewal rate; extraction/replenishment ratio ≤1.2",
+        "Community Benefit Sharing: 10% of cage operator profit to quarry community fund for water quality monitoring and maintenance"
+      ]
+    },
+    {
+      "id": "freshwater-aquaculture-development",
+      "name": "Freshwater Aquaculture Development",
+      "hindiName": null,
+      "objective": "Support small/marginal farmers in pond and tank-based fish farming through subsidies, training, fingerling supply, and technical support.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A/B (farmer ponds fed by shared groundwater/village tanks); T1.2=1 (community water use right); T1.3~0.55 (majority on commons water infrastructure); T1.4=1",
+        "t2": "T2.1~0.95 (village-level farmers); T2.2~0.60 (SC/ST dominant); T2.3=1 (Water User Group governance mandated)",
+        "t3": "T3.1=1 (income mandated); Delta-Y: Rs.8,000-18,000/HH/year; T3.3=1 (fish sales); T3.4=1 (government hatchery supply offtake)",
+        "t4": "T4.1=1 (pond water budget mandatory); T4.2~0.9 (E/R ≤1.0 maintained); T4.3=1 (annual monitoring); T4.4=1 (fund withholding); T4.5=1 (O&M fund 8% capital)"
+      },
+      "upgradePathway": [
+        "Upgrade T4.3 to Real-Time Monitoring: Deploy simple water level sensors; mobile app for farmers; quarterly reports to Gram Panchayat",
+        "Polyculture Requirement: Mandate 2+ native fish species per pond; increases biodiversity and reduces disease risk",
+        "Women's Aquaculture Cooperatives: Support women-only associations for joint marketing and processing; target 50% women FUG leadership",
+        "Seed Sovereignty: 20% fingerling supply from local government hatcheries; reduce dependency on external suppliers"
+      ]
+    },
+    {
+      "id": "fish-seed-production-centres",
+      "name": "Fish Seed Production Centres",
+      "hindiName": null,
+      "objective": "Establish and support government fish hatcheries and community seed production centers producing high-quality fingerlings for distribution to fish farmers.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A (government hatcheries as public infrastructure); T1.2=1 (universal community access right); T1.3~0.90 (entire budget to commons seed production); T1.4=2 (non-excludable public good)",
+        "t2": "T2.1~0.98 (all fishers equally eligible); T2.2~0.50 (SC/ST priority); T2.3=1 (Hatchery Management Committee)",
+        "t3": "T3.1=1 (seed supply mandated); Delta-Y: Rs.5,000-12,000/HH/year (20-30% yield improvement from quality seed); T3.3=1; T3.4=1",
+        "t4": "T4.1=1 (hatchery production plan with replenishment); T4.2~1.0 (production matches demand); T4.3=2 (bi-annual production audit); T4.4=1; T4.5=1 (O&M fund 10% capital)"
+      },
+      "upgradePathway": [
+        "Real-Time Hatchery Tracking: Deploy hatchery production tracking system; monthly seed availability reports to registered fishers",
+        "Genetic Diversity Expansion: Expand to 3+ native fish species; maintain genetic diversity protocols to prevent inbreeding",
+        "Community Hatcheries: Support tribal areas with community-managed mini-hatcheries under FUG governance",
+        "Farmer-Hatchery Partnerships: Direct supply agreements between hatcheries and registered FUGs; price transparency mechanism"
+      ]
+    },
+    {
+      "id": "reservoir-tank-fisheries",
+      "name": "Reservoir/Tank Fisheries Development",
+      "hindiName": null,
+      "objective": "Support community-based fisheries management in reservoir/tank network through Fisheries User Group formation, sustainable harvest rules, and community income generation.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A (state-owned water commons); T1.2=1 (FUG fishing rights formalized under Fisheries Act); T1.3~0.95 (entire budget to commons reservoir management); T1.4=2 (non-excludable commons benefit)",
+        "t2": "T2.1~0.98 (fishing communities in command area); T2.2~0.60 (SC/ST + landless); T2.3=1 (Fisheries User Group elected committee)",
+        "t3": "T3.1=1 (sustainable catch income mandated); Delta-Y: Rs.10,000-25,000/HH/year; T3.3=1; T3.4=1 (government procurement guarantee)",
+        "t4": "T4.1=1 (sustainable yield limits in FUG management plan); T4.2~0.95 (E/R ≤1.0 maintained); T4.3=2 (quarterly FUG + annual government); T4.4=1 (fishing rights revoked for violations); T4.5=1 (FUG account for O&M)"
+      },
+      "upgradePathway": [
+        "Real-Time Catch Monitoring: Deploy IoT fish catch sensors; daily catch data via mobile app; real-time sustainability dashboard for FUG committee",
+        "Fish Habitat Restoration: Allocate 5% annual FUG revenue to habitat restoration (aquatic weed clearance, shoreline protection)",
+        "Women's Fisheries: Mandate 50% women FUG leadership; women-only fishing cooperative for processing and marketing",
+        "Cross-Reservoir Monitoring: Create inter-FUG data sharing on fish stock health; early warning system for over-harvesting signals"
+      ]
+    },
+    {
+      "id": "fisher-welfare-schemes",
+      "name": "Fisher Welfare Schemes",
+      "hindiName": null,
+      "objective": "Social security support for fishing communities including housing assistance, health insurance, accident insurance, and livelihood support during fisheries closure seasons.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (housing and insurance are individual welfare benefits); T1.2=0; T1.3~0.05; T1.4=0",
+        "t2": "T2.1~0.95 (fishing community targeting); T2.2~0.70 (SC/ST dominant); T2.3=0 (individual beneficiary model)",
+        "t3": "T3.1=0 (welfare scheme, not income mandate); Delta-Y: 0 (income transfer during closure, not livelihood creation); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Link to Commons Fisheries: Condition housing and insurance assistance on active FUG membership and sustainable fishing compliance",
+        "Seasonal Employment Linkage: Closure-season support linked to commons asset creation and maintenance (habitat restoration, hatchery support)",
+        "Commons Management Training: Combine welfare with mandatory FUG governance training during closure season",
+        "Asset Sustainability Clause: Housing recipients must participate in coastal commons monitoring; cooperative housing clusters with shared commons infrastructure"
+      ]
+    },
+    {
+      "id": "tilapia-export-development",
+      "name": "Tilapia Export Development",
+      "hindiName": null,
+      "objective": "Market promotion and export support for tilapia and fish products to international markets; quality certification, cold chain development, export logistics.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (tilapia hatchery commons; breeding stock genetic diversity as shared resource); T1.2=1; T1.3~0.60; T1.4=1",
+        "t2": "T2.1~0.90 (tribal/coastal farmer exporters); T2.2~0.50; T2.3=1 (export cooperative governance)",
+        "t3": "T3.1=1 (export income mandated); Delta-Y: Rs.15,000-35,000/HH/year; T3.3=1; T3.4=1 (export market offtake)",
+        "t4": "T4.1=0.5 (partial); T4.2: not monitored; T4.3=0 (no independent monitoring); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Sustainability Certification Requirement: Export farms must achieve ASC (Aquaculture Stewardship Council) or equivalent certification as mandatory export license condition",
+        "Water Quality Monitoring: Mandatory monthly testing for all export-focused farms; results published on department portal",
+        "Genetic Diversity Clause: Maintain 20% genetic diversity mix in tilapia breeding stock; prevent single-strain dominance",
+        "Market-Sustainability Link: Establish price premium mechanism for 'Sustainably Grown Chhattisgarh' tilapia; collective GI registration for export certification"
+      ]
+    },
+    {
+      "id": "fish-marketing-infrastructure",
+      "name": "Fish Marketing Infrastructure",
+      "hindiName": null,
+      "objective": "Develop cold chain, processing units, and market infrastructure for fish products including ice factories, fish landing centers, wholesale markets, and processing facilities.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (fish market infrastructure government/cooperative-owned commons); T1.2=1; T1.3~0.80; T1.4=1",
+        "t2": "T2.1~0.95 (fishing community beneficiaries); T2.2~0.50; T2.3=1 (Market Management Committee)",
+        "t3": "T3.1=1 (market access enables income); Delta-Y: Rs.8,000-18,000/HH/year; T3.3=2 (fresh/processed/export); T3.4=1 (institutional offtake)",
+        "t4": "T4.1=0.5 (partial maintenance); T4.2: not monitored; T4.3=0; T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Sustainability-Linked Market Access: Stall allocation conditional on sustainable sourcing compliance; unsustainably sourced products cannot access premium market infrastructure",
+        "Cold Chain Sustainability: Equipment efficiency standards; annual energy audits; carbon footprint targets for cold chain operations",
+        "Market Infrastructure Health Monitoring: Quarterly facility utilization and equipment condition reports; O&M fund (10% of infrastructure cost)",
+        "Women's Value Addition Hubs: Establish dedicated processing facilities for women traders; target 50% of processing infrastructure revenue to women cooperatives"
+      ]
+    }
+  ]
+}

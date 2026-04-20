@@ -1,0 +1,176 @@
+{
+  "department": "Panchayat & Rural Engineering Department",
+  "slug": "panchayat-rural-engineering",
+  "totalSchemes": 7,
+  "summary": {
+    "soc": 2,
+    "nearSoc": 3,
+    "nonSoc": 2
+  },
+  "dominantFailure": "Three of 7 schemes achieve Near-SOC precisely because they fail T4 (Sustainability Lock) while passing T1, T2, and T3 — indicating strong design for commons governance but weak post-implementation sustainability mechanisms. The missing element is a mandatory O&M fund and commons asset health monitoring protocol.",
+  "structuralFindings": {
+    "dominantProblem": "The Panchayat Governance Advantage — strong T1+T2+T3 foundation with T4 as the sole missing lock-in",
+    "socException": "15th Finance Commission Grants (Tied) and Social Audit Mechanism both achieve full SOC because they embed statutory T4 requirements: JJM guidelines and the Social Audit Act respectively — demonstrating that external legal mandates deliver T4 better than internal scheme provisions",
+    "crossCuttingPriorities": [
+      "Commons O&M Fund Earmarking: Mandate minimum 10-15% of all infrastructure scheme budgets to dedicated maintenance fund; implement as single policy change across all 7 schemes (₹30-50 Cr annual impact)",
+      "Commons Asset Monitoring Dashboard: Extend eGramSwaraj platform to include commons asset health tracking; quarterly reporting condition for next tranche release",
+      "Gram Sabha Sustainability Resolution: Every infrastructure project requires prior Gram Sabha resolution committing to O&M governance; resolution recorded in eGramSwaraj before fund release",
+      "Commons Conditionality for State Grants: SFC grants and State Finance Commission disbursements conditional on previous cycle's commons maintenance audit clearance"
+    ],
+    "contextualFactors": [
+      "Chhattisgarh's panchayat system has strong tribal representation (30% ST population) with traditional commons governance practices active across 10,738 gram panchayats",
+      "Social Audit infrastructure already operational in 70%+ gram panchayats — ready institutional platform for T4 monitoring at near-zero marginal cost",
+      "Strong MGNREGS integration: panchayat works can be linked to NRM asset creation providing built-in livelihood pathway for T3 compliance",
+      "The 73rd Amendment mandates strong gram sabha authority in Chhattisgarh's PESA-designated areas (tribal blocks) — constitutional framework directly supports SOC governance requirements"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "15fc-grants-untied",
+      "name": "15th Finance Commission Grants - Untied",
+      "hindiName": null,
+      "objective": "Provide flexible, untied grants to Village Panchayats for 27 subjects under 11th Schedule for commons infrastructure, health, water, sanitation, education, and poverty alleviation.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (government revenue to public commons); T1.2=1 (73rd Amendment grants formal community access right); T1.3~0.70 (majority of grants target commons: water/sanitation/grazing); T1.4=1 (partial non-excludability)",
+        "t2": "T2.1~0.95 (100% local village residents); T2.2~0.40 (SC/ST/BPL prioritized); T2.3=1 (Gram Panchayat as mandated body; Gram Sabha approval required)",
+        "t3": "T3.1=1 (livelihood improvement implicit in 11th Schedule subjects); Delta-Y: Rs.3,000-8,000/HH/year (water access/sanitation/agriculture improvements); T3.3=2 (multiple pathways); T3.4=0.5 (weak; depends on convergence)",
+        "t4": "T4.1=0.5 (annual allocations but no explicit replenishment obligation); T4.2: not applicable (fund allocations); T4.3=0 (no commons asset health monitoring); T4.4=0 (no financial penalties); T4.5=0.5 (theoretically available but not mandated)"
+      },
+      "upgradePathway": [
+        "Mandatory Commons-Specific Monitoring: Require GPs to maintain Commons Asset Register (updated quarterly); release next tranche only after register verification",
+        "O&M Fund Lock-In: Minimum 10% of untied grant earmarked for commons asset O&M; held in separate GP sub-account; annual audit condition",
+        "Social Audit Conditionality: Social Audit finding clearance required before next cycle grant release; unresolved findings trigger 25% grant reduction",
+        "Gram Sabha Sustainability Clause: Each funded commons asset requires Gram Sabha resolution committing 5-year O&M governance responsibility"
+      ]
+    },
+    {
+      "id": "15fc-grants-tied",
+      "name": "15th Finance Commission Grants - Tied (Water & Sanitation)",
+      "hindiName": null,
+      "objective": "Provide earmarked grants for drinking water and sanitation infrastructure at village level under Jal Jeevan Mission convergence.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A (government ownership of water infrastructure); T1.2=1 (Jal Jeevan Mission mandates universal access right); T1.3~0.85 (entire allocation to water/sanitation commons); T1.4=2 (non-excludable: universal household access)",
+        "t2": "T2.1~0.95 (100% local beneficiaries); T2.2~0.50 (SC/ST/BPL prioritized; women-centered access); T2.3=1 (Water User Groups/Sanitation Committees mandated by JJM)",
+        "t3": "T3.1=1 (health improvement and time savings as livelihood benefit explicit); Delta-Y: Rs.4,000-12,000/HH/year (health costs saved/women's time/livelihood diversification); T3.3=2 (multiple pathways); T3.4=1 (government water procurement via MSY)",
+        "t4": "T4.1=1 (O&M plan and Water User Group responsibility mandated); T4.2=1 (annual water balance required; sustainability monitoring); T4.3=2 (quarterly monitoring + 6-month quality tests); T4.4=1 (fund tranche withheld if sustainability compromised); T4.5=1 (dedicated O&M fund 1-2% of capital per year)"
+      },
+      "upgradePathway": [
+        "Upgrade T4.3 to Real-Time Monitoring: IoT sensors at source points; mobile app dashboard for Water User Group committees; data visible to Gram Sabha",
+        "Groundwater Stress Routing: In blocks designated 'over-exploited' (ABYY classification), mandate 20% of water grant to groundwater recharge structures",
+        "Water User Group Legal Registration: All VWSCs registered under Cooperative Societies Act with formal bank accounts for O&M fund management",
+        "Source Sustainability Certification: Annual 'Water Source Sustainability Certificate' from independent agency as condition for next cycle funding"
+      ]
+    },
+    {
+      "id": "gpdp",
+      "name": "GPDP (Gram Panchayat Development Plan)",
+      "hindiName": null,
+      "objective": "Village-level development planning using eGramSwaraj platform where communities prioritize infrastructure and livelihood schemes via participatory planning.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (government land + community commons planned jointly); T1.2=1 (Gram Sabha assembly is decision-making entity); T1.3~0.60 (60-70% to commons/shared infrastructure); T1.4=1 (shared infrastructure has partial non-excludability)",
+        "t2": "T2.1~1.0 (100% local beneficiaries); T2.2~0.50 (SC/ST/women representation mandated in Gram Sabha); T2.3=1 (Gram Sabha + elected Gram Panchayat; eGramSwaraj records voting history)",
+        "t3": "T3.1=1 (income/livelihood improvement explicit in planning objectives); Delta-Y: Rs.5,000-15,000/HH/year (water/market access/commons improvements); T3.3=2 (multiple pathways); T3.4=0.5 (depends on convergence quality)",
+        "t4": "T4.1=0.5 (maintenance planning included but not mandatory replenishment obligation); T4.2: not measured; T4.3=0 (no commons health dashboard); T4.4=0 (no penalties for asset degradation); T4.5=0.5 (theoretically available from budget)"
+      },
+      "upgradePathway": [
+        "Mandatory Commons Maintenance Plan: Every funded commons asset in GPDP requires 5-year maintenance plan as pre-condition; plan lodged in eGramSwaraj before expenditure approval",
+        "O&M Fund Earmark: 15% of GPDP budget reserved for commons O&M; Gram Sabha approves allocation annually; release conditional on previous year's maintenance audit",
+        "Commons Asset Monitoring Dashboard: Extend eGramSwaraj to include commons asset health ratings (traffic light); visible to Block Development Officer and district administration",
+        "Performance-Linked Disbursement: GPs with high commons maintenance scores (green) receive 10% bonus allocation; non-compliant GPs face 20% reduction in next cycle"
+      ]
+    },
+    {
+      "id": "state-finance-commission-grants",
+      "name": "State Finance Commission Grants",
+      "hindiName": null,
+      "objective": "Provide additional revenue allocation to Village Panchayats per SFC orders, supplementing 15th FC grants, supporting GP operational costs and strategic priorities.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (SFC grants for operational/discretionary spending; no explicit commons focus); T1.2=0.5 (constitutional right but not commons-tied); T1.3~0.25 (only 20-30% to commons); T1.4=0 (discretionary benefits excludable)",
+        "t2": "T2.1~0.95 (local village residents); T2.2~0.40 (GP structure ensures SC/ST representation); T2.3=1 (Gram Panchayat decision-making)",
+        "t3": "T3.1=0.5 (operational grants support infrastructure indirectly); Delta-Y: Rs.1,000-3,000/HH/year (indirect benefit); T3.3=0 (no specific livelihood pathway mandated); T3.4=0",
+        "t4": "T4.1=0 (operational allocations; no replenishment obligation); T4.2: not applicable; T4.3=0 (no commons monitoring); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Conditionality: Link SFC disbursement to commons governance score; GPs with poor commons maintenance lose 15% of SFC grant",
+        "Mandatory Commons Audit: Annual commons asset health audit required before SFC release; Social Audit team conducts assessment",
+        "Commons-Focused Allocation: Minimum 25% of SFC grant must fund commons maintenance/improvement (specified in SFC order revision)",
+        "Performance Incentive: GPs achieving 'Green' commons health status receive 5% SFC bonus; creates competitive governance incentive"
+      ]
+    },
+    {
+      "id": "panchayat-sashaktikaran",
+      "name": "Panchayat Sashaktikaran (Panchayat Empowerment)",
+      "hindiName": null,
+      "objective": "Capacity building and institutional strengthening of Village Panchayats through training, exposure, skill development, and knowledge management.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (training is private good to individual PRI members); T1.2=0 (no commons resource formalized); T1.3~0.05 (negligible commons expenditure); T1.4=0 (training benefits excludable to trained individual)",
+        "t2": "T2.1~0.95 (local PRI representatives); T2.2~0.40 (SC/ST PRI members prioritized per constitutional reservation); T2.3=1 (Gram Panchayat is organizational entity)",
+        "t3": "T3.1=0 (training doesn't generate direct income); Delta-Y: 0 (no income pathway); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: not applicable; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Link Training to Commons Governance: Reorient curriculum to commons management (water governance, forest committees, pasture management); commons competency certification",
+        "Commons Management Certification: PRI members who complete commons governance training receive 'Commons Manager' certification; condition for GP commons fund access",
+        "Implementation Mentorship: Pair trained PRI members with FES/NGO mentors for 6-month commons governance implementation; track commons outcomes not just training attendance",
+        "Performance-Linked Incentive: Training fund release conditional on post-training commons governance improvements (measured by Commons Asset Register updates)"
+      ]
+    },
+    {
+      "id": "rural-infrastructure-development",
+      "name": "Rural Infrastructure Development",
+      "hindiName": null,
+      "objective": "Community-driven construction and maintenance of rural public facilities including Gram Panchayat buildings, community halls, markets, roads, drains, and social infrastructure.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (government-owned public infrastructure on village commons land); T1.2=1 (community right formalized through Gram Sabha decision); T1.3~0.75 (entire budget to commons infrastructure); T1.4=1 (community halls/markets have partial non-excludability)",
+        "t2": "T2.1~0.95 (100% local community); T2.2~0.40 (community facilities serve all including SC/ST; anti-discrimination mandatory); T2.3=1 (Gram Panchayat governance)",
+        "t3": "T3.1=1 (income pathway via community markets/enterprises enabled); Delta-Y: Rs.3,000-8,000/HH/year (market access/shop rental/commons enterprise); T3.3=2 (market access + enterprise space); T3.4=0.5 (depends on actual facility utilization)",
+        "t4": "T4.1=0.5 (construction guidelines include maintenance expectations but no mandatory replenishment obligation); T4.2: not applicable; T4.3=0 (no facility condition reporting system); T4.4=0 (no penalties for degradation); T4.5=0.5 (expected from GP operating budget)"
+      },
+      "upgradePathway": [
+        "O&M Fund Lock-In: 10% of construction cost deposited to Commons Facility O&M Fund before project handover; held in GP sub-account; withdrawal only for maintenance",
+        "Commons Facility Management Committee: Village-level management committee (10-15 members; SC/ST majority; 50% women) for each major facility; quarterly inspection reports",
+        "Facility Health Monitoring: Quarterly condition assessment lodged in eGramSwaraj; red-flagged facilities trigger automatic BDO inspection within 30 days",
+        "Performance-Linked Maintenance Grant: GPs that maintain facilities in good condition for 3+ years receive 15% bonus grant for next facility construction"
+      ]
+    },
+    {
+      "id": "social-audit-mechanism",
+      "name": "Social Audit Mechanism",
+      "hindiName": null,
+      "objective": "Community-based monitoring of implementation of centrally sponsored and state schemes at Gram Panchayat level; findings reported to Gram Sabha for public accountability.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A (public funds and scheme accountability as commons resource); T1.2=1 (73rd Amendment mandates Gram Sabha accountability; Social Audit is formalized mechanism); T1.3~0.85 (entire Social Audit budget to commons accountability); T1.4=2 (public accountability is non-excludable benefit)",
+        "t2": "T2.1~0.95 (trained community members from the beneficiary village); T2.2~0.50 (SC/ST/women auditor representation mandated); T2.3=1 (Gram Sabha formally approves audit schedule and receives findings)",
+        "t3": "T3.1=1 (improved scheme quality and leakage reduction as explicit benefit); Delta-Y: Rs.2,000-10,000/HH/year (leakage reduction benefit per beneficiary); T3.3=2 (scheme quality improvement + accountability governance pathway); T3.4=1 (government enforcement of Social Audit findings)",
+        "t4": "T4.1=1 (Social Audit Act mandates regular biannual audits); T4.2=1 (annual audit cycle is self-renewing); T4.3=3 (real-time unscheduled visits + scheduled audits; findings within 15 days); T4.4=1 (funds withheld for misconduct; reputational penalty via Gram Sabha public hearing); T4.5=1 (dedicated state Social Audit unit; trained community auditor pool maintained)"
+      },
+      "upgradePathway": [
+        "Technology Integration: Mobile app + blockchain for Social Audit finding documentation; immutable records prevent post-audit tampering; findings automatically fed to MIS",
+        "Linked Accountability: Social Audit outcomes formally linked to official promotion/performance evaluation decisions; creates systemic incentive for scheme quality",
+        "Community Auditor Formalization: 'Chartered Social Auditors' certification program; trained pool of 2-3 per block; professional recognition with honorarium",
+        "Learning System: Quarterly state-level bulletin on Social Audit findings; best-practice sharing; patterns used to design scheme improvements"
+      ]
+    }
+  ]
+}

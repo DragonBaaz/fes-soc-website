@@ -1,0 +1,240 @@
+{
+  "department": "Tribal Affairs Department",
+  "slug": "tribal-affairs",
+  "totalSchemes": 10,
+  "summary": {
+    "soc": 2,
+    "nearSoc": 4,
+    "nonSoc": 4
+  },
+  "dominantFailure": "Structural bifurcation: forest-based livelihood schemes (Van Dhan, FRA, NTFP) show strong SOC alignment when commons governance is formalized; education/welfare schemes fail T1 because they deliver private goods (scholarships, housing) to individuals. Target population (tribal) alone does not determine SOC — scheme architecture does.",
+  "structuralFindings": {
+    "dominantProblem": "The Commons/Private Goods Bifurcation — schemes built on forest commons achieve SOC; schemes delivering education and welfare subsidies fail T1 regardless of beneficiary identity",
+    "socException": "Van Dhan Vikas Kendra (4/4) and FRA-CFR Titling (4/4) achieve SOC because both are built around shared forest resources with formal commons governance (CFR committees, Van Dhan cooperatives, TRIFED institutional offtake)",
+    "crossCuttingPriorities": [
+      "Forest Commons Convergence: Route all tribal livelihood support through FRA CFR + Van Dhan commons; make CFR titling prerequisite for tribal livelihood scheme eligibility in forest blocks",
+      "Commons-Integrated Education: Embed commons service-learning in EMRS curriculum; 50% practical commons management training alongside academic subjects; graduate placement in commons institutions",
+      "TSP T4 Lock-In: Mandate 30% of Tribal Sub-Plan budget earmarked for commons asset creation with mandatory O&M fund (12% capital) and performance audit before next cycle release",
+      "Artisan Skill Sustainability: TRIFED mandated apprenticeship program (2 apprentices per artisan); annual craft skills census to monitor intergenerational transmission"
+    ],
+    "contextualFactors": [
+      "Chhattisgarh's tribal population (32% of state; ST-majority in 7 districts) provides the largest concentration of forest commons governance capacity in Central India",
+      "~1.7 million ha CFR titled — providing legal foundation for T1 PASS across all forest-dependent tribal schemes; scaling to remaining eligible areas is the highest-priority intervention",
+      "External mandates (FRA 2006, Forest Management Plans) substitute for scheme-embedded T4 provisions and consistently outperform internal scheme sustainability clauses",
+      "2 existing SOC schemes (Van Dhan + FRA) and 4 Near-SOC schemes together cover ~5-6 million tribal beneficiaries — reforms could reach near-universal SOC coverage in tribal livelihood programs"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "pm-janman",
+      "name": "PM-JANMAN (Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan)",
+      "hindiName": null,
+      "objective": "Comprehensive tribal welfare program covering education, health, livelihood, housing, and basic infrastructure for Scheduled Tribe population, with focused attention on 7 Particularly Vulnerable Tribal Groups (PVTGs).",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (mix of private goods: housing/scholarships; ≤25% budget to commons); T1.2=0 (no formalized community access right to commons resource); T1.3~0.25; T1.4=0 (individual housing/scholarships highly excludable)",
+        "t2": "T2.1~0.95 (tribal communities in designated blocks); T2.2~0.70 (exclusively ST population; PVTG focus); T2.3=0.5 (GP involvement but not formal commons governance)",
+        "t3": "T3.1=1 (income/livelihood improvement explicit); Delta-Y: Rs.8,000-20,000/HH/year (capitalized housing+livestock+skill income); T3.3=3 (housing/livestock/skills); T3.4=0.5 (depends on Van Dhan convergence)",
+        "t4": "T4.1=0 (one-time subsidies; no replenishment obligation); T4.2: N/A; T4.3=0; T4.4=0; T4.5=0.5"
+      },
+      "upgradePathway": [
+        "Converge with Commons Schemes: Link PM-JANMAN housing to Van Dhan participation; PVTG beneficiaries must join nearest Van Dhan unit as condition for livelihood support",
+        "Community Asset Overlay: Earmark 10% of PM-JANMAN budget for village commons infrastructure (water/electricity commons); managed by CFR Committee",
+        "Livestock Commons Integration: Livestock component redesigned as community grazing commons (not individual animals); link to NLM-Fodder model",
+        "Asset Sustainability Tracking: 18-36 month follow-up survey for all PM-JANMAN beneficiaries; commons participation tracked alongside asset utilization"
+      ]
+    },
+    {
+      "id": "van-dhan-vikas-kendra",
+      "name": "Van Dhan Vikas Kendra (PMVDY — Pradhan Mantri Van Dhan Vikas Yojana)",
+      "hindiName": null,
+      "objective": "Support NTFP-dependent tribal communities through value-addition centers where forest-based commodities (honey, lac, medicinal plants) are collected, processed, packaged, and marketed.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "classification_note": "Cross-departmental scheme also tracked under Forest Department",
+      "evidence": {
+        "t1": "T1.1=B (forest commons under community rights via FRA 2006); T1.2=1 (formal legal right under FRA + SCHEDULED TRIBE ACT); T1.3~0.90 (entire budget to forest commons processing infrastructure); T1.4=2 (non-excludable: all members benefit equally)",
+        "t2": "T2.1~0.98 (forest-dependent tribals in tribal blocks); T2.2~0.60 (poorest collectors; women ≥50%); T2.3=1 (Tribal Cooperative Society governance with elected committee)",
+        "t3": "T3.1=1 (NTFP value addition income mandated); Delta-Y: Rs.15,000-40,000/HH/year (honey ₹8-12k; lac ₹12-20k; processed herbal ₹5-10k); T3.3=2 (multiple NTFP processing pathways); T3.4=1 (TRIFED guaranteed procurement + B2C)",
+        "t4": "T4.1=1 (sustainable harvesting protocols mandated; procurement contingent on compliance); T4.2~1.0 (extraction levels <replenishment rates maintained); T4.3=2 (quarterly NTFP sourcing audits + annual forest assessments); T4.4=1 (TRIFED procurement conditional on sustainability compliance); T4.5=1 (operational budget includes monitoring + restoration fund)"
+      },
+      "upgradePathway": [
+        "Scale Horizontally: Expand from current 50+ to 200+ Van Dhan units by 2028; focus on underserved PVTG districts; target ₹10,000+/HH/year for all units",
+        "Real-Time Monitoring: IoT + blockchain for collection-to-processing tracking; immutable records for premium buyer trust",
+        "Market Price Transparency: Mobile app shows daily TRIFED prices; prevents middleman exploitation; women's self-monitoring capacity",
+        "Climate Finance: Register Van Dhan catchment forests for carbon credits; community retains 80% of credit revenue as supplementary income stream"
+      ]
+    },
+    {
+      "id": "fra-cfr-titling",
+      "name": "Forest Rights Act (FRA) — Community Forest Rights (CFR) Titling",
+      "hindiName": null,
+      "objective": "Legal formalization of tribal community rights to manage and benefit from forest commons; recognize CFR, individual forest rights, and grazing rights; Chhattisgarh titlized approximately 1.7 million ha CFR.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=B (forest commons with community management rights legally formalized); T1.2=1 (formal legal right under FRA 2006 — strongest possible); T1.3~0.95 (entire scheme to commons rights formalization); T1.4=2 (non-excludable benefit to all CFR community members)",
+        "t2": "T2.1~1.0 (CFR beneficiaries are the entire forest village community); T2.2~0.70 (ST population dominant; CFR prioritizes forest-dependent communities); T2.3=1 (Gram Sabha/CFR Community Forest Committee as constitutional governance body)",
+        "t3": "T3.1=1 (timber+NTFP+grazing income explicit and legally guaranteed); Delta-Y: Rs.10,000-30,000/HH/year (timber+NTFP+grazing+wage labor); T3.3=3 (multiple forest product pathways); T3.4=1 (government procurement for timber; TRIFED for NTFP)",
+        "t4": "T4.1=1 (5-year FMP with sustainable limits mandated by law); T4.2=1 (extraction ≤replenishment if FMP followed; enforceable); T4.3=2 (annual assessments + timber inventory + NTFP surveys); T4.4=1 (Forest Department enforcement; rights suspension for violations); T4.5=1 (MGNREGS for forest restoration labor; restoration budget available)"
+      },
+      "upgradePathway": [
+        "Satellite-Based Monitoring: Real-time forest cover monitoring via ISRO satellite data; CFR community dashboard shows deforestation alerts in near-real-time",
+        "Landscape Connectivity: Link adjacent CFR areas into landscape-scale commons corridors; joint management committees for borderland governance",
+        "Revenue Sharing Transparency: Blockchain-based NTFP revenue distribution; community members track individual entitlements on mobile app",
+        "Carbon Credit Integration: Verified Emissions Reductions for CFR areas maintaining and improving forest cover; community retains 80% of carbon credit revenue"
+      ]
+    },
+    {
+      "id": "eklavya-model-schools",
+      "name": "Eklavya Model Residential Schools (EMRS)",
+      "hindiName": null,
+      "objective": "Boarding schools providing secondary and senior secondary education to tribal students, emphasizing academic excellence and cultural integration; approximately 30+ schools operational in Chhattisgarh.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (school infrastructure is public but education is private good to individual student); T1.2=0 (no community governance over education resource); T1.3~0.05 (individual skill development focus); T1.4=0 (education benefit excludable to enrolled student)",
+        "t2": "T2.1~0.90 (tribal students from local communities); T2.2~0.80 (ST majority; PVTG eligible); T2.3=0.5 (School Management Committee with limited decision-making power)",
+        "t3": "T3.1=1 (educational attainment → employment income pathway); Delta-Y: Rs.3,000-8,000/HH/year (estimated graduate wage premium); T3.3=0 (single pathway: education only); T3.4=0 (no institutional placement guarantee)",
+        "t4": "T4.1=0 (one-time educational intervention; no sustainability obligation); T4.2: N/A; T4.3=0 (no employment tracking post-graduation); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Community-Based Pedagogy: 50% of EMRS curriculum as commons education (forest ecology, water governance, sustainable livelihoods, cooperative management); embed commons knowledge",
+        "Gram Sabha Governance: School Management Committee upgraded to include CFR Committee and Van Dhan unit representatives; community sets curriculum priorities",
+        "Commons Learning Outcomes: Track percentage of graduates entering commons governance roles (Van Dhan, JFM, Water User Groups); commons placement as school performance metric",
+        "Teaching Commons Sustainability: Dedicate 10% of EMRS school budget to maintaining a school-adjacent commons learning site (school forest, water harvesting garden)"
+      ]
+    },
+    {
+      "id": "post-matric-scholarship-st",
+      "name": "Post-Matric Scholarship for ST Students",
+      "hindiName": null,
+      "objective": "Financial support to ST students pursuing higher education (undergraduate and postgraduate) through scholarships covering tuition, living expenses, and books.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (educational support is private good to individual student); T1.2=0; T1.3~0.02 (individual financial transfer); T1.4=0 (excludable to recipient)",
+        "t2": "T2.1~0.85 (ST students from local areas); T2.2~0.60 (economically weaker ST; girls' enhanced rates); T2.3=0 (individual student beneficiary model)",
+        "t3": "T3.1=0.5 (education is indirect and uncertain income pathway); Delta-Y: uncertain (higher education completion doesn't guarantee employment); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0 (no outcome tracking post-scholarship); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Research Pathway: Scholarship renewal condition includes applied commons project (water governance, forest rights, cooperative management) in final year",
+        "Scholarship-to-Commons Return: Placement guarantee in tribal commons institutions (Van Dhan, MFP Federation, CFR committees) for scholarship recipients; 2-year service obligation",
+        "Outcome Tracking: Commons career dashboard; track all scholarship recipients for 5 years post-graduation; commons employment rate as scholarship program metric",
+        "Loan-to-Grant Conversion: Full grant conversion for students who enter commons governance career for 3+ years post-graduation; incentivizes commons sector employment"
+      ]
+    },
+    {
+      "id": "pre-matric-scholarship-st",
+      "name": "Pre-Matric Scholarship for ST Students",
+      "hindiName": null,
+      "objective": "Educational support to ST students in secondary schools (Classes VI-VIII) through scholarships covering fees, books, uniforms, and stipends.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual student educational support — private good); T1.2=0; T1.3~0.01; T1.4=0",
+        "t2": "T2.1~0.95 (ST students in local schools); T2.2~0.70 (poorest ST; often PVTG); T2.3=0 (individual student beneficiary)",
+        "t3": "T3.1=0 (not direct livelihood); Delta-Y: 0 (no income pathway at pre-matric level); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Service Learning: Mandatory 2-3 hours weekly commons activity (village forest walk, water source survey, market cooperative observation) embedded in school schedule",
+        "School-to-Commons Linkage: Commons learning gardens at each school; managed jointly by students, teachers, and CFR Committee; produce donated to school midday meal",
+        "Teacher Commons Training: All teachers in tribal schools receive 1-week commons governance orientation; integrate commons knowledge across subjects",
+        "Parent Community Engagement: Monthly school-commons event; parents who are CFR/JFM members speak to students about livelihood pathways"
+      ]
+    },
+    {
+      "id": "tribal-sub-plan",
+      "name": "Tribal Sub-Plan (TSP)",
+      "hindiName": null,
+      "objective": "Constitutional provision (Article 46) mandating that a percentage of state Plan budget be earmarked for ST welfare; typical allocation 5-7% of Plan outlay across all departments.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (government budget allocation to public commons infrastructure); T1.2=1 (constitutional mandate ensures formal right); T1.3~0.65 (TSP allocates: 40% infrastructure commons/30% education-health/30% subsidies); T1.4=1 (infrastructure has partial non-excludability)",
+        "t2": "T2.1~0.95 (100% ST population targeted); T2.2~0.80 (explicitly targets ST; focus on poorest); T2.3=0.5 (GP involved in planning; often top-down delivery)",
+        "t3": "T3.1=1 (livelihood improvement implicit in constitutional mandate); Delta-Y: Rs.5,000-15,000/HH/year (water/education/health infrastructure improvements); T3.3=3 (multiple pathways through convergence); T3.4=0.5 (depends on convergence quality)",
+        "t4": "T4.1=0.5 (annual allocation but no explicit replenishment obligation); T4.2: not measured; T4.3=0 (no commons asset health monitoring); T4.4=0 (no penalties); T4.5=0.5 (theoretically available but not mandated)"
+      },
+      "upgradePathway": [
+        "Mandatory Commons Earmark: 30% of TSP budget must fund commons asset creation (water harvesting/forest restoration/pasture development); tracked separately in district plans",
+        "Commons Asset Register: District-level commons asset database; all TSP-funded commons tracked quarterly; asset condition rating mandatory before next cycle allocation",
+        "O&M Fund Lock-In: 12% of commons asset component earmarked for O&M; held in district tribal welfare fund; released annually with performance conditions",
+        "TSP Social Audit: Annual Social Audit of TSP commons spending; findings published; underperforming districts receive additional oversight before disbursement"
+      ]
+    },
+    {
+      "id": "sca-tsp",
+      "name": "Special Central Assistance to TSP (SCA-TSP)",
+      "hindiName": null,
+      "objective": "Supplementary funding to Tribal Sub-Plan from Government of India, targeted to accelerated tribal development in high-concentration areas.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (central government supplementary funding to public commons); T1.2=1 (constitutional provision for ST welfare); T1.3~0.60 (SCA directed to education/health/water commons); T1.4=1 (infrastructure has partial non-excludability)",
+        "t2": "T2.1~0.95 (100% ST population); T2.2~0.80 (most vulnerable ST; PVTG focus); T2.3=0.5 (GP involvement but limited authority over spending priorities)",
+        "t3": "T3.1=1 (health/education/livelihood improvement mandated); Delta-Y: Rs.5,000-12,000/HH/year; T3.3=2 (health/education/livelihood); T3.4=0.5 (depends on convergence)",
+        "t4": "T4.1=0.5 (annual allocation; no mandatory asset clause); T4.2: not measured; T4.3=0 (no commons health dashboard); T4.4=0 (no penalties); T4.5=0.5 (vague O&M responsibility)"
+      },
+      "upgradePathway": [
+        "Consolidate with TSP Recommendations: Implement joint TSP + SCA-TSP upgrade package; unified commons earmark (30% of combined allocation) tracked under single district commons dashboard",
+        "Performance-Linked Central Transfer: Central release of SCA-TSP conditional on previous year's TSP commons maintenance audit; states with poor commons governance receive 20% less",
+        "Van Dhan Convergence Mandate: SCA-TSP districts must have active Van Dhan units; SCA allocation partly based on Van Dhan unit coverage and performance",
+        "CFR Titling Linkage: SCA districts prioritize CFR titling completion; SCA-TSP funds used to accelerate CFR implementation in pending gram sabhas"
+      ]
+    },
+    {
+      "id": "trifed-marketing",
+      "name": "TRIFED Marketing Support",
+      "hindiName": null,
+      "objective": "Marketing support for tribal products and handicrafts through Tribal Cooperative Marketing Development Federation, including buyer linkage, quality certification, GI registration, and online platforms.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (tribal products as commons cultural resource; GI certifications have non-excludability characteristics); T1.2=1 (TRIFED is tribal cooperative; collective marketing represents community right); T1.3~0.75 (marketing infrastructure shared among all cooperative members); T1.4=1",
+        "t2": "T2.1~0.95 (tribal artisans primary beneficiaries); T2.2~0.60 (poorest artisans; often women); T2.3=1 (TRIFED cooperatives have governance structure)",
+        "t3": "T3.1=1 (income from product marketing explicit); Delta-Y: Rs.8,000-25,000/HH/year (GI-certified premium prices); T3.3=2 (handicrafts/NTFP/medicines/textiles); T3.4=1 (government procurement + export markets)",
+        "t4": "T4.1=0 (no mandatory artisan skill replenishment/apprenticeship obligation); T4.2: not applicable (marketing is distribution, not extraction); T4.3=0 (no apprenticeship monitoring); T4.4=0 (no penalty if craft skills decline); T4.5=0.5 (no dedicated artisan training fund)"
+      },
+      "upgradePathway": [
+        "Mandatory Skill Apprenticeship: TRIFED condition each artisan to maintain 2 apprentices learning their craft; annual apprenticeship audit; TRIFED procurement conditional on compliance",
+        "Craft Sustainability Monitoring: Annual census of artisans and apprentices per craft; declining crafts receive emergency support; extinction-risk crafts get priority funding",
+        "GI Expansion: TRIFED target 10+ new GI registrations per year from Chhattisgarh; connects to premium pricing and export market access",
+        "Oral Tradition Documentation: Digital archive of traditional craft techniques; TRIFED-funded documentation before master artisans pass knowledge; open-access tribal knowledge commons"
+      ]
+    },
+    {
+      "id": "ntfp-mfp-federation",
+      "name": "Livelihood Improvement through NTFP (CG MFP Federation)",
+      "hindiName": null,
+      "objective": "Support tribal NTFP collectors and forest-dependent communities through the Chhattisgarh Minor Forest Produce Federation, which purchases, processes, and markets forest products at fair value.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=B (forest commons under community management; NTFP as shared commons resource); T1.2=1 (FRA CFR recognition formalizes community right); T1.3~0.85 (entire budget to forest commons procurement/processing); T1.4=2 (non-excludable benefit to all member communities)",
+        "t2": "T2.1~0.98 (forest-adjacent tribal communities); T2.2~0.70 (poorest collectors; women ≥60%); T2.3=1 (member cooperatives with elected governance)",
+        "t3": "T3.1=1 (NTFP income explicit and mandated through fair price guarantee); Delta-Y: Rs.8,000-20,000/HH/year (fair price procurement: 2-4x market rate); T3.3=2 (multiple NTFP pathways); T3.4=1 (MFP Federation guaranteed procurement)",
+        "t4": "T4.1=0.5 (emphasizes sustainable harvesting but no binding replenishment obligation with enforcement); T4.2: not independently monitored; T4.3=0 (no independent NTFP sustainability monitoring unit); T4.4=0 (no MFP Federation enforcement authority over collector behavior); T4.5=0 (no dedicated forest regeneration fund from MFP revenue)"
+      },
+      "upgradePathway": [
+        "Independent NTFP Monitoring Unit: Establish district-level NTFP sustainability monitoring cells (independent of MFP Federation); quarterly field surveys; extraction vs. regeneration tracking",
+        "Regeneration Fund: 8% of MFP Federation annual revenue earmarked to forest regeneration; managed by CFR committees in collection areas; annual planting obligation",
+        "Sustainable Harvesting Certification: 'Sustainably Certified' label for compliant collectors; TRIFED premium price for certified produce; market incentive for sustainability",
+        "Women Cooperative Strengthening: 50% of MFP procurement to women-led collectives; women's leadership training; separate women's price premium of 5% above base MFP rate"
+      ]
+    }
+  ]
+}

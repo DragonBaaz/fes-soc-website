@@ -1,0 +1,197 @@
+{
+  "department": "Rural Development Department",
+  "slug": "rural-development",
+  "totalSchemes": 8,
+  "summary": {
+    "soc": 1,
+    "nearSoc": 2,
+    "nonSoc": 5
+  },
+  "dominantFailure": "Individual livelihood subsidies fail T1 fundamentally due to private-good delivery architecture; only employment-based commons schemes (MGNREGS-NRM) achieve SOC by converging livelihood and commons asset creation. Post-scheme asset stewardship is the critical missing piece — most commons assets created lack mandatory 10-year governance obligations.",
+  "structuralFindings": {
+    "dominantProblem": "Employment-Based Commons Creation as the SOC Success Model — MGNREGS-NRM is the sole scheme that converges employment generation with commons asset creation",
+    "socException": "MGNREGS-NRM (4/4) succeeds because employment generation and commons asset creation converge in a single scheme; the only Rural Development scheme achieving full SOC",
+    "crossCuttingPriorities": [
+      "Scale MGNREGS-NRM to 60%+ of Rural Development public work: Reorient from non-NRM works to commons asset creation (watershed/pasture/forest); increase NRM allocation from current 40% to 60%+ (policy change, no budget increase)",
+      "Link Individual Livelihood Schemes to Commons Participation: SHGs (BIHAN), RSETI graduates, MKSP women farmers must participate in identified commons asset management as condition for scheme eligibility",
+      "Establish Commons Stewardship Framework: Post-scheme 10-year community stewardship groups for all MGNREGS-NRM assets; MGNREGS wages during maintenance as incentive",
+      "Redesign Rural Skill Training Toward Commons Governance: RSETI curriculum to include commons management competency; graduates placed in Water User Groups, Forest Committees, and Grazing Committees"
+    ],
+    "contextualFactors": [
+      "Individual livelihood subsidies (BIHAN, MKSP, RSETI) fail T1 fundamentally without commons integration — this is a design constraint, not an implementation gap",
+      "MGNREGS-NRM is the foundational platform for rural SOC — scaling its NRM allocation from 40% to 60% is the highest-leverage single intervention available",
+      "Chhattisgarh has 60%+ rainfed agriculture and extensive degraded commons (pasturelands, watershed areas) — strong demand for NRM-based employment that aligns with SOC requirements",
+      "BIHAN's 5+ million SHG women represent a ready organizational platform for commons governance if schemes are redesigned to link SHG activities to commons management"
+    ]
+  },
+  "schemes": [
+    {
+      "id": "mgnregs-nrm",
+      "name": "MGNREGS — NRM Component (Natural Resource Management)",
+      "hindiName": null,
+      "objective": "Create public rural employment through natural resource management works (water harvesting, pasture development, forest restoration, soil conservation) that build commons assets while providing guaranteed wage employment.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
+      "score": 4,
+      "classification": "SOC",
+      "evidence": {
+        "t1": "T1.1=A (commons NRM assets: watersheds/pastures/forests on public land); T1.2=1 (community commons asset creation); T1.3~0.65 (≥60% expenditure on commons NRM); T1.4=2 (non-excludable resource benefit)",
+        "t2": "T2.1~0.85 (village-level employment); T2.2~0.65 (SC/ST/women ≥65% of MGNREGS workers); T2.3=1 (Gram Sabha oversight of work selection mandated by Act)",
+        "t3": "T3.1=1 (guaranteed wage income mandated by law: 100 days @ statutory minimum); Delta-Y: Rs.8,000+/HH/year (household wage + NRM asset productivity); T3.3=2 (employment wages + NRM asset-based livelihoods); T3.4=1 (institutional buyer: government wage payment via DBT)",
+        "t4": "T4.1=1 (60% NRM budget earmarked for regeneration works); T4.2=1 (sustainability focus embedded in work selection criteria); T4.3=1 (annual work quality audit + asset sustainability assessment); T4.4=1 (wage withholding if quality standards not met); T4.5=1 (fund reduction for non-compliance)"
+      },
+      "upgradePathway": [
+        "Increase NRM Allocation to 60%+: Reorient from non-NRM works (roads, buildings) to NRM asset creation; policy directive to Block Development Officers; no additional budget required",
+        "Asset Productivity Linkage: Track annual productivity of MGNREGS-created NRM assets (water harvested/grazing improved/forest cover); publish at GP level; use as selection criterion for next cycle",
+        "Women's Leadership: Mandate 50% women in MGNREGS-NRM work selection committees; link to BIHAN SHGs for community asset stewardship",
+        "Long-term Asset Stewardship: 10-year community management groups for each NRM asset; MGNREGS wages during maintenance activities; MGNREGS Act amendment to allow maintenance employment"
+      ]
+    },
+    {
+      "id": "mgnregs-base",
+      "name": "MGNREGS — Base Employment Component",
+      "hindiName": null,
+      "objective": "Provide guaranteed rural employment (100 days/year minimum) at statutory minimum wage to all rural households, ensuring income security during agricultural off-seasons.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (public works on commons public land); T1.2=1 (community commons governance); T1.3~0.75 (≥70% to commons works); T1.4=2 (non-excludable employment access)",
+        "t2": "T2.1~0.85 (village-level employment); T2.2~0.65 (SC/ST/women ≥65%); T2.3=1 (Gram Sabha oversight mandated)",
+        "t3": "T3.1=1 (guaranteed wage mandated by MGNREGS Act); Delta-Y: Rs.6,000+/HH/year (100 days @ minimum wage); T3.3=2 (direct wages + commons benefit); T3.4=1 (government wage payment)",
+        "t4": "T4.1=0 (60% non-NRM works lack sustainability mandate; T4 fails for non-NRM portion); T4.2: no long-term maintenance mechanism for non-NRM assets; T4.3=0 (no community stewardship framework mandated); T4.4=0 (asset maintenance responsibility unclear post-completion)"
+      },
+      "upgradePathway": [
+        "Increase NRM Allocation to 60%+: Policy directive to shift work selection toward NRM; non-NRM works (roads, buildings) reduced to <40% of MGNREGS budget",
+        "Mandatory Asset Stewardship: 10-year community stewardship groups for every completed work; group members receive MGNREGS wages for maintenance activities",
+        "Asset Livelihood Linkage: Connect each MGNREGS asset to a livelihood pathway (water harvesting → irrigation cooperative; pasture development → grazing committee; forest → JFM committee)",
+        "Monitoring Framework: Annual asset condition assessment by independent agency; assets rated green/amber/red; red assets trigger stewardship committee review"
+      ]
+    },
+    {
+      "id": "bihan-nrlm",
+      "name": "BIHAN (NRLM) — SHG Promotion & Livelihood Development",
+      "hindiName": null,
+      "objective": "Promote Self-Help Groups (SHGs) of rural women for savings, credit, and livelihood activities, enabling household income generation through group-based micro-enterprises.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual household livelihood — private enterprise); T1.2=0 (group-based credit without commons resource); T1.3~0.05 (≥90% on individual member benefits); T1.4=0 (enterprise benefits excludable to individual member)",
+        "t2": "T2.1~0.80 (village-level SHGs); T2.2~0.70 (SC/ST women ≥70%); T2.3=1 (women's group governance)",
+        "t3": "T3.1=1 (micro-enterprise income mandated); Delta-Y: Rs.5,000+/HH/year; T3.3=3 (dairy/vegetable/handicraft); T3.4=0 (market-dependent; no institutional offtake guarantee)",
+        "t4": "T4.1=0 (no sustainability mandate for commons resource); T4.2: N/A; T4.3=0 (SHG health depends on individual profitability); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons-Linked Livelihood Groups: SHG eligibility requires participation in managing an identified commons asset (village pond/pasture/community forest); SHG loan tied to commons management outcomes",
+        "Commons Asset Component: 20% of SHG micro-loan disbursement designated for commons asset maintenance (water body desilting, pasture seeding, community forestry)",
+        "Group Sustainability Obligation: Each SHG sets aside 5% of annual savings for O&M of adopted commons asset; commons health tracked alongside SHG health",
+        "Monitoring & Enforcement: Annual commons asset health assessment by BDO; SHG rating includes commons management score; affects loan renewal and interest rate"
+      ]
+    },
+    {
+      "id": "saghan-vanikaran",
+      "name": "Saghan Vanikaran (Community Afforestation)",
+      "hindiName": null,
+      "objective": "Implement community-based afforestation on village commons and degraded lands, creating employment through plantation work while building forest commons assets.",
+      "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
+      "score": 3,
+      "classification": "Near-SOC",
+      "evidence": {
+        "t1": "T1.1=A (community forest commons on village/revenue land); T1.2=1 (village afforestation on commons land); T1.3~0.80 (≥75% on commons plantation); T1.4=2 (non-excludable benefit)",
+        "t2": "T2.1~0.90 (village-level beneficiaries); T2.2~0.55 (SC/ST+women ≥55%); T2.3=1 (community forest committee governance)",
+        "t3": "T3.1=1 (plantation employment + future forest income mandated); Delta-Y: Rs.7,000+/HH/year (employment ₹3,000 + forest income ₹4,000 post-maturation); T3.3=3 (employment/NTFP/fuelwood/timber); T3.4=1 (institutional buyers: Forest Department)",
+        "t4": "T4.1=0 (no tree survival monitoring post-plantation; 30-40% sapling mortality unmonitored); T4.2: no maintenance obligation; T4.3=0 (no post-project community stewardship); T4.4=0 (no replenishment obligation)"
+      },
+      "upgradePathway": [
+        "Tree Survival Monitoring: Quarterly survival census (year 1-3); payment withheld if survival <80%; replacement planting mandatory at plantation committee's expense",
+        "Community Stewardship Fund: 10% of plantation capital deposited to 10-year maintenance fund before project handover; community forest committee manages disbursements",
+        "Benefit-Sharing Agreement: Pre-plantation formalization of income-sharing formula among participating households; lodged with Gram Panchayat before work commences",
+        "Continuous Afforestation Obligation: Forest committee must plant replacement trees ≥100% of any harvested trees; carry-forward obligation linked to future grant eligibility"
+      ]
+    },
+    {
+      "id": "sansad-adarsh-gram",
+      "name": "Sansad Adarsh Gram Yojana (Model Village Development)",
+      "hindiName": null,
+      "objective": "Develop select villages as model settlements through integrated infrastructure, livelihood support, and governance improvements, demonstrating sustainable village development.",
+      "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
+      "score": 0,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C/A (mixed: individual housing + community infrastructure; commons component <50%); T1.2=0 (no specific commons focus mandated); T1.3~0.40; T1.4=0 (mixed benefit)",
+        "t2": "T2.1~0.70; T2.2: no clear SC/ST priority; T2.3=0 (traditional panchayat, not commons-focused governance)",
+        "t3": "T3.1=0 (infrastructure output, not livelihood income mandate); Delta-Y: 0 (no income pathway mandated); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0 (no sustainability framework); T4.4=0; T4.5=0 (post-project infrastructure orphaned)"
+      },
+      "upgradePathway": [
+        "Note: This is an integrated development program falling primarily outside SOC scope.",
+        "SOC Convergence: Reserve 50% of Adarsh Gram funds for commons-specific investments (water/forest/pasture); link to FES SOC framework metrics",
+        "Commons Governance Pilot: Use Adarsh Gram as commons governance innovation lab; test SOC upgrade mechanisms before scaling",
+        "Performance Metrics: Add commons health indicators to Adarsh Gram success criteria alongside infrastructure metrics"
+      ]
+    },
+    {
+      "id": "rseti",
+      "name": "RSETI (Rural Skill Development & Entrepreneurship)",
+      "hindiName": null,
+      "objective": "Provide vocational training and entrepreneurship support to rural youth, enabling livelihood diversification through skilled employment or micro-enterprise establishment.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual skill/knowledge — private good); T1.2=0 (individual training model; no commons resource); T1.3~0.05 (expenditure on individual beneficiaries); T1.4=0 (skill benefit excludable to trained individual)",
+        "t2": "T2.1~0.75 (village-level training centers); T2.2~0.50 (SC/ST youth prioritized); T2.3=1 (training committee governance)",
+        "t3": "T3.1=1 (skilled employment income mandated as training outcome); Delta-Y: Rs.6,000+/HH/year (skilled employment); T3.3=3 (construction/hospitality/retail); T3.4=0 (market-dependent; no institutional offtake)",
+        "t4": "T4.1=0 (no sustainability mandate); T4.2: N/A; T4.3=0 (no post-training support or monitoring); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Management Competency: Add mandatory commons governance module (water management, forest committees, cooperative governance) to all RSETI curricula",
+        "Placement in Commons Institutions: 30% of RSETI placement target in commons institutions (Water User Groups, JFM committees, MFP Federation); government placement guarantee",
+        "Livelihood-Commons Linkage: RSETI graduates managing commons earn supplementary income from commons revenue; creates incentive for skilled commons governance",
+        "Long-term Career Pathway: Commons Management as formal career track (Block Commons Manager positions); RSETI as training pipeline for government commons governance roles"
+      ]
+    },
+    {
+      "id": "mksp-millets",
+      "name": "MKSP (Millets Cluster Development)",
+      "hindiName": null,
+      "objective": "Support women farmers in millet cultivation through inputs, training, and market linkage, promoting nutritious crop production and women farmer empowerment.",
+      "tests": { "t1": false, "t2": true, "t3": true, "t4": false },
+      "score": 2,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual private farm); T1.2=0 (private farmer inputs on private land); T1.3~0.05 (≥90% to individual farmer inputs); T1.4=0 (benefit excludable to individual farmer)",
+        "t2": "T2.1~0.75 (village-level millet cluster); T2.2~0.80 (women farmers ≥80%); T2.3=1 (women's farmer groups governance)",
+        "t3": "T3.1=1 (millet income mandated); Delta-Y: Rs.5,000+/HH/year (millet premium over cereals); T3.3=2 (nutrition + income pathway); T3.4=0 (market-dependent; no institutional procurement guarantee)",
+        "t4": "T4.1=0 (no soil health mandate; no rotation obligation); T4.2: N/A; T4.3=0 (no collective marketing sustainability); T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Commons Land Component: Designate 20% of cluster area on village commons/fallow land; jointly managed by women farmer collective; commons millet income distributed cooperatively",
+        "Soil Health Mandate: Annual organic matter investment (composting/green manuring) as subsidy continuation condition; soil health tested every 3 years",
+        "Collective Marketing Sustainability: Producer cooperative mandatory for all MKSP clusters; TRIFED or state procurement agreement for millet offtake; price floor guaranteed",
+        "Water Conservation Obligation: Each MKSP cluster maintains water conservation structures (farm ponds/bunds) covering ≥10% of cluster area; link to JJM source sustainability"
+      ]
+    },
+    {
+      "id": "pm-awas-yojana-gramin",
+      "name": "PM Awas Yojana — Gramin (Rural Housing)",
+      "hindiName": null,
+      "objective": "Provide financial assistance for construction of pucca (permanent) houses for rural poor households, improving living standards and housing security.",
+      "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
+      "score": 1,
+      "classification": "Non-SOC",
+      "evidence": {
+        "t1": "T1.1=C (individual housing on private plot — private asset); T1.2=0; T1.3~0.02 (≥95% to individual house construction); T1.4=0 (highly excludable benefit)",
+        "t2": "T2.1~0.90 (village-level targeting); T2.2~0.70 (SC/ST ≥70% beneficiaries; BPL priority); T2.3=1 (community verification process through Gram Sabha)",
+        "t3": "T3.1=0 (housing asset, not livelihood income); Delta-Y: 0 (no income pathway mandated); T3.3=0; T3.4=0",
+        "t4": "T4.1=0; T4.2: N/A; T4.3=0; T4.4=0; T4.5=0"
+      },
+      "upgradePathway": [
+        "Note: This is an individual housing subsidy scheme — falls outside direct SOC scope.",
+        "SOC Convergence: Link PMAY-G to commons participation; condition housing on beneficiary joining Water User Group or village commons committee",
+        "Community Infrastructure Overlay: Dedicate 5% of PMAY-G budget to shared sanitation/water commons for beneficiary cluster",
+        "Skill Linkage: PMAY-G construction as RSETI training site; beneficiary family members trained in construction; commons management skills bundled in training"
+      ]
+    }
+  ]
+}
