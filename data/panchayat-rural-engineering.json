@@ -1,13 +1,22 @@
 {
   "department": "Panchayat & Rural Engineering Department",
   "slug": "panchayat-rural-engineering",
+  "state": "Chhattisgarh",
   "totalSchemes": 7,
   "summary": {
     "soc": 2,
-    "nearSoc": 3,
+    "socWithGaps": 0,
+    "nearSocOperational": 0,
+    "nearSocStructural": 3,
     "nonSoc": 2
   },
+  "dominantFinding": "Strong gram sabha architecture and Social Audit infrastructure across 70%+ panchayats put SOC within reach for all three Near-SOC schemes — the sole missing element in every case is a mandatory O&M fund and commons asset health monitoring protocol.",
   "dominantFailure": "Three of 7 schemes achieve Near-SOC precisely because they fail T4 (Sustainability Lock) while passing T1, T2, and T3 — indicating strong design for commons governance but weak post-implementation sustainability mechanisms. The missing element is a mandatory O&M fund and commons asset health monitoring protocol.",
+  "commonsProfile": {
+    "primaryCommonsTypes": ["Water & Sanitation Commons", "Public Rural Infrastructure", "Gram Panchayat Commons"],
+    "climateStressedZones": false,
+    "keyEcologicalContext": "10,738 gram panchayats with PESA-strengthened tribal governance provide deep institutional capacity; Social Audit infrastructure is already operational in 70%+ panchayats, making sustainability monitoring a policy choice not a capacity gap"
+  },
   "structuralFindings": {
     "dominantProblem": "The Panchayat Governance Advantage — strong T1+T2+T3 foundation with T4 as the sole missing lock-in",
     "socException": "15th Finance Commission Grants (Tied) and Social Audit Mechanism both achieve full SOC because they embed statutory T4 requirements: JJM guidelines and the Social Audit Act respectively — demonstrating that external legal mandates deliver T4 better than internal scheme provisions",
@@ -32,7 +41,7 @@
       "objective": "Provide flexible, untied grants to Village Panchayats for 27 subjects under 11th Schedule for commons infrastructure, health, water, sanitation, education, and poverty alleviation.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (government revenue to public commons); T1.2=1 (73rd Amendment grants formal community access right); T1.3~0.70 (majority of grants target commons: water/sanitation/grazing); T1.4=1 (partial non-excludability)",
         "t2": "T2.1~0.95 (100% local village residents); T2.2~0.40 (SC/ST/BPL prioritized); T2.3=1 (Gram Panchayat as mandated body; Gram Sabha approval required)",
@@ -74,7 +83,7 @@
       "objective": "Village-level development planning using eGramSwaraj platform where communities prioritize infrastructure and livelihood schemes via participatory planning.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (government land + community commons planned jointly); T1.2=1 (Gram Sabha assembly is decision-making entity); T1.3~0.60 (60-70% to commons/shared infrastructure); T1.4=1 (shared infrastructure has partial non-excludability)",
         "t2": "T2.1~1.0 (100% local beneficiaries); T2.2~0.50 (SC/ST/women representation mandated in Gram Sabha); T2.3=1 (Gram Sabha + elected Gram Panchayat; eGramSwaraj records voting history)",
@@ -137,7 +146,7 @@
       "objective": "Community-driven construction and maintenance of rural public facilities including Gram Panchayat buildings, community halls, markets, roads, drains, and social infrastructure.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (government-owned public infrastructure on village commons land); T1.2=1 (community right formalized through Gram Sabha decision); T1.3~0.75 (entire budget to commons infrastructure); T1.4=1 (community halls/markets have partial non-excludability)",
         "t2": "T2.1~0.95 (100% local community); T2.2~0.40 (community facilities serve all including SC/ST; anti-discrimination mandatory); T2.3=1 (Gram Panchayat governance)",

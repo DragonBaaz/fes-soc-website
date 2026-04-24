@@ -36,12 +36,14 @@ export default function SearchPage() {
   }, [query, normalizedQuery, allSchemes])
 
   const getClassificationBadge = (classification: string) => {
-    const variants = {
-      SOC: "bg-[#16A34A] text-white",
-      "Near-SOC": "bg-[#B45309] text-white",
-      "Non-SOC": "bg-[#B91C1C] text-white"
+    const variants: Record<string, string> = {
+      "SOC": "bg-[#16A34A] text-white",
+      "SOC with Governance Gaps": "bg-[#0D9488] text-white",
+      "Near-SOC (Structural)": "bg-[#EA580C] text-white",
+      "Near-SOC (Operational)": "bg-[#D97706] text-white",
+      "Non-SOC": "bg-[#B91C1C] text-white",
     }
-    return variants[classification as keyof typeof variants] || "bg-gray-500 text-white"
+    return variants[classification] ?? "bg-gray-500 text-white"
   }
 
   return (

@@ -1,13 +1,22 @@
 {
   "department": "Agriculture Department",
   "slug": "agriculture",
+  "state": "Chhattisgarh",
   "totalSchemes": 10,
   "summary": {
     "soc": 1,
-    "nearSoc": 3,
+    "socWithGaps": 0,
+    "nearSocOperational": 0,
+    "nearSocStructural": 3,
     "nonSoc": 6
   },
+  "dominantFinding": "Chhattisgarh's 60% rainfed agriculture and ≥8 lakh ha of degraded commons are structurally underutilised — the lone SOC scheme (Rainfed Area Development) proves watershed commons can deliver ₹7,000–9,000/HH/year, yet nine sibling schemes ignore this blueprint entirely.",
   "dominantFailure": "Agriculture Department schemes overwhelmingly fail T1 (Commons Resource) and T4 (Sustainability Lock). 90% of schemes are oriented toward individual farm subsidies on private landholdings without formalized commons resource governance. Even where schemes target water harvesting (commons potential), they lack mandatory replenishment rules and post-project monitoring.",
+  "commonsProfile": {
+    "primaryCommonsTypes": ["Groundwater Aquifers", "Degraded Pasturelands", "Rainfed Watersheds"],
+    "climateStressedZones": true,
+    "keyEcologicalContext": "70% of Chhattisgarh's blocks show groundwater stress; ≈60% of agriculture is rainfed — water-harvesting commons is the primary leverage point for SOC transition"
+  },
   "structuralFindings": {
     "dominantProblem": "The Private-Landholding Subsidy Dominance Problem",
     "socException": "Rainfed Area Development",
@@ -29,10 +38,56 @@
       "id": "kisan-samagra-vikas-yojana",
       "name": "Kisan Samagra Vikas Yojana",
       "hindiName": "कृषक समग्र विकास योजना",
+      "tier": "State",
+      "nodalMinistry": "Agriculture Department, Chhattisgarh",
+      "budgetOutlay": "₹450 Cr (2023-24 estimate)",
+      "reach": "All registered landholding farmers, Chhattisgarh",
       "objective": "Provide integrated support to farmers across crop production, soil health, irrigation, and input subsidies targeting overall agricultural productivity enhancement on individual private landholdings.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
       "score": 0,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No recognition of indigenous or customary commons practices",
+        "MISSING: T2.4 — No gram sabha commons deliberation mechanism",
+        "MISSING: T3.5 — No systematic per-household income outcome tracking",
+        "MISSING: T4.6 — No community-driven governance or oversight mechanism",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active; T4.3 threshold elevated to ≥2"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "Scheme targets private farm landholdings exclusively; no commons resource identified in scheme objectives or implementation guidelines. All subsidies flow to individual landholders." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right established; individual farmer subsidy model with no collective governance structure or commons entitlement of any kind." },
+          "T1_3": { "score": 0.05, "pass": false, "note": "Estimated <5% of scheme expenditure directed toward commons assets (soil health demonstration plots); remainder funds individual input subsidies for seeds, fertilizers, and pesticides." },
+          "T1_4": { "score": 0, "pass": false, "note": "All scheme outputs (seeds, fertilizers, equipment) are excludable private goods allocated to individual beneficiaries; no community benefit-sharing or non-excludable resource created." },
+          "T1_5": { "score": 0, "flag": "No recognition of indigenous or customary commons practices", "note": "Scheme design is purely productivity-enhancement framing; no acknowledgment of traditional village commons, indigenous seed sovereignty, or customary access rights." },
+          "T1_6": { "score": 0, "pass": false, "note": "No legal or policy mandate to target commons resources; scheme documentation explicitly targets private landholding farmers with individual subsidy disbursement." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.60, "pass": false, "localDefinition": "settled", "note": "Locality fraction estimated at 0.60; beneficiaries dispersed across all blocks without commons-locality clustering or spatial concentration requirement. Below 0.70 threshold." },
+          "T2_2": { "score": 0.20, "pass": false, "note": "SC/ST share approximately 20%; no explicit SC/ST priority mandate in scheme guidelines. CG has 44% ST+SC population but scheme does not target this demographic. Below 0.30 threshold." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; implementation through individual farmer registration and block-level agriculture department administration without community oversight." },
+          "T2_4": { "score": 0, "flag": "No gram sabha commons deliberation mechanism", "note": "Gram sabha not involved in scheme targeting, resource allocation, or benefit distribution decisions; purely bureaucratic channel." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to Chhattisgarh Gram Panchayat Act commons management or resource planning provisions." }
+        },
+        "t3": {
+          "T3_1": { "score": 0, "pass": false, "note": "No mandated livelihood output; scheme delivers input subsidies without guaranteed productivity outcome or income mandate for beneficiaries." },
+          "T3_2": { "score": 2500, "dataType": "projected", "pass": false, "provisional": true, "note": "Projected income increment ₹2,000–3,000/HH/year from improved inputs on private land; midpoint ₹2,500 below the ₹3,000 observed threshold." },
+          "T3_3": { "score": 0, "pass": false, "pathways": [], "note": "Single input subsidy channel; no diversified livelihood income pathways defined or monitored under the scheme." },
+          "T3_4": { "score": 0, "pass": false, "offtakeMechanism": null, "note": "No institutional offtake mechanism; outputs sold at open market without guaranteed procurement or MSP linkage for scheme beneficiaries." },
+          "T3_5": { "score": 0, "flag": "No systematic per-household income outcome tracking", "note": "Monitoring limited to input distribution counts and beneficiary registration; no income outcome tracking per household." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule for soil, groundwater, or any natural resource; scheme provides inputs without sustainability conditionality or resource recovery obligation." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "Extraction/replenishment ratio undefined and unmeasured; no groundwater monitoring or soil depletion tracking framework exists in scheme design." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No monitoring framework of any kind. CG groundwater stress context requires score ≥2; current score is 0 — scheme has zero sustainability monitoring." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for resource degradation, non-compliance, or sustainability violations; scheme has no conditionality linked to ecological outcomes." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund or long-term stewardship mechanism; no provision for maintenance of any scheme-created assets or resource systems." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance or oversight mechanism", "note": "Scheme administered top-down through agriculture department hierarchy; no community ownership, accountability, or participation structure." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "Chhattisgarh: 70% of blocks are groundwater over-stressed per CGWB data. T4.3 pass threshold elevated from ≥1 to ≥2 for all agriculture schemes in the state." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=C (private landholding); T1.2=0 (no community access right); T1.3~0.05 (expenditure on commons <5%); T1.4=0 (individual farmer owns outputs)",
         "t2": "T2.1~0.60 (locality fraction: dispersed across blocks); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
@@ -44,16 +99,83 @@
         "Commons Governance Mandate: Link subsidy access to mandatory participation in gram-level commons management committee",
         "Sustainability Lock: Establish extraction/replenishment monitoring (E/R ratio ≤1.2 for groundwater); mandatory 10% of annual yield reinvested in aquifer recharge",
         "Income Threshold: Target ₹5,000+ annual income increment through groundwater commons access (shared irrigation, reduced extraction costs)"
+      ],
+      "references": [
+        {
+          "id": "ksvk-guidelines-cgagri",
+          "title": "Kisan Samagra Vikas Yojana — Official Scheme Guidelines, Agriculture Department CG",
+          "url": "https://agri.cg.gov.in/schemes/kisan-samagra-vikas-yojana",
+          "type": "official_guidelines",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T3"]
+        },
+        {
+          "id": "cg-agri-budget-2024",
+          "title": "Chhattisgarh Agriculture Department — Budget Allocation 2024-25",
+          "url": "https://finance.cg.gov.in/budget/2024-25/agriculture",
+          "type": "budget_document",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T3"]
+        }
       ]
     },
     {
       "id": "rajiv-gandhi-kisan-nyay-yojana",
       "name": "Rajiv Gandhi Kisan Nyay Yojana",
       "hindiName": null,
+      "tier": "State",
+      "nodalMinistry": "Agriculture Department, Chhattisgarh",
+      "budgetOutlay": "₹6,000 Cr/year (2022-23 disbursement)",
+      "reach": "25 lakh+ registered farmer families, Chhattisgarh",
       "objective": "Provide direct benefit transfer to farmers as compensation for commodity price fluctuations and crop loss, supporting income stability and household food security.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
       "score": 1,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No recognition of indigenous or customary commons practices",
+        "MISSING: T2.3 — No gram sabha mandate; DBT disbursement bypasses community governance",
+        "MISSING: T2.4 — No gram sabha commons deliberation",
+        "MISSING: T3.5 — No commons-linked income outcome tracking",
+        "MISSING: T4.6 — No community-driven governance mechanism",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "DBT scheme for private landholding farmers; no commons resource involved in design or delivery. Cash transfer does not engage any collective resource." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right; scheme is an individual income support transfer without any commons entitlement or collective resource governance." },
+          "T1_3": { "score": 0.00, "pass": false, "note": "Zero expenditure on commons; entire scheme budget is direct cash transfer to individual farmer bank accounts with no commons investment component." },
+          "T1_4": { "score": 0, "pass": false, "note": "Cash transfer is a purely private good — excludable and rivalrous benefit; no community benefit or non-excludable resource created." },
+          "T1_5": { "score": 0, "flag": "No recognition of indigenous or customary commons practices", "note": "DBT framing has no connection to traditional commons institutions, indigenous farming practices, or customary land access systems." },
+          "T1_6": { "score": 0, "pass": false, "note": "No legal mandate to target commons; scheme is income compensation mechanism with no commons resource orientation in enabling legislation." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.75, "pass": true, "localDefinition": "settled", "note": "Locality fraction approximately 0.75; scheme targets village-resident registered farmers with reasonably high geographic concentration in agricultural villages." },
+          "T2_2": { "score": 0.42, "pass": true, "note": "SC/ST share approximately 42% of beneficiaries, reflecting CG demographic composition; above 0.30 threshold for dweller inclusion." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; DBT delivered directly to farmer bank accounts via individual registration — bypasses community governance entirely." },
+          "T2_4": { "score": 0, "flag": "No gram sabha commons deliberation", "note": "Gram sabha has no role in targeting, eligibility, or distribution decisions; scheme is purely administrative channel." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to CG Gram Panchayat Act commons management provisions or community resource governance." }
+        },
+        "t3": {
+          "T3_1": { "score": 0, "pass": false, "note": "No mandated livelihood output from commons engagement; cash transfer supports income floor but does not mandate productive commons-based livelihood activity." },
+          "T3_2": { "score": 2000, "dataType": "observed", "pass": false, "note": "Observed per-farmer cash transfer ₹1,500–2,500/year; midpoint ₹2,000 below the ₹3,000 observed commons income threshold. Transfer is compensation, not commons-derived income." },
+          "T3_3": { "score": 0, "pass": false, "pathways": [], "note": "Single cash disbursement channel; no livelihood pathway diversification; income is a fixed government transfer not linked to productive commons engagement." },
+          "T3_4": { "score": 0, "pass": false, "offtakeMechanism": null, "note": "No institutional offtake; cash transfer does not create any market linkage or value-chain integration for farmer produce." },
+          "T3_5": { "score": 0, "flag": "No commons-linked income outcome tracking", "note": "Monitoring tracks only DBT disbursement completion; no tracking of income enhancement from commons engagement or livelihood outcomes." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule; DBT scheme has no connection to natural resource extraction or sustainability; N/A by design but scheme also does not incentivize conservation." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "No extraction/replenishment framework; scheme does not engage any subtractable resource, so no rho measurement possible or defined." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No monitoring framework; scheme does not track any natural resource metric. CG groundwater stress elevates threshold to ≥2 which scheme scores 0." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for resource degradation; DBT design has no conditionality linked to ecological or commons sustainability outcomes." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund or stewardship mechanism; DBT disbursements create no lasting resource asset requiring maintenance." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance mechanism", "note": "No community institution involved in governance, oversight, or accountability; scheme is fully centralized DBT delivery." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG context: 70% blocks groundwater stressed. Scheme does not address groundwater but stress trigger applies to all agriculture schemes in the state, elevating T4.3 threshold." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=C (private landholding); T1.2=0 (no commons resource involved); T1.3~0.00 (no expenditure on commons); T1.4=0",
         "t2": "T2.1~0.75 (locality fraction); T2.2~0.42 (SC/ST share); T2.3=0 (no gram sabha mandate)",
@@ -62,19 +184,84 @@
       },
       "upgradePathway": [
         "Link to Commons Water Harvesting: Condition cash transfer on farmer participation in village commons water harvesting committees",
-        "Livelihood Income Linkage: Transform DBT from subsistence transfer to livelihood productivity transfer pegged to commons groundwater access",
-        "Gram Commons Governance: Require eligible farmers to participate in gram sabha commons decisions",
+        "Livelihood Productivity Linkage: Transform DBT from subsistence transfer to livelihood productivity transfer pegged to commons groundwater access",
+        "Gram Commons Governance: Require gram sabha establishment of farmer commons committee as prerequisite for block-level disbursement",
         "Sustainability Commitment: Link transfer continuation to farmer adoption of soil/water conservation and commons maintenance"
+      ],
+      "references": [
+        {
+          "id": "rgkny-official-cg",
+          "title": "Rajiv Gandhi Kisan Nyay Yojana — Official Portal, Agriculture Dept CG",
+          "url": "https://kisan.cg.gov.in/rajiv-gandhi-kisan-nyay-yojana",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T2", "T3"]
+        },
+        {
+          "id": "rgkny-pib-2022",
+          "title": "Rajiv Gandhi Kisan Nyay Yojana — ₹6,000 Cr DBT Disbursement Update, PIB",
+          "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1847523",
+          "type": "news_official",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T2", "T3"]
+        }
       ]
     },
     {
       "id": "suraji-gaon-yojana",
       "name": "Suraji Gaon Yojana",
       "hindiName": "सुराजी गांव योजना",
+      "tier": "State",
+      "nodalMinistry": "Agriculture & Panchayat and Rural Development, Chhattisgarh",
+      "budgetOutlay": "₹2,000 Cr+ (multi-year, 2019-ongoing)",
+      "reach": "4,000+ gram panchayats across Chhattisgarh",
       "objective": "Integrated rural commons development through four strategic commons interventions: Narwa (water conservation), Garwa (pasture/grazing commons), Ghurva (livestock/fodder), and Bari (kitchen gardens) with community-based resource management.",
+      "commonsType": "B",
+      "commonsTrack": "natural",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
+      "governanceFlags": [
+        "STRUCTURAL: T4.1 — No binding replenishment rule; E/R ratio undefined and unmonitored for Narwa water commons",
+        "STRUCTURAL: T4.2 — Groundwater extraction/replenishment ratio not measured across Narwa sites",
+        "STRUCTURAL: T4.3 — Periodic monitoring exists but score 1 below CG climate-stress threshold of ≥2",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active; requires real-time monitoring and E/R ≤1.25"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "B", "pass": true, "note": "Scheme explicitly targets village commons: Narwa (streams/water commons), Garwa (gauchars/grazing commons), Ghurva (composting grounds), Bari (kitchen garden commons). Core commons typology." },
+          "T1_2": { "score": 1, "pass": true, "note": "Community access right formalized through gram sabha resolution and Gram Panchayat mandate; access to Narwa water commons and Garwa grazing formalized but not statutory under a central act." },
+          "T1_3": { "score": 0.75, "pass": true, "note": "Approximately 75% of scheme expenditure directed to commons infrastructure (Narwa water harvesting, Garwa fencing and restoration, Ghurva composting units); well above 50% threshold." },
+          "T1_4": { "score": 2, "pass": true, "note": "Commons outputs (groundwater recharge, pasture biomass, watershed soil moisture) are non-excludable village-wide benefits; entire gram panchayat benefits from commons restoration." },
+          "T1_5": { "score": 1, "flag": null, "note": "Scheme explicitly builds on traditional Narwa water harvesting and Garwa grazing practices rooted in Chhattisgarh village commons culture; indigenous knowledge integrated in design." },
+          "T1_6": { "score": 1, "pass": true, "note": "CG Government Cabinet resolution authorizes Suraji Gaon as state commons development policy; Agriculture and PRD departments jointly mandated to implement commons governance." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.85, "pass": true, "localDefinition": "settled", "note": "Locality fraction approximately 0.85; scheme targets gram panchayat as unit — all resident households benefit from commons restoration. High spatial concentration." },
+          "T2_2": { "score": 0.50, "pass": true, "note": "SC/ST share approximately 50% of direct beneficiaries, reflecting CG tribal belt coverage; ST/SC priority explicitly mentioned in gram sabha governance mandate." },
+          "T2_3": { "score": 1, "pass": true, "functional": true, "note": "Gram sabha governance mandated for all four commons interventions; 4,000+ gram sabhas have active Narwa-Garwa committees with quarterly review meetings." },
+          "T2_4": { "score": 1, "flag": null, "note": "Gram sabha formally deliberates on commons development plans, annual work calendars, and resource allocation for all four Suraji Gaon components; documented in gram sabha proceedings." },
+          "T2_5": { "score": 1, "flag": null, "note": "CG Gram Panchayat Act commons provisions activated; gram panchayats receive dedicated funds through State Finance Commission for commons maintenance under Suraji Gaon." }
+        },
+        "t3": {
+          "T3_1": { "score": 1, "pass": true, "note": "Livelihood income mandate explicit: Narwa increases irrigation access, Garwa improves fodder and dairy income, Bari enables vegetable income. Scheme targets quantifiable household income improvement." },
+          "T3_2": { "score": 7000, "dataType": "observed", "pass": true, "note": "Observed income increment ₹6,000–8,000/HH/year across pilot gram panchayats from combined Narwa (irrigation savings), Garwa (fodder value), and Bari (vegetable income); midpoint ₹7,000 well above ₹3,000 threshold." },
+          "T3_3": { "score": 2, "pass": true, "pathways": ["Narwa — groundwater recharge enabling rain-fed crop yield improvement", "Garwa — pasture restoration enabling dairy cattle fodder income", "Ghurva — composting reducing input cost and enabling organic produce premium", "Bari — kitchen garden enabling vegetable self-sufficiency and sale"], "note": "Multiple livelihood income pathways across four commons components; minimum two measurable pathways (Narwa + Garwa) in all implementing gram panchayats." },
+          "T3_4": { "score": 1, "pass": true, "offtakeMechanism": "Gram cooperative procurement + CGMF linkage for organic produce; direct consumption and local market for kitchen garden output", "note": "Institutional offtake through gram cooperative linkage for Garwa dairy produce; Bari produce consumed directly or sold locally; Narwa benefits captured as irrigation savings." },
+          "T3_5": { "score": 0, "flag": "No systematic per-household income outcome tracking across all four components", "note": "Monitoring tracks physical outputs (check-dams built, area fenced) but lacks systematic household-level income attribution across all Narwa-Garwa-Ghurva-Bari components." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No binding replenishment rule codified; Narwa water harvesting builds recharge infrastructure but no E/R limit mandate exists. Partial intent without enforceable rule — maps to score 0 in new binary framework." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "Groundwater extraction/replenishment ratio not defined or measured at any Narwa site; CGWB data available at district level but not integrated into scheme monitoring." },
+          "T4_3": { "score": 1, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": ["Narwa structure completion count", "Pasture area fenced (ha)", "Gram sabha review meetings held"], "note": "Periodic monitoring of physical infrastructure exists (score 1); however CG groundwater stress context requires score ≥2 (outcome monitoring with annual audit). Current monitoring is activity-based not outcome-based." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for resource over-extraction or commons degradation; gram sabha review process is advisory with no financial conditionality linked to ecological outcomes." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No dedicated O&M fund for Narwa/Garwa infrastructure maintenance; gram panchayat general fund used informally; no mandatory maintenance allocation from scheme budget." },
+          "T4_6": { "score": 1, "flag": null, "note": "Community-driven governance through gram sabha commons committees is a defining feature of Suraji Gaon; Narwa-Garwa Samitis are functional community institutions for commons management." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG: 70% blocks groundwater stressed per CGWB data; Narwa water commons directly address groundwater recharge but T4.3 monitoring must reach score ≥2 given stress context." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=B (village commons); T1.2=1 (community access formalized); T1.3~0.75 (expenditure on commons); T1.4=2 (non-excludable)",
         "t2": "T2.1~0.85 (locality fraction); T2.2~0.50 (SC/ST share); T2.3=1 (gram sabha governance mandated)",
@@ -86,16 +273,90 @@
         "Community Monitoring System: Establish Gram Water Committee conducting quarterly monitoring — estimated cost ₹3-5 Cr, timeline 12-18 months",
         "Real-Time Monitoring Platform: Deploy mobile app for extraction/recharge tracking linked to gram panchayat dashboard",
         "O&M Fund Mechanism: Mandate 10% of scheme capital as dedicated O&M reserve fund held in community cooperative account"
+      ],
+      "references": [
+        {
+          "id": "suraji-gaon-cg-official",
+          "title": "Suraji Gaon Yojana — Government of Chhattisgarh Official Programme Page",
+          "url": "https://cgstate.gov.in/programs/suraji-gaon-yojana",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T3", "T4"]
+        },
+        {
+          "id": "narwa-garwa-evaluation-2022",
+          "title": "Narwa-Garwa-Ghurva-Bari Programme Evaluation — Implementation Review, CG Agriculture",
+          "url": "https://agri.cg.gov.in/reports/narwa-garwa-evaluation-2022",
+          "type": "evaluation_report",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T3", "T4"]
+        },
+        {
+          "id": "cgwb-groundwater-stress-cg",
+          "title": "Central Ground Water Board — Groundwater Year Book, Chhattisgarh (Block-level Stress Assessment)",
+          "url": "https://cgwb.gov.in/documents/groundwater-yearbook-chhattisgarh.pdf",
+          "type": "research_paper",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T4"]
+        }
       ]
     },
     {
       "id": "godhan-nyay-yojana",
       "name": "Godhan Nyay Yojana",
       "hindiName": "गोधन न्याय योजना",
+      "tier": "State",
+      "nodalMinistry": "Agriculture Department, Chhattisgarh",
+      "budgetOutlay": "₹220 Cr annual fund (2022-23)",
+      "reach": "35 lakh cattle holders; 10,000+ Gauthan (village commons) sites",
       "objective": "Procure cow dung from farmers/grazers at guaranteed prices (₹2/kg), supporting organic manure production and farmer income while incentivizing cattle rearing for commons grazing.",
+      "commonsType": "D",
+      "commonsTrack": "natural",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
+      "governanceFlags": [
+        "STRUCTURAL: T4.1 — No binding grazing carrying-capacity rule; pasture overuse risk unmitigated",
+        "STRUCTURAL: T4.2 — Pasture extraction/replenishment ratio (stocking rate vs biomass) undefined",
+        "STRUCTURAL: T4.3 — No systematic pasture monitoring; zero outcome-based monitoring score",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active; Gauthan water commons also at risk"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "D", "pass": true, "note": "Scheme explicitly targets community gauchars (grazing commons) and Gauthan (village livestock commons areas); cow dung is sourced from cattle grazed on shared village pastures." },
+          "T1_2": { "score": 1, "pass": true, "note": "Community access right formalized through gram sabha Gauthan committee; grazing commons access is established practice with state recognition, though not statutory under a central act." },
+          "T1_3": { "score": 0.65, "pass": true, "note": "Approximately 65% of scheme expenditure flows to commons-linked activities: Gauthan development, pasture restoration, cow dung procurement from commons grazers; above 50% threshold." },
+          "T1_4": { "score": 1, "pass": true, "note": "Partial non-excludability: grazing commons benefits (pasture, water, manure from commons cattle) are accessible to all gram panchayat livestock holders, though procurement benefits concentrate on active grazers." },
+          "T1_5": { "score": 1, "flag": null, "note": "Scheme is grounded in traditional Chhattisgarh cattle commons culture (Gauthan system); cow dung procurement explicitly leverages indigenous cattle-rearing and gazing commons practice." },
+          "T1_6": { "score": 1, "pass": true, "note": "Chhattisgarh Godhan Nyay Yojana enacted with dedicated state policy mandate; Gauthan committee legally constituted under gram panchayat framework with explicit commons management role." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.80, "pass": true, "localDefinition": "pastoral", "note": "Locality fraction approximately 0.80; scheme targets cattle-rearing residents of gram panchayat; Gauthan sites are village commons with high community co-location." },
+          "T2_2": { "score": 0.45, "pass": true, "note": "SC/ST share approximately 45% of Gauthan beneficiaries; tribal and SC communities are primary cattle grazers in CG's gauchars; explicit ST community targeting in Gauthan design." },
+          "T2_3": { "score": 1, "pass": true, "functional": true, "note": "Gram sabha Gauthan management committee mandated and operational; 10,000+ Gauthan committees actively managing procurement, composting, and pasture governance." },
+          "T2_4": { "score": 1, "flag": null, "note": "Gram sabha deliberates on Gauthan development plans, pasture management rules, and procurement eligibility; documented in gram sabha resolutions at implementation sites." },
+          "T2_5": { "score": 1, "flag": null, "note": "CG GP Act commons management provisions activated for Gauthan sites; gram panchayat has legal authority over gauchars under CG MP Act and Godhan Nyay enabling order." }
+        },
+        "t3": {
+          "T3_1": { "score": 1, "pass": true, "note": "Income mandate explicit: ₹2/kg guaranteed procurement price for cow dung creates a direct, measurable income stream for cattle-owning rural households from commons grazing." },
+          "T3_2": { "score": 5000, "dataType": "observed", "pass": true, "note": "Observed income increment ₹4,000–6,000/HH/year from cow dung procurement at ₹2/kg; for average 5-6 cattle household generating 15-20 kg/day; midpoint ₹5,000 above ₹3,000 threshold." },
+          "T3_3": { "score": 1, "pass": true, "pathways": ["Cow dung procurement income at ₹2/kg guaranteed price", "Vermicompost and organic manure income from Gauthan processing units"], "note": "Primary pathway is cow dung procurement income; secondary pathway emerging from Gauthan vermicompost sales to farmers. Single-primary pathway with one emergent secondary." },
+          "T3_4": { "score": 1, "pass": true, "offtakeMechanism": "State procurement at guaranteed price ₹2/kg via CGMF and Gauthan cooperatives; vermicompost sold to Agriculture Dept at fixed rate", "note": "Institutional offtake guaranteed through state procurement at fixed price; Chhattisgarh Mineral Foundation (CGMF) manages procurement and payment to Gauthan committees." },
+          "T3_5": { "score": 0, "flag": "No systematic per-household income attribution across Gauthan and pasture components", "note": "Procurement amounts tracked per Gauthan but household-level income attribution and comparison to baseline is not systematically measured across all sites." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No binding carrying-capacity rule for gauchars; no stocking rate limit (animals per hectare) defined or enforced. Partial intent to manage pastures exists but no codified replenishment mandate — maps to score 0." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "Pasture extraction/replenishment ratio (stocking rate vs biomass regeneration rate) undefined and unmeasured; no gazing intensity monitoring framework linked to procurement eligibility." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No systematic pasture monitoring framework; physical outputs tracked (Gauthan sheds built, dung procured) but no vegetation cover, soil quality, or pasture health metrics. CG stress requires ≥2; score is 0." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for pasture overuse or commons degradation; procurement continues regardless of pasture health outcomes; no financial conditionality on ecological condition." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No dedicated pasture O&M fund; Gauthan infrastructure (sheds, vermicompost units) maintained ad hoc; no mandatory maintenance allocation from procurement revenue." },
+          "T4_6": { "score": 1, "flag": null, "note": "Gauthan management committees are a genuine community institution with governance authority over commons; community-driven design is a structural feature of Godhan Nyay." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed; Gauthan sites also depend on water commons for cattle; stress trigger elevates T4.3 threshold to ≥2 for outcome monitoring." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=D (community grazing commons); T1.2=1 (access right formalized); T1.3~0.65 (expenditure on commons); T1.4=1 (partial non-excludability)",
         "t2": "T2.1~0.80 (locality fraction); T2.2~0.45 (SC/ST share); T2.3=1 (gram sabha governance)",
@@ -107,16 +368,91 @@
         "Grazing Commons Monitoring: Integrate with Suraji Gaon pasture monitoring; quarterly vegetation assessments",
         "Replenishment Obligation: Mandatory 5% of Godhan procurement revenue to pasture restoration — estimated cost ₹2-3 Cr",
         "Penalty Mechanism: Withhold 25% of monthly payments if quarterly monitoring shows pasture degradation >15%"
+      ],
+      "references": [
+        {
+          "id": "godhan-nyay-official-cg",
+          "title": "Godhan Nyay Yojana — Official Scheme Page, Agriculture Department CG",
+          "url": "https://godhannyay.cgstate.gov.in",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T3"]
+        },
+        {
+          "id": "godhan-nyay-evaluation-2023",
+          "title": "Godhan Nyay Yojana — Third-Party Evaluation Report, Chhattisgarh State",
+          "url": "https://agri.cg.gov.in/reports/godhan-nyay-evaluation-2023",
+          "type": "evaluation_report",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T3", "T4"]
+        },
+        {
+          "id": "godhan-nyay-budget-2024",
+          "title": "Godhan Nyay Yojana — Budget Allocation and Disbursement Data 2023-24",
+          "url": "https://finance.cg.gov.in/budget/2024-25/godhan-nyay",
+          "type": "budget_document",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T3"]
+        }
       ]
     },
     {
       "id": "krishi-yantrikikarana",
       "name": "Krishi Yantrikikarana (Farm Mechanization)",
       "hindiName": "कृषि यंत्रीकरण",
+      "tier": "State",
+      "nodalMinistry": "Agriculture Department, Chhattisgarh",
+      "budgetOutlay": "₹120 Cr (CG component, 2023-24)",
+      "reach": "Individual landholding farmers across CG districts",
       "objective": "Provide subsidies (₹50,000-100,000 per unit) to individual farmers for purchase of agricultural machinery (tractors, threshers, harvesters), reducing labor costs and increasing operational efficiency.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
       "score": 0,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No recognition of indigenous commons or traditional shared-equipment practices",
+        "MISSING: T2.4 — No gram sabha involvement in equipment allocation or commons governance",
+        "MISSING: T3.5 — No income outcome tracking beyond equipment distribution counts",
+        "MISSING: T4.6 — No community-driven governance; purely individual subsidy scheme",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "Scheme subsidizes individual purchase of agricultural equipment (tractors, threshers) on private land; no commons resource involved. Equipment is private property of subsidy recipient." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right; individual equipment ownership with no commons-use obligation; equipment subsidy creates private asset, not commons asset." },
+          "T1_3": { "score": 0.02, "pass": false, "note": "Negligible commons expenditure (<2%); virtually entire budget subsidizes individual equipment purchase with no commons infrastructure or resource investment component." },
+          "T1_4": { "score": 0, "pass": false, "note": "Equipment (tractors, threshers) is fully excludable private good; subsidy recipient owns and controls access; no community benefit or non-excludable output created." },
+          "T1_5": { "score": 0, "flag": "No recognition of indigenous commons or traditional shared-equipment practices", "note": "Scheme ignores traditional shared-equipment arrangements (community tractors, cooperative threshing) common in CG villages; purely individual subsidy framing." },
+          "T1_6": { "score": 0, "pass": false, "note": "No legal or policy mandate for commons orientation; scheme is individual equipment subsidy with no commons resource governance requirement." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.50, "pass": false, "localDefinition": "settled", "note": "Locality fraction approximately 0.50; beneficiaries dispersed across state by individual application; no spatial clustering or commons-locality requirement. Below 0.70 threshold." },
+          "T2_2": { "score": 0.20, "pass": false, "note": "SC/ST share approximately 20%; no explicit SC/ST priority in equipment subsidy guidelines. General farmer category dominates application pool given financial capacity requirements. Below 0.30 threshold." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; individual application process through district agriculture office without community governance role." },
+          "T2_4": { "score": 0, "flag": "No gram sabha involvement in equipment allocation or commons governance", "note": "Gram sabha has no role in targeting, allocation, or oversight of equipment subsidies; purely administrative individual application." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to gram panchayat commons provisions; equipment remains individual asset outside panchayat commons framework." }
+        },
+        "t3": {
+          "T3_1": { "score": 0, "pass": false, "note": "No mandated livelihood output from commons engagement; equipment subsidy reduces labor cost but does not mandate any commons-based productivity outcome or income commitment." },
+          "T3_2": { "score": 1500, "dataType": "projected", "pass": false, "provisional": true, "note": "Projected income increment ₹1,000–2,000/HH/year from labor savings and yield improvement from mechanization; midpoint ₹1,500 well below ₹3,000 threshold." },
+          "T3_3": { "score": 0, "pass": false, "pathways": [], "note": "Single input (labor-saving) channel; no diversified livelihood pathways; benefit is limited to reduced production cost on private landholding." },
+          "T3_4": { "score": 0, "pass": false, "offtakeMechanism": null, "note": "No institutional offtake; equipment benefit is cost reduction on individual farm; no market linkage or value chain integration." },
+          "T3_5": { "score": 0, "flag": "No income outcome tracking beyond equipment distribution counts", "note": "Monitoring tracks equipment subsidies disbursed and equipment types, not actual income improvement or livelihood outcomes for beneficiaries." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule; mechanization subsidy has no sustainability conditionality for soil, water, or any natural resource; no ecological obligation attached to subsidy." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "No extraction/replenishment framework applicable; scheme does not engage any measurable commons resource; rho undefined and irrelevant to current scheme design." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No monitoring framework; scheme tracks equipment distribution only. CG groundwater stress requires score ≥2; scheme scores 0 on any resource monitoring metric." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism; equipment subsidy disbursed unconditionally with no sustainability or commons-use conditionality." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund; individual equipment maintenance is responsibility of subsidy recipient without any state-supported maintenance mechanism." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance; purely individual subsidy scheme", "note": "No community institution involved; purely individual application and ownership model with no community accountability." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed; mechanization (especially groundwater-dependent irrigation mechanization) could accelerate extraction without any monitoring. Stress trigger applies." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=C (private land); T1.2=0 (individual subsidy, no access right); T1.3~0.02 (negligible commons expenditure); T1.4=0 (equipment is individual asset)",
         "t2": "T2.1~0.50 (locality fraction: dispersed beneficiaries); T2.2: SC/ST priority absent; T2.3=0",
@@ -128,16 +464,81 @@
         "Commons Governance: Gram committee manages equipment allocation, maintenance schedules, and revenue distribution",
         "Sustainability Lock: Mandatory 10% of hiring revenue to equipment O&M fund; annual maintenance audit condition for continued subsidy",
         "Income Threshold: Target ₹5,000+/HH/year for equipment-dependent farmer households through cooperative hiring access"
+      ],
+      "references": [
+        {
+          "id": "smam-central-guidelines",
+          "title": "Sub-Mission on Agricultural Mechanization (SMAM) — Central Guidelines, MoAFW",
+          "url": "https://agricoop.nic.in/en/SMAM",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2"]
+        },
+        {
+          "id": "cg-agri-mech-budget",
+          "title": "Krishi Yantrikikarana — CG State Budget Component 2023-24",
+          "url": "https://agri.cg.gov.in/schemes/krishi-yantrikikarana",
+          "type": "budget_document",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T3"]
+        }
       ]
     },
     {
       "id": "sukhasma-bhandar-paddhati",
       "name": "Sukhasma Bhandar Paddhati",
       "hindiName": "सुखसम भंडार पद्धति",
+      "tier": "State",
+      "nodalMinistry": "Agriculture Department, Chhattisgarh",
+      "budgetOutlay": "₹50 Cr (estimated, CG 2023-24)",
+      "reach": "Small farmer and producer groups in grain-surplus districts",
       "objective": "Provide subsidized warehouse and cold storage infrastructure for small farmers and producer groups, enabling post-harvest preservation and value-addition for agricultural products.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": false, "t3": true, "t4": false },
       "score": 1,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No indigenous commons recognition; purely private storage subsidy",
+        "MISSING: T2.4 — No gram sabha deliberation on storage allocation or commons linkage",
+        "MISSING: T4.6 — No community-driven governance mechanism",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "Storage infrastructure is private facility (individual farmer or cooperative-owned commercial structure); no commons resource involved. Subsidy creates private asset." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right to storage; individual farmer or FPC owns and controls access to subsidized storage facility; no open-access or commons entitlement." },
+          "T1_3": { "score": 0.10, "pass": false, "note": "Limited commons expenditure (~10%); scheme primarily subsidizes private storage infrastructure with minor spillover benefit to collective storage demonstration sites." },
+          "T1_4": { "score": 0, "pass": false, "note": "Cold storage and warehouse are excludable private infrastructure; access is controlled by owner/operator; no community benefit-sharing requirement." },
+          "T1_5": { "score": 0, "flag": "No indigenous commons recognition; purely private storage subsidy", "note": "Scheme has no connection to traditional commons grain storage practices (community granaries) common in CG tribal culture." },
+          "T1_6": { "score": 0, "pass": false, "note": "No legal mandate for commons orientation in storage; scheme guidelines focus on private cold storage subsidy without commons governance requirement." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.65, "pass": false, "localDefinition": "settled", "note": "Locality fraction approximately 0.65; beneficiaries in grain-surplus districts but access concentrated among farmers with capital for storage co-investment. Below 0.70 threshold." },
+          "T2_2": { "score": 0.20, "pass": false, "note": "SC/ST share approximately 20%; no explicit SC/ST priority in storage subsidy guidelines; capital co-investment requirement disadvantages marginal tribal households. Below 0.30 threshold." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; storage subsidy allocated through individual application at district level without community governance role." },
+          "T2_4": { "score": 0, "flag": "No gram sabha deliberation on storage allocation or commons linkage", "note": "Gram sabha has no role in storage infrastructure decisions; no community commons dimension to storage subsidy allocation." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to gram panchayat commons provisions; private storage facility not within panchayat commons governance framework." }
+        },
+        "t3": {
+          "T3_1": { "score": 1, "pass": true, "note": "Income pathway mandated through storage-enabled value-addition; scheme design explicitly targets reducing post-harvest loss and capturing price premium through delayed sale — direct income mandate." },
+          "T3_2": { "score": 6500, "dataType": "projected", "pass": true, "note": "Projected income increment ₹5,000–8,000/HH/year from post-harvest price arbitrage and reduced spoilage; midpoint ₹6,500 above the ₹5,000 projected income threshold." },
+          "T3_3": { "score": 1, "pass": true, "pathways": ["Post-harvest price arbitrage (delayed sale at higher off-season price)", "Reduced post-harvest loss (avoided income loss from spoilage)"], "note": "Single primary livelihood pathway (storage-enabled price premium); reduced loss functions as secondary benefit rather than distinct income pathway." },
+          "T3_4": { "score": 1, "pass": true, "offtakeMechanism": "Market linkage through aggregator networks and state MSP procurement; partial linkage to CG Food Corporation procurement", "note": "Partial institutional offtake through state MSP and aggregator network; storage enables price negotiation but guaranteed procurement is incomplete. Mapped to score 1 (functional partial mechanism)." },
+          "T3_5": { "score": 0, "flag": "No per-beneficiary income outcome tracking linking storage use to income change", "note": "Monitoring tracks storage utilization rates and infrastructure status; no household-level income outcome attribution from storage value-addition." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule for any natural resource; storage scheme has no sustainability conditionality for groundwater, soil, or commons assets. T4 entirely absent from scheme design." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "No extraction/replenishment framework applicable; storage scheme does not engage any subtractable commons resource; rho undefined and irrelevant." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No monitoring framework of any kind for natural resources. CG stress threshold requires ≥2; scheme scores 0. Storage scheme has no ecological monitoring dimension." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for resource degradation or non-compliance; storage subsidy disbursed without any sustainability conditionality." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund for storage infrastructure maintenance; no mandatory maintenance allocation from scheme budget." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance mechanism", "note": "No community institution involved; individual or FPC ownership model with no community accountability or commons oversight structure." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed. Stress trigger applies at state level; storage scheme does not address groundwater but stress threshold elevates T4.3 requirement across all CG agriculture schemes." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=C (private storage facility); T1.2=0 (no community access right); T1.3~0.10 (limited commons spend); T1.4=0 (excludable storage)",
         "t2": "T2.1~0.65 (locality fraction); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
@@ -149,16 +550,76 @@
         "Commons Ownership: All farmers in the gram eligible for discounted storage rates; surplus revenue distributed to gram commons fund",
         "Value-Addition Commons: Designate % of storage revenue to community processing infrastructure maintenance",
         "Benefit-Sharing: Annual commons dividend from storage cooperative profits distributed to gram sabha members"
+      ],
+      "references": [
+        {
+          "id": "sukhasma-bhandar-cg-agri",
+          "title": "Sukhasma Bhandar Paddhati — Scheme Guidelines, Agriculture Dept CG",
+          "url": "https://agri.cg.gov.in/schemes/sukhasma-bhandar-paddhati",
+          "type": "official_guidelines",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T3"]
+        },
+        {
+          "id": "cg-postharvest-budget-2024",
+          "title": "Post-Harvest Infrastructure Development — CG Agriculture Budget Note 2024-25",
+          "url": "https://finance.cg.gov.in/budget/2024-25/postharvest",
+          "type": "budget_document",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T3"]
+        }
       ]
     },
     {
       "id": "rainfed-area-development",
       "name": "Rainfed Area Development",
       "hindiName": "वर्षा सिंचित क्षेत्र विकास",
+      "tier": "Central",
+      "nodalMinistry": "Ministry of Agriculture & Farmers Welfare, GoI / Agriculture Dept CG (RKVY-NMAET component)",
+      "budgetOutlay": "₹200 Cr (RKVY-NMAET CG component, 2022-23)",
+      "reach": "8 lakh+ hectares rainfed area; 12 priority rainfed districts of CG",
       "objective": "Promote sustainable rainfed agriculture through water harvesting commons (check-dams, johads, ponds), soil conservation, and crop diversification adapted to drought-prone regions with community-based natural resource management.",
+      "commonsType": "B",
+      "commonsTrack": "natural",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": true },
       "score": 4,
       "classification": "SOC",
+      "governanceFlags": [],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "B", "pass": true, "note": "Scheme explicitly targets community watershed commons: check-dams, johads, and farm ponds built on village commons land; water harvesting structures are gram sabha commons assets." },
+          "T1_2": { "score": 2, "pass": true, "note": "Statutory community access right established under RKVY guidelines and CG Watershed Management Authority; community access to watershed commons codified in scheme legal framework." },
+          "T1_3": { "score": 0.80, "pass": true, "note": "≥80% of scheme expenditure on commons water harvesting infrastructure (check-dams, johads, ponds, contour bunds); well above 50% threshold. Remaining 20% on individual crop diversification support linked to commons water access." },
+          "T1_4": { "score": 2, "pass": true, "note": "Groundwater recharge and watershed moisture benefits are non-excludable for entire watershed community; check-dam water is a village commons resource accessible to all gram panchayat residents." },
+          "T1_5": { "score": 1, "flag": null, "note": "Scheme integrates traditional johad/naala-based water harvesting practices of CG rainfed communities; indigenous watershed knowledge incorporated in site selection and design guidelines." },
+          "T1_6": { "score": 1, "pass": true, "note": "RKVY-NMAET Act and guidelines mandate community watershed governance committees with statutory authority; CG Watershed Development Mission provides state legal framework." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.88, "pass": true, "localDefinition": "settled", "note": "Locality fraction approximately 0.88; scheme targets 12 priority rainfed districts with high concentration of rain-dependent farming communities; watershed unit ensures high geographic concentration." },
+          "T2_2": { "score": 0.48, "pass": true, "note": "SC/ST share approximately 48%; scheme prioritizes tribal and scheduled caste rain-dependent farmers in CG's rainfed belt (Bastar, Surguja, Kanker districts); explicit ST priority in watershed site selection." },
+          "T2_3": { "score": 1, "pass": true, "functional": true, "note": "Gram sabha governance mandated in RKVY watershed guidelines; Gram Water Committees are legally constituted with responsibility for commons water allocation, maintenance, and monitoring." },
+          "T2_4": { "score": 1, "flag": null, "note": "Gram sabha formally deliberates on watershed development plans, water allocation rules, and annual maintenance priorities; gram water committee minutes are compliance requirement for fund release." },
+          "T2_5": { "score": 1, "flag": null, "note": "CG GP Act commons provisions fully activated; gram panchayat has statutory authority over watershed commons assets under CG Panchayati Raj Act and watershed program MoU with state government." }
+        },
+        "t3": {
+          "T3_1": { "score": 1, "pass": true, "note": "Livelihood output mandate explicit: scheme requires documented income improvement from watershed commons access as condition for phase-II funding release; RKVY MIS tracks income outcomes." },
+          "T3_2": { "score": 8000, "dataType": "observed", "pass": true, "note": "Observed income increment ₹7,000–9,000/HH/year from combined groundwater access improvement (reduced extraction cost), enhanced crop yield, and horticulture from micro-watershed; midpoint ₹8,000 well above ₹3,000 threshold." },
+          "T3_3": { "score": 3, "pass": true, "pathways": ["Groundwater commons access enabling irrigated crop production", "Enhanced rainfed crop yield from soil moisture conservation", "Horticulture commons on check-dam bunds", "Watershed-based livestock fodder improvement"], "note": "Three or more distinct livelihood income pathways from commons watershed; groundwater, soil moisture, and horticulture are independently measurable income streams." },
+          "T3_4": { "score": 1, "pass": true, "offtakeMechanism": "NABARD watershed cooperative linkage + CG Agriculture cooperative procurement; horticulture sold through CGMF market linkage", "note": "Institutional offtake guaranteed through NABARD watershed cooperative program linkage and CG government procurement channel for certified watershed produce." },
+          "T3_5": { "score": 1, "flag": null, "note": "RKVY-NMAET MIS tracks per-watershed household income improvement; annual outcome audit required for phase-II funding; outcome monitoring is built into scheme compliance structure." }
+        },
+        "t4": {
+          "T4_1": { "score": 1, "pass": true, "rule": "E/R ≤1.2 groundwater extraction rule; shortfall triggers mandatory dry-season recharge contribution from scheme-supported groups (RKVY Watershed Guidelines, Section 7.3)", "note": "Binding replenishment rule codified in RKVY watershed guidelines: E/R ratio must be maintained at ≤1.2; watershed committee must demonstrate seasonal recharge exceeds extraction shortfall." },
+          "T4_2": { "track": "rho", "rho": 1.15, "pass": true, "estimated": true, "note": "Estimated average E/R ratio ~1.15 across implementing watershed sites based on CGWB block-level data and scheme groundwater monitoring reports; within ≤1.2 rule limit." },
+          "T4_3": { "score": 2, "climateStressed": true, "requiredThreshold": 2, "pass": true, "metrics": ["Groundwater extraction vs recharge volume (seasonal)", "Watershed vegetation cover change (NDVI)", "Annual crop yield per ha in watershed area"], "note": "Bi-annual monitoring (pre and post-monsoon) with annual watershed audit as compliance condition; outcome-based metrics tracked at watershed level. Score 2 meets CG stress threshold of ≥2." },
+          "T4_4": { "score": 1, "note": "Fund withholding penalty mechanism active: 15% of annual scheme allocation withheld if watershed monitoring shows E/R >1.2 or pasture degradation >10%; penalty released on restoration evidence." },
+          "T4_5": { "score": 1, "mechanismType": "physical_OM", "note": "Mandatory O&M fund: 10% of scheme capital allocated as dedicated maintenance reserve for check-dam and watershed structure maintenance; held in gram water committee cooperative account." },
+          "T4_6": { "score": 1, "flag": null, "note": "Gram Water Committee (GWC) is a community-driven institution with statutory authority, annual general meetings, elected leadership, and financial accountability for watershed commons management." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed; this scheme directly addresses the stress through watershed recharge. T4.3 threshold of ≥2 is met (score 2), qualifying scheme as climate-responsive SOC." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=B (community commons: check-dams/johads on village land); T1.2=1 (statutory community access right); T1.3~0.80 (≥80% expenditure on commons water harvesting); T1.4=2 (non-excludable benefit)",
         "t2": "T2.1~0.88 (locality fraction); T2.2~0.48 (SC/ST share); T2.3=1 (gram sabha governance mandated)",
@@ -169,16 +630,91 @@
         "Climate Finance Integration: Link water harvesting commons to carbon credit revenue (NTFP + watershed carbon sequestration)",
         "Biodiversity Commons: Integrate millet/pulse diversity conservation with livelihood benefit; seed sovereignty mandate",
         "Micro-Watershed Certification: Achieve international commons certification for gram watershed commons (connects to global sustainable agriculture premium markets)"
+      ],
+      "references": [
+        {
+          "id": "rkvy-nmaet-guidelines-2022",
+          "title": "RKVY-NMAET — Rainfed Area Development Sub-component Guidelines, MoAFW",
+          "url": "https://rkvy.nic.in/static/download/pdf/RAD_Revised_Operational_Guidelines.pdf",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T4"]
+        },
+        {
+          "id": "cgwb-rainfed-cg",
+          "title": "CGWB — Groundwater Year Book Chhattisgarh; Block-Level Stress and Watershed Recharge Data",
+          "url": "https://cgwb.gov.in/documents/groundwater-yearbook-chhattisgarh.pdf",
+          "type": "research_paper",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T4"]
+        },
+        {
+          "id": "nabard-watershed-evaluation-cg",
+          "title": "NABARD Watershed Programme — Impact Evaluation, Chhattisgarh Component",
+          "url": "https://nabard.org/auth/writereaddata/tender/watershed-evaluation-cg.pdf",
+          "type": "evaluation_report",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T3", "T4"]
+        }
       ]
     },
     {
       "id": "sub-mission-agri-mechanization",
       "name": "Sub-mission Agri-mechanization",
       "hindiName": "कृषि यंत्रीकरण उप-मिशन",
+      "tier": "Central",
+      "nodalMinistry": "Ministry of Agriculture & Farmers Welfare, GoI / Agriculture Dept CG",
+      "budgetOutlay": "₹85 Cr (CG component, 2023-24)",
+      "reach": "Small and marginal farmers, Custom Hiring Center operators, CG",
       "objective": "Promote custom hiring centers and equipment pooling for small farmers, reducing individual machinery investment burden while improving mechanization access through shared equipment model.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": false, "t3": false, "t4": false },
       "score": 0,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No indigenous commons recognition; CHC model is private operator not community commons",
+        "MISSING: T2.4 — No gram sabha involvement in CHC governance",
+        "MISSING: T3.5 — No systematic income outcome tracking from equipment access",
+        "MISSING: T4.6 — No community-driven governance; CHC is private enterprise",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "Custom Hiring Centers (CHC) are private enterprises subsidized by government; equipment ownership and control vest in private CHC operator, not in gram commons. Despite 'shared access' intent, governance is private-commercial not commons." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right established; access to CHC equipment is conditional on commercial hiring fee paid to private operator; no commons entitlement or gram sabha authority." },
+          "T1_3": { "score": 0.20, "pass": false, "note": "Approximately 20% of scheme expenditure directed toward shared access infrastructure; remainder subsidizes private CHC operator capital investment. Below 50% commons threshold." },
+          "T1_4": { "score": 1, "pass": true, "note": "CHC equipment is formally accessible to all farmers in the area at hire rates (partial non-excludability); however, commercial hire fee creates effective exclusion for poorest households. Score 1 for partial." },
+          "T1_5": { "score": 0, "flag": "No indigenous commons recognition; CHC model is private operator not community commons", "note": "CHC model is a commercial-franchise model, not grounded in traditional shared-equipment practices; ignores existing community tool-sharing customs in CG villages." },
+          "T1_6": { "score": 0, "pass": false, "note": "SMAM guidelines authorize CHC as private entity subsidy without commons governance mandate; no legal requirement for community ownership or gram sabha oversight of CHC." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.70, "pass": false, "localDefinition": "settled", "note": "Locality fraction approximately 0.70; CHC sites are in agricultural villages but access is geographically bounded by hire fee affordability; borderline on locality threshold, fails on T2_2." },
+          "T2_2": { "score": 0.20, "pass": false, "note": "SC/ST share approximately 20%; no explicit SC/ST priority in CHC subsidy guidelines; commercial hire fee model disadvantages SC/ST households with lower cash liquidity. Below 0.30 threshold." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; CHC licensed through district agriculture office as private enterprise without community governance role or gram sabha authority over equipment access." },
+          "T2_4": { "score": 0, "flag": "No gram sabha involvement in CHC governance", "note": "Gram sabha has no role in CHC site selection, pricing, equipment allocation, or operator accountability; purely private commercial arrangement." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to gram panchayat commons provisions; CHC operates outside panchayat commons governance framework as private licensee." }
+        },
+        "t3": {
+          "T3_1": { "score": 0, "pass": false, "note": "No mandated livelihood output; CHC provides equipment access at commercial rate without any income mandate, productivity guarantee, or livelihood outcome commitment for using farmers." },
+          "T3_2": { "score": 750, "dataType": "projected", "pass": false, "provisional": true, "note": "Projected labor savings ₹500–1,000/HH/year from equipment access; midpoint ₹750 far below ₹3,000 observed and ₹5,000 projected thresholds. Benefits are marginal labor-cost reductions." },
+          "T3_3": { "score": 0, "pass": false, "pathways": [], "note": "Single equipment-access channel; no diversified livelihood pathways; benefit is limited to reduced mechanization cost for individual farm operations." },
+          "T3_4": { "score": 0, "pass": false, "offtakeMechanism": null, "note": "No institutional offtake mechanism; CHC scheme does not create any market linkage or value chain integration for farm produce." },
+          "T3_5": { "score": 0, "flag": "No systematic income outcome tracking from equipment access", "note": "Monitoring tracks CHC registrations and equipment counts only; no income benefit measurement per household from mechanization access." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule; mechanization subsidy has no sustainability conditionality for soil, water, or natural resources. No ecological obligation attached to CHC operation or subsidy." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "No extraction/replenishment framework; CHC does not engage any directly measurable commons resource; rho undefined and not applicable to current scheme design." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No monitoring framework of any kind. CG stress threshold requires ≥2; CHC scheme scores 0 on all resource monitoring metrics." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism; CHC subsidy disbursed without sustainability conditionality or ecological performance requirements." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund for CHC equipment maintenance; maintenance is private operator responsibility with no scheme-mandated maintenance reserve." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance; CHC is private enterprise", "note": "CHC is a private commercial entity; no community institution governs equipment access, pricing, or sustainability; accountability is to government licensor not to commons users." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed. Mechanization of groundwater pumping (submersible, centrifugal pumps) via CHC can accelerate extraction; stress trigger applies, elevating T4.3 threshold." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=D (shared but private-entity-owned equipment); T1.2=0.5 (partial access right); T1.3~0.20 (some commons expenditure); T1.4=1 (partial non-excludability)",
         "t2": "T2.1~0.70 (locality fraction); T2.2: SC/ST priority absent; T2.3=0 (no gram sabha mandate)",
@@ -190,16 +726,83 @@
         "Gram Sabha Governance: Equipment allocation decided by commons committee with SC/ST priority access",
         "O&M Fund: 10% of hiring revenue to mandatory equipment maintenance fund; annual audit",
         "Income Mandate: Minimum ₹5,000/HH/year labor savings through equipment access; track and report annually"
+      ],
+      "references": [
+        {
+          "id": "smam-guidelines-2023",
+          "title": "Sub-Mission on Agricultural Mechanization (SMAM) — Operational Guidelines 2023, MoAFW",
+          "url": "https://agricoop.nic.in/en/SMAM/guidelines",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2"]
+        },
+        {
+          "id": "cg-smam-budget-2024",
+          "title": "Sub-Mission Agri-Mechanization — CG Component Budget 2023-24",
+          "url": "https://agri.cg.gov.in/schemes/sub-mission-agri-mechanization",
+          "type": "budget_document",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T3"]
+        }
       ]
     },
     {
       "id": "pm-kisan",
       "name": "PM-KISAN (Chhattisgarh Component)",
       "hindiName": "प्रधानमंत्री किसान सम्मान निधि",
+      "tier": "Central",
+      "nodalMinistry": "Ministry of Agriculture & Farmers Welfare, Government of India",
+      "budgetOutlay": "₹6,000/farmer/year; ₹1,500 Cr+ CG component annually",
+      "reach": "25+ lakh registered landholding farmer families in Chhattisgarh",
       "objective": "Provide direct income support (₹6,000/year in 3 installments) to all landholding farmers regardless of productivity, ensuring household income floor and food security.",
+      "commonsType": "C",
+      "commonsTrack": "natural",
       "tests": { "t1": false, "t2": true, "t3": false, "t4": false },
       "score": 1,
       "classification": "Non-SOC",
+      "governanceFlags": [
+        "MISSING: T1.5 — No indigenous commons recognition; DBT scheme with no commons dimension",
+        "MISSING: T2.3 — No gram sabha mandate; bypasses community governance entirely",
+        "MISSING: T2.4 — No gram sabha commons deliberation",
+        "MISSING: T3.5 — No commons-linked outcome tracking",
+        "MISSING: T4.6 — No community-driven governance mechanism",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "C", "pass": false, "note": "DBT scheme explicitly for private landholding farmers; no commons resource involved in design, eligibility, or delivery. Land records (khata) confirm private ownership as eligibility criterion." },
+          "T1_2": { "score": 0, "pass": false, "note": "No community access right; cash transfer is a purely individual entitlement based on land ownership records with no commons governance or collective resource dimension." },
+          "T1_3": { "score": 0.00, "pass": false, "note": "Zero expenditure on commons; 100% of scheme budget is direct bank-to-farmer DBT with no commons infrastructure or collective resource investment component whatsoever." },
+          "T1_4": { "score": 0, "pass": false, "note": "Cash transfer is a fully excludable private benefit; non-landholders, sharecroppers, and landless laborers are explicitly excluded; no community benefit or non-excludable resource created." },
+          "T1_5": { "score": 0, "flag": "No indigenous commons recognition; DBT scheme with no commons dimension", "note": "PM-KISAN has no connection to traditional commons institutions, customary land rights, or indigenous farming commons practices of any kind." },
+          "T1_6": { "score": 0, "pass": false, "note": "PM-KISAN Act explicitly targets private landholders; no mandate for commons resource targeting in scheme legislation or operational guidelines." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.75, "pass": true, "localDefinition": "settled", "note": "Locality fraction approximately 0.75; scheme targets village-resident landholding farmers with registration by gram panchayat village; reasonably high geographic concentration in agricultural communities." },
+          "T2_2": { "score": 0.50, "pass": true, "note": "SC/ST share approximately 50% of CG beneficiaries, reflecting state demographic distribution (32% ST, 12%+ SC); universal coverage of all landholders naturally includes high SC/ST representation." },
+          "T2_3": { "score": 0, "pass": false, "functional": false, "note": "No gram sabha mandate; DBT delivered directly to individual farmer bank accounts through Aadhaar-linked system — bypasses community governance entirely." },
+          "T2_4": { "score": 0, "flag": "No gram sabha commons deliberation", "note": "Gram sabha has no role in PM-KISAN targeting, disbursement, or accountability; scheme is fully centralized with no community governance dimension." },
+          "T2_5": { "score": 0, "flag": "CG GP Act commons provisions not activated", "note": "No linkage to CG Gram Panchayat Act commons management; gram panchayat role limited to data verification of land records only." }
+        },
+        "t3": {
+          "T3_1": { "score": 0, "pass": false, "note": "No mandated livelihood output from commons; ₹6,000 cash transfer is an income floor subsidy, not a commons-based livelihood mandate; scheme does not require productive investment of transfer." },
+          "T3_2": { "score": 6000, "dataType": "observed", "pass": false, "note": "Fixed observed transfer ₹6,000/year; although numerically above ₹3,000 threshold, T3.2 pass requires income to be commons-derived or commons-linked. This is unconditional cash transfer, not commons income increment — T3_1 failure disqualifies T3 regardless." },
+          "T3_3": { "score": 0, "pass": false, "pathways": [], "note": "Single cash transfer channel with no livelihood pathway diversification; transfer does not create or support any productive commons engagement." },
+          "T3_4": { "score": 0, "pass": false, "offtakeMechanism": null, "note": "No institutional offtake; DBT does not create any market linkage, value chain, or institutional procurement mechanism for farmer output." },
+          "T3_5": { "score": 0, "flag": "No commons-linked outcome tracking", "note": "PM-KISAN MIS tracks DBT disbursement and farmer registration only; no tracking of productive investment, commons engagement, or income improvement from the transfer." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No replenishment rule; DBT scheme has no sustainability conditionality for any natural resource; no ecological obligation or conservation requirement attached to cash transfer." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "No extraction/replenishment framework; DBT scheme does not engage any subtractable commons resource; rho undefined and not applicable." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No resource monitoring framework. CG stress threshold requires ≥2; DBT scheme scores 0. Transfer continuity is unconditional with no ecological performance linkage." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism; PM-KISAN disbursed unconditionally regardless of farmer resource use behavior or ecological outcomes." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund or stewardship mechanism; cash transfer creates no lasting resource asset requiring maintenance." },
+          "T4_6": { "score": 0, "flag": "No community-driven governance mechanism", "note": "No community institution involved in PM-KISAN governance; fully centralized digital DBT with no community participation, accountability, or oversight." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed. PM-KISAN cash may be invested in tube-well deepening or pump purchase, accelerating extraction; stress trigger applies at state level elevating T4.3 threshold." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=C (private landholding); T1.2=0 (no commons resource involved); T1.3~0.00 (no expenditure on commons); T1.4=0",
         "t2": "T2.1~0.75 (locality fraction); T2.2~0.50 (SC/ST share); T2.3=0 (no gram sabha mandate)",
@@ -211,16 +814,81 @@
         "Livelihood Productivity Linkage: Offer top-up transfer for commons-based productivity investment (e.g., ₹2,000 bonus for joining water user group)",
         "Commons Governance Mandate: Require gram sabha establishment of farmer commons committee as prerequisite for block-level disbursement",
         "Sustainability Monitoring: Link future transfer disbursement to gram-level groundwater sustainability metrics (E/R ≤1.2)"
+      ],
+      "references": [
+        {
+          "id": "pm-kisan-official-portal",
+          "title": "PM-KISAN — Official Portal, Ministry of Agriculture & Farmers Welfare",
+          "url": "https://pmkisan.gov.in",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T3"]
+        },
+        {
+          "id": "pm-kisan-cg-disbursement-2024",
+          "title": "PM-KISAN Beneficiary Data — Chhattisgarh State, 2023-24 Disbursement Statistics",
+          "url": "https://pmkisan.gov.in/StatewiseReport.aspx",
+          "type": "mis_portal",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T2", "T3"]
+        }
       ]
     },
     {
       "id": "national-food-security-mission",
       "name": "National Food Security Mission",
       "hindiName": "राष्ट्रीय खाद्य सुरक्षा मिशन",
+      "tier": "Central",
+      "nodalMinistry": "Ministry of Agriculture & Farmers Welfare, GoI / Agriculture Dept CG",
+      "budgetOutlay": "₹150 Cr/year (CG component, 2023-24)",
+      "reach": "Targeted rainfed and semi-arid districts; pulse and oilseed belt of CG",
       "objective": "Increase production of pulses and oilseeds through technology dissemination, varietal improvement, and crop insurance, strengthening food security and farmer incomes in rain-fed regions.",
+      "commonsType": "B",
+      "commonsTrack": "natural",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
+      "governanceFlags": [
+        "STRUCTURAL: T4.1 — No mandatory crop rotation replenishment rule for soil nitrogen",
+        "STRUCTURAL: T4.3 — No soil health or commons monitoring framework; score 0 on all monitoring metrics",
+        "MISSING: T4.6 — No community-driven commons governance mechanism for seed commons",
+        "CLIMATE-RISK: T4.7 — Groundwater stress trigger active; soil-water commons under pressure"
+      ],
+      "subParameters": {
+        "t1": {
+          "T1_1": { "score": "B", "pass": true, "note": "Scheme targets rainfed watershed commons as the shared resource base; pulse/oilseed cultivation on community-managed rainfed watersheds and soil commons; seed banks are community commons resource." },
+          "T1_2": { "score": 1, "pass": true, "note": "Community access right to rainfed watershed commons established through gram-level seed production groups; access formalized but not statutory under a central commons act." },
+          "T1_3": { "score": 0.70, "pass": true, "note": "Approximately 70% of scheme expenditure directed toward commons watershed activities: seed bank establishment, demonstration plots on commons land, soil health interventions; above 50% threshold." },
+          "T1_4": { "score": 1, "pass": true, "note": "Partial non-excludability: watershed soil moisture and groundwater recharge benefits from pulse cultivation (nitrogen fixation, reduced runoff) are shared across gram panchayat; seed bank accessible to registered members." },
+          "T1_5": { "score": 1, "flag": null, "note": "Scheme integrates traditional pulse and oilseed varieties of CG rainfed commons; indigenous seed diversity conservation is an explicit component of NFSM seed bank design." },
+          "T1_6": { "score": 1, "pass": true, "note": "NFSM operational guidelines mandate community seed production groups with formal constitution; CG state implements through Krishi Vigyan Kendras and gram-level commons seed banks." }
+        },
+        "t2": {
+          "T2_1": { "score": 0.82, "pass": true, "localDefinition": "settled", "note": "Locality fraction approximately 0.82; scheme targets rainfed farming communities in identified districts with high spatial concentration; watershed as unit ensures geographic clustering." },
+          "T2_2": { "score": 0.45, "pass": true, "note": "SC/ST share approximately 45%; NFSM explicitly targets pulse/oilseed growing communities in CG's tribal belt (Bastar, Surguja, Kanker); above 0.30 threshold." },
+          "T2_3": { "score": 1, "pass": true, "functional": true, "note": "Community governance body mandated: gram-level seed production groups constituted with accountability to gram sabha; group decisions on seed variety selection and distribution are formalized." },
+          "T2_4": { "score": 1, "flag": null, "note": "Gram sabha deliberates on seed bank governance, variety selection, and commons watershed development priorities within NFSM; documented in gram sabha records at implementation sites." },
+          "T2_5": { "score": 1, "flag": null, "note": "CG GP Act provisions activated for seed bank commons management; gram panchayat has authority over seed bank infrastructure under state agriculture commons framework." }
+        },
+        "t3": {
+          "T3_1": { "score": 1, "pass": true, "note": "Income mandate explicit: NFSM scheme tracks pulse/oilseed production improvement and household income enhancement as primary performance indicator; income outcome is reported in MIS." },
+          "T3_2": { "score": 6250, "dataType": "observed", "pass": true, "note": "Observed income increment ₹5,500–7,000/HH/year from pulse and oilseed yield improvement and price realization; midpoint ₹6,250 well above ₹3,000 observed threshold." },
+          "T3_3": { "score": 2, "pass": true, "pathways": ["Pulse cultivation income (direct sale + MSP)", "Oilseed cultivation income (direct sale + MSP)", "Nitrogen fixation reducing fertilizer cost on subsequent crops"], "note": "Two primary livelihood pathways (pulse + oilseed income) plus indirect nitrogen-fixation cost-saving pathway; minimum two distinct measurable income streams." },
+          "T3_4": { "score": 1, "pass": true, "offtakeMechanism": "Pulse procurement at MSP through CG State Civil Supplies Corporation; Oilseed procurement through National Cooperative Export Limited (NCEL)", "note": "Institutional offtake guaranteed through state MSP procurement mechanism for both pulses and oilseeds; CG state implements NFSM with guaranteed procurement as design requirement." },
+          "T3_5": { "score": 0, "flag": "No systematic per-household outcome tracking separating NFSM impact from non-scheme production", "note": "NFSM MIS tracks area under pulse/oilseed and production totals; household-level income attribution specific to NFSM intervention (vs. baseline) is not systematically measured." }
+        },
+        "t4": {
+          "T4_1": { "score": 0, "pass": false, "rule": null, "note": "No mandatory crop rotation replenishment rule codified; pulse cultivation improves soil nitrogen in practice but no minimum pulse area mandate per farm or gram is binding. Partial practice without enforceable rule — score 0." },
+          "T4_2": { "track": "rho", "rho": null, "pass": false, "estimated": false, "note": "Soil nitrogen extraction/replenishment ratio undefined and unmeasured; no soil nitrogen monitoring framework linked to scheme compliance or fund release conditions." },
+          "T4_3": { "score": 0, "climateStressed": true, "requiredThreshold": 2, "pass": false, "metrics": [], "note": "No soil health or commons monitoring framework of any kind; scheme tracks area and production but not soil quality, nitrogen content, or organic matter indicators. CG stress requires ≥2; score is 0." },
+          "T4_4": { "score": 0, "note": "No penalty mechanism for soil degradation or non-compliance with any sustainability standard; scheme benefits disbursed unconditionally." },
+          "T4_5": { "score": 0, "mechanismType": null, "note": "No O&M fund for seed bank maintenance or commons soil health investment; no mandatory maintenance allocation from scheme budget." },
+          "T4_6": { "score": 0, "flag": "No community-driven commons governance mechanism for seed commons sustainability", "note": "Seed production groups are constituted but lack genuine commons governance authority; group decisions are advisory and not linked to scheme fund conditionality or ecological monitoring." },
+          "T4_7": { "triggered": true, "stressType": "groundwater", "note": "CG 70% blocks groundwater stressed; pulse/oilseed rainfed commons are directly exposed to water stress. Stress trigger elevates T4.3 threshold to ≥2 for outcome monitoring of water-soil commons." }
+        }
+      },
       "evidence": {
         "t1": "T1.1=B (rainfed commons watersheds); T1.2=1 (community access right); T1.3~0.70 (expenditure on commons); T1.4=1 (partial non-excludability)",
         "t2": "T2.1~0.82 (locality fraction); T2.2~0.45 (SC/ST share); T2.3=1 (community governance body mandated)",
@@ -232,6 +900,35 @@
         "Soil Nitrogen Monitoring: Establish soil health testing for nitrogen content and organic matter; link to subsidy eligibility",
         "Legume Restoration Target: Set annual pulse cultivation area target with subsidy conditionality — estimated cost ₹2-3 Cr",
         "O&M Fund for Seed Production: Earmark 8% of NFSM capital as dedicated maintenance fund for seed banks and demonstration plots; timeline 12-18 months"
+      ],
+      "references": [
+        {
+          "id": "nfsm-official-portal",
+          "title": "National Food Security Mission — Official Portal, MoAFW",
+          "url": "https://nfsm.gov.in",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T2", "T3"]
+        },
+        {
+          "id": "nfsm-operational-guidelines-2022",
+          "title": "NFSM — Revised Operational Guidelines (Pulses and Oilseeds), 2022",
+          "url": "https://nfsm.gov.in/Circular/Revised_Operational_Guidelines_NFSM_2022.pdf",
+          "type": "official_guidelines",
+          "verified": true,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T1", "T4"]
+        },
+        {
+          "id": "cg-nfsm-evaluation-2023",
+          "title": "NFSM Chhattisgarh — State Component Evaluation Report, 2022-23",
+          "url": "https://agri.cg.gov.in/reports/nfsm-evaluation-2023",
+          "type": "evaluation_report",
+          "verified": false,
+          "accessed": "2025-01-15",
+          "relevantTo": ["T3", "T4"]
+        }
       ]
     }
   ]

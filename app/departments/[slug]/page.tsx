@@ -34,10 +34,20 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
   const getClassificationBadge = (classification: string) => {
     switch (classification) {
       case "SOC": return "bg-[#16A34A] text-white"
-      case "Near-SOC": return "bg-[#B45309] text-white"
+      case "SOC with Governance Gaps": return "bg-[#0D9488] text-white"
+      case "Near-SOC (Operational)": return "bg-[#D97706] text-white"
+      case "Near-SOC (Structural)": return "bg-[#EA580C] text-white"
+      case "Non-SOC": return "bg-[#B91C1C] text-white"
       default: return "bg-gray-500 text-white"
     }
   }
+
+  const socCount = dept.summary.soc || 0
+  const socWithGapsCount = dept.summary.socWithGaps || 0
+  const nearSocOpCount = dept.summary.nearSocOperational || 0
+  const nearSocStructCount = dept.summary.nearSocStructural || 0
+  const nonSocCount = dept.summary.nonSoc || 0
+  const hasDetailedSummary = dept.summary.nearSocOperational !== undefined
 
   return (
     <div className="min-h-screen bg-[#F7F5F0]">
@@ -58,38 +68,106 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
           <div className="print:hidden text-sm text-gray-600 mt-2">Department Diagnostic Report • {new Date().getFullYear()}</div>
         </div>
 
-        {/* Improved Stats Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 print:hidden">
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm col-span-1 md:col-span-3">
-             <div className="flex flex-wrap items-center gap-6">
+        {/* Stats Bar */}
+        {hasDetailedSummary ? (
+          <div className="mb-8 print:hidden space-y-2">
+            <div className="flex items-center justify-between text-sm text-gray-500 font-medium px-1">
+              <span>{dept.totalSchemes} schemes analysed</span>
+              <span>{((socCount + socWithGapsCount) / dept.totalSchemes * 100).toFixed(0)}% commons-aligned</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+              <div className="bg-[#16A34A] text-white p-4 rounded-lg text-center shadow-sm">
+                <div className="text-2xl font-bold">{socCount}</div>
+                <div className="text-[10px] uppercase tracking-wider font-bold opacity-90 leading-tight mt-1">SOC Compliant</div>
+              </div>
+              <div className="bg-[#0D9488] text-white p-4 rounded-lg text-center shadow-sm">
+                <div className="text-2xl font-bold">{socWithGapsCount}</div>
+                <div className="text-[10px] uppercase tracking-wider font-bold opacity-90 leading-tight mt-1">SOC with Gaps</div>
+              </div>
+              <div className="bg-[#D97706] text-white p-4 rounded-lg text-center shadow-sm">
+                <div className="text-2xl font-bold">{nearSocOpCount}</div>
+                <div className="text-[10px] uppercase tracking-wider font-bold opacity-90 leading-tight mt-1">Near-SOC Operational</div>
+              </div>
+              <div className="bg-[#EA580C] text-white p-4 rounded-lg text-center shadow-sm">
+                <div className="text-2xl font-bold">{nearSocStructCount}</div>
+                <div className="text-[10px] uppercase tracking-wider font-bold opacity-90 leading-tight mt-1">Near-SOC Structural</div>
+              </div>
+              <div className="bg-[#B91C1C] text-white p-4 rounded-lg text-center shadow-sm">
+                <div className="text-2xl font-bold">{nonSocCount}</div>
+                <div className="text-[10px] uppercase tracking-wider font-bold opacity-90 leading-tight mt-1">Non-SOC</div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 print:hidden">
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm col-span-1 md:col-span-3">
+               <div className="flex flex-wrap items-center gap-6">
+                  <div>
+                    <div className="text-3xl font-bold text-[#1B4332]">{dept.totalSchemes}</div>
+                    <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Total Schemes Analysed</div>
+                  </div>
+                  <div className="h-10 w-px bg-gray-200 hidden sm:block" />
+                  <div className="flex gap-3">
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full bg-[#16A34A]" />
+                        <span className="text-xl font-bold text-[#16A34A]">{socCount}</span>
+                      </div>
+                      <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">SOC Compliant</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full bg-[#D97706]" />
+                        <span className="text-xl font-bold text-[#D97706]">{nearSocOpCount + nearSocStructCount}</span>
+                      </div>
+                      <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Near-SOC</span>
+                    </div>
+                  </div>
+               </div>
+            </div>
+            <div className="bg-[#1B4332] p-6 rounded-xl text-white shadow-sm flex flex-col justify-center">
+              <div className="text-3xl font-bold">{((socCount / dept.totalSchemes) * 100).toFixed(0)}%</div>
+              <div className="text-[10px] uppercase tracking-wider opacity-80 font-bold">Department Score</div>
+            </div>
+          </div>
+        )}
+
+        {/* Commons Profile */}
+        {dept.commonsProfile && (
+          <div className="bg-white border border-gray-200 p-6 rounded-xl mb-8 shadow-sm print:shadow-none print:border-gray-300">
+            <h3 className="text-lg font-bold text-[#1B4332] mb-4">Commons Profile</h3>
+            <div className="space-y-4">
+              {dept.commonsProfile.primaryCommonsTypes && dept.commonsProfile.primaryCommonsTypes.length > 0 && (
                 <div>
-                  <div className="text-3xl font-bold text-[#1B4332]">{dept.totalSchemes}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Total Schemes Analysed</div>
-                </div>
-                <div className="h-10 w-px bg-gray-200 hidden sm:block" />
-                <div className="flex gap-3">
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-[#16A34A]" />
-                      <span className="text-xl font-bold text-[#16A34A]">{dept.summary.soc}</span>
-                    </div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">SOC Compliant</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-[#D97706]" />
-                      <span className="text-xl font-bold text-[#D97706]">{dept.summary.nearSoc}</span>
-                    </div>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Near-SOC</span>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Commons Types</p>
+                  <div className="flex flex-wrap gap-2">
+                    {dept.commonsProfile.primaryCommonsTypes.map((type) => (
+                      <Badge key={type} className="bg-[#2D6A4F] text-white capitalize">
+                        {type}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
-             </div>
+              )}
+              {dept.commonsProfile.climateStressedZones !== undefined && (
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Climate Vulnerability</p>
+                  {dept.commonsProfile.climateStressedZones ? (
+                    <Badge className="bg-[#EA580C] text-white">Climate-Stressed Zones</Badge>
+                  ) : (
+                    <Badge className="bg-gray-400 text-white">Not Classified as Stressed</Badge>
+                  )}
+                </div>
+              )}
+              {dept.commonsProfile.keyEcologicalContext && (
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Ecological Context</p>
+                  <p className="text-sm text-gray-700">{dept.commonsProfile.keyEcologicalContext}</p>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="bg-[#1B4332] p-6 rounded-xl text-white shadow-sm flex flex-col justify-center">
-            <div className="text-3xl font-bold">{((dept.summary.soc / dept.totalSchemes) * 100).toFixed(0)}%</div>
-            <div className="text-[10px] uppercase tracking-wider opacity-80 font-bold">Department Score</div>
-          </div>
-        </div>
+        )}
 
         {/* Sectoral Dominant Finding */}
         <div className="mb-12 bg-white border border-gray-200 p-8 rounded-xl shadow-sm relative overflow-hidden print:shadow-none print:border-gray-300 print:break-inside-avoid">
@@ -125,49 +203,62 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
                   <TableHead className="text-center font-bold text-[#1B4332]">T3</TableHead>
                   <TableHead className="text-center font-bold text-[#1B4332]">T4</TableHead>
                   <TableHead className="text-center font-bold text-[#1B4332] print:hidden">Score</TableHead>
+                  <TableHead className="text-center font-bold text-[#1B4332] print:hidden">Flags</TableHead>
                   <TableHead className="text-right font-bold text-[#1B4332]">Classification</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {dept.schemes.map((scheme) => (
-                  <TableRow key={scheme.id} className="hover:bg-gray-50/50 print:hover:bg-white print:border-b print:border-b-gray-200">
-                    <TableCell className="font-medium print:text-sm">
-                      <div className="print:hidden">
-                        <Link href={`/schemes/${scheme.id}`} className="text-[#1B4332] hover:underline">
-                          {scheme.name}
-                        </Link>
-                        <div className="text-[10px] text-gray-400 mt-1">{scheme.hindiName}</div>
-                      </div>
-                      <div className="hidden print:block">{scheme.name}</div>
-                    </TableCell>
-                    <TableCell className="text-center print:text-sm">
-                      <span className={`${getStatusStyle(scheme.tests.t1)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
-                        {scheme.tests.t1 ? "✓" : "✗"}
-                      </span>
-                    </TableCell>
-                    <TableCell className="text-center print:text-sm">
-                      <span className={`${getStatusStyle(scheme.tests.t2)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
-                        {scheme.tests.t2 ? "✓" : "✗"}
-                      </span>
-                    </TableCell>
-                    <TableCell className="text-center print:text-sm">
-                      <span className={`${getStatusStyle(scheme.tests.t3)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
-                        {scheme.tests.t3 ? "✓" : "✗"}
-                      </span>
-                    </TableCell>
-                    <TableCell className="text-center print:text-sm">
-                      <span className={`${getStatusStyle(scheme.tests.t4)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
-                        {scheme.tests.t4 ? "✓" : "✗"}
-                      </span>
-                    </TableCell>
-                    <TableCell className="text-center font-bold print:hidden">{scheme.score}/4</TableCell>
-                    <TableCell className="text-right print:text-sm">
-                      <Badge className={`${getClassificationBadge(scheme.classification)} print:text-xs print:px-1 print:py-0`}>
-                        {scheme.classification}
-                      </Badge>
-                    </TableCell>
-                  </TableRow>
-                ))}
+                {dept.schemes.map((scheme) => {
+                  const flagCount = scheme.governanceFlags?.length || 0
+                  return (
+                    <TableRow key={scheme.id} className="hover:bg-gray-50/50 print:hover:bg-white print:border-b print:border-b-gray-200">
+                      <TableCell className="font-medium print:text-sm">
+                        <div className="print:hidden">
+                          <Link href={`/schemes/${scheme.id}`} className="text-[#1B4332] hover:underline">
+                            {scheme.name}
+                          </Link>
+                          <div className="text-[10px] text-gray-400 mt-1">{scheme.hindiName}</div>
+                        </div>
+                        <div className="hidden print:block">{scheme.name}</div>
+                      </TableCell>
+                      <TableCell className="text-center print:text-sm">
+                        <span className={`${getStatusStyle(scheme.tests.t1)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
+                          {scheme.tests.t1 ? "✓" : "✗"}
+                        </span>
+                      </TableCell>
+                      <TableCell className="text-center print:text-sm">
+                        <span className={`${getStatusStyle(scheme.tests.t2)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
+                          {scheme.tests.t2 ? "✓" : "✗"}
+                        </span>
+                      </TableCell>
+                      <TableCell className="text-center print:text-sm">
+                        <span className={`${getStatusStyle(scheme.tests.t3)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
+                          {scheme.tests.t3 ? "✓" : "✗"}
+                        </span>
+                      </TableCell>
+                      <TableCell className="text-center print:text-sm">
+                        <span className={`${getStatusStyle(scheme.tests.t4)} print:bg-white print:text-[#1B4332] print:p-0 print:rounded-none print:text-xs`}>
+                          {scheme.tests.t4 ? "✓" : "✗"}
+                        </span>
+                      </TableCell>
+                      <TableCell className="text-center font-bold print:hidden">{scheme.score}/4</TableCell>
+                      <TableCell className="text-center print:hidden">
+                        {flagCount > 0 ? (
+                          <Badge variant="outline" className="bg-[#FEF08A] text-[#92400E] border-[#D97706]">
+                            {flagCount} flags
+                          </Badge>
+                        ) : (
+                          <span className="text-[10px] text-gray-400 font-medium">none</span>
+                        )}
+                      </TableCell>
+                      <TableCell className="text-right print:text-sm">
+                        <Badge className={`${getClassificationBadge(scheme.classification)} print:text-xs print:px-1 print:py-0`}>
+                          {scheme.classification}
+                        </Badge>
+                      </TableCell>
+                    </TableRow>
+                  )
+                })}
               </TableBody>
             </Table>
           </div>

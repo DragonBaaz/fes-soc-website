@@ -1,13 +1,22 @@
 {
   "department": "Tribal Affairs Department",
   "slug": "tribal-affairs",
+  "state": "Chhattisgarh",
   "totalSchemes": 10,
   "summary": {
     "soc": 2,
-    "nearSoc": 4,
+    "socWithGaps": 0,
+    "nearSocOperational": 0,
+    "nearSocStructural": 4,
     "nonSoc": 4
   },
+  "dominantFinding": "32% tribal population and 1.7 million ha CFR titled create the country's most favourable conditions for forest commons SOC — Van Dhan and FRA-CFR prove it; all four Near-SOC schemes pass T1–T3 but stall at T4 because budget governance rules never mandate commons asset stewardship.",
   "dominantFailure": "Structural bifurcation: forest-based livelihood schemes (Van Dhan, FRA, NTFP) show strong SOC alignment when commons governance is formalized; education/welfare schemes fail T1 because they deliver private goods (scholarships, housing) to individuals. Target population (tribal) alone does not determine SOC — scheme architecture does.",
+  "commonsProfile": {
+    "primaryCommonsTypes": ["Forest Commons (CFR)", "NTFP Commons", "Tribal Knowledge & Craft Commons"],
+    "climateStressedZones": true,
+    "keyEcologicalContext": "7 ST-majority districts with the strongest CFR institutional base in Central India; traditional knowledge, craft traditions, and community governance constitute intangible commons requiring active intergenerational transmission mechanisms"
+  },
   "structuralFindings": {
     "dominantProblem": "The Commons/Private Goods Bifurcation — schemes built on forest commons achieve SOC; schemes delivering education and welfare subsidies fail T1 regardless of beneficiary identity",
     "socException": "Van Dhan Vikas Kendra (4/4) and FRA-CFR Titling (4/4) achieve SOC because both are built around shared forest resources with formal commons governance (CFR committees, Van Dhan cooperatives, TRIFED institutional offtake)",
@@ -159,7 +168,7 @@
       "objective": "Constitutional provision (Article 46) mandating that a percentage of state Plan budget be earmarked for ST welfare; typical allocation 5-7% of Plan outlay across all departments.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (government budget allocation to public commons infrastructure); T1.2=1 (constitutional mandate ensures formal right); T1.3~0.65 (TSP allocates: 40% infrastructure commons/30% education-health/30% subsidies); T1.4=1 (infrastructure has partial non-excludability)",
         "t2": "T2.1~0.95 (100% ST population targeted); T2.2~0.80 (explicitly targets ST; focus on poorest); T2.3=0.5 (GP involved in planning; often top-down delivery)",
@@ -180,7 +189,7 @@
       "objective": "Supplementary funding to Tribal Sub-Plan from Government of India, targeted to accelerated tribal development in high-concentration areas.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (central government supplementary funding to public commons); T1.2=1 (constitutional provision for ST welfare); T1.3~0.60 (SCA directed to education/health/water commons); T1.4=1 (infrastructure has partial non-excludability)",
         "t2": "T2.1~0.95 (100% ST population); T2.2~0.80 (most vulnerable ST; PVTG focus); T2.3=0.5 (GP involvement but limited authority over spending priorities)",
@@ -201,7 +210,7 @@
       "objective": "Marketing support for tribal products and handicrafts through Tribal Cooperative Marketing Development Federation, including buyer linkage, quality certification, GI registration, and online platforms.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=B (tribal products as commons cultural resource; GI certifications have non-excludability characteristics); T1.2=1 (TRIFED is tribal cooperative; collective marketing represents community right); T1.3~0.75 (marketing infrastructure shared among all cooperative members); T1.4=1",
         "t2": "T2.1~0.95 (tribal artisans primary beneficiaries); T2.2~0.60 (poorest artisans; often women); T2.3=1 (TRIFED cooperatives have governance structure)",
@@ -222,7 +231,7 @@
       "objective": "Support tribal NTFP collectors and forest-dependent communities through the Chhattisgarh Minor Forest Produce Federation, which purchases, processes, and markets forest products at fair value.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=B (forest commons under community management; NTFP as shared commons resource); T1.2=1 (FRA CFR recognition formalizes community right); T1.3~0.85 (entire budget to forest commons procurement/processing); T1.4=2 (non-excludable benefit to all member communities)",
         "t2": "T2.1~0.98 (forest-adjacent tribal communities); T2.2~0.70 (poorest collectors; women ≥60%); T2.3=1 (member cooperatives with elected governance)",

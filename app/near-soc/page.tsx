@@ -2,12 +2,17 @@ import { Navbar } from "@/components/navbar"
 import { getAllSchemes } from "@/lib/data"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
+import { Alert, AlertDescription } from "@/components/ui/alert"
 
 export default function NearSOCPage() {
   const allSchemes = getAllSchemes()
-  const nearSOCSchemes = allSchemes.filter(s => s.classification === "Near-SOC")
+  
+  // Split by Operational (T1/T2/T3 fails, T4 passes) vs Structural (T4 fails)
+  const operationalSchemes = allSchemes.filter(s => s.classification === "Near-SOC (Operational)")
+  const structuralSchemes = allSchemes.filter(s => s.classification === "Near-SOC (Structural)")
+  const nearSOCSchemes = [...operationalSchemes, ...structuralSchemes]
 
-  // Group by failing test
+  // Group by failing test (for display within each category)
   const failsT1 = nearSOCSchemes.filter(s => !s.tests.t1)
   const failsT2 = nearSOCSchemes.filter(s => !s.tests.t2)
   const failsT3 = nearSOCSchemes.filter(s => !s.tests.t3)
@@ -62,10 +67,20 @@ export default function NearSOCPage() {
           <h1 className="text-5xl font-bold text-[#1B4332] mb-3">
             Near-SOC Upgrade Watchlist
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 mb-6">
             {nearSOCSchemes.length} schemes passing 3 of 4 SOC tests — one targeted design change away from full compliance
           </p>
         </div>
+
+        {/* Callout for Structural */}
+        <Alert className="bg-[#FEE2E2] border-[#DC2626] text-[#7F1D1D] mb-12">
+          <AlertDescription>
+            <p className="font-bold mb-2">⚠️ Near-SOC (Structural) Is the Highest-Priority Upgrade Target</p>
+            <p className="text-sm">
+              Near-SOC (Structural) schemes require <strong>scheme redesign</strong>, not operational adjustment. A T4 failure means the scheme is generating income from commons without a structural guarantee the commons will survive. These are prioritised for immediate policy intervention.
+            </p>
+          </AlertDescription>
+        </Alert>
 
         {/* Summary Pills */}
         <div className="mb-12 flex flex-wrap gap-3">

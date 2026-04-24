@@ -1,13 +1,22 @@
 {
   "department": "Rural Development Department",
   "slug": "rural-development",
+  "state": "Chhattisgarh",
   "totalSchemes": 8,
   "summary": {
     "soc": 1,
-    "nearSoc": 2,
+    "socWithGaps": 0,
+    "nearSocOperational": 0,
+    "nearSocStructural": 2,
     "nonSoc": 5
   },
+  "dominantFinding": "MGNREGS-NRM proves the model: employment generation and commons asset creation can converge in a single scheme, delivering ₹8,000+/HH/year — yet four sibling schemes deliver individual subsidies while 60% of Chhattisgarh's agriculture rests on degraded commons the same budget could restore.",
   "dominantFailure": "Individual livelihood subsidies fail T1 fundamentally due to private-good delivery architecture; only employment-based commons schemes (MGNREGS-NRM) achieve SOC by converging livelihood and commons asset creation. Post-scheme asset stewardship is the critical missing piece — most commons assets created lack mandatory 10-year governance obligations.",
+  "commonsProfile": {
+    "primaryCommonsTypes": ["NRM Commons (Watersheds, Pastures)", "Village Commons Land", "Community Forests"],
+    "climateStressedZones": true,
+    "keyEcologicalContext": "60%+ rainfed agriculture and extensive degraded commons create both demand and opportunity for NRM-based employment; BIHAN's 5 million SHG women are an untapped commons governance resource awaiting institutional linkage"
+  },
   "structuralFindings": {
     "dominantProblem": "Employment-Based Commons Creation as the SOC Success Model — MGNREGS-NRM is the sole scheme that converges employment generation with commons asset creation",
     "socException": "MGNREGS-NRM (4/4) succeeds because employment generation and commons asset creation converge in a single scheme; the only Rural Development scheme achieving full SOC",
@@ -53,7 +62,7 @@
       "objective": "Provide guaranteed rural employment (100 days/year minimum) at statutory minimum wage to all rural households, ensuring income security during agricultural off-seasons.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (public works on commons public land); T1.2=1 (community commons governance); T1.3~0.75 (≥70% to commons works); T1.4=2 (non-excludable employment access)",
         "t2": "T2.1~0.85 (village-level employment); T2.2~0.65 (SC/ST/women ≥65%); T2.3=1 (Gram Sabha oversight mandated)",
@@ -95,7 +104,7 @@
       "objective": "Implement community-based afforestation on village commons and degraded lands, creating employment through plantation work while building forest commons assets.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (community forest commons on village/revenue land); T1.2=1 (village afforestation on commons land); T1.3~0.80 (≥75% on commons plantation); T1.4=2 (non-excludable benefit)",
         "t2": "T2.1~0.90 (village-level beneficiaries); T2.2~0.55 (SC/ST+women ≥55%); T2.3=1 (community forest committee governance)",

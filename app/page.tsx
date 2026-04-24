@@ -9,7 +9,7 @@ export default function Home() {
   const totalDepartments = allDepartments.length;
   const totalSchemes = allDepartments.reduce((acc, dept) => acc + dept.totalSchemes, 0);
   const totalSoc = allDepartments.reduce((acc, dept) => acc + dept.summary.soc, 0);
-  const totalNearSoc = allDepartments.reduce((acc, dept) => acc + dept.summary.nearSoc, 0);
+  const totalNearSoc = allDepartments.reduce((acc, dept) => acc + (dept.summary.nearSocStructural || 0) + (dept.summary.nearSocOperational || 0), 0);
 
   return (
     <div className="min-h-screen bg-[#F7F5F0]">
@@ -175,17 +175,17 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex h-2 w-full rounded-full overflow-hidden bg-gray-100">
-                      <div 
-                        className="bg-[#16A34A]" 
-                        style={{ width: `${(dept.summary.soc / dept.totalSchemes) * 100}%` }} 
+                      <div
+                        className="bg-[#16A34A]"
+                        style={{ width: `${(dept.summary.soc / dept.totalSchemes) * 100}%` }}
                       />
-                      <div 
-                        className="bg-[#D97706]" 
-                        style={{ width: `${(dept.summary.nearSoc / dept.totalSchemes) * 100}%` }} 
+                      <div
+                        className="bg-[#D97706]"
+                        style={{ width: `${(((dept.summary.nearSocStructural || 0) + (dept.summary.nearSocOperational || 0)) / dept.totalSchemes) * 100}%` }}
                       />
-                      <div 
-                        className="bg-gray-300" 
-                        style={{ width: `${(dept.summary.nonSoc / dept.totalSchemes) * 100}%` }} 
+                      <div
+                        className="bg-gray-300"
+                        style={{ width: `${(dept.summary.nonSoc / dept.totalSchemes) * 100}%` }}
                       />
                     </div>
                     <div className="flex justify-between mt-2 text-[10px] text-gray-500 font-medium">

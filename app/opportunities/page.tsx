@@ -9,7 +9,10 @@ import { allDepartments } from "@/lib/data"
 export default function OpportunitiesPage() {
   const nearSocSchemes = allDepartments.flatMap((dept) =>
     dept.schemes
-      .filter((s) => s.classification === "Near-SOC")
+      .filter((s) =>
+        s.classification === "Near-SOC (Structural)" ||
+        s.classification === "Near-SOC (Operational)"
+      )
       .map((s) => ({ ...s, departmentName: dept.department, departmentSlug: dept.slug }))
   )
 

@@ -1,13 +1,22 @@
 {
   "department": "Forest Department",
   "slug": "forest",
+  "state": "Chhattisgarh",
   "totalSchemes": 13,
   "summary": {
     "soc": 4,
-    "nearSoc": 4,
+    "socWithGaps": 0,
+    "nearSocOperational": 2,
+    "nearSocStructural": 2,
     "nonSoc": 5
   },
+  "dominantFinding": "44% forest cover and 1.7 million ha CFR already titled — the largest in India — gives Forest the strongest legal commons infrastructure of all departments; where schemes stall it is not on commons identity but on enforcement, because external mandates (FRA, Social Audit Act) consistently outperform scheme-embedded provisions.",
   "dominantFailure": "T4 enforcement requires independent oversight; self-monitoring by scheme implementing agency is consistently weak. Private plantation subsidies (Chief Minister Plantation, Afforestation on Government Land) fail T1 structurally. External legal mandates (Forest Rights Act, Forest Management Plans) achieve T4 compliance better than scheme-embedded provisions.",
+  "commonsProfile": {
+    "primaryCommonsTypes": ["Community Forest Rights (CFR)", "NTFP Commons", "JFM Forests"],
+    "climateStressedZones": true,
+    "keyEcologicalContext": "Chhattisgarh holds India's largest CFR titled area (~1.7 million ha); forest commons are legally formalized but T4 enforcement — best delivered by external mandates like FRA and Social Audit Act — remains the binding constraint"
+  },
   "structuralFindings": {
     "dominantProblem": "T4 Sustainability Enforcement Requires External Accountability — internal self-monitoring is insufficient",
     "socException": "Van Dhan Vikas Kendra and Community-Based Forest Management (FRA+JFM integrated) achieve full SOC through formalized commons governance and external sustainability mandates (Social Audit Act, FRA 2006)",
@@ -72,7 +81,7 @@
       "objective": "Manage funds collected from forest diversion for development projects, channeling capital into reforestation and environmental restoration projects.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=A (state forest commons); T1.2=1 (community participation in site selection); T1.3~0.85 (entire allocation directed to forest commons restoration); T1.4=2 (non-excludable at community level)",
         "t2": "T2.1~0.70 (beneficiaries in diversion-adjacent villages); T2.2~0.40 (SC/ST beneficiaries); T2.3=1 (community participation mandated)",
@@ -93,7 +102,7 @@
       "objective": "Provide institutional framework for forest dwellers to collect, process, and market non-timber forest products (tendu leaf, sal seeds, bamboo, mushrooms, honey) with fair-value procurement guarantees.",
       "tests": { "t1": true, "t2": true, "t3": true, "t4": false },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Structural)",
       "evidence": {
         "t1": "T1.1=B (communal forest with NTFP commons rights); T1.2=1 (community use rights via FRA); T1.3~0.70 (≥60% on commons product collection/processing); T1.4=2 (non-excludable benefit)",
         "t2": "T2.1~0.85 (forest-adjacent population); T2.2~0.50 (ST+women-headed HHs ≥50%); T2.3=1 (User Group governance structure)",
@@ -177,7 +186,7 @@
       "objective": "Develop and implement 10-year management plans for state forests and protected areas, specifying conservation priorities, resource extraction limits, and community livelihood integration.",
       "tests": { "t1": true, "t2": true, "t3": false, "t4": true },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Operational)",
       "evidence": {
         "t1": "T1.1=A (state forest commons); T1.2=1 (community governance framework mandated); T1.3~0.80 (≥70% on commons conservation); T1.4=2 (non-excludable benefit)",
         "t2": "T2.1~0.75 (forest-dependent villages prioritized); T2.2~0.45 (ST participation); T2.3=1 (forest committees with community representation)",
@@ -241,7 +250,7 @@
       "objective": "Enhance forest productivity through selective species plantation, tending, and regeneration of degraded forest patches, improving timber yield and NTFP productivity.",
       "tests": { "t1": true, "t2": true, "t3": false, "t4": true },
       "score": 3,
-      "classification": "Near-SOC",
+      "classification": "Near-SOC (Operational)",
       "evidence": {
         "t1": "T1.1=A (state forest commons); T1.2=1 (commons enrichment on public land); T1.3~0.80 (≥75% on commons enrichment); T1.4=2 (non-excludable benefit)",
         "t2": "T2.1~0.80 (forest village beneficiaries); T2.2~0.45 (ST priority); T2.3=1 (gram committee involvement mandated)",
