@@ -21,3 +21,4 @@ node_modules
 
 # Reference docs — local only, not part of the website codebase
 _docs/
+.env
