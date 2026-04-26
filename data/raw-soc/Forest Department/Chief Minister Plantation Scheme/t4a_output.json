@@ -1,0 +1,60 @@
+{
+  "test_id": "T4a",
+  "scheme": "Chief Minister Plantation Scheme",
+  "department": "Forest Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-25",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "The scheme contains no legally-binding or scheme-guideline-mandated obligation to replenish, restore, maintain, or sustain a commons resource. The 3-year survival monitoring requirement (78% target) and the maintenance allowance (₹500/tree/year × 3 years) are incentive mechanisms applied to private tree survival on private land — they are not replenishment obligations for a commons resource. The scheme's cumulative plantation target (42 lakh trees by 2026) is a state green-cover output goal, not a commons regeneration mandate. Official Notification No. 6-CMP/2015/CGN specifies no afforestation ratio on commons, no recharge structure mandate, no rotational grazing protocol, no seed-bank renewal obligation, no knowledge-transmission component — none of the qualifying replenishment/continuity rules per the SOC framework apply. No consequence mechanism for non-compliance with a replenishment obligation exists because no replenishment obligation exists. AUTOMATIC T4 FAIL triggered.",
+      "src": "Official Notification No. 6-CMP/2015/CGN (2024 update — no commons replenishment clause found); Outcome Budget 2025-26; CAG State Accounts Report 2024-25"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "T1.1 (carried from t1_output.json) = 'C' (private land). Track selection rule: T1.1 ≠ E → track = RhoRatio. Q32 (ρ Ratio) is answered; Q33 (Vitality Index) is SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = 'C'"
+    },
+    "Q32": {
+      "v": 0.0,
+      "calc": "ρ = Annual extraction enabled by scheme ÷ Annual replenishment mandated by scheme. Extraction: The scheme mandates tree planting on private land with no commons harvest component; no extraction from commons is enabled or tracked. Extraction from scheme activity = 0 units/year. Replenishment: Plantation survival = 3.5 lakh trees planted × 78% survival rate = 2.73 lakh trees surviving per year (Outcome Budget 2025-26). ρ = 0 ÷ 2.73 lakh = 0.00. NOTE: Concept is structurally inapplicable — there is no commons resource from which extraction occurs. The ρ ratio is computed using the only available data (plantation survival as a proxy for private-land green cover replenishment), yielding ρ = 0.00 technically within PASS threshold (≤1.2). This calculation is analytically vacuous: a ρ of 0 does not reflect a sustainable commons — it reflects the absence of any commons resource to extract from. Marked Estimated per T1.5 = No.",
+      "status": "Estimated",
+      "interp": "PASS — ρ = 0.00 ≤ 1.2 (technical/formal PASS). However, this result is structurally meaningless: the scheme operates on private land with no commons resource extraction. C1_T4.1 = FAIL overrides this result — T4a partial PASS requires both C1_T4.1 = PASS AND ρ ≤ 1.2. Since C1_T4.1 = FAIL (Q30 = No), T4a partial result is FAIL regardless of ρ.",
+      "src": "Outcome Budget 2025-26 (3.5 lakh trees planted, 78% survival); Official Notification No. 6-CMP/2015/CGN (no commons harvest mandate); CAG State Accounts Report 2024-25",
+      "docs": [
+        "Outcome Budget 2025-26 — trees planted (3.5 lakh) and survival rate (78%) data",
+        "Official Notification No. 6-CMP/2015/CGN — no commons extraction clause",
+        "CAG State Accounts Report 2024-25 — plantation records verification"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP — track = RhoRatio (T1.1 = C ≠ E); Vitality Index does not apply",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "PASS (formal, vacuous — ρ = 0.00 ≤ 1.2; but concept inapplicable to private land scheme; moot given C1_T4.1 = FAIL)",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-CMP/2015/CGN (July 2015, updated 2024)",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "t1_output.json (carry_for_later_tests)"
+  ],
+  "unverified_fields": []
+}

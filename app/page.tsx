@@ -10,6 +10,7 @@ export default function Home() {
   const totalSchemes = allDepartments.reduce((acc, dept) => acc + dept.totalSchemes, 0);
   const totalSoc = allDepartments.reduce((acc, dept) => acc + dept.summary.soc, 0);
   const totalNearSoc = allDepartments.reduce((acc, dept) => acc + (dept.summary.nearSocStructural || 0) + (dept.summary.nearSocOperational || 0), 0);
+  const socRate = totalSchemes > 0 ? ((totalSoc / totalSchemes) * 100).toFixed(1) : "0.0";
 
   return (
     <div className="min-h-screen bg-[#F7F5F0]">
@@ -204,7 +205,7 @@ export default function Home() {
           <div className="bg-[#D97706]/10 border border-[#D97706]/20 p-8 text-center rounded-lg">
             <h2 className="text-2xl font-bold text-[#D97706] mb-4">Key Finding</h2>
             <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
-              While 85% of schemes address public needs, only <strong>{((totalSoc/totalSchemes)*100).toFixed(1)}%</strong> meet the full diagnostic criteria for 
+              While 85% of schemes address public needs, only <strong>{socRate}%</strong> meet the full diagnostic criteria for 
               <strong> Shared-Outcome Commons</strong>, highlighting a critical gap in structural community agency.
             </p>
           </div>

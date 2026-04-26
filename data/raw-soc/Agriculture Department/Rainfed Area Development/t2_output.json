@@ -1,0 +1,93 @@
+{
+  "test_id": "T2",
+  "scheme": "Rainfed Area Development",
+  "department": "Agriculture Department, Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2008/CGN-26/2008; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; National Portal; Census 2011 (demographic reference)",
+  "carried_from_t1": {
+    "T1.1": "A1"
+  },
+  "answers": {
+    "Q15": {
+      "v": 420000,
+      "src": "Chhattisgarh Economic Survey 2024-25 ('Beneficiaries: 4.2 lakh farmer households'); CAG State Accounts Report 2024-25 ('4.2 lakh households supported confirmed')"
+    },
+    "Q16": {
+      "v": 420000,
+      "src": "Scheme is geographically targeted to 42 designated rainfed blocks (Notification No. 2008/CGN-26/2008). All beneficiary support (water structures, soil health, crop promotion) is tied to farm operations within these specific blocks. No mechanism exists for benefits to flow to actors outside the 42-block operational area. Beneficiary MIS registration is block-based. Entire 4.2 lakh beneficiaries are local settled farmers within the program blocks."
+    },
+    "Q17": {
+      "v": "Settled_communities — within 42 designated rainfed blocks (GP/block boundary)",
+      "r": "The scheme targets settled agricultural communities in 42 specifically identified semi-arid/dry blocks in Chhattisgarh. These are permanent farming households, not pastoral or mobile communities. The 'local' boundary is the 42-block administrative perimeter as defined in Notification No. 2008/CGN-26/2008.",
+      "src": "Official Notification No. 2008/CGN-26/2008 (42 blocks specified); Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q18": {
+      "v": 1.0,
+      "calc": "θ₂ = Q16 ÷ Q15 = 420,000 ÷ 420,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.0, well above 0.70 threshold. All beneficiaries are local settled farmers within the 42 designated rainfed blocks. No non-local beneficiary pathway exists in scheme design.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: Exact count of marginalised household beneficiaries (SC/ST/de-notified tribes/landless/women-headed/differently-abled-headed/elderly-headed) not stated in programs.md. SECC or PM-JANMAN category-wise beneficiary data for the 42 program blocks not available in the source documents provided. Contextual note: Chhattisgarh has SC+ST population of approximately 42.2% (Census 2011); rainfed semi-arid blocks in Chhattisgarh typically overlap with tribal belts where ST proportion is often 50-70%; combined marginalised HH share is likely ≥ 50%, strongly indicative of θ₃ ≥ 0.40, but not directly verifiable from available data.>>",
+      "r": "Category-wise beneficiary breakdown not available in programs.md or cited sources. Demographic inference suggests high marginalised share but requires SECC/scheme MIS verification.",
+      "src": "<<NOT AVAILABLE IN SOURCE DATA — requires SECC 2011 block-level data or scheme MIS beneficiary categorisation for 42 program blocks>>"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be precisely calculated; Q19 (numerator) is unverified>>",
+      "calc": "θ₃ = Q19 ÷ Q15 = <<UNVERIFIED>> ÷ 420,000 = <<UNVERIFIED>>",
+      "interp": "PASS (estimated) — demographic evidence (SC+ST ≈ 42.2% state-wide; higher in target semi-arid blocks per Census 2011) strongly indicates θ₃ ≥ 0.40. Confirmation requires SECC/PM-JANMAN block-level beneficiary data.",
+      "src": "Census 2011 (Chhattisgarh SC/ST population); Chhattisgarh Economic Survey 2024-25 (beneficiary count)"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Watershed Committees at village level are explicitly mandated as the implementation body in Official Notification No. 2008/CGN-26/2008. These are formally constituted bodies with defined roles in scheme delivery."
+      },
+      "22b": {
+        "v": "Yes",
+        "r": "Watershed committees are mandated as the primary implementation mechanism — not optional or advisory. The Notification assigns them responsibility for construction oversight, beneficiary identification, and program execution. Their role is prescribed, not consultative."
+      },
+      "22c": {
+        "v": "Yes",
+        "r": "CAG State Accounts Report 2024-25 verified the construction of 4,800 water conservation structures and disbursement of ₹420 crores through the watershed committee implementation chain. This level of verified delivery requires active committee functioning during FY 2024-25. Direct evidence: CAG noted functional assessment of structures (88% functional), implying active committee-level oversight. Note: specific meeting minutes/resolution records from watershed committees are not cited in available source data — functionality is inferred from CAG-verified program outcomes."
+      },
+      "docs": [
+        "Official Notification No. 2008/CGN-26/2008 (watershed committee mandate)",
+        "CAG State Accounts Report 2024-25 (verified ₹420 cr delivery and 4,800 structures)"
+      ],
+      "src": "Official Notification No. 2008/CGN-26/2008; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "Women's representation in watershed committees is not documented in available source data. Official Notification No. 2008/CGN-26/2008 does not specify gender composition requirements for watershed committees. Under Chhattisgarh Panchayat Raj institutions, 50% women's reservation applies to elected GP bodies; whether this extends formally to watershed committees constituted under this notification is not confirmed. No data on women's committee membership is available.",
+      "src": "Official Notification No. 2008/CGN-26/2008 (no gender mandate stated); programs.md (no women representation data)"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal grievance or voice mechanism for non-beneficiaries is documented in the programs.md for this scheme. No Social Audit mandate, MIS grievance portal, or ombudsman function is cited in the Notification, CAG report, Economic Survey, Outcome Budget, or National Portal description. The CAG audit is a government accountability mechanism, not a community grievance pathway.",
+      "src": "Official Notification No. 2008/CGN-26/2008; National Portal scheme description; CAG State Accounts Report 2024-25"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS",
+    "C2_theta3": "PASS (estimated — see Q19/Q20 unverified note; demographic evidence strongly indicates θ₃ ≥ 0.40 for Chhattisgarh semi-arid tribal block beneficiaries; direct verification pending SECC/PM-JANMAN data)",
+    "C3_T2.3": "PASS",
+    "enh_T2.4_flag": "GOVERNANCE GAP — T2.4 = No. No formal grievance or voice mechanism documented for local dwellers excluded from scheme benefits. This is a governance gap per framework Section 4.4. Combined with T2.5 gap, qualifies as ≥2 enhancement flags absent — triggers 'SOC with Governance Gaps' classification if all 4 tests pass.",
+    "enh_T2.5_flag": "GOVERNANCE GAP — T2.5 = No. Women's representation in watershed committees not documented; 50% women's reservation under 73rd Amendment applies to GP bodies but application to watershed committees not confirmed. Women-headed households are likely a significant beneficiary group (rainfed farming areas) but governance representation gap exists.",
+    "overall": "PASS (provisional — C2_theta3 estimated from demographics, not verified from SECC/scheme MIS; full confirmation requires block-level beneficiary categorisation data)"
+  },
+  "sources_verified": [
+    "Official Notification No. 2008/CGN-26/2008",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "National Portal (Agriculture > Water Management > Watershed Development)",
+    "Census 2011 — Chhattisgarh SC/ST demographic reference"
+  ],
+  "unverified_fields": ["Q19", "Q20", "Q22"]
+}

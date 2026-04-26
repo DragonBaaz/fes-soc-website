@@ -1,0 +1,89 @@
+{
+  "test_id": "T2",
+  "scheme": "Krishi Yantrikikaran",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2005/CGN-26/2005; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; National Portal (Agriculture > Farm Inputs > Mechanization)",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 140000,
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26 ('Equipment beneficiaries: 1.4 lakh farmers, FY 2024-25')"
+    },
+    "Q16": {
+      "v": 140000,
+      "src": "Official Notification No. 2005/CGN-26/2005 (scheme eligibility restricted to Chhattisgarh farmers with 0.5–5 ha holdings); Outcome Budget 2025-26. All beneficiaries are resident farming households within Chhattisgarh's agricultural blocks."
+    },
+    "Q17": {
+      "v": "Settled_communities — beneficiaries are resident farming households within the block/GP area where their agricultural land is situated, across Chhattisgarh state",
+      "r": "Krishi Yantrikikaran targets small and marginal farmers (0.5–5 ha) within Chhattisgarh. Eligibility is geographically restricted to Chhattisgarh farmers. All subsidy recipients are settled agricultural communities farming land within their own block/GP area. The definition applied is: within the GP/block where the farmer's land is located.",
+      "src": "Official Notification No. 2005/CGN-26/2005"
+    },
+    "Q18": {
+      "v": 1.0,
+      "calc": "θ₂ = Q16 ÷ Q15 = 140,000 ÷ 140,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00 ≥ 0.70. All beneficiaries are local Chhattisgarh resident farmers on their own land. Scheme eligibility is geographically restricted to state-resident farmers, so no non-local beneficiary is possible.",
+      "src": "Official Notification No. 2005/CGN-26/2005; Outcome Budget 2025-26"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No beneficiary-category breakdown (SC/ST/BPL/landless/women-headed counts) is provided in available scheme documents. The notification specifies enhanced 80% subsidy for SC/ST/BPL farmers but does not state their absolute count or share among the 1.4 lakh beneficiaries. CAG and Outcome Budget do not disaggregate by social category.>>",
+      "r": "The scheme explicitly targets SC/ST/BPL with a higher subsidy rate (80% vs 50% for general), indicating design intent to reach marginalised households. However, actual numbers of marginalised beneficiaries are not available from programs.md or referenced official documents.",
+      "src": "Official Notification No. 2005/CGN-26/2005 (subsidy differential for SC/ST/BPL); CAG State Accounts Report 2024-25 (no category breakdown provided)"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be computed — Q19 (marginalised beneficiary count) is unverified. No per-category beneficiary data available.>>",
+      "calc": "θ₃ = Q19 ÷ Q15 — Q19 is UNVERIFIED; calculation not possible",
+      "interp": "FAIL — unable to verify θ₃ ≥ 0.40; Q19 unverified",
+      "src": "Official Notification No. 2005/CGN-26/2005; CAG State Accounts Report 2024-25"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "No formally constituted community representative body (Gram Sabha, User Group, Village Water Committee, SHG federation, JFM Committee, or equivalent) is mandated in the scheme's governance architecture. The scheme is implemented through the District Agriculture Office (top-down administrative channel). Custom Hire Centers (CHCs) are operational equipment-sharing facilities, not governance bodies with decision-making authority over the scheme."
+      },
+      "22b": {
+        "v": "No",
+        "r": "Official Notification No. 2005/CGN-26/2005 specifies 'Implementation: District agriculture office.' No scheme guideline mandates a community body's role in decision-making (beneficiary selection, fund allocation, grievance resolution, or scheme monitoring)."
+      },
+      "22c": {
+        "v": "No",
+        "r": "Since no formally constituted community body exists with a mandated role, there are no meeting records to verify. Functionality criterion is not met."
+      },
+      "docs": [],
+      "src": "Official Notification No. 2005/CGN-26/2005; Outcome Budget 2025-26; National Portal"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community governance body exists for this scheme (Q22 = 0), so women's representation in a governance body cannot be assessed. Enhancement gap noted: scheme has no community governance structure in which women's representation could be mandated or tracked.",
+      "src": "Official Notification No. 2005/CGN-26/2005"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "The National Portal includes a beneficiary portal for status tracking and application facility, but this serves existing applicants/beneficiaries, not excluded non-beneficiaries. No institutionally mandated grievance or voice mechanism for non-beneficiaries (Social Audit process, Gram Sabha complaint channel, MIS grievance portal accessible to excluded persons, or Ombudsman) is specified in the scheme's official notification or guideline documents. Governance gap flagged.",
+      "src": "National Portal (Agriculture > Farm Inputs > Mechanization); Official Notification No. 2005/CGN-26/2005"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS — θ₂ = 1.00 ≥ 0.70; all beneficiaries are local Chhattisgarh resident farmers.",
+    "C2_theta3": "FAIL — θ₃ UNVERIFIED; no per-category beneficiary count available; cannot confirm θ₃ ≥ 0.40.",
+    "C3_T2.3": "FAIL — T2.3 = 0; no formally constituted community body with mandated decision-making role exists in scheme design. Implementation is through District Agriculture Office (top-down).",
+    "enh_T2.4_flag": "GOVERNANCE GAP — T2.4 = 0; no institutionally mandated grievance/voice mechanism for excluded non-beneficiaries. Governance gap recorded.",
+    "enh_T2.5_flag": "GOVERNANCE GAP — T2.5 = 0; no community governance body exists in which to measure women's representation. Scheme has no community governance structure; this is a structural gap beyond representation alone.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 2005/CGN-26/2005",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "National Portal — Agriculture > Farm Inputs > Mechanization"
+  ],
+  "unverified_fields": ["Q19", "Q20"]
+}

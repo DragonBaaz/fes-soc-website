@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "National Food Security Mission",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "NFSM National Guidelines (2007); Chhattisgarh State Budget 2025-26; CAG State Accounts Report 2024-25 (Chhattisgarh); Outcome Budget 2025-26; NFSM Portal (nfsm.gov.in)",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "<<UNVERIFIED: programs.md and cited sources do not provide specific NDMA/DLCC/CGWB officially notified stress-zone classification for the 26 pulses and 12 oilseed districts covered by NFSM in Chhattisgarh. Note: Chhattisgarh has historically drought-affected districts and some NFSM-covered areas may fall in NDMA drought-prone blocks, but official notified status cannot be confirmed from available sources. Conservative treatment: Q34 threshold is evaluated under the standard (≥1) threshold given absence of confirmed notified stress classification.>>",
+      "r": "Stress zone status unverifiable from available data. No CGWB, NDMA, or DLCC classification is cited in programs.md or linked sources for NFSM's Chhattisgarh operational area. Primary resource is private agricultural land (not a groundwater block or forest patch), further limiting direct applicability of standard stress-zone classifications.",
+      "src": "<<UNVERIFIED — not found in State Budget, Economic Survey, CAG Report, Outcome Budget, or NFSM Portal data>>"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "NFSM conducts annual monitoring of production outcomes through: (a) annual Outcome Budget reporting of scheme results (production volumes, productivity improvement, seed adoption rate, fund utilization); (b) CAG annual audit of implementation in Chhattisgarh (verified production, beneficiary count, fund utilization — CAG Report 2024-25); (c) NFSM Portal state-wise annual performance data. Monitoring is conducted exclusively by government agencies. Resource health (soil fertility, water use, biodiversity) is not separately monitored — only production outcomes are tracked. Score = 1 (annual government reporting only). Q35 status is UNVERIFIED; applying standard threshold ≥1. If Q35 were confirmed Yes (stress zone), threshold upgrades to ≥2 and this score would constitute C3 FAIL.",
+      "src": "Outcome Budget 2025-26 (annual results framework); CAG State Accounts Report 2024-25 (annual audit); NFSM Portal (annual state-wise performance)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism exists for violation of replenishment or resource-use rules under NFSM because no such rules are mandated (T4.1 = No/FAIL). NFSM guidelines include fund utilization conditions (states must use funds per guidelines or face next-tranche withholding), but this is a fiscal compliance mechanism, not an ecological or commons-replenishment enforcement sanction. No fine, scheme-benefit withdrawal for ecological non-compliance, or GP-imposed ecological sanction is documented in NFSM guidelines or Chhattisgarh's implementation framework.",
+      "src": "NFSM National Guidelines (2007) — no penalty clause for resource use or replenishment violation found; CAG Report 2024-25 — only fiscal non-utilization flagged, no ecological penalty"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No documented mechanism for post-scheme continuity of commons governance exists under NFSM. The scheme operates on private agricultural land with no commons governance structure to hand over. There is no institutional transfer to Gram Panchayat, BMC, FRC, or community cooperative for commons stewardship after scheme exit. NFSM has operated continuously since 2007 as a government programme, but continuity is through ongoing government allocation — not through an earmarked O&M fund, legal vesting of commons assets, or community institutional handover. No continuity clause for commons resource stewardship appears in NFSM guidelines.",
+      "src": "NFSM National Guidelines (2007) — no post-scheme continuity provision identified; Chhattisgarh State Budget 2025-26 (no O&M or continuity fund line for NFSM)"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Community monitoring is absent from NFSM's design. All monitoring is conducted exclusively by government agencies: district agriculture offices track input distribution and adoption; CAG audits fund utilization; Outcome Budget reports production outcomes. No Gram Sabha social audit, community resource monitoring committee, participatory resource mapping, or community-managed MIS is mandated under NFSM. This is the primary structural gap in the sustainability lock. FLAG: T4.6 = 0 is the most critical upgrade lever — government-only monitoring has documented risk of delayed/suppressed disclosure on agricultural resource stress.",
+      "src": "NFSM National Guidelines (2007) — monitoring structure: district agriculture offices and CAG only; NFSM Portal (portal-based MIS, government-managed); no social audit or community monitoring component in scheme design"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (carried from T4a — no mandatory replenishment rule)",
+    "C2_rho_or_VI": "FAIL (carried from T4a — ρ undefined, no mandated replenishment denominator; private land, not a commons)",
+    "C3_T4.3": "PASS — score = 1 ≥ threshold of 1 (standard; Q35 UNVERIFIED, stress upgrade not confirmed). NOTE: if Q35 confirmed Yes, threshold upgrades to ≥2 and C3 = FAIL.",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No; neither penalty mechanism nor post-scheme continuity mechanism exists",
+    "enh_T4.6_flag": "T4.6 = 0 — CRITICAL STRUCTURAL GAP: monitoring is purely governmental. Primary upgrade lever. Community-based monitoring activation (social audit, participatory mapping) is the minimum corrective action for any T4 redesign pathway.",
+    "overall_T4": "FAIL — C1_T4.1 = FAIL, C2_rho_or_VI = FAIL, C4_T4.4_or_T4.5 = FAIL. Multiple T4 sub-conditions fail. This confirms Near-SOC (Structural) classification if all other tests passed, but combined with T1 and T2 FAIL, overall SOC classification = Adjacent/Non-SOC."
+  },
+  "sources_verified": [
+    "NFSM National Guidelines (2007)",
+    "Chhattisgarh State Budget 2025-26",
+    "CAG State Accounts Report 2024-25 (Chhattisgarh)",
+    "Outcome Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "NFSM Portal (nfsm.gov.in)"
+  ],
+  "unverified_fields": ["Q35"]
+}

@@ -1,0 +1,57 @@
+{
+  "test_id": "T4a",
+  "scheme": "Rajiv Gandhi Kisan Nyay Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "t1_output.json (carry_for_later_tests.T1.1 = C, T1.5 = Yes); Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "Yes"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "RGKNY is a Direct Benefit Transfer income-support scheme paying farmers per quintal of crop produced on their private agricultural land. The scheme's official notification (No. 26-A-2020/CGN) and all operational guidelines contain no replenishment, regeneration, or renewal obligation of any kind. There is no afforestation ratio, no water recharge mandate, no rotational grazing protocol, no seed-bank renewal obligation, no knowledge-transmission component, no NRM spend requirement, and no commons resource whose sustainability the scheme is designed to protect. The scheme design is exclusively a cash transfer mechanism with administrative verification. T4.1 = No → AUTOMATIC T4 FAIL (Near-SOC Structural, requires redesign).",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25 ('Processing: Automated through state agriculture portal. Annual fund transfer to farmer accounts through e-governance system.'); Outcome Budget 2025-26"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = 'C' (private agricultural land). T1.1 ≠ 'E', therefore the RhoRatio track (Track A) applies. Q32 is answered; Q33 is set to SKIP.",
+      "src": "t1_output.json — carry_for_later_tests.T1.1 = C"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ is undefined and inapplicable. RGKNY operates exclusively on private agricultural land (T1.1 = C). There is no commons resource from which extraction occurs; there is no commons replenishment mandate. Both annual extraction from commons (numerator) and annual replenishment mandated by scheme (denominator) are zero for any commons resource — yielding an indeterminate 0/0 ratio. ρ cannot be computed for a scheme with no commons resource. T4 has already failed at Q30 (T4.1 = No). Even if ρ could be estimated, the absence of any replenishment rule means the denominator is structurally zero, confirming FAIL.>>",
+      "calc": "<<UNVERIFIED: extraction from commons = 0 (no commons resource); replenishment mandated by scheme = 0 (no replenishment obligation); ρ = 0/0 = undefined>>",
+      "status": "Measured",
+      "interp": "FAIL — ρ is indeterminate/inapplicable; no commons resource exists; T4 fails at Q30 regardless",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Outcome Budget 2025-26",
+      "docs": []
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "t1_output.json — carry_for_later_tests.T1.1 = C; carry_for_later_tests.T1.5 = Yes",
+    "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Government of Chhattisgarh",
+    "CAG State Accounts Report 2024-25"
+  ],
+  "unverified_fields": ["Q32"]
+}

@@ -1,0 +1,89 @@
+{
+  "test_id": "T2",
+  "scheme": "Kisan Samagra Vikas Yojana",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026); National Portal of India (agriportal.cg.nic.in)",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 2250000,
+      "src": "Outcome Budget 2025-26: 'Farmers benefited: 22.5 lakh (FY 2024-25)'"
+    },
+    "Q16": {
+      "v": 2250000,
+      "src": "Chhattisgarh Economic Survey 2024-25; Official Notification No. 2009/CGN-26/2009 — scheme eligibility is restricted to farmers in Chhattisgarh; all 22.5 lakh registered beneficiaries are resident farmers within the scheme's operational area (28 districts of Chhattisgarh)"
+    },
+    "Q17": {
+      "v": "Settled_communities — 28 districts of Chhattisgarh constitute the scheme's operational area; all beneficiaries are permanently settled farmers residing within this area",
+      "r": "The scheme is a state-level agricultural support programme targeting farmers across all 28 districts of Chhattisgarh. Beneficiaries must be resident farmers with landholding within the state to be eligible per Official Notification No. 2009/CGN-26/2009. The 'local' definition applied is settled communities within the scheme's 28-district operational geography. No pastoral, mobile, or seasonal community definition is applicable.",
+      "src": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q18": {
+      "v": 1.00,
+      "calc": "θ₂ = Q16.v ÷ Q15.v = 2,250,000 ÷ 2,250,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00, well above the threshold of 0.70. All scheme beneficiaries are resident farmers within the operational area of Chhattisgarh. By scheme design, non-resident farmers cannot register or receive benefits.",
+      "src": "Outcome Budget 2025-26; Official Notification No. 2009/CGN-26/2009"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No beneficiary-level social category breakdown (SC/ST/de-notified tribes/landless/women-headed/differently-abled-headed/elderly-headed households) is provided in any cited official source. The scheme notification (No. 2009/CGN-26/2009) targets 'small and marginal farmers' with landholding up to 5 hectares but does not disaggregate beneficiaries by social category. Outcome Budget 2025-26 and CAG Report No. 2 of 2026 report aggregate metrics only. SECC/PM-JANMAN data linked to scheme beneficiary rolls is not available in cited sources.>>",
+      "r": "Chhattisgarh has ST population ~31% and SC ~13% (Census 2011). Small and marginal farmers (≤5 ha) in Chhattisgarh have disproportionately high tribal and SC representation given the state's agrarian structure, suggesting θ₃ is likely ≥ 0.40. However, no verifiable disaggregated beneficiary count is available from scheme documents or official evaluations to confirm this.",
+      "src": ""
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: Cannot compute θ₃ without Q19 value. See Q19 rationale.>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v — Q19 is UNVERIFIED; calculation not possible",
+      "interp": "FAIL — θ₃ cannot be verified; insufficient data to confirm ≥ 0.40 threshold",
+      "src": ""
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Agricultural cooperative societies are formally constituted bodies under the Chhattisgarh Cooperative Societies Act and are identified as implementation vehicles in Official Notification No. 2009/CGN-26/2009 and Chhattisgarh Economic Survey 2024-25. Gram Sabhas (Panchayati Raj institutions) also exist at village level across the 28 operational districts."
+      },
+      "22b": {
+        "v": "No",
+        "r": "Official Notification No. 2009/CGN-26/2009 designates cooperative societies as implementation and delivery mechanisms for scheme components (input subsidy distribution, market linkage). However, no scheme document consulted mandates a formal decision-making role for cooperative societies or Gram Sabhas in scheme governance — benefit allocation, target-setting, or eligibility determination. The body's role is implementation/delivery rather than scheme governance decision-making as required by T2.3 criterion 2. UNVERIFIED from available sources; conservative answer = No."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No meeting minutes, documented resolutions, or records of ≥ 2 formal governance meetings in the prior 12 months (FY 2024-25) for any scheme-level governance body are available in any cited official source. CAG Report No. 2 of 2026 audits financial compliance but does not document governance body meeting records. UNVERIFIED from available sources; conservative answer = No."
+      },
+      "docs": [],
+      "src": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report No. 2 of 2026"
+    },
+    "Q23": {
+      "v": "<<UNVERIFIED: No data on women's representation in cooperative society governance or scheme-level committees is available in cited sources. Formal women's representation figures for agricultural cooperative societies in Chhattisgarh are not documented in programs.md source material.>>",
+      "r": "Conservative interpretation: No. Women's representation in agricultural cooperative governance in India frequently falls below 33%, and no scheme-specific documentation exists in cited sources to confirm compliance with the 73rd Constitutional Amendment threshold. Women-headed households are a defined category in the scheme's marginalised beneficiary group (T2.2), creating a potential governance representation gap.",
+      "src": ""
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal institutionally mandated grievance or voice mechanism for non-beneficiaries (farmers above eligibility threshold, community members excluded from scheme benefits) is documented in any cited official source. The National Portal of India lists a registration portal (agriportal.cg.nic.in) which may include a complaint function, but no social audit provision, standalone MIS grievance portal, or ombudsman mechanism specific to this scheme is mentioned in Official Notification No. 2009/CGN-26/2009, CAG Report No. 2 of 2026, or Outcome Budget 2025-26. T2.4 = No → governance gap flagged.",
+      "src": "Official Notification No. 2009/CGN-26/2009; National Portal of India; CAG State Accounts Report No. 2 of 2026"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS — θ₂ = 1.00 ≥ 0.70; all 22.5 lakh beneficiaries are resident farmers within Chhattisgarh's 28-district operational area",
+    "C2_theta3": "FAIL — θ₃ UNVERIFIED; marginalised beneficiary count (Q19) not available from cited sources; cannot confirm ≥ 0.40 threshold",
+    "C3_T2.3": "FAIL — T2.3 = 0; 22b (decision-making mandate) and 22c (functional meeting records) both unconfirmed/No; no formally mandated functional governance body with documented meetings identified in scheme documents",
+    "enh_T2.4_flag": "GOVERNANCE GAP: T2.4 = No — no formal grievance/voice mechanism documented for non-beneficiaries; flag recorded per framework Section 3 and T2.4 governance gap trigger",
+    "enh_T2.5_flag": "GOVERNANCE GAP: T2.5 UNVERIFIED (treated as No) — women's representation in governance body not documented; potential gap between women-headed household beneficiary inclusion and governance representation; upgrade pathway flag per T2.5 cross-check",
+    "overall": "FAIL — C2 (θ₃ unverified) and C3 (T2.3=0) both fail. T2 FAIL. Given T1 also fails, scheme classification is Adjacent/Non-SOC at minimum."
+  },
+  "sources_verified": [
+    "Official Notification No. 2009/CGN-26/2009",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026)",
+    "National Portal of India (agriportal.cg.nic.in)"
+  ],
+  "unverified_fields": ["Q19", "Q20", "Q23"]
+}

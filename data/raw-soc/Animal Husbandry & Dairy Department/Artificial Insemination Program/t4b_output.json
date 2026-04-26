@@ -1,0 +1,52 @@
+{
+  "test_id": "T4b",
+  "scheme": "Artificial Insemination Program",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "carried_from_t4a": {
+    "C1_T4.1": "UNVERIFIED",
+    "C2_rho_or_VI": "UNVERIFIED",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The primary resource (state semen preservation stations and genetic material — T1.1=A1) is physical government infrastructure and is not classified under any documented climate/ecological stress category applicable to the ρ Ratio track: not a CGWB over-exploited groundwater block, not an ISFR high-fire-risk forest zone, not an NDMA drought-prone pasture/dryland resource. The semen stations are built infrastructure; climate stress indicators under T4.7 do not apply to this resource type. Q34 threshold therefore remains ≥ 1.",
+      "src": "CGWB groundwater assessment (general reference); NDMA drought classification (not applicable to AI semen station infrastructure); t4a_output.json — track=RhoRatio, T1.1=A1"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Annual monitoring is confirmed: CAG State Accounts 2024-25 audits fund utilization and genetic improvement success rates annually; OUTCOME section documents annual tracking of AI procedures completed, genetic improvement rate, calves born, herd productivity, and milk yield increase. This constitutes annual reporting by a government agency (Score = 1). No community-accessible quarterly report or real-time dashboard is referenced. Q35 = No, so threshold is ≥ 1 → T4.3 = 1 PASSES.",
+      "src": "programs.md — OUTCOME: 'AI procedures completed annually, genetic improvement rate documented'; CAG State Accounts 2024-25: 'AI program fund utilization examined, genetic improvement success rates verified'"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism for violation of replenishment/use rules is documented in programs.md. The ANNOUNCEMENT references 'SOP' and 'performance expectations' but does not articulate any consequence for non-compliance (no fine, no scheme-benefit withdrawal, no access suspension, no legal action trigger). CAG audit findings may generate administrative accountability but the scheme guidelines themselves do not contain a defined enforcement consequence. T4.4 = 0.",
+      "src": "programs.md — ANNOUNCEMENT: 'SOP, performance expectations' (no consequence language); CAG State Accounts 2024-25 (audit oversight only, no scheme-level penalty clause)"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No documented post-scheme continuity mechanism (O&M fund, asset transfer plan to GP/BMC/cooperative, continuity clause, legal vesting) is referenced in programs.md. The AI program is a standing government scheme, not a time-limited project with a defined exit; however, the framework requires a designated fund or institutional mechanism explicitly designed into the scheme for post-intervention continuity — not merely assumed from general government operations. No such provision is evidenced. T4.5 = 0.",
+      "src": "programs.md — BUDGET, ANNOUNCEMENT, PORTAL sections (no O&M fund, no continuity clause, no asset transfer plan referenced)"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "No community monitoring role is mentioned in programs.md. Monitoring of AI procedures, genetic improvement rates, and herd productivity is conducted entirely by the state Animal Husbandry Department and audited by CAG. Farmers track individual animal outcomes (milk yield, calves) but there is no scheme-mandated community monitoring mechanism (Gram Sabha social audit, community committee, participatory resource assessment). T4.6 = 0. Enhancement gap flagged as primary upgrade lever.",
+      "src": "programs.md — OUTCOME: all metrics tracked by department; CAG audit: departmental monitoring only; no community monitoring mechanism referenced in any section"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "UNVERIFIED (from T4a — SOP and CAG oversight suggest likely PASS; scheme-specific replenishment obligation with defined consequence not confirmed)",
+    "C2_rho_or_VI": "UNVERIFIED (from T4a — design-based estimate ρ ≤ 1.0; Estimated per T1.5=No; must be verified with production/usage data)",
+    "C3_T4.3": "PASS",
+    "C4_T4.4_or_T4.5": "FAIL",
+    "enh_T4.6_flag": "GOVERNANCE GAP — community monitoring entirely absent; all monitoring is departmental only; T4.6=0 is the primary structural upgrade lever for this scheme",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "programs.md — Animal Husbandry & Dairy Department / Artificial Insemination Program (ANNOUNCEMENT, OUTCOME, BUDGET, CAG sections)",
+    "t4a_output.json — carry_for_t4b values (C1_T4.1=UNVERIFIED, C2_rho_or_VI=UNVERIFIED, track=RhoRatio)",
+    "CAG State Accounts 2024-25"
+  ],
+  "unverified_fields": []
+}

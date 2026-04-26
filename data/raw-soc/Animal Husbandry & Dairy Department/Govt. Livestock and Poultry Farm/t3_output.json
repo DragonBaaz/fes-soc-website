@@ -1,0 +1,66 @@
+{
+  "test_id": "T3",
+  "scheme": "Govt. Livestock and Poultry Farm",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations; SURVEY — Economic Survey on government livestock and poultry farms; OUTCOME — Implementation outcome records; BUDGET — State budget allocation; CAG State Accounts Report Chhattisgarh 2024-25; PORTAL — National Portal listing",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme explicitly articulates livelihood pathways from the commons. OUTCOME records confirm: 'Quality animal stock produced and supplied to farmers' and 'Farmer training programs active' — both are scheme outputs that directly enable income. The Economic Survey (SURVEY) states the farm supports 'quality animal stock multiplication' and 'farmer training for improved livestock management practices,' articulating the economic pathway from commons (government farm) to farmer income. The ANNOUNCEMENT specifies 'farmer access and eligibility criteria' and 'technical support provision framework,' documenting the income-enabling mechanism in scheme design. Meets T3.1 condition (b): explicit livelihood pathway articulated in scheme design documents.",
+      "src": "SURVEY; OUTCOME; ANNOUNCEMENT"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study, impact assessment, or MIS-verified household income data for this scheme identified in documents reviewed",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "<<UNVERIFIED: No DPR income projection per beneficiary household per year available in scheme documents reviewed. BUDGET, SURVEY, OUTCOME, and ANNOUNCEMENT describe scheme operations and outputs but do not provide a household-level incremental income (ΔY) figure or cost-benefit model projection.>>",
+        "calc": "Not available — no per-HH income projection cited in reviewed documents",
+        "interp": "FAIL-PROVISIONAL",
+        "src": "BUDGET; SURVEY; OUTCOME; ANNOUNCEMENT"
+      },
+      "governing": "Projected-Provisional",
+      "r": "No Observed ΔY data exists (no evaluation study or MIS income tracking for beneficiary households). Projected ΔY would govern but is also unverified — no per-household income increment figure available in scheme documents. Cannot confirm ΔY against the ₹5,000/HH/year projected threshold. Field marked UNVERIFIED; C2_deltaY assessed as FAIL.",
+      "docs": [
+        "CAG State Accounts Report Chhattisgarh 2024-25 — covers farm operational costs and genetic program effectiveness, not beneficiary household income outcomes",
+        "SURVEY — Economic Survey provides qualitative description of farm functions; no household income figure cited"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways explicitly enabled by scheme design: (1) Livestock-based income — quality cattle, buffalo, and goat stock supplied to farmers (ANNOUNCEMENT specifies livestock animal types and breeding objectives) enabling dairy production (milk sales), breeding animal sales, and related income. (2) Poultry-based income — quality poultry birds supplied to farmers (the scheme title 'Govt. Livestock and Poultry Farm' and PORTAL listing as a Breeding Center confirm poultry as a distinct scheme component) enabling egg production and poultry meat income. Both pathways are articulated in official scheme documents as separate farm operations with distinct animal types and breeding objectives. A third pathway (farmer training enabling technology adoption and productivity gains) is mentioned in SURVEY and OUTCOME but is an enabling mechanism rather than a distinct income pathway in itself.",
+      "src": "ANNOUNCEMENT; SURVEY; PORTAL"
+    },
+    "Q28": {
+      "v": "<<UNVERIFIED: No specific institutional offtake mechanism for farmer-produced livestock or poultry products (milk, eggs, meat) identified in the scheme documents reviewed. ANNOUNCEMENT, SURVEY, OUTCOME, BUDGET, and PORTAL describe the scheme as an institutional supply/breeding center providing quality animals TO farmers but do not document a downstream procurement guarantee, guaranteed buyer, or institutional demand channel FOR farmer-produced livestock/poultry output. CGMFED (Chhattisgarh State Cooperative Dairy Federation) and Chhattisgarh state poultry development programs may functionally serve this role for beneficiary farmers but are not referenced in the reviewed scheme documents and cannot be confirmed as scheme-linked institutional offtake.>>",
+      "r": "T3.4 requires a guaranteed buyer or institutional demand channel for produce/services derived from the commons (government farm). The scheme documents describe institutional supply to farmers (government distributes quality animals) but not institutional procurement from farmers for their produce. Without a verified linkage to a procurement scheme, MSP, or certified buyer network in scheme guidelines, T3.4 cannot be confirmed as Yes. Marked UNVERIFIED; C4_T3.4 assessed as FAIL.",
+      "src": "ANNOUNCEMENT; PORTAL; OUTCOME"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "OUTCOME section records that scheme tracks 'production metrics through farm records and animal performance data' — these are government farm-level operational metrics (genetic performance of breeding stock, animal productivity at the government facility), not household-level non-monetary indicators. No tracking of food sufficiency months, dietary diversity (food species accessed from commons), livestock feeding days secured by beneficiary households, or access to medicinal resources is documented in scheme records.",
+      "src": "OUTCOME"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "FAIL",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "FAIL",
+    "enh_T3.5_flag": "T3.5 = No — only farm-level production metrics tracked; no household non-monetary indicators. ΔY is UNVERIFIED so near-threshold assessment is not possible.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations",
+    "SURVEY — Economic Survey: government livestock and poultry farms as breeding centers and technology demonstration units",
+    "OUTCOME — Implementation outcome records: quality stock supplied to farmers, training active, production metrics tracked",
+    "BUDGET — State budget allocation for government livestock and poultry farm infrastructure",
+    "CAG State Accounts Report Chhattisgarh 2024-25",
+    "PORTAL — National Portal listing under Agriculture > Animal Husbandry > Breeding Centers"
+  ],
+  "unverified_fields": ["Q26", "Q28"]
+}

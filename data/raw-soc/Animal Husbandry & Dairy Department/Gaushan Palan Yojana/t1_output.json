@@ -1,0 +1,104 @@
+{
+  "test_id": "T1",
+  "scheme": "Gaushan Palan Yojana",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (BUDGET, SURVEY, OUTCOME, ANNOUNCEMENT, CAG, PORTAL sections); CAG State Accounts 2024-25; Economic Survey; National Portal (Agriculture > Animal Husbandry > Cattle Development)",
+  "answers": {
+    "Q1": {
+      "v": "Gaushan Palan Yojana",
+      "src": "programs.md — scheme heading; National Portal listing under Agriculture > Animal Husbandry > Cattle Development"
+    },
+    "Q2": {
+      "v": "Animal Husbandry & Dairy Department",
+      "src": "programs.md — department classification; National Portal scheme listing"
+    },
+    "Q3": {
+      "v": "Official state notification establishing cattle rearing and heritage breed conservation scheme; CAG State Accounts 2024-25; Economic Survey (cattle rearing and indigenous breed conservation chapter); National Portal scheme page",
+      "src": "programs.md — ANNOUNCEMENT, CAG, PORTAL, SURVEY sections"
+    },
+    "Q4": {
+      "v": "B",
+      "r": "The primary resource is community cattle shelters (Gaushalas) governed as Common Pool Resources under community/traditional institutions. The scheme name 'Gaushan Palan' explicitly references community cattle shelters, which in the Indian context are typically registered societies, GP-affiliated trusts, or community bodies — not individually owned. The heritage/indigenous breed genetic commons maintained within these shelters constitutes an intangible co-resource. Classification as B (Community CPR) is the most defensible given the scheme design; if subsequent audit reveals scheme operates exclusively through individually-owned private cattle without community governance, reclassify to C (auto-FAIL). No private-land-only classification is supported by the name or Economic Survey description.",
+      "src": "programs.md — SURVEY ('sustainable cattle rearing and indigenous breed conservation'), ANNOUNCEMENT ('cattle breed selection (indigenous/heritage)'), PORTAL ('heritage conservation efforts'); scheme name etymology (Gaushan = community cow shelter)"
+    },
+    "Q5": {
+      "v": "Community cattle shelters (Gaushalas) and heritage/indigenous cattle breed populations within state jurisdiction. Scheme covers: (a) physical — community shelter construction, feed provision, veterinary infrastructure; (b) intangible — indigenous/heritage breed genetic pool and associated traditional husbandry knowledge. Geographic extent determined by state government notification; district-level implementation. Breed types: indigenous/heritage cattle as specified in notification. Shelter boundaries and herd counts per Gaushala are the operative resource units.",
+      "src": "programs.md — ANNOUNCEMENT, OUTCOME, SURVEY, PORTAL sections"
+    },
+    "Q6": {
+      "v": "No",
+      "r": "Available documentation does not reference any GPS-coordinate survey, GP resolution with boundary map, or public boundary document demarcating the Gaushala resource area or the heritage breed conservation zone. The notification specifies beneficiary eligibility and subsidy parameters but not spatial demarcation of the commons resource. This triggers a T4.2 measurement risk flag: ρ ratio or Vitality Index estimates will be based on scheme monitoring data rather than independently demarcated resource boundaries.",
+      "src": "programs.md — ANNOUNCEMENT section (specifies eligibility, subsidy, breed criteria but no boundary demarcation document referenced)"
+    },
+    "Q7": {
+      "v": "1",
+      "r": "Community access to Gaushalas and indigenous cattle breeds rests on customary and traditionally recognised rights. Gram Panchayats have customary authority over community cattle management under Panchayat Raj Acts (state-specific). The right to maintain community cattle shelters is culturally established and acknowledged by state government through the scheme itself. Score = 1 (customary/traditionally recognised). Statutory codification under FRA or PESA does not apply to cattle genetic resources; however, the Animal Husbandry department notification provides quasi-statutory recognition of community cattle management practices.",
+      "src": "programs.md — ANNOUNCEMENT ('Official notification establishing cattle rearing scheme'); Panchayat Raj Act provisions for village common resources; scheme design implicitly recognises customary right"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, land-use change notification, SEZ declaration, compulsory acquisition proceeding, or equivalent encumbrance on Gaushala land or heritage cattle gene pool resources is mentioned in any available source. CAG audit (2024-25) reviews scheme compliance without flagging any legal override. Classification: PASS.",
+      "src": "programs.md — CAG section; PORTAL section; ANNOUNCEMENT section — no encumbrance flagged"
+    },
+    "Q9": {
+      "v": "<<UNVERIFIED: Specific annual or project-period expenditure figure not available in programs.md or cited sources>>",
+      "unit": "₹Cr",
+      "period": "<<UNVERIFIED: FY not specified in available data>>",
+      "breakdown": "Budget components listed: cattle shelter construction subsidy, feed provision support, breeding stock supply, veterinary care, heritage breed conservation, animal health insurance — no rupee amounts provided per component",
+      "src": "programs.md — BUDGET section (components listed, amounts absent); CAG 2024-25 (audit verifies disbursement categories but provides no aggregate figures in available extract)"
+    },
+    "Q10": {
+      "v": "<<UNVERIFIED: Expenditure on commons components (heritage breed conservation, community Gaushala infrastructure, community institution strengthening) cannot be isolated without line-item budget data>>",
+      "unit": "₹Cr",
+      "r": "Qualifying commons expenditure would include: heritage breed conservation programme costs, community Gaushala shelter construction (if serving community pool not individual farms), knowledge documentation, and breed registry maintenance. Individually-directed subsidies (feed, veterinary care, insurance for private cattle) would be excluded. Without line-item figures, numerator cannot be determined.",
+      "src": "programs.md — BUDGET section; CAG 2024-25 — no disaggregated amounts in available extract"
+    },
+    "Q11": {
+      "v": "<<UNVERIFIED: Private-asset expenditure (individual feed subsidies, individual veterinary care, individual insurance, individually-owned cattle procurement) cannot be quantified without line-item budget>>",
+      "unit": "₹Cr",
+      "r": "Expenditure on privately-owned cattle (feed, vet care, insurance, individual breeding stock) would count as private-asset spend. Cannot determine without budget breakdown.",
+      "src": "programs.md — BUDGET section"
+    },
+    "Q12": {
+      "v": "<<UNVERIFIED: θ₁ cannot be computed — numerator (Q10) and denominator (Q9) both unverified>>",
+      "calc": "θ₁ = Q10.v ÷ Q9.v — computation not possible without financial data",
+      "interp": "<<UNVERIFIED: PASS or FAIL cannot be determined. Qualitative note: if the dominant budget share goes to individually-directed livestock subsidies (feed, vet, insurance, private shelter), θ₁ is likely < 0.50 → FAIL. If budget is primarily channelled through community Gaushalas for commons-level breed conservation and shared infrastructure, θ₁ could meet the 0.50 threshold.>>",
+      "src": "programs.md — BUDGET section"
+    },
+    "Q13": {
+      "docs": [
+        "Official state notification establishing Gaushan Palan Yojana (cited in programs.md ANNOUNCEMENT)",
+        "CAG State Accounts 2024-25 — cattle rearing scheme expenditure audit",
+        "Economic Survey — Gaushan Palan Yojana section",
+        "National Portal listing: Agriculture > Animal Husbandry > Cattle Development"
+      ]
+    },
+    "Q14": {
+      "v": "1",
+      "r": "Benefits are partially excludable. Scheme subsidies (shelter, feed, veterinary care, insurance) flow to enrolled and eligible beneficiary households — access is conditional on meeting eligibility criteria and registration, creating excludability for non-enrolled individuals. However, the heritage breed conservation component (maintaining indigenous cattle genetic diversity) generates a non-excludable benefit accessible to the broader farming community and future generations. Score = 1 (partially excludable). Cross-flag: since exclusion is eligibility-based rather than fee-based, the equity cross-check with T2.2 (marginalised beneficiary share) is recommended but not automatic under the fee-based exclusion trigger.",
+      "src": "programs.md — ANNOUNCEMENT ('Beneficiary eligibility criteria'), OUTCOME ('Beneficiaries enrolled'), SURVEY ('heritage cattle breeds... cultural preservation' — community-level benefit)"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "B",
+    "T1.5": "No"
+  },
+  "pass_verification": {
+    "C1_T1.1": "PASS",
+    "C2_T1.2": "PASS",
+    "C3_theta1": "<<UNVERIFIED: Financial data (Q9, Q10, Q11) not available; θ₁ cannot be computed>>",
+    "C4_T1.4": "PASS",
+    "C5_T1.6": "PASS",
+    "overall": "<<UNVERIFIED: All hard-gate conditions (C1, C2, C4, C5) individually PASS, but C3 (θ₁ ≥ 0.50) cannot be verified without line-item budget data. Test 1 classification is conditionally PASS pending financial verification. If θ₁ < 0.50 upon financial audit, overall = FAIL.>>"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET section",
+    "programs.md — SURVEY section (Economic Survey quote)",
+    "programs.md — OUTCOME section",
+    "programs.md — ANNOUNCEMENT section",
+    "programs.md — CAG section (CAG State Accounts 2024-25)",
+    "programs.md — PORTAL section (National Portal)"
+  ],
+  "unverified_fields": ["Q9", "Q10", "Q11", "Q12"]
+}

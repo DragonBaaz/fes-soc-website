@@ -1,0 +1,66 @@
+{
+  "test_id": "T3",
+  "scheme": "Gaushan Palan Yojana",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (BUDGET, SURVEY, OUTCOME, ANNOUNCEMENT, CAG, PORTAL sections); CAG State Accounts 2024-25; Economic Survey; National Portal listing",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme explicitly articulates an income-generation pathway in scheme outcome documents: 'Income generated through milk and animal sales' (programs.md OUTCOME). The Economic Survey further confirms the scheme 'contributes to agricultural sustainability'. The official notification specifies a 'performance monitoring framework for cattle management', confirming a mandated output-tracking mechanism that includes livelihood outcomes. Both milk production and animal sale constitute articulated economic pathways from commons (heritage breed cattle) to beneficiary income, meeting the T3.1 'Yes' condition.",
+      "src": "programs.md — OUTCOME section ('Income generated through milk and animal sales'); SURVEY section ('contributing to agricultural sustainability'); ANNOUNCEMENT section ('performance monitoring framework for cattle management')"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study, MIS-verified income data, or household survey with ΔY per beneficiary household is referenced in available sources",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "<<UNVERIFIED: No DPR income projection or model-based ΔY estimate is available in programs.md or cited source extracts>>",
+        "calc": "programs.md BUDGET section lists expenditure components but provides no projected income per beneficiary household figure",
+        "interp": "UNVERIFIED — cannot determine PASS or FAIL-PROVISIONAL",
+        "src": "programs.md — BUDGET, ANNOUNCEMENT sections (no ΔY figure present)"
+      },
+      "governing": "<<UNVERIFIED: Neither Observed nor Projected ΔY figure is available from verified sources>>",
+      "r": "Observed ΔY is not available — no evaluation study or MIS income data cited. Projected ΔY from DPR/scheme design is also not specified in available documentation. Income from milk and cattle sales is confirmed as a scheme outcome (OUTCOME section) but per-household annual increment cannot be quantified. Both thresholds (₹3,000 observed; ₹5,000 projected) therefore cannot be assessed.",
+      "docs": [
+        "programs.md — OUTCOME section (qualitative income reference only)",
+        "CAG State Accounts 2024-25 — audits expenditure, not beneficiary income ΔY"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways are explicitly articulated in scheme outcome documentation: (1) Milk production and dairy sales — confirmed in programs.md OUTCOME ('Income generated through milk and animal sales'); (2) Animal/cattle sales — explicitly stated in the same OUTCOME section. A third potential pathway (manure, biogas, draught power from heritage cattle) is not explicitly mentioned in scheme documents and therefore not counted per the counting rule. Heritage breed premium or GI-tag premium is also not mentioned. Score = 2 (two explicitly articulated pathways).",
+      "src": "programs.md — OUTCOME section ('Income generated through milk and animal sales')"
+    },
+    "Q28": {
+      "v": "<<UNVERIFIED: No institutional offtake mechanism explicitly described in available scheme documentation>>",
+      "r": "programs.md does not mention MSP procurement, government agency offtake agreement (TDCCOL/NAFED/state dairy federation), cooperative milk procurement linkage, fair-trade certification, GI tag with buyer network, or any equivalent institutional demand channel for milk or cattle produce from scheme beneficiaries. The PORTAL cross-references 'national indigenous breed preservation initiatives' but does not specify an offtake mechanism. Typical state animal husbandry schemes in India link to state dairy cooperatives or government cattle markets, but this cannot be confirmed for Gaushan Palan Yojana from available sources. Marking UNVERIFIED rather than No to avoid false negative — field auditor must verify with scheme guidelines and state dairy procurement orders.",
+      "src": "programs.md — all sections reviewed; no offtake mechanism found"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "programs.md does not document tracking of non-monetary livelihood metrics as defined under T3.5 (food sufficiency months, food species count, livestock feeding days, access to medicinal plants). The OUTCOME section tracks heritage breed population preservation and cattle shelter construction — these are conservation metrics, not non-monetary livelihood metrics per T3.5 definition. CAG audit verifies 'breed conservation program effectiveness' but this is a conservation output, not a livelihood welfare metric. No food security or fodder availability tracking is referenced. Near-threshold note: ΔY is UNVERIFIED so the under-measurement flag (T3.5 = No with ΔY near threshold) cannot be fully applied, but the absence of non-monetary tracking is noted as a monitoring gap.",
+      "src": "programs.md — OUTCOME, CAG sections reviewed"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "<<UNVERIFIED: Neither Observed nor Projected ΔY available; cannot assess against ₹3,000 or ₹5,000 thresholds>>",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "<<UNVERIFIED: Institutional offtake mechanism not confirmed in available documentation>>",
+    "enh_T3.5_flag": "T3.5 = No (non-monetary metrics not tracked). ΔY also unverified — standard near-threshold flag cannot be applied quantitatively, but qualitative under-measurement risk exists given absence of livestock feeding days or fodder availability tracking in a cattle-rearing scheme.",
+    "overall": "<<UNVERIFIED: C1 (T3.1) and C3 (T3.3) PASS; C2 (ΔY) and C4 (T3.4) cannot be verified from available sources. Test 3 classification pending financial and market-linkage verification. If ΔY meets threshold and T3.4 confirmed, overall = PASS. If either fails, overall = FAIL.>>"
+  },
+  "sources_verified": [
+    "programs.md — OUTCOME section",
+    "programs.md — SURVEY section (Economic Survey)",
+    "programs.md — ANNOUNCEMENT section",
+    "programs.md — BUDGET section",
+    "programs.md — CAG section (CAG State Accounts 2024-25)",
+    "programs.md — PORTAL section (National Portal)"
+  ],
+  "unverified_fields": ["Q26", "Q28"]
+}

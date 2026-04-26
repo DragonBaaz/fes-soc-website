@@ -1,0 +1,106 @@
+{
+  "test_id": "T1",
+  "scheme": "Rajiv Gandhi Kisan Nyay Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh State Budget 2025-26; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; National Portal of India / rgkny.cg.nic.in",
+  "answers": {
+    "Q1": {
+      "v": "Rajiv Gandhi Kisan Nyay Yojana",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh"
+    },
+    "Q2": {
+      "v": "Agriculture Department, Government of Chhattisgarh",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; National Portal of India"
+    },
+    "Q3": {
+      "v": "Official Notification No. 26-A-2020/CGN dated 21.05.2020 (as amended 2023 to include 5 crops); Chhattisgarh State Budget 2025-26; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25",
+      "src": "Chhattisgarh State Government official records"
+    },
+    "Q4": {
+      "v": "C",
+      "r": "The primary resource operated on by RGKNY is private agricultural land belonging to individual farmers. The scheme's beneficiary eligibility is explicitly conditioned on land ownership and production proof (Khasra/land records). The DBT payment is per quintal of crop produced on the farmer's own private agricultural holding. Covered crops (paddy, maize, soybean, groundnut, cotton) are grown on privately owned farmland. There is no commons resource — natural, physical, social, or institutional — that constitutes the primary resource of the scheme. The scheme is a direct income-support transfer to private landowners. T1.1 = C → AUTOMATIC TEST 1 FAIL.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25 ('Beneficiary verification: Land ownership + production proof')"
+    },
+    "Q5": {
+      "v": "The scheme operates on private agricultural landholdings across Chhattisgarh. Covered crops are paddy (21.4 lakh beneficiary farmers), maize, soybean, groundnut, and cotton (combined 8.2 lakh farmers for non-paddy crops). Total beneficiaries: 29.6 lakh farmers. There is no commons resource (no common land, water body, community forest, or intangible commons) involved. The production input is exclusively private land. The scheme covers Chhattisgarh state; individual farm plot boundaries are demarcated through Khasra/revenue land records maintained by the state Revenue Department.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q6": {
+      "v": "Yes",
+      "r": "Individual private agricultural plots are demarcated in state revenue records (Khasra numbers, land survey records). Beneficiary eligibility requires submission of land ownership documents. However, these are private land records, not commons boundary demarcation. Note: T1.1 = C, so this field is rendered moot — there is no commons resource whose boundary could be demarcated. Answered 'Yes' reflecting that the underlying land units are documented in official records.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020 (beneficiary eligibility conditions); Chhattisgarh Revenue Department land records system"
+    },
+    "Q7": {
+      "v": "0",
+      "r": "The primary resource is private agricultural land. There is no community access or practice right — access is exclusively that of the private landowner. There is no statutory, customary, or any other form of community right to access the farmland. The scheme explicitly restricts eligibility to land-owning farmers based on individual land title. Score = 0.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, land-use change notification, SEZ notification, compulsory acquisition proceeding, or equivalent administrative override affecting the scheme's operation or the agricultural lands covered has been identified. The scheme has been operational continuously since 2020 and was expanded in 2023. CAG audit found full compliance. This criterion is PASS, but the scheme fails T1 on other grounds (T1.1 = C).",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q9": {
+      "v": 4850,
+      "unit": "₹Cr",
+      "period": "FY 2024-25",
+      "breakdown": "Entire expenditure is Direct Benefit Transfer (DBT) to individual farmer bank accounts; per-crop per-quintal basis: paddy ₹500/qtl, maize ₹400/qtl, soybean ₹1,000/qtl, groundnut ₹800/qtl, cotton (rate per notification). Administrative processing is through state agriculture portal (automated, e-governance). No physical asset creation component.",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q10": {
+      "v": 0,
+      "unit": "₹Cr",
+      "r": "₹0 — the entire expenditure of RGKNY flows as Direct Benefit Transfer to individual private farmers' bank accounts. All outputs (cash transfers) flow exclusively to private individuals on the basis of their private agricultural production. There is zero expenditure on any common/public/community resource — no common land, no water body, no community institution, no knowledge commons, no shared infrastructure. The scheme has no physical asset creation component and no community-level expenditure.",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26; Official Notification No. 26-A-2020/CGN"
+    },
+    "Q11": {
+      "v": 4850,
+      "unit": "₹Cr",
+      "r": "₹4,850 crores — the entire expenditure is cash transferred to private individual farmers (private beneficiaries) based on their land ownership and crop production on their private landholdings. All scheme expenditure is private-asset / private-beneficiary expenditure (DBT to individual accounts).",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q12": {
+      "v": 0.00,
+      "calc": "θ₁ = Q10 ÷ Q9 = 0 ÷ 4850 = 0.00",
+      "interp": "FAIL — θ₁ = 0.00, well below the pass threshold of ≥ 0.50. Zero scheme expenditure flows to any commons resource. The entire scheme is private-beneficiary DBT.",
+      "src": "Derived from Q9 and Q10; CAG State Accounts Report 2024-25"
+    },
+    "Q13": {
+      "docs": [
+        "Official Notification No. 26-A-2020/CGN dated 21.05.2020 (scheme establishment)",
+        "Chhattisgarh State Budget 2025-26 (₹5,600 crore allocation)",
+        "Chhattisgarh Economic Survey 2024-25 (scheme overview, beneficiary data)",
+        "Outcome Budget 2025-26 (DBT performance metrics, ₹4,850 crore disbursement FY 2024-25)",
+        "CAG State Accounts Report 2024-25 (audit of DBT implementation)",
+        "rgkny.cg.nic.in — beneficiary portal (National Portal of India reference)"
+      ]
+    },
+    "Q14": {
+      "v": "0",
+      "r": "Benefits are fully excludable. The DBT cash transfer accrues exclusively to the individual farmer who owns the land and produced the crop. Eligibility is individually verified (land title + production proof). Non-landowners, tenant farmers without land title, and all non-farmers in the community receive no benefit. There is no community-level or non-excludable benefit — the scheme is a private income support payment. Score = 0 → TEST 1 FAIL.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "C",
+    "T1.5": "Yes"
+  },
+  "pass_verification": {
+    "C1_T1.1": "FAIL",
+    "C2_T1.2": "FAIL",
+    "C3_theta1": "FAIL",
+    "C4_T1.4": "FAIL",
+    "C5_T1.6": "PASS",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh",
+    "Chhattisgarh State Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Government of Chhattisgarh",
+    "CAG State Accounts Report 2024-25",
+    "National Portal of India / rgkny.cg.nic.in"
+  ],
+  "unverified_fields": []
+}

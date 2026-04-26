@@ -1,0 +1,103 @@
+{
+  "test_id": "T1",
+  "scheme": "Dairy Development Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md — BUDGET (State budget allocation); SURVEY (Economic Survey); ANNOUNCEMENT (Official notification); CAG (State Accounts 2024-25); PORTAL (National Portal, Agriculture > Animal Husbandry > Value Added Products)",
+  "answers": {
+    "Q1": {
+      "v": "Dairy Development Scheme",
+      "src": "programs.md — ANNOUNCEMENT; PORTAL"
+    },
+    "Q2": {
+      "v": "Animal Husbandry & Dairy Department",
+      "src": "programs.md — ANNOUNCEMENT"
+    },
+    "Q3": {
+      "v": "State budget allocation (Animal Husbandry & Dairy — Value Added Animal Product Schemes); Economic Survey statement on dairy development; Official notification for Dairy Development Scheme (subsidy eligibility, cooperative formation guidelines, milk quality standards); CAG State Accounts 2024-25 (dairy scheme fund utilization audit); National Portal — Agriculture > Animal Husbandry > Value Added Products",
+      "src": "programs.md — BUDGET; SURVEY; ANNOUNCEMENT; CAG; PORTAL"
+    },
+    "Q4": {
+      "v": "C",
+      "r": "The primary resource the scheme operates on is privately owned dairy livestock (cattle/buffalo) acquired by individual beneficiaries through the dairy animal purchase support subsidy and housed in privately constructed/subsidised sheds. The scheme's budget line items — dairy unit subsidy for shed construction, dairy animal purchase support, feed supplement cost — are all directed at private asset acquisition for individual beneficiaries. Feed supplements and veterinary health programs attach to privately owned animals. Cooperative milk collection/processing infrastructure is listed secondary in the budget description and is supportive of private production, not the primary scheme resource. There is no communal grazing reserve, shared livestock pool, or community-governed animal resource identified as the operative commons.",
+      "src": "programs.md — BUDGET: 'dairy unit subsidy for shed construction, dairy animal purchase support, feed supplement cost'; ANNOUNCEMENT: 'Dairy unit subsidy eligibility, animal selection criteria, infrastructure requirements, beneficiary qualification'"
+    },
+    "Q5": {
+      "v": "Primary resource: privately owned dairy cattle/buffalo acquired through individual beneficiary subsidies, located on private landholdings or homesteads. Private infrastructure includes dairy sheds (subsidy-funded). Secondary cooperative infrastructure includes milk chilling/collection centres and dairy processing units for value-added products (ghee, curd, paneer). No defined geographic commons boundary is identified. No communal grazing reserve, shared pastoral land, or state-notified community resource forms the scheme's operative resource base. State of operation not specified in programs.md.",
+      "src": "programs.md — BUDGET; ANNOUNCEMENT; SURVEY; PORTAL"
+    },
+    "Q6": {
+      "v": "No",
+      "r": "The scheme's primary resource is privately owned livestock; there is no commons resource whose boundaries require or have received demarcation. No survey number, GPS coordinates, GP resolution, watershed boundary map, or knowledge-domain boundary document for a shared/common resource is referenced in any available source document.",
+      "src": "programs.md — BUDGET; ANNOUNCEMENT (no demarcation document cited in any entry)"
+    },
+    "Q7": {
+      "v": "0",
+      "r": "The scheme does not operate on a commons resource. No legal, statutory, or customary community right to access a shared resource underlies this scheme. Cooperative membership is voluntarily formed and criteria-based (beneficiary qualification criteria per ANNOUNCEMENT), not a pre-existing community right to a shared commons. T1.2 = 0 → T1 FAIL.",
+      "src": "programs.md — ANNOUNCEMENT: 'Dairy unit subsidy eligibility, animal selection criteria, beneficiary qualification'"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, land-use change notification, SEZ notification, compulsory acquisition, or equivalent legal encumbrance on any scheme resource is documented in programs.md or in the CAG State Accounts 2024-25 entry. Scheme operates on private assets, which are not subject to community-override encumbrance processes. T1.6 = No active encumbrance → PASS on this sub-parameter.",
+      "src": "programs.md — CAG: audit examines fund utilization and infrastructure, no legal override flagged; ANNOUNCEMENT: no encumbrance mentioned"
+    },
+    "Q9": {
+      "v": "<<UNVERIFIED: Specific annual or project-period total scheme expenditure (₹ Crores) is not stated in programs.md. CAG State Accounts 2024-25 confirms a fund utilization audit exists but no aggregate expenditure figure is reproduced in the programs.md entry. State budget allocation reference exists but no rupee amount is cited.>>",
+      "unit": "₹Cr",
+      "period": "<<UNVERIFIED>>",
+      "breakdown": "<<UNVERIFIED: Component split (shed subsidy : animal purchase : feed : milk centre : processing : veterinary) not quantified in available documents.>>",
+      "src": "programs.md — BUDGET; CAG (figures not reproduced)"
+    },
+    "Q10": {
+      "v": "<<UNVERIFIED: Expenditure specifically on cooperative/community infrastructure (milk collection centres, dairy processing facilities) — which would constitute the commons-qualifying numerator — is not quantified in any available document.>>",
+      "unit": "₹Cr",
+      "r": "The commons-qualifying numerator would include: milk collection centre infrastructure expenditure and dairy processing facility support expenditure, to the extent these flow to cooperative/community assets rather than private operators. Feed supplements, shed construction, and animal purchase subsidies are excluded (private-benefit spend).",
+      "src": "programs.md — BUDGET"
+    },
+    "Q11": {
+      "v": "<<UNVERIFIED: Private-asset subsidy expenditure (shed construction, dairy animal purchase, feed supplement) not quantified in available documents. These items visibly dominate the budget description.>>",
+      "unit": "₹Cr",
+      "r": "Shed construction subsidy, dairy animal purchase support, and feed supplement cost flow exclusively to private individual beneficiaries and count as private-benefit spend regardless of location.",
+      "src": "programs.md — BUDGET: 'dairy unit subsidy for shed construction, dairy animal purchase support, feed supplement cost'"
+    },
+    "Q12": {
+      "v": "<<UNVERIFIED>>",
+      "calc": "θ₁ = Q10 ÷ Q9 — both inputs unverified; calculation cannot be performed",
+      "interp": "FAIL — T1.1 = C constitutes an automatic T1 FAIL independent of θ₁. Additionally, the budget description shows individual animal/shed subsidies dominating expenditure, indicating θ₁ is likely < 0.50; exact ratio unverifiable from available documents.",
+      "src": "programs.md — BUDGET"
+    },
+    "Q13": {
+      "docs": [
+        "State Budget allocation documents (Animal Husbandry & Dairy — Value Added Animal Product Schemes)",
+        "Official notification for Dairy Development Scheme (subsidy eligibility, cooperative formation guidelines, milk quality standards)",
+        "CAG State Accounts 2024-25 — dairy scheme fund utilization audit",
+        "National Portal — Agriculture > Animal Husbandry > Value Added Products (subsidy details, beneficiary statistics, production metrics)"
+      ]
+    },
+    "Q14": {
+      "v": "0",
+      "r": "Benefits — milk production income, value-added product income (ghee, curd, paneer), and subsidy-funded physical assets (animals, sheds) — accrue exclusively to the individual private dairy unit owner. The dairy animal is privately owned post-subsidy; only the registered beneficiary captures production income. Cooperative milk offtake delivers payment to the individual seller, not a non-excludable community. No mechanism exists for non-members to access the productive assets or income stream of a neighbour's private dairy unit. T1.4 = 0 → T1 FAIL.",
+      "src": "programs.md — BUDGET: individual subsidies; OUTCOME: 'Dairy entrepreneurs supported through subsidy'; ANNOUNCEMENT: 'Dairy unit subsidy eligibility, beneficiary qualification'"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "pass_verification": {
+    "C1_T1.1": "FAIL — T1.1 = C (private resource); automatic T1 FAIL",
+    "C2_T1.2": "FAIL — T1.2 = 0; no community access right to a commons resource exists",
+    "C3_theta1": "FAIL — unverified (specific financial data unavailable); budget description indicates private-asset subsidies dominate expenditure, θ₁ likely < 0.50",
+    "C4_T1.4": "FAIL — T1.4 = 0; benefits are fully excludable to individual private dairy unit owner",
+    "C5_T1.6": "PASS — no active legal encumbrance documented",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET: State budget allocation for dairy enterprise development",
+    "programs.md — SURVEY: Economic Survey statement on dairy development scheme",
+    "programs.md — ANNOUNCEMENT: Official notification (dairy unit subsidy eligibility, cooperative formation guidelines)",
+    "programs.md — CAG: CAG State Accounts 2024-25 dairy scheme fund utilization audit",
+    "programs.md — PORTAL: National Portal Agriculture > Animal Husbandry > Value Added Products"
+  ],
+  "unverified_fields": ["Q9", "Q10", "Q11", "Q12"]
+}

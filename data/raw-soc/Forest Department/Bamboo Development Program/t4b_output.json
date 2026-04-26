@@ -1,0 +1,57 @@
+{
+  "test_id": "T4b",
+  "scheme": "Bamboo Development Program",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-BD/2010/CGN (updated 2023); CAG State Accounts Report 2024-25; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; State Forest Portal; Indian Forest Act 1927; Forest Rights Act 2006",
+  "carried_from_t4a": {
+    "C1_T4.1": "PASS",
+    "C2_rho_or_VI": "PASS",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "Scheme documents (Official Notification No. 6-BD/2010/CGN, CAG State Accounts Report 2024-25, Economic Survey 2024-25) do not classify the 18,500-hectare bamboo plantation areas under any notified stress designation: no CGWB over-exploited block, no DLCC drought list inclusion, no NBA threatened-species habitat, no eco-sensitive zone. CAG verifies 'Natural regeneration verified (forest management records)' indicating healthy ecosystem status. No stress-zone upgrade to Q34 threshold applies.",
+      "src": "CAG State Accounts Report 2024-25; Official Notification No. 6-BD/2010/CGN; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q34": {
+      "v": "2",
+      "r": "Q35 = No → pass threshold = Q34 ≥ 1. Monitoring evidence: (1) Annual monitoring — CAG State Accounts Report 2024-25 independently audited production (4.85 lakh MT), area (18,500 ha), employment (85,000), and sustainability (natural regeneration) — annual verified audit. (2) Outcome Budget 2025-26 tracks results annually against targets. (3) State Forest Portal has active production tracker (4.85 lakh MT), plantation mapper (18,500 ha), artisan directory (85,000), and processing unit locator (285 units) — continuous MIS-style tracking suggesting at minimum semi-annual data updates. Classified as v=2 (semi-annual or more frequent) conservatively; portal trackers may support v=3 but frequency not explicitly stated in program documents. v=2 ≥ threshold of 1 → PASS.",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26; State Forest Portal — active trackers"
+    },
+    "Q36": {
+      "v": "Yes",
+      "r": "Penalty mechanisms are operative through: (1) Processing unit licensing — 285 units are 'registered (license audit)'; license revocation is an enforceable sanction for non-compliance. (2) Indian Forest Act 1927 — Forest Department has statutory authority to impose fines and sanctions for violations of forest resource use rules applicable to bamboo on state forest land. (3) Forest Rights Act 2006 — legal action provisions for violation of community forest rights and management obligations. (4) Official Notification No. 6-BD/2010/CGN — issued by Forest Department which holds enforcement authority.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25 — license audit; Indian Forest Act 1927; Forest Rights Act 2006"
+    },
+    "Q37": {
+      "v": "Yes",
+      "r": "Post-scheme continuity is structurally embedded: (1) SFFC (State Forest Federation Corporation) is a permanent state institution with ongoing mandate for bamboo industry management — no time-bound project expiry. (2) Bamboo plantations are on permanent state forest land managed by the Forest Department — institutional continuity guaranteed by the department's permanent existence. (3) The scheme is established by an open-ended notification (Notification No. 6-BD/2010/CGN, operative since 2010 with 2023 update) — not a fixed-term project. (4) Forest Rights Act framework vests ongoing community rights in MFP including bamboo, providing legal continuity of community access independent of scheme cycle.",
+      "src": "Official Notification No. 6-BD/2010/CGN; Chhattisgarh Economic Survey 2024-25 — 15-year operational continuity; Forest Rights Act 2006"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Official scheme documents do not mandate a community-based monitoring role. Monitoring is departmental: Forest Department manages plantation surveys, CAG conducts external audits, and the state portal aggregates data. No GP social audit, FRC patrol mandate, BMC register upkeep, or participatory resource mapping is documented within the Bamboo Development Program's notification or operational documents. Note: PESA-area Gram Sabhas have general monitoring rights under FRA for MFP, but this is not a scheme-specific mandate for the Bamboo Development Program.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25; State Forest Portal"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "PASS (from T4a)",
+    "C2_rho_or_VI": "PASS (from T4a — ρ = 0.96 ≤ 1.2)",
+    "C3_T4.3": "PASS",
+    "C4_T4.4_or_T4.5": "PASS",
+    "enh_T4.6_flag": "GOVERNANCE GAP: community monitoring role not mandated in scheme documents; monitoring is purely departmental (Forest Dept + CAG + portal)",
+    "overall_T4": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-BD/2010/CGN (January 2010, updated 2023)",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "State Forest Portal",
+    "Indian Forest Act 1927",
+    "Forest Rights Act 2006"
+  ],
+  "unverified_fields": []
+}

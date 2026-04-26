@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "Rajiv Gandhi Kisan Nyay Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "t4a_output.json (carry_for_t4b); Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "RGKNY operates on private agricultural land across Chhattisgarh (T1.1 = C); there is no commons resource to assess for climate/ecological stress. Evaluated on the scheme's operational resource base: no notified over-exploited groundwater block, no DLCC drought classification specifically applicable to the scheme's resource (private farmland statewide), and no CGWB critical/over-exploited block classification triggered for RGKNY as a scheme. Chhattisgarh has some drought-prone districts (NDMA), but RGKNY is a state-wide scheme with no specific stress-zone designation in scheme documents. Q35 = No: standard T4.3 threshold (≥ 1) applies. This is moot as Q34 = 0, which fails under both thresholds.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; NDMA district drought classification (publicly available, no specific RGKNY stress-zone designation found)"
+    },
+    "Q34": {
+      "v": "0",
+      "r": "Q35 = No → Q34 pass threshold = ≥ 1. However, Q34 = 0 because RGKNY has no monitoring framework for any commons resource or replenishment compliance. The scheme tracks exclusively administrative and financial metrics (DBT payment success rate, amounts transferred, bank reconciliation). There is no monitoring of agricultural land health, soil indicators, groundwater levels, ecosystem services, or any commons-resource health indicator. The scheme has no commons resource and no replenishment obligation — therefore nothing to monitor for sustainability compliance. Score = 0 → T4.3 FAIL.",
+      "src": "Outcome Budget 2025-26 (metrics: 'DBT processed ₹4,850 crores, payment success rate 98.2%' — purely financial); CAG State Accounts Report 2024-25 (audit scope: financial compliance only); Official Notification No. 26-A-2020/CGN dated 21.05.2020"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "RGKNY contains no penalty or sanction mechanism for violation of any replenishment or commons-use rule, because no such rule exists (Q30 = No; T4.1 = 0). The scheme's enforcement provisions are limited to DBT payment eligibility (land ownership verification, production proof). There is no documented consequence — financial or otherwise — linked to any commons resource usage, replenishment compliance, or ecological obligation. T4.4 = 0.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "RGKNY has no provision for post-scheme continuity of any commons governance mechanism. The scheme is a recurring annual DBT programme; there is no institutional handover plan, no O&M fund, no asset transfer to GP/BMC/FRC/cooperative, no legal vesting of any commons resource, and no continuity clause for any community governance body beyond the scheme period. The scheme's continuity depends entirely on annual state budget allocation, not a structural commons governance mechanism. T4.5 = 0.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh State Budget 2025-26"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "RGKNY has no community-based monitoring role. All monitoring is conducted exclusively by the Agriculture Department and state government through the automated e-governance portal (rgkny.cg.nic.in). There is no provision for Gram Sabha social audit, community resource assessment, FRC patrol, BMC register upkeep, or any participatory monitoring mechanism in the scheme design. T4.6 = 0. GOVERNANCE GAP flagged.",
+      "src": "Chhattisgarh Economic Survey 2024-25 ('Processing: Automated through state agriculture portal'); Outcome Budget 2025-26; Official Notification No. 26-A-2020/CGN dated 21.05.2020"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (from T4a — no mandatory replenishment/continuity rule in scheme)",
+    "C2_rho_or_VI": "FAIL (from T4a — ρ undefined/inapplicable; no commons resource extraction or replenishment dynamic)",
+    "C3_T4.3": "FAIL (Q34 = 0; no commons resource health monitoring)",
+    "C4_T4.4_or_T4.5": "FAIL (Q36 = No AND Q37 = No; no penalty mechanism and no post-scheme continuity mechanism)",
+    "enh_T4.6_flag": "GOVERNANCE GAP — Q38 = No; monitoring is entirely departmental/automated; no community participation in any resource monitoring",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "t4a_output.json — carry_for_t4b: C1_T4.1 = FAIL, C2_rho_or_VI = FAIL, track = RhoRatio",
+    "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Government of Chhattisgarh",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh State Budget 2025-26"
+  ],
+  "unverified_fields": []
+}

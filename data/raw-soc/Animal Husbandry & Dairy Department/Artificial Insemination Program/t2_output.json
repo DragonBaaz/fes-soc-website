@@ -1,0 +1,86 @@
+{
+  "test_id": "T2",
+  "scheme": "Artificial Insemination Program",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "carried_from_t1": {
+    "T1.1": "A1"
+  },
+  "answers": {
+    "Q15": {
+      "v": "<<UNVERIFIED: programs.md does not state total scheme beneficiary count; CAG audit and OUTCOME section confirm AI procedures tracked annually but provide no aggregate beneficiary figure>>",
+      "src": "programs.md — OUTCOME: 'AI procedures completed annually' (no aggregate HH count); CAG State Accounts 2024-25"
+    },
+    "Q16": {
+      "v": "<<UNVERIFIED: absolute number unavailable; however, by scheme design all beneficiaries are local farming households with bovine livestock in their home area — technicians travel to farms, not farmers to a central location; θ₂ ≈ 1.0 by design>>",
+      "src": "programs.md — ANNOUNCEMENT: 'AI service provider network' (field delivery model implies local beneficiaries); PORTAL: 'service availability' at local level"
+    },
+    "Q17": {
+      "v": "Settled_communities — within GP/block of the farmer's home village where AI service is delivered",
+      "r": "AI services are delivered by itinerant technicians to farmers at their home farm/village. Beneficiaries are settled farming households within the operational block/district. The 10 km radius definition applies; effectively all beneficiaries are within the scheme's operational commons area since the service is delivered to their doorstep.",
+      "src": "programs.md — ANNOUNCEMENT: 'AI service provider network' (field delivery); PORTAL: 'service availability, technician network'"
+    },
+    "Q18": {
+      "v": "<<UNVERIFIED: absolute figures for Q15 and Q16 unavailable; θ₂ estimated ≈ 1.00 by scheme design (all registered beneficiaries are local farming households served at their home village by field technicians; no non-local beneficiaries exist in scheme design)>>",
+      "calc": "θ₂ = Q16.v ÷ Q15.v — not computable from available data; design-based estimate θ₂ ≈ 1.00",
+      "interp": "UNVERIFIED — design strongly suggests PASS (θ₂ ≈ 1.00); re-verify with MIS beneficiary register",
+      "src": "programs.md — ANNOUNCEMENT, PORTAL sections"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: programs.md does not provide beneficiary categorisation data by SC/ST/marginalised status; SECC or PM-JANMAN data not referenced in scheme documents>>",
+      "r": "Chhattisgarh's rural population is approximately 43% SC/ST (ST ~30%, SC ~13% per Census 2011). AI program targets all livestock-owning rural farming households. In Chhattisgarh, ST and SC communities have significant livestock ownership. Including women-headed, landless, and elderly-headed households, θ₃ ≥ 0.40 is demographically plausible but not confirmed from scheme MIS data.",
+      "src": "programs.md — no beneficiary categorisation data; Census of India 2011 (Chhattisgarh SC/ST population reference — external verified source)"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ not computable without Q19 figure; demographic evidence supports likely PASS>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v — not computable; demographic inference suggests θ₃ likely ≥ 0.40 given Chhattisgarh ST/SC rural population composition",
+      "interp": "UNVERIFIED — demographic profile of Chhattisgarh rural farmers supports likely PASS; must be verified with scheme MIS beneficiary data categorised by social group",
+      "src": "programs.md — no categorised beneficiary data; Census of India 2011 SC/ST data for Chhattisgarh"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "No formally constituted community representative body (Gram Sabha, User Group, JFM Committee, Village Water Committee, SHG federation, BMC, dairy cooperative with decision-making mandate, or equivalent) is mentioned in programs.md. The ANNOUNCEMENT describes an 'AI service provider network' which is a technical delivery mechanism, not a community governance body. No community institution with scheme decision-making powers is referenced in any section."
+      },
+      "22b": {
+        "v": "No",
+        "r": "No community body role is mandated in scheme guidelines as documented in programs.md. The scheme operates as an administrative service delivery mechanism (government technicians → individual farmers) without a community governance layer."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No meeting records, minutes, or resolutions for any community body can be verified. No community body exists per 22a, so functionality cannot be assessed."
+      },
+      "docs": [],
+      "src": "programs.md — ANNOUNCEMENT: 'AI service provider network, farmer eligibility and registration, SOP, cost-sharing mechanism' (no community body mentioned); BUDGET, SURVEY, OUTCOME, CAG, PORTAL — none reference a community governance institution"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No governance body exists per Q22a; women's representation in any such body cannot be assessed. T2.5 = 0 by extension. Enhancement gap noted. Programs.md does not reference women-specific governance provisions.",
+      "src": "programs.md — no governance body or women's representation data referenced"
+    },
+    "Q24": {
+      "v": "<<UNVERIFIED: no scheme-specific grievance mechanism documented in programs.md; National Portal listing suggests general government grievance channels (PM-JANMAN portal, CM Helpline 1100) are accessible but scheme-level mandated grievance mechanism not confirmed>>",
+      "r": "No formal grievance mechanism is documented at scheme level in programs.md. The scheme is on the National Portal which provides a general interface, but a scheme-specific, institutionally mandated grievance mechanism for non-beneficiaries has not been verified. Governance gap flagged.",
+      "src": "programs.md — PORTAL section (National Portal listing only); CM Helpline (1100) exists at state level (general governance, not scheme-specific)"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "UNVERIFIED",
+    "C2_theta3": "UNVERIFIED",
+    "C3_T2.3": "FAIL",
+    "enh_T2.4_flag": "GOVERNANCE GAP — no scheme-specific mandated grievance mechanism documented; general state grievance channels exist but not institutionally mandated at scheme level",
+    "enh_T2.5_flag": "GOVERNANCE GAP — no community governance body exists; women's representation therefore undetermined and unstructured",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "programs.md — Animal Husbandry & Dairy Department / Artificial Insemination Program (all sections)",
+    "Census of India 2011 — Chhattisgarh SC/ST population data (external verified source)",
+    "CAG State Accounts 2024-25"
+  ],
+  "unverified_fields": ["Q15", "Q16", "Q18", "Q19", "Q20", "Q24"]
+}

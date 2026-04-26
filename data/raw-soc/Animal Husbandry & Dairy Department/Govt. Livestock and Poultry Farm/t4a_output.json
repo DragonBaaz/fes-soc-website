@@ -1,0 +1,61 @@
+{
+  "test_id": "T4a",
+  "scheme": "Govt. Livestock and Poultry Farm",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "ANNOUNCEMENT — Official notification; SURVEY — Economic Survey; OUTCOME — Implementation outcome records; BUDGET — State budget allocation; CAG State Accounts Report Chhattisgarh 2024-25; PORTAL — National Portal listing",
+  "carried_from_t1": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "answers": {
+    "Q30": {
+      "v": "<<UNVERIFIED: Scheme documents reference ongoing genetic improvement programs (SURVEY, OUTCOME) and annual budget allocation for farm maintenance (BUDGET) with CAG accountability for genetic program effectiveness (CAG). These may constitute a de facto continuity obligation. However, a specifically written replenishment or regeneration mandate with defined non-compliance consequences (fund withholding, disqualification, reduced allocation) in the scheme's operational guidelines is not confirmed in reviewed documents. ANNOUNCEMENT establishes farm operations but replenishment/renewal obligation with enforcement trigger not documented.>>",
+      "r": "For a government livestock/poultry farm (physical commons, A1 category), a qualifying replenishment rule would require: a written obligation to maintain/replenish breeding stock and farm infrastructure, AND a defined consequence for failure. The annual budget mandate and CAG audit mechanism provide indirect accountability, but they are general financial controls rather than scheme-specific replenishment obligations with explicit enforcement triggers. Without the full text of the operational guidelines (ANNOUNCEMENT), T4.1 cannot be confirmed as Yes.",
+      "src": "ANNOUNCEMENT; SURVEY; OUTCOME; BUDGET; CAG"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = A1 (state/public land, physical commons — government livestock and poultry farm infrastructure). Per T4a track rule: T1.1 ≠ E → track = RhoRatio. Natural/physical commons track applies: evaluate extraction-to-replenishment ratio (ρ) in Q32. Q33 (Vitality Index) is SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = A1"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ ratio cannot be computed without specific annual figures for (a) animals extracted from farm breeding stock (distributed to farmers per year) and (b) animals replenished through breeding programs per year. Farm records exist per OUTCOME ('production metrics tracked through farm records and animal performance data') but specific extraction and replenishment figures were not available in reviewed documents. T1.5 = Yes (farm boundary demarcated) permits Measured status if farm records are reviewed.>>",
+      "calc": "ρ = Annual extraction (animals distributed/removed from breeding stock) ÷ Annual replenishment (new breeding animals added through genetic programs) = [unverified] ÷ [unverified]. Logical inference from scheme design: farm is designed to maintain and improve breeding stock (genetic improvement programs per SURVEY, OUTCOME), suggesting ρ ≤ 1.0 in steady-state operations, but not confirmed.",
+      "status": "Measured",
+      "interp": "FAIL",
+      "src": "OUTCOME; SURVEY; CAG",
+      "docs": [
+        "OUTCOME — farm records and animal performance data (production metrics tracked)",
+        "CAG State Accounts Report Chhattisgarh 2024-25 — genetic program effectiveness audit"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations",
+    "SURVEY — Economic Survey: farm as breeding center with genetic improvement programs",
+    "OUTCOME — Implementation outcome records: production metrics tracked via farm records",
+    "BUDGET — State budget allocation: farm construction, maintenance, genetic improvement as budget components",
+    "CAG State Accounts Report Chhattisgarh 2024-25 — genetic program effectiveness audit coverage",
+    "PORTAL — National Portal listing under Agriculture > Animal Husbandry > Breeding Centers"
+  ],
+  "unverified_fields": ["Q30", "Q32"]
+}

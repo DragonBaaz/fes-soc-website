@@ -1,0 +1,107 @@
+{
+  "test_id": "T1",
+  "scheme": "Bamboo Development Program",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26; Official Notification No. 6-BD/2010/CGN (updated 2023); State Forest Portal",
+  "answers": {
+    "Q1": {
+      "v": "Bamboo Development Program",
+      "src": "Official Notification No. 6-BD/2010/CGN; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6"
+    },
+    "Q2": {
+      "v": "Forest Department, Chhattisgarh; co-implementing agencies: Industries Department, SFFC (State Forest Federation Corporation)",
+      "src": "Official Notification No. 6-BD/2010/CGN (2023 update) — 'Implementation: Forest Department + Industries Department + SFFC'"
+    },
+    "Q3": {
+      "v": "Official Notification No. 6-BD/2010/CGN (January 1, 2010; updated 2023); aligned with National Bamboo Mission; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; Outcome Budget 2025-26",
+      "src": "Official Notification No. 6-BD/2010/CGN"
+    },
+    "Q4": {
+      "v": "A1",
+      "r": "Bamboo is cultivated on state forest land (18,500 hectares) formally notified for community use under Notification No. 6-BD/2010/CGN. The scheme designates state forest land for plantation, production, and artisan/farmer community benefit. Land ownership is with the State Forest Department and resources are designated for non-exclusive community use.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25 — area verified by land survey"
+    },
+    "Q5": {
+      "v": "Bamboo forest resource on state land in Chhattisgarh. Area: 18,500 hectares (cumulative, CAG-verified by land survey). Resource type: bamboo (shoots, culms, processed material) as a forest produce. Geographic spread: distributed across state forest zones. Production scale: 4.85 lakh metric tons annually. Boundaries documented via plantation mapper on state forest portal and CAG land survey.",
+      "src": "CAG State Accounts Report 2024-25; State Forest Portal plantation mapper; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q6": {
+      "v": "Yes",
+      "r": "State forest portal has a plantation mapper covering the 18,500-hectare area. CAG (2024-25) verified area via land survey. Official Notification No. 6-BD/2010/CGN specifies plantation target of 18,500 hectares as a publicly documented boundary.",
+      "src": "State Forest Portal — plantation mapper; CAG State Accounts Report 2024-25"
+    },
+    "Q7": {
+      "v": "2",
+      "r": "Bamboo as Minor Forest Produce (MFP) carries statutory rights under the Forest Rights Act 2006 (Section 3(1)(c) — community rights over MFP including bamboo) and PESA 1996 for scheduled areas. Notification No. 6-BD/2010/CGN provides explicit legal framework for artisan and farmer community access to bamboo resources, making the community's right legally enforceable.",
+      "src": "Forest Rights Act 2006 Section 3(1)(c); PESA 1996; Official Notification No. 6-BD/2010/CGN"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "CAG State Accounts Report 2024-25 reviewed the scheme and confirmed operational status with no diversion findings. Scheme documents show no active mining lease, SEZ notification, land-use change order, or compulsory acquisition affecting the 18,500-hectare bamboo plantation area.",
+      "src": "CAG State Accounts Report 2024-25; Official Notification No. 6-BD/2010/CGN (2023 update)"
+    },
+    "Q9": {
+      "v": 75,
+      "unit": "₹Cr",
+      "period": "FY 2025-26",
+      "breakdown": "Bamboo plantation ₹30cr; Processing infrastructure ₹25cr; Artisan training ₹15cr; Market linkage ₹5cr. Actual disbursement: ₹72cr (96% utilisation).",
+      "src": "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; CAG State Accounts Report 2024-25"
+    },
+    "Q10": {
+      "v": 75,
+      "unit": "₹Cr",
+      "r": "All four components flow to community/commons benefits: (1) Bamboo plantation ₹30cr — on state forest land (community forest commons). (2) Processing infrastructure ₹25cr — community processing centres managed through SFFC (State Forest Federation Corporation), serving the collective artisan community. (3) Artisan training ₹15cr — intangible knowledge/skill commons (training 42,000 artisans in community craft). (4) Market linkage ₹5cr — community-level market infrastructure. No component flows exclusively to a private actor; all outputs are community-accessible through the SFFC framework.",
+      "src": "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; Official Notification No. 6-BD/2010/CGN"
+    },
+    "Q11": {
+      "v": 0,
+      "unit": "₹Cr",
+      "r": "No expenditure in the scheme flows exclusively to private assets. Processing units (285) are registered under SFFC/state framework and serve the collective artisan community. Individual artisan income support (₹3,500/ha farmer payments) is an output transfer, not a capital expenditure item. Q10 + Q11 = 75 + 0 = 75 = Q9.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25"
+    },
+    "Q12": {
+      "v": 1.00,
+      "calc": "θ₁ = Q10 ÷ Q9 = 75 ÷ 75 = 1.00",
+      "interp": "PASS — θ₁ = 1.00 ≥ 0.50 threshold. 100% of scheme expenditure flows to community/commons benefits.",
+      "src": "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; CAG State Accounts Report 2024-25"
+    },
+    "Q13": {
+      "docs": [
+        "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6 (Forest Department) — ₹75cr allocation with breakdown",
+        "CAG State Accounts Report 2024-25 — ₹72cr expenditure verified, 96% utilisation",
+        "Official Notification No. 6-BD/2010/CGN (updated 2023) — budget mandate and component structure",
+        "Outcome Budget 2025-26 — expenditure results and targets",
+        "Chhattisgarh Economic Survey 2024-25 — scheme financial and output data"
+      ]
+    },
+    "Q14": {
+      "v": "1",
+      "r": "Benefits are partially excludable: directly accessible to registered artisans (85,000), farmers in bamboo zones (18,500 ha), and supply chain workers (28,500); non-enrolled individuals are excluded. However, the enrolled group is large and openly accessible to forest-area communities. Indirect ecological benefits (watershed, forest cover) are non-excludable to all. Classified as 1 (partially excludable) conservatively; the scheme could be argued as 2 given open registration.",
+      "src": "Official Notification No. 6-BD/2010/CGN; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "pass_verification": {
+    "C1_T1.1": "PASS",
+    "C2_T1.2": "PASS",
+    "C3_theta1": "PASS",
+    "C4_T1.4": "PASS",
+    "C5_T1.6": "PASS",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6 (Forest Department)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "Official Notification No. 6-BD/2010/CGN (January 2010, updated 2023)",
+    "State Forest Portal",
+    "Forest Rights Act 2006",
+    "PESA 1996"
+  ],
+  "unverified_fields": []
+}

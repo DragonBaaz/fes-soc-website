@@ -1,0 +1,55 @@
+{
+  "test_id": "T4b",
+  "scheme": "Kisan Samagra Vikas Yojana",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26; CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026); Chhattisgarh Economic Survey 2024-25; CGWB Ground Water Year Book; NDMA drought classification",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The scheme operates on private agricultural land (T1.1 = C); no commons resource is the subject of the scheme, and therefore no commons resource can be classified as lying in a notified climate/ecological stress zone under the framework. For completeness: while parts of Chhattisgarh face drought stress (NDMA drought-prone blocks in some districts), the scheme's private farmland is not a commons resource subject to the T4.7 climate vulnerability conditional. Q35 = No → Q34 monitoring threshold remains ≥ 1 (standard, not upgraded to ≥ 2).",
+      "src": "Official Notification No. 2009/CGN-26/2009 (resource type); NDMA drought classification (contextual)"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Q35 = No → threshold applicable is Q34 ≥ 1. The scheme has an annual performance review cycle: Official Notification No. 2009/CGN-26/2009 mandates 'Annual scheme performance review: June.' Outcome Budget 2025-26 documents annual outcome tracking. CAG Report No. 2 of 2026 confirms annual audit and fund utilization review. This constitutes annual reporting by government agency — Score 1. No quarterly, semi-annual, or real-time monitoring of any resource health metric is documented. However, since there is no commons resource and Q30 = No (no replenishment obligation), the monitoring being assessed is the scheme's operational monitoring, not commons-resource health monitoring as intended by T4.3. C3_T4.3 = PASS at the standard threshold; note: this PASS is technical — it applies to scheme performance monitoring, not commons health monitoring, as no commons exists.",
+      "src": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26; CAG State Accounts Report No. 2 of 2026"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism for violation of a replenishment or commons-use rule is documented in any cited official source. Since Q30 = No (no mandatory replenishment rule exists), there is no rule to enforce and correspondingly no penalty mechanism. Official Notification No. 2009/CGN-26/2009 does not describe financial penalties, benefit withdrawal, scheme disqualification, or legal action tied to any commons resource management obligation. The CAG Report No. 2 of 2026 notes 94% compliance with scheme guidelines but documents no penalty framework for ecological or commons compliance.",
+      "src": "Official Notification No. 2009/CGN-26/2009; CAG State Accounts Report No. 2 of 2026"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No documented mechanism for post-scheme continuity of commons governance exists. The scheme has no commons resource (T1.1 = C) and therefore no commons governance institution to hand over to a GP, BMC, FRC, or community cooperative after the scheme period ends. No O&M fund, legal vesting clause, institutional handover plan, or continuity protocol for any commons asset is mentioned in Official Notification No. 2009/CGN-26/2009, the Outcome Budget 2025-26, or the CAG Report No. 2 of 2026. The scheme is a recurring state budget scheme with annual renewal, not a project-period scheme with a defined exit and handover mechanism for commons governance.",
+      "src": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "All monitoring identified in the scheme is conducted exclusively by government agencies and departmental staff. The scheme deploys a network of 2,300+ agricultural extension workers (government employees) for implementation and monitoring. No community-based monitoring mandate, GP social audit provision, participatory resource mapping, community monitoring committee, or Village Ecological Register mechanism is mentioned in any cited official source. Monitoring is purely departmental. T4.6 = 0 → governance gap flagged as enhancement variable absent.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (from T4a) — no mandatory replenishment rule for any commons resource; scheme design contains no sustainability lock",
+    "C2_rho_or_VI": "FAIL (from T4a) — ρ ratio inapplicable (no commons resource, T1.1=C); replenishment denominator does not exist",
+    "C3_T4.3": "PASS — Q34 = 1 ≥ 1 (standard threshold; Q35 = No, no stress upgrade); annual government performance review documented in scheme notification and Outcome Budget; NOTE: this is a technical pass — monitoring is of scheme performance metrics, not commons health, as no commons resource exists",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No; neither a penalty mechanism (T4.4) nor a post-scheme continuity mechanism (T4.5) is documented; joint fail on the OR-gate",
+    "enh_T4.6_flag": "GOVERNANCE GAP: T4.6 = No — monitoring is exclusively departmental (2,300+ government extension workers); no community monitoring participation documented; per framework Section 4, T4.6 = 0 is the single most important upgrade pathway flag for Near-SOC Structural schemes; however, given that all four tests fail here (Adjacent/Non-SOC), T4.6 remediation is secondary to fundamental scheme redesign",
+    "overall_T4": "FAIL — C1 FAIL (no replenishment rule), C2 FAIL (ρ inapplicable/no commons), C4 FAIL (neither penalty nor continuity mechanism exists). C3 passes technically but on scheme performance monitoring, not commons resource monitoring. T4 FAIL confirmed. Combined with T1 FAIL, T2 FAIL, T3 FAIL: all four tests fail → scheme classification is Adjacent/Non-SOC (≤2 tests pass)."
+  },
+  "sources_verified": [
+    "Official Notification No. 2009/CGN-26/2009",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "t4a_output.json (carry_for_t4b values)"
+  ],
+  "unverified_fields": []
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-04-26T11:46:22.185Z",
+  "sourceRoot": "C:\\\\Users\\\\vaibh\\\\OneDrive\\\\Desktop\\\\soc\\\\departments",
+  "copiedSchemeCount": 20,
+  "skippedSchemeCount": 205,
+  "departments": [
+    {
+      "departmentSlug": "agriculture-department",
+      "departmentName": "Agriculture Department",
+      "totalSchemes": 7,
+      "classificationCounts": {
+        "SOC": 0,
+        "SOC with Governance Gaps": 1,
+        "Near-SOC (Operational)": 0,
+        "Near-SOC (Structural)": 1,
+        "Adjacent / Non-SOC": 5,
+        "Unknown": 0
+      },
+      "testPassCounts": {
+        "t1Pass": 2,
+        "t2Pass": 2,
+        "t3Pass": 3,
+        "t4Pass": 1
+      },
+      "enhancementAbsenceCounts": {
+        "T1.5": 5,
+        "T2.4": 5,
+        "T2.5": 4,
+        "T3.5": 5,
+        "T4.6": 7
+      },
+      "unverifiedSchemeCount": 7,
+      "dominantFindings": {
+        "topFailurePattern": "T4.6",
+        "topUpgradeLever": "T1.5"
+      },
+      "schemeIds": [
+        "agriculture-department-rajiv-gandhi-kisan-nyay-yojana",
+        "agriculture-department-rainfed-area-development",
+        "agriculture-department-pm-kisan-chhattisgarh-component",
+        "agriculture-department-national-food-security-mission",
+        "agriculture-department-krishi-yantrikikaran",
+        "agriculture-department-kisan-samagra-vikas-yojana",
+        "agriculture-department-godhan-nyay-yojana"
+      ]
+    },
+    {
+      "departmentSlug": "animal-husbandry-dairy-department",
+      "departmentName": "Animal Husbandry & Dairy Department",
+      "totalSchemes": 5,
+      "classificationCounts": {
+        "SOC": 0,
+        "SOC with Governance Gaps": 1,
+        "Near-SOC (Operational)": 0,
+        "Near-SOC (Structural)": 0,
+        "Adjacent / Non-SOC": 4,
+        "Unknown": 0
+      },
+      "testPassCounts": {
+        "t1Pass": 3,
+        "t2Pass": 2,
+        "t3Pass": 3,
+        "t4Pass": 1
+      },
+      "enhancementAbsenceCounts": {
+        "T1.5": 1,
+        "T2.4": 4,
+        "T2.5": 3,
+        "T3.5": 4,
+        "T4.6": 5
+      },
+      "unverifiedSchemeCount": 5,
+      "dominantFindings": {
+        "topFailurePattern": "T4.6",
+        "topUpgradeLever": "T2.4"
+      },
+      "schemeIds": [
+        "animal-husbandry-dairy-department-govt-livestock-and-poultry-farm",
+        "animal-husbandry-dairy-department-gaushan-palan-yojana",
+        "animal-husbandry-dairy-department-dairy-development-scheme",
+        "animal-husbandry-dairy-department-backyard-poultry-scheme",
+        "animal-husbandry-dairy-department-artificial-insemination-program"
+      ]
+    },
+    {
+      "departmentSlug": "forest-department",
+      "departmentName": "Forest Department",
+      "totalSchemes": 8,
+      "classificationCounts": {
+        "SOC": 0,
+        "SOC with Governance Gaps": 2,
+        "Near-SOC (Operational)": 1,
+        "Near-SOC (Structural)": 2,
+        "Adjacent / Non-SOC": 3,
+        "Unknown": 0
+      },
+      "testPassCounts": {
+        "t1Pass": 6,
+        "t2Pass": 6,
+        "t3Pass": 6,
+        "t4Pass": 3
+      },
+      "enhancementAbsenceCounts": {
+        "T1.5": 1,
+        "T2.4": 1,
+        "T2.5": 5,
+        "T3.5": 8,
+        "T4.6": 7
+      },
+      "unverifiedSchemeCount": 6,
+      "dominantFindings": {
+        "topFailurePattern": "T3.5",
+        "topUpgradeLever": "T4.6"
+      },
+      "schemeIds": [
+        "forest-department-vrikshopan-yojana-sapling-distribution",
+        "forest-department-minor-forest-produce-trading-mfpt",
+        "forest-department-joint-forest-management",
+        "forest-department-forest-rights-act-fra",
+        "forest-department-ecotourism-development",
+        "forest-department-chief-minister-plantation-scheme",
+        "forest-department-campa-compensatory-afforestation",
+        "forest-department-bamboo-development-program"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "T4b",
+  "scheme": "PM-KISAN (Chhattisgarh Component)",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "PM-KISAN Central Notification (December 1, 2018); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; pmkisan.gov.in portal",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "PM-KISAN (T1.1 = C) involves no commons resource. There is no physical or intangible commons to classify under documented climate/ecological stress indicators (CGWB over-exploited block, DLCC drought list, NBA threatened-species habitat, eco-sensitive zone). While Chhattisgarh has drought-prone blocks (NDMA) and some groundwater-stressed districts, these classifications do not apply to any scheme-level commons resource — because PM-KISAN operates entirely on private agricultural land via DBT. Climate stress classification of the scheme's resource base is inapplicable. No stress upgrade to Q34 threshold is triggered.",
+      "src": "PM-KISAN Official Notification December 1, 2018 (private land DBT scheme — no commons resource classified); Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q34": {
+      "v": "0",
+      "r": "Q35 = No; threshold for Q34 is ≥ 1 (standard). However, PM-KISAN has no scheduled monitoring of any commons resource health or replenishment compliance — because no commons resource exists and no replenishment obligation has been mandated (Q30 = No). The scheme's operational monitoring covers payment disbursement tracking (quarterly Outcome Budget, CAG annual audit, MIS database quality checks at 94% currency) — but this is administrative financial monitoring of DBT payments, not commons resource health monitoring. No resource health metrics (water table, vegetation, soil, biodiversity, practitioner count, or equivalent) are measured or reported at any frequency. Score = 0 → C3 FAIL.",
+      "src": "CAG State Accounts Report 2024-25 (monitoring scope: fund flow, payment success rate, database quality only); Outcome Budget 2025-26 (metrics: beneficiary count, ₹Cr disbursed, success rate — no NRM/resource health metrics); pmkisan.gov.in"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "PM-KISAN mandates no replenishment rule (Q30 = No; C1_T4.1 = FAIL). Consequently, no penalty or sanction mechanism for violation of a replenishment/use rule exists. The scheme's only enforcement mechanism is ineligibility screening (0.8% rejection per CAG for fraudulent enrollment), which is a payment integrity check — not a conservation/sustainability enforcement mechanism. No fine, scheme-benefit withdrawal tied to NRM non-compliance, legal action under FRA/PESA/EPA/BDA, or GP-imposed conservation sanction is mandated.",
+      "src": "PM-KISAN Official Notification December 1, 2018; CAG State Accounts Report 2024-25 (enforcement scope: fraud prevention, not NRM compliance)"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "PM-KISAN has no commons resource and no commons governance structure to sustain post-scheme. The scheme is an ongoing central transfer program with no time-limited project phase, no asset creation on common land, no O&M fund, no institutional handover plan, no GP/BMC/FRC continuity clause, and no legal vesting of any commons governance function. Post-scheme continuity of commons governance is inapplicable. Score = No.",
+      "src": "PM-KISAN Official Notification December 1, 2018; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "All PM-KISAN monitoring is conducted by state agriculture departments and the Ministry of Agriculture & Farmers Welfare through centralized MIS, DBT payment records, and CAG audit. No community monitoring role is mandated — no GP social audit of scheme outcomes, no FRC/BMC patrol or register upkeep, no participatory resource mapping, and no community-based monitoring committee is required under scheme guidelines. Monitoring is exclusively departmental and administrative (payment verification, database maintenance). Score = No → governance gap flag.",
+      "src": "PM-KISAN Official Notification December 1, 2018; CAG State Accounts Report 2024-25 (audit scope: departmental DBT verification only); pmkisan.gov.in (portal: government-administered)"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (carried from T4a — no replenishment rule mandated; Q30 = No)",
+    "C2_rho_or_VI": "FAIL (carried from T4a — ρ undefined; no commons resource exists; no extraction or replenishment dynamic)",
+    "C3_T4.3": "FAIL — Q34 = 0; no commons resource health monitoring at any frequency; only administrative DBT payment tracking exists",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No; no penalty mechanism for replenishment violation; no post-scheme continuity mechanism for commons governance",
+    "enh_T4.6_flag": "governance gap — monitoring is exclusively departmental (Ministry and state agriculture department DBT audit); no community monitoring role mandated; T4.6 = 0 is the primary structural gap and the highest-priority upgrade lever if SOC redesign were attempted",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "PM-KISAN Official Notification, December 1, 2018",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "pmkisan.gov.in portal"
+  ],
+  "unverified_fields": []
+}

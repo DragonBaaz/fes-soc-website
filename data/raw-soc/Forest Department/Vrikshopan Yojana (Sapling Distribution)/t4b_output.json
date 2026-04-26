@@ -1,0 +1,58 @@
+{
+  "test_id": "T4b",
+  "scheme": "Vrikshopan Yojana (Sapling Distribution)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-VY/2018/CGN (2024); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; Vrikshopan Yojana State Forest Portal; t4a_output.json (carry_for_t4b)",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "PASS",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The scheme's primary commons resource (A2: government nurseries, 210 facilities state-wide) is not classified under a specific notified climate/ecological stress designation in the applicable official databases. The nursery infrastructure as a state-managed asset network does not appear on CGWB over-exploited block lists (groundwater), ISFR high-fire-risk or high-deforestation-pressure designations for the nurseries per se, or NDMA drought-prone block classification for the nursery resource specifically. While Chhattisgarh has some drought-prone districts and faces forest cover pressures (per ISFR), the scheme operates state-wide through 210 distributed nurseries and no specific stress-zone classification is documented for the scheme's commons resource in official sources. Q34 threshold remains at ≥ 1 (standard; no upgrade applied).",
+      "src": "CGWB groundwater status reports; ISFR 2023; NDMA drought-prone district list; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Annual monitoring is conducted by the Forest Department and verified by CAG. The scheme tracks: sapling survival rate (65% at 1-year, verified by CAG monitoring plot surveys), total saplings distributed (annual government reports), nursery production (210 nurseries audited), quality compliance (92% verified by sample testing). The Outcome Budget and CAG State Accounts Report produce annual performance data. The scheme portal (vrikshopan portal) provides aggregate statistics updated annually. However, monitoring is conducted by government agencies only (Forest Department + CAG audit); it is government-reported at annual intervals, not community-accessible at quarterly frequency or better. Score = 1. Q35 = No → threshold = ≥ 1. PASS on T4.3.",
+      "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25; Vrikshopan Yojana State Forest Portal"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism for violation of replenishment or use rules is identified in any scheme source document. The Official Notification (2024) specifies distribution procedures and survival targets but contains no enforcement clause, fine, scheme-benefit withdrawal, suspension of nursery access, or legal sanction for non-compliance with any scheme obligation. The 60% survival target is a performance indicator with no stated consequence for failure to achieve it. There is no GP-imposed sanction or administrative penalty mechanism. Note: this finding is compounded by Q30 (T4.1 = No) — since no replenishment rule exists, there is correspondingly no penalty framework for its violation.",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); CAG State Accounts Report 2024-25; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No post-scheme continuity mechanism is designed into the scheme. The scheme provides a 3-year maintenance support period for planted saplings, but this support period is within the scheme's active phase, not a post-scheme institutional handover arrangement. Once the scheme's support period ends, trees on private land revert to private management with no commons governance continuity. For the nursery infrastructure (A2 commons resource), no O&M fund, GP/BMC institutional vesting, or continuity clause for nursery operations after scheme closure is stipulated in scheme guidelines. The scheme assumes ongoing budget allocation from the state government, but no ring-fenced continuity fund or institutional vehicle beyond the scheme's project period is established. FAIL on T4.5.",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; CAG State Accounts Report 2024-25"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Monitoring is conducted exclusively by government agencies (Forest Department annual monitoring, CAG periodic audit). No scheme guideline mandates community participation in monitoring: no social audit provision, no GP-led participatory resource assessment, no community monitoring committee with defined role, no Village Ecological Register update requirement, no beneficiary-led survival reporting beyond the portal's self-reporting feature (which is informational, not constitutionally or scheme-mandated). The portal's survival tracker allows individual beneficiaries to report tree survival but is not a structured community monitoring mechanism with institutional mandate or formal record-keeping role. FLAG: T4.6 = 0 is the primary structural gap and upgrade lever — community monitoring is the most cost-effective addition to convert Near-SOC (Structural) schemes. Activation plan recommended: mandate GP-level participatory sapling survival audits with recorded resolutions, feeding into the state MIS.",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); Vrikshopan Yojana State Forest Portal; CAG State Accounts Report 2024-25"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (from T4a — no mandatory replenishment rule with enforcement consequence identified in scheme guidelines)",
+    "C2_rho_or_VI": "PASS (from T4a — ρ = 1.00 ≤ 1.2; Estimated; based on annual distribution = annual production; T1.5 = No boundary demarcation)",
+    "C3_T4.3": "PASS (Q34 score = 1; Q35 = No → threshold ≥ 1 applies; annual government monitoring confirmed by CAG and Outcome Budget)",
+    "C4_T4.4_or_T4.5": "FAIL (Q36 = No: no penalty mechanism; Q37 = No: no post-scheme continuity mechanism; neither condition satisfied)",
+    "enh_T4.6_flag": "GOVERNANCE GAP — PRIMARY UPGRADE LEVER: Community-led monitoring absent (Q38 = No). Monitoring is exclusively departmental. Recommended action: mandate GP-level participatory sapling survival audits with resolution records feeding into scheme MIS. This is the single most cost-effective structural upgrade for this scheme.",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-VY/2018/CGN (established April 1, 2018; amended 2024)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Vrikshopan Yojana State Forest Portal",
+    "CGWB groundwater status reports (no over-exploited block for nursery resource)",
+    "ISFR 2023 (no specific nursery-resource stress zone classification)"
+  ],
+  "unverified_fields": []
+}

@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "Dairy Development Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL — ρ unverifiable; no commons resource; T4.1 = No is primary failure",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The scheme's primary resource is privately owned dairy livestock (T1.1 = C from T1 output). There is no commons resource for which a climate or ecological stress classification is applicable. No CGWB over-exploited block, DLCC drought-prone classification, NBA threatened-species habitat, or eco-sensitive zone notification relates to a commons resource operated by this scheme. Dairy pasture or fodder land, if any, is not identified as a scheme commons resource in any available document. Climate stress conditional (T4.7) is therefore not triggered. Q34 threshold remains at ≥1.",
+      "src": "programs.md — all entries (no commons resource or geographic zone cited); t1_output.json (T1.1 = C)"
+    },
+    "Q34": {
+      "v": "0",
+      "r": "Q35 = No; applicable threshold = Q34 ≥ 1. No monitoring of any commons resource health is designed into or documented for this scheme. PORTAL entry confirms tracking of 'production metrics and beneficiary statistics' — this is production/financial monitoring, not resource health monitoring for a commons (groundwater level, pasture condition index, forest cover, etc.). CAG State Accounts 2024-25 covers fund utilization and infrastructure cost verification, not commons resource health. Since T1.1 = C (no commons), no commons resource health metric exists to monitor. Q34 = 0 → C3 FAIL. Note: stress upgrade from Q35 is not triggered; standard threshold ≥ 1 applies and is not met.",
+      "src": "programs.md — PORTAL: 'production metrics' (production output monitoring only); CAG: 'fund utilization, infrastructure cost verification, scheme viability' (financial audit, not resource health monitoring)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism for violation of any commons replenishment or use rule is documented in any available source. Since T4.1 = No (no mandatory replenishment rule exists for any commons), there is no underlying obligation for which a penalty mechanism could be designed. The scheme's ANNOUNCEMENT describes eligibility and qualification criteria for subsidy access — disqualification from subsidy is a beneficiary-eligibility control, not a commons protection penalty. CAG audit scope does not include commons-violation sanctions. No scheme guideline clause withholding funds, suspending access, or imposing legal action for commons damage is cited.",
+      "src": "programs.md — ANNOUNCEMENT: subsidy eligibility criteria (no commons sanction clause); CAG: fund utilization audit (no penalty mechanism for commons violation noted)"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No documented mechanism for post-scheme continuity of commons governance is present. The scheme mentions 'cooperative dairy structure strengthened' and 'cooperative formation guidelines' — the cooperative provides milk procurement continuity for private dairy businesses, but this is not a commons governance continuity mechanism. No O&M fund for a commons, no legal vesting of commons assets to a GP/BMC/FRC/community cooperative, no institutional handover plan for a commons, and no continuity clause in scheme guidelines for commons stewardship are documented in any available source. The cooperative's function post-scheme would be private milk procurement, not commons stewardship.",
+      "src": "programs.md — ANNOUNCEMENT: 'cooperative formation guidelines' (milk procurement role; no commons continuity mandate); OUTCOME: 'Cooperative dairy structure strengthened' (private value-chain continuity, not commons governance); CAG: no continuity mechanism documented"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "No formal community monitoring role for any commons resource is designed into or documented for the scheme. The scheme has no commons to monitor. No GP social audit, FRC patrol, BMC register upkeep, participatory resource mapping, or community-managed sensing activity for a commons is mentioned in any source. PORTAL and OUTCOME entries describe government-tracked production metrics only. Enhancement gap: community-based monitoring is the single most important upgrade pathway for T4 failures; its complete absence here reflects the structural absence of a commons governance design. Flag as primary structural gap.",
+      "src": "programs.md — PORTAL: 'production metrics' (departmental tracking only); OUTCOME; ANNOUNCEMENT (no community monitoring mechanism cited)"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (from T4a — no mandatory replenishment rule; no commons resource)",
+    "C2_rho_or_VI": "FAIL (from T4a — ρ inapplicable; no commons resource; T1.1 = C)",
+    "C3_T4.3": "FAIL — Q34 = 0; no commons resource health monitoring; Q35 = No so threshold = ≥1; not met",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No; neither penalty nor continuity mechanism exists for any commons",
+    "enh_T4.6_flag": "GOVERNANCE GAP — Q38 = No; no community monitoring role; primary structural gap; upgrade pathway requires community monitoring activation as first step",
+    "overall_T4": "FAIL — all four T4 conditions (C1, C2, C3, C4) failed; scheme has no commons resource and therefore no sustainability lock architecture. Classification: Adjacent/Non-SOC (T1 also FAIL → ≤2 tests PASS)"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET: State budget allocation for dairy enterprise development",
+    "programs.md — SURVEY: Economic Survey on dairy development",
+    "programs.md — OUTCOME: Implementation outcomes",
+    "programs.md — ANNOUNCEMENT: Official notification",
+    "programs.md — CAG: CAG State Accounts 2024-25",
+    "programs.md — PORTAL: National Portal Agriculture > Animal Husbandry > Value Added Products",
+    "t4a_output.json: carry_for_t4b (C1_T4.1 = FAIL; C2_rho_or_VI = FAIL; track = RhoRatio)"
+  ],
+  "unverified_fields": []
+}

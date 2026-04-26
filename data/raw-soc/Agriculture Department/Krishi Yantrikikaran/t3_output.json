@@ -1,0 +1,66 @@
+{
+  "test_id": "T3",
+  "scheme": "Krishi Yantrikikaran",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2005/CGN-26/2005; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme's official guidelines and outcome documents explicitly mandate livelihood and income output indicators: (1) equipment utilization rate (82% average), (2) area under mechanized farming (22 lakh hectares), (3) labor days saved (8.5 crore person-days, reducing labor cost 40–50%), (4) operational efficiency (3–4 season increase per equipment per year), (5) labor productivity increase (3.2x). The economic mechanism is articulated: mechanization → reduced hired labor cost → higher net farm income, and Custom Hire Centers → equipment rental income for CHC operators. Livelihood pathways are explicitly described in the Economic Survey and Outcome Budget.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 2005/CGN-26/2005"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study or MIS-verified per-household annual income gain figure is available in the source documents. Aggregate data available: 8.5 crore person-days saved across 22 lakh ha and 1.4 lakh beneficiaries. No per-HH/year ΔY figure is derived or verified from scheme MIS or evaluation report.",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "<<UNVERIFIED: No DPR-level projected ΔY per household per year figure is stated in available documents. The Economic Survey reports a 3.2x labor productivity increase and 40-50% labor cost reduction but does not translate these into a per-HH annual income gain. Average subsidy is ₹125,000 per unit (one-time capital, not annual income). Insufficient data to project ΔY/HH/year.>>",
+        "calc": "NOT_AVAILABLE — no DPR income projection in per-HH/year terms found in source documents",
+        "interp": "FAIL",
+        "src": ""
+      },
+      "governing": "Projected-Provisional",
+      "r": "No observed ΔY data from evaluation studies exists. Projected ΔY cannot be determined from available documents — no DPR or guideline states a per-household annual income gain figure. The data available (aggregate labor days saved, productivity ratios) does not yield a verifiable per-HH/year figure without additional assumptions not supported by official documents. Field marked UNVERIFIED.",
+      "docs": [
+        "Chhattisgarh Economic Survey 2024-25 — 3.2x productivity, 40-50% labor cost reduction (aggregate, not per-HH/year)",
+        "Outcome Budget 2025-26 — 8.5 crore person-days saved (aggregate, not per-HH/year)",
+        "Official Notification No. 2005/CGN-26/2005 — ₹125,000 average subsidy per unit (one-time capital, not annual income)"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways are explicitly articulated in scheme documents: (1) Labor cost savings for individual subsidy recipients — scheme guidelines and Economic Survey explicitly state 40–50% labor cost reduction and 8.5 crore person-days saved, translating into higher net farm income for subsidy-recipient farmers; (2) Equipment hiring income for Custom Hire Center operators — scheme design explicitly establishes CHCs (850 centers operational) as community-level equipment-sharing hubs where hiring charges generate income for the CHC operator/community group. A third pathway (increased crop productivity from timely operations) is referenced in the Economic Survey but is presented as a consequence of mechanization broadly, not as a distinct scheme-mandated pathway.",
+      "src": "Official Notification No. 2005/CGN-26/2005; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q28": {
+      "v": "No",
+      "r": "No institutional offtake mechanism is established by the scheme for the produce or services generated through mechanization. CHC equipment hiring charges are market-rate with no guaranteed government procurement or price support. No MSP, government agency offtake agreement (NAFED/TDCCOL), GI tag with documented buyer network, BMC access and benefit-sharing agreement, or fair trade certification with an institutional buyer is identified in the scheme design. Agricultural produce from mechanized farms is sold through existing market channels without an institutional backstop specific to this scheme.",
+      "src": "Official Notification No. 2005/CGN-26/2005; National Portal (Agriculture > Farm Inputs > Mechanization); programs.md"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "The scheme tracks only monetary/productivity metrics: equipment utilization rate, area under mechanized farming, labor days saved (as a cost-reduction proxy), and operational efficiency. No non-monetary livelihood indicators are tracked — food sufficiency months, nutritional diversity (food species count), livestock feeding days from commons, or access to medicinal plants are absent from the scheme MIS or evaluation framework. Note: Q26 ΔY is UNVERIFIED (not near a threshold), so the near-threshold under-measurement flag is not triggered on quantitative grounds, but the absence of non-monetary tracking is noted.",
+      "src": "Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS — Scheme explicitly mandates livelihood output indicators (labor productivity, labor days saved, equipment utilization) and articulates economic pathways from mechanization to farmer income.",
+    "C2_deltaY": "FAIL — Q26 ΔY is UNVERIFIED; no per-HH/year income gain figure (observed or projected) is available in official documents to meet either the ₹3,000 (observed) or ₹5,000 (projected) threshold.",
+    "C3_T3.3": "PASS — T3.3 = 2; two distinct livelihood pathways explicitly articulated (labor cost savings for subsidy recipients; CHC hiring income for center operators).",
+    "C4_T3.4": "FAIL — T3.4 = No; no institutional offtake mechanism, government procurement guarantee, GI tag buyer network, or BMC agreement identified for scheme outputs.",
+    "enh_T3.5_flag": "T3.5 = 0 (no non-monetary metrics tracked). ΔY is UNVERIFIED rather than near-threshold, so the standard near-threshold under-measurement flag is not applicable on numeric grounds; however, the scheme likely under-measures true livelihood benefit since labor savings and productivity gains have non-monetary dimensions not captured in MIS.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 2005/CGN-26/2005",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "National Portal — Agriculture > Farm Inputs > Mechanization"
+  ],
+  "unverified_fields": ["Q26"]
+}

@@ -1,0 +1,96 @@
+{
+  "test_id": "T2",
+  "scheme": "Bamboo Development Program",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-BD/2010/CGN (updated 2023); Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26; State Forest Portal",
+  "carried_from_t1": {
+    "T1.1": "A1"
+  },
+  "answers": {
+    "Q15": {
+      "v": 113500,
+      "src": "Chhattisgarh Economic Survey 2024-25 — 'Employment multiplier: 85,000 direct + 28,500 supply chain workers'; CAG State Accounts Report 2024-25 — 85,000 artisans confirmed"
+    },
+    "Q16": {
+      "v": 113500,
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26 — all 85,000 artisans and 28,500 supply chain workers are engaged within Chhattisgarh's bamboo forest zones (18,500 ha); no non-local beneficiary group documented"
+    },
+    "Q17": {
+      "v": "Settled_communities — within state forest zones of Chhattisgarh where bamboo plantations are located (18,500 hectares across forest blocks)",
+      "r": "All documented beneficiaries (artisans, processors, supply chain workers) are resident in and employed within the bamboo plantation forest zones of Chhattisgarh. Scheme is administered by the state Forest Department within its own forest jurisdictions. No external or non-local beneficiary group identified in any scheme document.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25 — area confirmed by land survey"
+    },
+    "Q18": {
+      "v": 1.00,
+      "calc": "θ₂ = Q16 ÷ Q15 = 113,500 ÷ 113,500 = 1.00",
+      "interp": "PASS — θ₂ = 1.00 ≥ 0.70 threshold. All documented beneficiaries are local dwellers within the bamboo forest zones.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No explicit SC/ST/marginalised household count provided in scheme documents. Budget 2025-26 (Demand for Grants No. 6), Economic Survey 2024-25, CAG State Accounts Report 2024-25, Outcome Budget 2025-26, and Official Notification No. 6-BD/2010/CGN all report total artisan count (85,000) without disaggregation by caste category or household type. Contextual note: bamboo artisan communities in Chhattisgarh forest areas are predominantly ST/tribal (PESA-scheduled areas), strongly suggesting θ₃ > 0.40, but this cannot be confirmed from the provided documents alone.>>",
+      "r": "Official documents do not provide SC/ST or marginalised household breakdown for the 85,000 artisans or 28,500 supply chain workers.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: Depends on Q19, which is unverified. θ₃ cannot be calculated without confirmed marginalised beneficiary count.>>",
+      "calc": "θ₃ = Q19 ÷ Q15 — not calculable (Q19 unverified)",
+      "interp": "FAIL — cannot confirm θ₃ ≥ 0.40 without verified marginalised beneficiary data",
+      "src": "See Q19"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Village Forest Committees (VFCs) under Joint Forest Management and Gram Sabhas under PESA 1996 / FRA 2006 are formally constituted in the PESA-scheduled forest areas where Bamboo Development Program operates. SFFC (State Forest Federation Corporation) also serves as a state-level federated body representing forest communities."
+      },
+      "22b": {
+        "v": "<<UNVERIFIED: Official Notification No. 6-BD/2010/CGN specifies 'Implementation: Forest Department + Industries Department + SFFC' — does not explicitly mandate VFC/Gram Sabha role in Bamboo Development Program decision-making. PESA/FRA mandate community roles in MFP management generally, but these are not scheme-specific mandates in the Bamboo Development Program notification.>>"
+      },
+      "22c": {
+        "v": "<<UNVERIFIED: No meeting minutes, Gram Sabha resolutions, or VFC/SFFC committee meeting records are referenced or cited in programs.md data sources (Budget, Economic Survey, CAG, Outcome Budget, Portal). Cannot confirm ≥2 documented meetings with resolutions in prior 12 months.>>"
+      },
+      "docs": [],
+      "src": "Official Notification No. 6-BD/2010/CGN; PESA 1996; FRA 2006; CAG State Accounts Report 2024-25"
+    },
+    "Q23": {
+      "v": "<<UNVERIFIED: No data on gender composition of VFCs, SFFC committees, or any governance body for this scheme is provided in scheme documents.>>",
+      "r": "Neither the Official Notification, Economic Survey, CAG report, Outcome Budget, nor the Portal data reference gender representation in governance bodies.",
+      "src": "Official Notification No. 6-BD/2010/CGN; CAG State Accounts Report 2024-25"
+    },
+    "Q24": {
+      "v": "<<UNVERIFIED: State Forest Portal lists services (plantation locator, producer directory, product marketplace, training info, market data) but does not explicitly document a formal grievance/voice mechanism. No Social Audit, MIS grievance portal, Gram Sabha complaint process, or ombudsman is referenced in scheme documents.>>",
+      "r": "Programs.md does not document an institutionally mandated grievance mechanism within the Bamboo Development Program.",
+      "src": "State Forest Portal; Official Notification No. 6-BD/2010/CGN"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS",
+    "C2_theta3": "FAIL",
+    "C3_T2.3": "FAIL",
+    "enh_T2.4_flag": "GOVERNANCE GAP: formal grievance/voice mechanism for non-beneficiaries not documented in scheme",
+    "enh_T2.5_flag": "GOVERNANCE GAP: women's representation in governance body not documented",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-BD/2010/CGN (January 2010, updated 2023)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "State Forest Portal",
+    "PESA 1996",
+    "Forest Rights Act 2006"
+  ],
+  "unverified_fields": [
+    "Q19",
+    "Q20",
+    "Q22-22b",
+    "Q22-22c",
+    "Q23",
+    "Q24"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "test_id": "T4b",
+  "scheme": "Minor Forest Produce Trading",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-MFPT/2000/CGN (updated 2023); Outcome Budget 2025-26; CAG State Accounts Report 2024-25; CGMFPFED Portal; Indian Forest Act 1927; Forest Rights Act 2006",
+  "carried_from_t4a": {
+    "C1_T4.1":      "PASS",
+    "C2_rho_or_VI": "PASS",
+    "track":        "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "No official climate or ecological stress classification for the NTFP forest resource areas of Chhattisgarh is referenced in the reviewed sources. The scheme reports 98% sustainable harvest compliance (CAG-verified), indicating forests are not under acute extraction stress from scheme operations. No ISFR high-fire-risk or high-deforestation-pressure district notification, CGWB over-exploited block classification, or NDMA drought-prone block notification is specifically associated with the NTFP collection zones in the official documents reviewed. Baseline monitoring threshold of Q34 ≥ 1 applies.",
+      "src": "CAG State Accounts Report 2024-25 (98% sustainability verified); Outcome Budget 2025-26; Official Notification No. 6-MFPT/2000/CGN"
+    },
+    "Q34": {
+      "v": "3",
+      "r": "Continuous/real-time monitoring confirmed. Q35 = No, so threshold is Q34 ≥ 1. Evidence: (1) CGMFPFED Portal (cgmfpfed.org) provides a real-time NTFP price tracker and live statistics dashboard (8.5 lakh MT, 185,000 collectors, collection centre data, price rates) — this constitutes continuous resource-extraction monitoring with community-accessible digital disclosure. (2) Outcome Budget 2025-26 publishes annual sustainability and results data in the public domain. (3) CAG State Accounts Report 2024-25 provides independent annual audit with inventory verification of NTFP volumes and sustainability compliance. Together, these constitute continuous/real-time monitoring (score 3) with annual independent verification overlay. Stress upgrade (≥2) not required since Q35 = No.",
+      "src": "CGMFPFED Portal (real-time price tracker and statistics); Outcome Budget 2025-26; CAG State Accounts Report 2024-25"
+    },
+    "Q36": {
+      "v": "Yes",
+      "r": "Documented penalty mechanisms exist: (1) Indian Forest Act 1927 (applicable in Chhattisgarh) provides legal sanctions including fines and prosecution for illegal or excess harvesting from state forests, applicable to violations of sustainable harvest norms. (2) Forest Rights Act 2006 creates enforcement mechanisms for community forest rights, with provisions for action against over-extraction. (3) CGMFPFED operational framework empowers the federation to suspend or revoke collector registration for non-compliance with harvest norms (95%+ compliance threshold in Official Notification constitutes an operational condition for scheme participation). These constitute 'legal action under FRA/Forest Act' and 'scheme-benefit withdrawal' qualifying under T4.4.",
+      "src": "Official Notification No. 6-MFPT/2000/CGN (95%+ compliance as operational condition); Indian Forest Act 1927; Forest Rights Act 2006; CAG State Accounts Report 2024-25 (compliance enforcement verified)"
+    },
+    "Q37": {
+      "v": "Yes",
+      "r": "Post-scheme continuity is institutionally assured: (1) CGMFPFED (Chhattisgarh Minor Forest Produce Federation) is a permanent statutory government corporation with an ongoing mandate — it is not a time-limited project vehicle but a standing institution funded annually through state budget (Demand for Grants No. 6, Forest Department). (2) 35 tribal producer cooperatives are registered legal entities with independent status and membership base (145,000 members), capable of continuing operations beyond any given budget year. (3) 1,250 collection centres are established physical infrastructure with ongoing operational mandate. The scheme's continuity is embedded in CGMFPFED's statutory existence, not dependent on scheme-specific earmarking.",
+      "src": "Official Notification No. 6-MFPT/2000/CGN; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6 (annual budget allocation for CGMFPFED); CAG State Accounts Report 2024-25 (CGMFPFED institutional verification)"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "No formal community monitoring mandate is documented in the reviewed sources. Monitoring of NTFP volumes, sustainability compliance, and scheme performance is conducted by CGMFPFED (departmental MIS) and independently by CAG. The 35 cooperatives participate in commercial operations (pricing, collective bargaining) but are not documented as having a formal resource health monitoring role (no social audit provisions, no FRC patrol mandate, no BMC-equivalent register for NTFP forests, no participatory resource mapping protocol cited in Official Notification or Outcome Budget). This is a governance gap — flagged as enhancement variable absent.",
+      "src": "Official Notification No. 6-MFPT/2000/CGN (no community monitoring mandate cited); Outcome Budget 2025-26; CAG State Accounts Report 2024-25 (monitoring described as departmental and audit-based)"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1":         "PASS (from T4a — mandatory sustainable harvest norm mandated with 95%+ compliance threshold)",
+    "C2_rho_or_VI":    "PASS (from T4a — ρ = 0.98, Measured, well within ≤ 1.2 threshold)",
+    "C3_T4.3":         "PASS (Q34 = 3; threshold = ≥1 since Q35 = No; continuous real-time monitoring via CGMFPFED portal + annual CAG audit)",
+    "C4_T4.4_or_T4.5": "PASS (Q36 = Yes AND Q37 = Yes; both penalty and continuity mechanisms independently satisfied)",
+    "enh_T4.6_flag":   "GOVERNANCE GAP — T4.6 = 0: Community monitoring is absent; all monitoring is departmental (CGMFPFED + CAG). This is flagged as the primary structural upgrade lever. Combined with T2.4 = 0 and T3.5 = 0, cumulative absent enhancements = 3, triggering 'SOC with Governance Gaps' at master decision level.",
+    "overall_T4":      "PASS"
+  },
+  "master_decision_note": "All 4 tests PASS. Enhancement variables absent: T2.4 (no grievance mechanism), T3.5 (no non-monetary livelihood tracking), T4.6 (no community monitoring). Absent enhancements = 3 (≥2). Final SOC Classification: SOC with Governance Gaps.",
+  "sources_verified": [
+    "Official Notification No. 6-MFPT/2000/CGN (January 2000, updated 2023)",
+    "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "CGMFPFED Portal (cgmfpfed.org)",
+    "Indian Forest Act 1927",
+    "Forest Rights Act 2006"
+  ],
+  "unverified_fields": []
+}

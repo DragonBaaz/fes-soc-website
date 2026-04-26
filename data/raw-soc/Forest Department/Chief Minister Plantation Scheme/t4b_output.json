@@ -1,0 +1,55 @@
+{
+  "test_id": "T4b",
+  "scheme": "Chief Minister Plantation Scheme",
+  "department": "Forest Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-25",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "PASS (formal/vacuous — ρ = 0.00; concept inapplicable to private land scheme; moot given C1_T4.1 = FAIL)",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The scheme's primary resource is private land across Chhattisgarh state (T1.1 = C). There is no demarcated commons resource to classify under a notified climate or ecological stress zone. The scheme operates state-wide and is not targeted at or restricted to any CGWB over-exploited block, NDMA drought-prone block, ISFR high fire-risk zone, or NBA threatened-species habitat. While parts of Chhattisgarh include drought-prone and ecologically stressed areas, no scheme guideline or official notification classifies the scheme's resource (private plantation land) as lying within a notified stress zone. The Q35 stress-override does not apply. Q34 threshold remains at ≥ 1 (standard).",
+      "src": "Official Notification No. 6-CMP/2015/CGN (no stress-zone targeting); Chhattisgarh Economic Survey 2024-25 (state-wide coverage, not stress-zone-specific)"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Q35 = No → threshold is Q34 ≥ 1 (standard; no climate-stress upgrade). The scheme mandates 3-year survival monitoring for each plantation batch: trees are tracked at planting, year-1, year-2, and year-3 intervals (78% survival target). CAG State Accounts Report 2024-25 confirms annual government audits of survival records and payment data. The State Forest Portal publishes aggregate statistics annually. This constitutes annual reporting by a government agency (score = 1). There is no quarterly or semi-annual community-accessible disclosure, no real-time dashboard, and no GP-noticeboard disclosure. Score = 1. With Q35 = No, threshold = ≥ 1. Formal PASS. NOTE: This monitoring applies to private tree survival on private land — not to a commons resource health metric. The concept of T4.3 (commons resource monitoring) is inapplicable here since there is no commons; the formal score reflects government administrative tracking of a private scheme output.",
+      "src": "Official Notification No. 6-CMP/2015/CGN (3-year survival monitoring mandate); CAG State Accounts Report 2024-25 (annual audit of survival records); State Forest Portal (annual statistics)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty or sanction mechanism for violation of a replenishment or commons-use rule exists. As established in Q30 (T4.1 = No), the scheme contains no replenishment obligation for a commons resource — therefore there is no rule whose violation can be sanctioned. The maintenance allowance (₹500/tree/year) is conditional on tree survival: if trees die, the maintenance payment is withheld. However, this is an incentive conditional on private asset survival, not a penalty for commons depletion. No fine, scheme-benefit withdrawal, legal action under FRA/PESA/EPA/BDA, or GP-imposed sanction for any replenishment violation is specified in the official notification or any available scheme document. Q36 = No.",
+      "src": "Official Notification No. 6-CMP/2015/CGN (no penalty clause for commons replenishment violation found); CAG State Accounts Report 2024-25"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No post-scheme continuity mechanism for commons governance exists. After the 3-year maintenance period concludes, planted trees become permanent private assets of the landholder — no commons governance handover is required or provided. The scheme design contains no O&M fund, no institutional handover plan to a GP/BMC/FRC/community cooperative, no legal vesting of resources in a community body, and no continuity clause in the official guidelines. The scheme's exit design is implicit: trees are planted, incentive paid over 3 years, and thereafter the private landholder manages the private asset independently. Since no commons resource was created or managed, no commons continuity mechanism is applicable or designed. Q37 = No.",
+      "src": "Official Notification No. 6-CMP/2015/CGN (no continuity clause found); Outcome Budget 2025-26; CAG State Accounts Report 2024-25"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Monitoring is conducted exclusively by government agencies with no community participation in measurement or disclosure. Survival tracking is performed by District Forest Officers. Annual audits are conducted by CAG. The State Forest Portal publishes departmental statistics. No GP social audit, no Forest Rights Committee patrol, no BMC register upkeep, no participatory resource mapping, and no community monitoring committee is mentioned in any scheme document or evaluation report. Q38 = No. Governance gap flagged.",
+      "src": "Official Notification No. 6-CMP/2015/CGN; CAG State Accounts Report 2024-25; Outcome Budget 2025-26; State Forest Portal"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (carried from T4a — no mandatory replenishment or continuity rule for a commons resource; Q30 = No)",
+    "C2_rho_or_VI": "PASS (carried from T4a — ρ = 0.00 ≤ 1.2; formal/vacuous; concept inapplicable to private land scheme)",
+    "C3_T4.3": "PASS (formal) — Q34 = 1 ≥ 1 (standard threshold, Q35 = No); annual government survival monitoring. NOTE: concept is inapplicable to a private land scheme; monitoring is of private plantation survival, not commons resource health.",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No. Neither a penalty mechanism (T4.4) nor a post-scheme continuity mechanism (T4.5) exists. No commons replenishment rule to enforce or hand over.",
+    "enh_T4.6_flag": "GOVERNANCE GAP — Q38 = No. Monitoring is exclusively departmental (DFO + CAG). No community participation in resource monitoring. Primary structural upgrade lever if scheme were redesigned toward a commons model.",
+    "overall_T4": "FAIL — C1_T4.1 = FAIL (no replenishment rule) AND C4_T4.4_or_T4.5 = FAIL (no penalty or continuity mechanism). T4 requires all of C1, C2, C3, C4 to PASS; two criteria fail. Near-SOC (Structural) designation applies if T4 were the sole failing test; however in this scheme T1 and T2 also fail — the scheme classifies as Adjacent/Non-SOC overall."
+  },
+  "sources_verified": [
+    "Official Notification No. 6-CMP/2015/CGN (July 2015, updated 2024)",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "State Forest Portal",
+    "t4a_output.json (carry_for_t4b)"
+  ],
+  "unverified_fields": []
+}

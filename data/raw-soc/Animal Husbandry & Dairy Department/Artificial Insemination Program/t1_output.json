@@ -1,0 +1,101 @@
+{
+  "test_id": "T1",
+  "scheme": "Artificial Insemination Program",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (BUDGET, SURVEY, OUTCOME, ANNOUNCEMENT, CAG, PORTAL); CAG State Accounts 2024-25; National Portal — Agriculture > Animal Husbandry > Genetic Improvement",
+  "answers": {
+    "Q1": {
+      "v": "Artificial Insemination Program",
+      "src": "programs.md — scheme heading"
+    },
+    "Q2": {
+      "v": "Animal Husbandry & Dairy Department, Chhattisgarh",
+      "src": "programs.md — department assignment; National Portal under Animal Husbandry > Genetic Improvement"
+    },
+    "Q3": {
+      "v": "Official notification for AI program implementation (ANNOUNCEMENT); National Programme for Bovine Breeding (NPBB) guidelines; National Livestock Mission; CAG State Accounts 2024-25; National Portal — Agriculture > Animal Husbandry > Genetic Improvement",
+      "src": "programs.md — ANNOUNCEMENT and PORTAL sections"
+    },
+    "Q4": {
+      "v": "A1",
+      "r": "The primary resource is state-maintained semen preservation stations and genetic material (high-genetic-value bull semen from elite government bulls) which are state/public resources formally established and notified for community/farmer use under the livestock genetic improvement mission. The scheme operates through this state-managed genetic resource base to deliver AI services to the farming community. The semen/genetic material satisfies the commons definition: (a) not exclusively privately owned (state-held), (b) accessible to the farming community under scheme guidelines, (c) degradation of semen quality or station capacity imposes direct costs on community livestock productivity.",
+      "src": "programs.md — BUDGET: 'semen collection and preservation technology, genetic material storage facilities'; PORTAL: 'linked with national livestock improvement mission, semen quality certification'; ANNOUNCEMENT: 'AI service provider network, semen quality standards, SOP'"
+    },
+    "Q5": {
+      "v": "State-operated semen preservation stations and high-genetic-value bull semen inventory managed by Chhattisgarh Animal Husbandry & Dairy Department. Includes bull stations, semen collection labs, processing and quality certification infrastructure, liquid nitrogen preservation units, and an AI technician field network delivering services to bovine livestock of farming households across the state. Resource is state-managed and accessible to all eligible farmers with cattle/buffalo. No formal geographic boundary demarcation exists for this genetic commons.",
+      "src": "programs.md — BUDGET, ANNOUNCEMENT, CAG, PORTAL sections"
+    },
+    "Q6": {
+      "v": "No",
+      "r": "State semen stations exist at fixed locations, but there is no formal geographic or institutional boundary demarcation (survey number, GPS coordinates, GP resolution, watershed boundary map) published in any public document for the genetic resource commons as required by T1.5. FLAG: T4.2 assessment (ρ or Vitality Index) must be treated as Estimated, not Measured.",
+      "src": "programs.md — no boundary documentation referenced in any section"
+    },
+    "Q7": {
+      "v": "1",
+      "r": "Farmers have a programmatically-recognised customary right to access government AI services under the state livestock improvement scheme. ANNOUNCEMENT specifies farmer eligibility and registration, and cost-sharing mechanism, confirming access is formally structured. This exceeds purely administrative discretion (0) but falls short of a fully codified statutory individual right enforceable in court (2). The access right operates through scheme guidelines under the national livestock mission framework.",
+      "src": "programs.md — ANNOUNCEMENT: 'farmer eligibility and registration, cost-sharing mechanism'; PORTAL: 'farmer registration, technician network, service availability'"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No evidence of any active diversion order, mining lease, land-use change notification, SEZ, compulsory acquisition, or equivalent legal process affecting state semen stations or the livestock genetic improvement program during the scheme period. CAG audit found no adverse orders.",
+      "src": "programs.md — no encumbrance referenced in any section; CAG State Accounts 2024-25"
+    },
+    "Q9": {
+      "v": "<<UNVERIFIED: programs.md does not provide specific annual budget figures; CAG reference confirms fund utilization audit exists but does not state total scheme expenditure amount>>",
+      "unit": "₹Cr",
+      "period": "<<UNVERIFIED: specific FY not stated>>",
+      "breakdown": "Budget components listed: semen collection and preservation technology, AI technician training, equipment procurement, genetic material storage facilities, farmer awareness programs (BUDGET section). CAG confirms: semen preservation facility maintenance cost, AI technician salary disbursement, training program expenses, equipment procurement and maintenance.",
+      "src": "programs.md — BUDGET and CAG sections"
+    },
+    "Q10": {
+      "v": "<<UNVERIFIED: no specific expenditure figure; budget composition suggests majority is common-resource spend>>",
+      "unit": "₹Cr",
+      "r": "Common-resource expenditure components identifiable from programs.md: (a) semen collection and preservation technology — state genetic asset maintenance; (b) genetic material storage facilities — shared infrastructure; (c) AI technician training — capacity building for community service delivery; (d) equipment procurement — semen station equipment; (e) farmer awareness programs — community capacity building. These represent the commons infrastructure. Direct AI procedure delivery costs (technician field visits to individual animals) are ambiguous — they constitute public service delivery but outputs partially accrue to private animals.",
+      "src": "programs.md — BUDGET section; CAG: 'semen preservation facility maintenance, training program expenses, equipment procurement'"
+    },
+    "Q11": {
+      "v": "<<UNVERIFIED: no specific private-asset expenditure figure; AI technician salary for field delivery to individual private animals is a potential private-benefit component>>",
+      "unit": "₹Cr",
+      "r": "AI technician salary disbursement (confirmed by CAG) is the primary uncertain component: technicians deliver AI directly to individual farmers' private animals. If classified as private-benefit spend, this could represent 40-50% of total budget. However, government AI delivery is a public service — it does not create a private physical asset; the improved genetic potential is distributed across the community herd. Without cost data, classification of technician salary is unresolved.",
+      "src": "programs.md — CAG: 'AI technician salary disbursement'"
+    },
+    "Q12": {
+      "v": "<<UNVERIFIED: θ₁ not computable without verified Q9 and Q10 figures>>",
+      "calc": "θ₁ = Q10.v ÷ Q9.v — not computable; both unverified",
+      "interp": "UNVERIFIED — budget component descriptions suggest infrastructure and common-resource expenditure (semen preservation, training, facilities, awareness) likely constitutes majority of spend; θ₁ likely ≥ 0.50 but cannot be confirmed without financial statements or DPR cost breakdown",
+      "src": "programs.md — BUDGET and CAG sections"
+    },
+    "Q13": {
+      "docs": [
+        "CAG State Accounts 2024-25 — AI program fund utilization audit",
+        "Official notification for AI program implementation (ANNOUNCEMENT section)",
+        "National Portal — Agriculture > Animal Husbandry > Genetic Improvement (PORTAL section)",
+        "Economic Survey — Artificial Insemination Program section (SURVEY section)"
+      ]
+    },
+    "Q14": {
+      "v": "1",
+      "r": "Benefits are partially excludable: AI services are available to all registered farmers with eligible bovine livestock (cattle/buffalo), excluding households without bovine animals or who do not register under scheme guidelines. The improved milk yield and genetic gain accrue primarily to the individual farmer's animal, but collective improvement of community herd genetics is a shared benefit. Service is subsidised/free to farmers — no fee-based exclusion mechanism; T2 cross-flag for equity not required.",
+      "src": "programs.md — ANNOUNCEMENT: 'farmer eligibility and registration, cost-sharing mechanism'; PORTAL: 'farmer registration, technician network'"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "A1",
+    "T1.5": "No"
+  },
+  "pass_verification": {
+    "C1_T1.1": "PASS",
+    "C2_T1.2": "PASS",
+    "C3_theta1": "UNVERIFIED",
+    "C4_T1.4": "PASS",
+    "C5_T1.6": "PASS",
+    "overall": "UNVERIFIED"
+  },
+  "sources_verified": [
+    "programs.md — Animal Husbandry & Dairy Department / Artificial Insemination Program (BUDGET, SURVEY, OUTCOME, ANNOUNCEMENT, CAG, PORTAL)",
+    "CAG State Accounts 2024-25",
+    "National Portal — Agriculture > Animal Husbandry > Genetic Improvement"
+  ],
+  "unverified_fields": ["Q9", "Q10", "Q11", "Q12"]
+}

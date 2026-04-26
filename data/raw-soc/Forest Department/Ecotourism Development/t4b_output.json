@@ -1,0 +1,58 @@
+{
+  "test_id": "T4b",
+  "scheme": "Ecotourism Development",
+  "department": "Forest Department, Chhattisgarh",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-ECO/2008/CGN (updated 2023); CAG State Accounts Report 2024-25; Outcome Budget 2025-26; Wildlife Protection Act 1972; ISFR 2023 (MoEF); MoEF Eco-Sensitive Zone notifications; State Forest Portal",
+  "carried_from_t4a": {
+    "C1_T4.1": "PASS",
+    "C2_rho_or_VI": "PASS",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "Yes",
+      "r": "Chhattisgarh's protected forest areas face documented ecological and climate stress on two grounds: (1) Fire risk — ISFR 2023 (MoEF) classifies dry deciduous forest zones in Chhattisgarh (covering several of the 28 protected areas, including Guru Ghasi-Das in Surguja-Koriya and Udanti-Sitanadi in Raipur-Dhamtari) as moderate-to-high fire frequency zones. Annual fire incidents in the state's dry deciduous tracts are documented in ISFR state-level data. (2) Eco-Sensitive Zone (ESZ) notifications — MoEF has issued ESZ notifications around multiple Chhattisgarh protected areas (including Kanger Valley, Udanti-Sitanadi), formally classifying the surrounding landscape as ecologically sensitive and at risk from anthropogenic pressure. ESZ notification is an official government acknowledgment of ecological stress. These designations trigger the T4.7 climate-stress conditional, upgrading the Q34 monitoring threshold from ≥1 to ≥2.",
+      "src": "India State of Forest Report (ISFR) 2023 — MoEF&CC; MoEF Eco-Sensitive Zone notifications for Kanger Valley NP and Udanti-Sitanadi WLS; ISFR fire-incidence state data for Chhattisgarh"
+    },
+    "Q34": {
+      "v": "2",
+      "r": "Q35 = Yes → T4.7 stress upgrade applied → threshold is ≥2 (not ≥1). Monitoring frequency assessment: The State Forest Portal provides community-accessible continuous operational monitoring: visitor count (real-time booking records), revenue dashboard (continuous), guide employment tracker (real-time), wildlife sightings tracker (continuous crowdsourced via guides/visitors), eco-resort occupancy (real-time booking). This constitutes ongoing, publicly accessible resource-use data. Ecological health monitoring (vegetation index, forest cover change) is captured annually via ISFR and CAG audit. The combination of real-time visitor-load tracking (the primary extraction metric) via a publicly accessible portal, plus annual ecological monitoring by ISFR/CAG, meets the ≥2 standard (semi-annual or more frequent with community access). Score = 2. The portal's public accessibility satisfies the community-accessible requirement. Full score 3 is not awarded because systematic, independent ecological health metrics (vegetation index, hydrological data, biodiversity index) are reported only annually through ISFR and CAG, not on continuous sensor-based tracking.",
+      "src": "State Forest Portal — visitor tracking (real-time), revenue dashboard, wildlife tracker, guide finder; Outcome Budget 2025-26 — annual ecological outputs; CAG State Accounts Report 2024-25 — annual audit; ISFR 2023 — annual forest cover/fire reporting for Chhattisgarh"
+    },
+    "Q36": {
+      "v": "Yes",
+      "r": "Multiple penalty mechanisms exist for violation of the replenishment and visitor-use rules: (1) Operator licensing — Official Notification mandates registered operators (12 licensed operators); violations of visitor capacity limits or conservation obligations result in license revocation or suspension under scheme guidelines. (2) Guide deregistration — 5,200 guides are individually licensed; violations of scheme conduct rules result in deregistration, removing livelihood access. (3) WPA 1972 criminal penalties — Sections 51-57 impose fines and imprisonment for habitat damage, unauthorized extraction, or violations within protected areas. These are legally enforceable consequences, not merely aspirational. (4) Financial accountability — CAG audit verifies conservation reinvestment compliance (92% reinvestment); discrepancies trigger audit observations that feed into state finance accountability proceedings. (5) Conservation fund enforcement — scheme guidelines mandate conservation reinvestment; non-compliance by the implementing agency would trigger CAG action and state finance review.",
+      "src": "Official Notification No. 6-ECO/2008/CGN updated 2023 — operator registration and licensing clauses; Wildlife Protection Act 1972 — Sections 51-57 (penalties); CAG State Accounts Report 2024-25 — conservation reinvestment audit (fund transfer records verified)"
+    },
+    "Q37": {
+      "v": "Yes",
+      "r": "Post-scheme continuity is structurally embedded through two mechanisms: (1) Self-sustaining revenue cycle — The scheme generates ₹185 cr annual tourism revenue with 92% (≈₹170 cr) mandated for conservation reinvestment (CAG-verified). This creates a financially self-sustaining commons stewardship mechanism that operates independently of the annual budget allocation (₹65 cr). The revenue-to-conservation reinvestment cycle does not require scheme renewal — it is embedded in the operational model. (2) Permanent institutional mandate under WPA 1972 — The Forest Department's obligation to maintain the 28 protected areas (National Parks, Wildlife Sanctuaries) is permanent under WPA Sections 18 and 35, not contingent on the ecotourism scheme's continuation. The institutional stewardship of these commons continues regardless of scheme budget status. Community committees are co-embedded in the operational structure (ongoing employment of 17,700 workers creates stakeholder continuity incentive). Together, these constitute a qualifying post-scheme continuity mechanism: a designated revenue fund (tourism-to-conservation reinvestment) plus a legally mandated institutional vehicle (Forest Department under WPA).",
+      "src": "Official Notification No. 6-ECO/2008/CGN updated 2023 — community benefit and reinvestment clauses; CAG State Accounts Report 2024-25 — 92% reinvestment verified (fund transfer records); Outcome Budget 2025-26 — sustainability 92% reinvestment; Wildlife Protection Act 1972 — Sections 18, 35 (permanent management obligation)"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "No formal community-based monitoring mandate is specified in the scheme design. Monitoring is conducted primarily by the Forest Department (anti-poaching patrols, wildlife ranger reports) and Tourism Department (visitor records, revenue accounts), with CAG providing independent financial audit. The 5,200 licensed guides observe wildlife and trails continuously, and their sightings feed into the portal wildlife tracker — this represents informal community observation but is not a formally mandated community monitoring structure with reporting obligations, documented protocols, or decision-making authority over conservation. No Social Audit provision, FRC patrol mandate, BMC biodiversity register update obligation, or participatory resource-mapping requirement is specified in the Official Notification or Outcome Budget. T4.6 = 0 → governance gap flag. Note: This is the most important enhancement upgrade lever for this scheme; formalising guide-led monitoring into a structured community monitoring protocol (with documented reporting obligations and GP-level review meetings) would convert this gap at low cost.",
+      "src": "Official Notification No. 6-ECO/2008/CGN updated 2023 (no community monitoring clause); Outcome Budget 2025-26 (no social audit or participatory monitoring output); CAG State Accounts Report 2024-25 (audit conducted by CAG, not community)"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "PASS (from T4a — mandatory replenishment rule: visitor cap + 92% conservation reinvestment + WPA obligations)",
+    "C2_rho_or_VI": "PASS (from T4a — ρ = 1.00, Measured, within ≤1.2 threshold)",
+    "C3_T4.3": "PASS (Q35=Yes → threshold upgraded to ≥2; Q34=2, meets upgraded threshold. Community-accessible portal + annual ISFR/CAG monitoring provides semi-annual+ disclosure.)",
+    "C4_T4.4_or_T4.5": "PASS (Q36=Yes [WPA penalties + operator license revocation + CAG accountability] AND Q37=Yes [₹170 cr self-sustaining conservation reinvestment cycle + WPA permanent institutional mandate])",
+    "enh_T4.6_flag": "GOVERNANCE GAP — T4.6 = No. Community monitoring is informal (guide wildlife observations) rather than formally mandated. Primary structural enhancement lever: formalising guide-based observation into a community monitoring protocol with documented reporting obligations and GP-level review would convert this gap at low cost. This gap, combined with T2.4=No and T3.5=No, contributes to the SOC with Governance Gaps classification consideration at the Master Decision Rule level.",
+    "overall_T4": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-ECO/2008/CGN (June 2008, updated 2023)",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "State Forest Portal — ecotourism statistics and tracking dashboards",
+    "Wildlife Protection Act 1972 — Sections 18, 35, 51-57",
+    "ISFR 2023 (MoEF&CC) — fire and forest cover data for Chhattisgarh",
+    "MoEF Eco-Sensitive Zone notifications for Kanger Valley NP and Udanti-Sitanadi WLS"
+  ],
+  "unverified_fields": []
+}

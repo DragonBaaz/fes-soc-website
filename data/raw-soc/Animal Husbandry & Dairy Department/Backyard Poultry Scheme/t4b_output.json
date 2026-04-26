@@ -1,0 +1,57 @@
+{
+  "test_id": "T4b",
+  "scheme": "Backyard Poultry Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Scheme official notification (ANNOUNCEMENT); National Portal listing (PORTAL); CAG State Accounts 2024-25 (CAG); Economic Survey entry (SURVEY); Implementation outcomes record (OUTCOME); T4a output (carry)",
+  "carried_from_t4a": {
+    "C1_T4.1":      "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track":        "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "The scheme's primary resource is private household property (individual backyards and household-owned birds per T1.1 = C). No commons resource requiring climate/ecological stress assessment is identified. No CGWB over-exploited or critical block notification, DLCC/NDMA drought designation, NBA threatened-species habitat listing, or eco-sensitive zone classification is applicable to the scheme's resource type. Scheme operates state-wide across rural households; while some operational districts may have drought designations, the scheme does not operate on a commons resource that would activate the climate-stress upgrade. Q35 = No; Q34 threshold remains ≥ 1.",
+      "src": "ANNOUNCEMENT; PORTAL; SURVEY — no climate stress zone classification for scheme resource identified"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Q35 = No → pass threshold for Q34 is ≥ 1. Climate-stress upgrade does NOT apply. Scheme performance monitoring exists at an annual/periodic level: ANNOUNCEMENT mandates 'performance monitoring'; OUTCOME records scheme outputs (beneficiary enrollment, chick distribution, egg production, disease incidence) on a documented periodic basis; CAG audits expenditure annually. This constitutes annual government-agency monitoring (Score 1). No community-accessible quarterly reports, no real-time dashboards, and no MIS with public disclosure are identified. Note: Q34 technically assesses commons resource health monitoring; since no commons resource is identified (T1.1 = C), the score of 1 reflects scheme output monitoring as the closest applicable proxy.",
+      "src": "ANNOUNCEMENT (performance monitoring mandate); OUTCOME (output tracking); CAG (annual expenditure audit)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No penalty, sanction, fine, benefit-withdrawal, or enforcement mechanism for violation of any replenishment or commons-use rule is identified in scheme documents. The scheme has no replenishment rule (Q30/T4.1 = No), so a penalty mechanism for violation of such a rule does not exist. ANNOUNCEMENT, PORTAL, SURVEY, OUTCOME, and CAG documents are silent on any penalty clause, scheme-benefit suspension, or legal action tied to commons maintenance. Q36 = No.",
+      "src": "ANNOUNCEMENT; PORTAL; CAG — no penalty mechanism referenced"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No post-scheme continuity mechanism is identified. No institutional handover plan, asset transfer to GP/BMC/community cooperative, O&M fund, continuity clause in scheme guidelines, or legal vesting of scheme assets is mentioned in any scheme document. When the scheme's active intervention phase ends, no structural provision ensures continuation of scheme-related resource governance. The scheme is a periodic input-subsidy scheme with no enduring governance handover. Q37 = No.",
+      "src": "ANNOUNCEMENT; PORTAL; SURVEY — no continuity or post-scheme mechanism referenced"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Monitoring is purely departmental. No community-based monitoring role is mandated in scheme design. No GP social audit for scheme compliance, no FRC patrol, no BMC register upkeep, no participatory resource mapping, and no community monitoring committee are referenced in any scheme document. The ANNOUNCEMENT references departmental 'performance monitoring' and 'extension service' only. Enhancement variable T4.6 = 0. Flag: primary upgrade lever — government-only monitoring has documented risk of delayed or suppressed disclosure; community monitoring of commons is a critical structural gap. This is the most important upgrade action for any Near-SOC (Structural) redesign pathway.",
+      "src": "ANNOUNCEMENT; PORTAL; OUTCOME — no community monitoring mechanism referenced"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1":         "FAIL (from T4a) — no mandatory replenishment or continuity rule in scheme design",
+    "C2_rho_or_VI":    "FAIL (from T4a) — ρ not computable; no commons resource; T4.1 = No",
+    "C3_T4.3":         "PASS — Q34 = 1 (annual government monitoring); Q35 = No → threshold = ≥ 1 satisfied",
+    "C4_T4.4_or_T4.5": "FAIL — Q36 = No AND Q37 = No; no penalty mechanism and no post-scheme continuity provision",
+    "enh_T4.6_flag":   "GOVERNANCE GAP — T4.6 = 0; monitoring is purely departmental; community has no formal monitoring role; this is the primary structural upgrade lever for any T4 remediation pathway",
+    "overall_T4":      "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official scheme notification",
+    "SURVEY — Economic Survey entry",
+    "OUTCOME — Implementation outcomes",
+    "BUDGET — Budget allocation description",
+    "CAG — CAG State Accounts 2024-25",
+    "PORTAL — National Portal listing",
+    "t4a_output.json — carried C1_T4.1 = FAIL, C2_rho_or_VI = FAIL, track = RhoRatio"
+  ],
+  "unverified_fields": []
+}

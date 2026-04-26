@@ -4,14 +4,50 @@ import { getAllSchemes } from "@/lib/data"
 import { Navbar } from "@/components/navbar"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
+// Master Dictionary of all extracted questions
+const QUESTION_LABELS: Record<string, string> = {
+  "Q1": "Scheme Name", "Q2": "Department / Implementing Agency", "Q3": "Scheme Guidelines / Reference Documents", "Q4": "Primary Resource Type", "Q5": "Describe resource (location, type, size, boundaries)", "Q6": "Is the resource boundary demarcated in a public document?", "Q7": "Basis for community access or practice right", "Q8": "Is there any active legal or administrative process that could override community access?", "Q9": "Total scheme expenditure (last FY or project period)", "Q10": "Expenditure on common/public/community resources", "Q11": "Expenditure on private assets or assets benefiting only private individuals", "Q12": "θ₁ = Expenditure on commons ÷ Total expenditure", "Q13": "Supporting documents for financial questions", "Q14": "Are the benefits of the resource excludable?", "Q15": "Total number of scheme beneficiaries", "Q16": "Beneficiaries residing within the operational commons area (local dwellers)", "Q17": "Definition of 'local' applied for this audit", "Q18": "θ₂ = Local beneficiaries ÷ Total beneficiaries", "Q19": "Number of beneficiaries from marginalised households", "Q20": "θ₃ = Marginalised beneficiaries ÷ Total beneficiaries", "Q21": "Are traditional knowledge holders included as primary beneficiaries?", "Q22": "Is there a formally constituted community representative body?", "Q23": "Does the governance body have ≥33% women's representation?", "Q24": "Is there a formal grievance/voice mechanism for non-beneficiaries?", "Q25": "Does the scheme mandate a livelihood or income output indicator or pathway?", "Q26": "Incremental income per beneficiary household per year (ΔY)", "Q27": "How many distinct livelihood pathways are enabled by the scheme?", "Q28": "Is there a market or institutional offtake mechanism for produce or services?", "Q29": "Does the scheme track any non-monetary livelihood indicators?", "Q30": "Does the scheme mandate a replenishment/renewal rule for the commons resource?", "Q31": "Which sustainability track applies to this scheme?", "Q32": "ρ = Annual extraction ÷ Annual replenishment", "Q33": "Vitality Index", "Q34": "Monitoring frequency for the commons resource / replenishment compliance", "Q35": "Is the commons resource under documented climate/ecological stress?", "Q36": "Is there a penalty or sanction mechanism for violation of rules?", "Q37": "Is there a documented mechanism for post-scheme continuity of governance?", "Q38": "Does the community have a formal monitoring role?"
+}
+
+// Master Dictionary for Schema Logic & Context
+const QUESTION_METADATA: Record<string, any> = {
+  "Q4": { valid_values: { "A1": "State/public land/resource formally notified for community use", "A2": "State/public land/resource managed for state revenue", "B": "Community land / Common Pool Resource governed by community or traditional institution", "C": "Private land or property (AUTOMATIC FAIL)", "D": "Mixed — describe both components", "E": "Intangible/knowledge/cultural/institutional commons" } },
+  "Q6": { valid_values: { "Yes": "Attached map, survey number, GP resolution, or boundary description exists", "No": "No public boundary document" } },
+  "Q7": { valid_values: { "0": "Purely administrative discretion; no legal or customary basis", "1": "Customary/traditionally recognised right", "2": "Statutory/legally enforceable right" }, pass_threshold: "T1.2 ≥ 1" },
+  "Q8": { valid_values: { "No": "No active diversion order, mining lease, land-use change, SEZ, compulsory acquisition, or equivalent", "Yes": "Active override exists (AUTOMATIC FAIL)" } },
+  "Q10": { include: "Outputs flowing to non-excludable or community-level benefits: common land, water bodies, watersheds, community forests, common pastures, intangible commons, infrastructure on common land serving entire community.", exclude: "Expenditure where outputs flow exclusively to private actors, even if located on common land." },
+  "Q12": { pass_threshold: "θ₁ ≥ 0.50", formula: { lhs: "θ₁", num: "Q10", den: "Q9" } },
+  "Q14": { valid_values: { "0": "Fully excludable — one private actor only", "1": "Partially excludable — defined group, non-members excluded", "2": "Non-excludable — benefits accessible to entire community" }, pass_threshold: "T1.4 ≥ 1" },
+  "Q17": { valid_values: { "Settled_communities": "Within GP/block/watershed or 10 km radius of the commons", "Pastoral_mobile_seasonal": "Within the customary use area as documented" } },
+  "Q18": { pass_threshold: "θ₂ ≥ 0.70", formula: { lhs: "θ₂", num: "Q16", den: "Q15" } },
+  "Q19": { include: "SC / ST / de-notified tribes / landless / women-headed / differently-abled-headed / elderly-headed" },
+  "Q20": { pass_threshold: "θ₃ ≥ 0.40", formula: { lhs: "θ₃", num: "Q19", den: "Q15" } },
+  "Q22": { pass_threshold: "ALL three sub-answers = Yes" },
+  "Q23": { valid_values: { "Yes": "≥33% women per 73rd Constitutional Amendment", "No": "Below 33% or not documented" } },
+  "Q24": { valid_values: { "Yes": "Institutionally mandated mechanism (Gram Sabha complaint process, Social Audit, MIS grievance portal)", "No": "No formal mechanism" } },
+  "Q25": { valid_values: { "Yes": "Mandatory output indicator measuring income/livelihood OR explicit livelihood pathway articulated", "No": "Outputs are purely physical infrastructure with no livelihood sub-indicator" }, pass_threshold: "T3.1 = Yes" },
+  "Q26": { pass_threshold: "Observed ≥ ₹3,000 OR Projected ≥ ₹5,000" },
+  "Q27": { valid_values: { "0": "None", "1": "Single pathway", "2": "Two pathways", "3": "Three or more" }, pass_threshold: "T3.3 ≥ 1" },
+  "Q28": { valid_values: { "Yes": "Guaranteed buyer or institutional demand channel exists and is operational", "No": "Purely market-dependent with no institutional backstop" }, pass_threshold: "T3.4 = Yes" },
+  "Q29": { valid_values: { "Yes": "MIS/evaluation tracks ≥1 non-monetary metric", "No": "Only monetary metrics" } },
+  "Q30": { valid_values: { "Yes": "Guidelines/DPR mandate a replenishment rule", "No": "No replenishment/renewal obligation in official scheme design" }, pass_threshold: "T4.1 = Yes" },
+  "Q31": { valid_values: { "RhoRatio": "Natural/physical commons", "VitalityIndex": "Intangible/knowledge/cultural commons" } },
+  "Q32": { pass_threshold: "ρ ≤ 1.2" },
+  "Q33": { pass_threshold: "VI ≥ 1 with required core component" },
+  "Q34": { valid_values: { "0": "No scheduled monitoring", "1": "Annual monitoring only", "2": "Semi-annual or more frequent monitoring", "3": "Continuous / real-time" }, pass_threshold: "≥ 1 (or ≥ 2 if climate stressed)" },
+  "Q35": { valid_values: { "Yes": "Resource lies in an officially notified stress zone", "No": "No notified stress classification" } },
+  "Q36": { valid_values: { "Yes": "Documented penalty exists", "No": "No enforceable consequence for violation" } },
+  "Q37": { valid_values: { "Yes": "Institutional handover plan exists", "No": "No continuity provision" } },
+  "Q38": { valid_values: { "Yes": "Scheme mandates community monitoring", "No": "Monitoring is purely departmental" } }
+};
+
 export function generateStaticParams() {
   const schemes = getAllSchemes()
-  return schemes.map((scheme) => ({
-    id: scheme.id,
+  return schemes.map((scheme: any) => ({
+    id: scheme.id, 
   }))
 }
 
@@ -22,34 +58,30 @@ interface PageProps {
 export default async function SchemeDetailPage({ params }: PageProps) {
   const { id } = await params
   const schemes = getAllSchemes()
-  const scheme = schemes.find((s) => s.id === id)
+  const legacyScheme = schemes.find((s: any) => s.id === id)
 
-  if (!scheme) {
+  if (!legacyScheme || !legacyScheme.canonicalData) {
     notFound()
   }
 
-  const getPassFailBadge = (pass: boolean) => (
-    <span className={`px-2 py-1 rounded text-xs font-bold ${
-      pass 
-        ? "bg-[#D1FAE5] text-[#065F46]" 
-        : "bg-[#FEE2E2] text-[#991B1B]"
-    }`}>
-      {pass ? "PASS" : "FAIL"}
-    </span>
-  )
+  const scheme = legacyScheme.canonicalData
 
+  const score = ['t1', 't2', 't3', 't4'].filter(
+    t => scheme.tests?.[t as keyof typeof scheme.tests]?.status === 'PASS' || scheme.tests?.[t as keyof typeof scheme.tests]?.status === 'PASS-PROVISIONAL'
+  ).length;
+
+  // Strict thematic gradients instead of standard traffic light colors
   const getClassificationStyles = (classification: string) => {
     switch (classification) {
-      case "SOC": return "bg-[#16A34A] text-white"
-      case "SOC with Governance Gaps": return "bg-[#0D9488] text-white"
-      case "Near-SOC (Operational)": return "bg-[#D97706] text-white"
-      case "Near-SOC (Structural)": return "bg-[#EA580C] text-white"
-      case "Non-SOC": return "bg-[#B91C1C] text-white"
-      default: return "bg-gray-500 text-white"
+      case "SOC": return "bg-[#1B4332] text-white" 
+      case "SOC with Governance Gaps": return "bg-[#2D6A4F] text-white"
+      case "Near-SOC (Operational)": return "bg-[#40916C] text-white"
+      case "Near-SOC (Structural)": return "bg-[#52B788] text-white"
+      case "Adjacent / Non-SOC": return "bg-[#74A58F] text-white" // Replaced the red with a soft muted sage
+      default: return "bg-[#9CA3AF] text-white"
     }
   }
 
-  // Governance flag display labels
   const getFlagLabel = (flag: string): { label: string; severity: string } => {
     const labels: Record<string, { label: string; severity: string }> = {
       'T1.5': { label: 'Boundary Unmapped', severity: 'low' },
@@ -61,21 +93,41 @@ export default async function SchemeDetailPage({ params }: PageProps) {
     return labels[flag] || { label: flag, severity: 'unknown' }
   }
 
+  // Strict thematic dots replacing the warning ambers/reds
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return '#DC2626'
-      case 'medium': return '#D97706'
-      case 'low': return '#6B7280'
-      default: return '#6B7280'
+      case 'high': return '#1B4332' // Deep green for primary alerts
+      case 'medium': return '#40916C' // Mid green for secondary alerts
+      case 'low': return '#9CA3AF' // Slate for minor notes
+      default: return '#9CA3AF'
     }
   }
+
+  const allQuestions = {
+    ...(scheme.tests?.t1?.questionValues || {}),
+    ...(scheme.tests?.t2?.questionValues || {}),
+    ...(scheme.tests?.t3?.questionValues || {}),
+    ...(scheme.tests?.t4?.questionValues || {})
+  };
+
+  const sortedQIDs = Object.keys(allQuestions).sort((a, b) => {
+    const numA = parseInt(a.replace(/\D/g, ''), 10);
+    const numB = parseInt(b.replace(/\D/g, ''), 10);
+    return numA - numB;
+  });
+
+  const allUnverified = [
+    ...(scheme.tests?.t1?.unverifiedFields || []),
+    ...(scheme.tests?.t2?.unverifiedFields || []),
+    ...(scheme.tests?.t3?.unverifiedFields || []),
+    ...(scheme.tests?.t4?.unverifiedFields || [])
+  ];
 
   return (
     <div className="min-h-screen bg-[#F7F5F0]">
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-5xl">
-        {/* Back to Department Link */}
         <Link 
           href={`/departments/${scheme.departmentSlug}`}
           className="inline-flex items-center gap-1 text-sm font-semibold text-[#1B4332] hover:text-[#2D6A4F] mb-6 group"
@@ -84,277 +136,246 @@ export default async function SchemeDetailPage({ params }: PageProps) {
           Back to {scheme.departmentName}
         </Link>
 
-        {/* Breadcrumb */}
-        <nav className="flex mb-6 text-sm text-gray-500 gap-2 items-center">
-          <Link href="/departments" className="hover:text-[#1B4332]">Departments</Link>
+        <nav className="flex mb-6 text-sm text-gray-500 gap-2 items-center flex-wrap">
+          <Link href="/departments" className="hover:text-[#1B4332] whitespace-nowrap">Departments</Link>
           <span>/</span>
-          <Link href={`/departments/${scheme.departmentSlug}`} className="hover:text-[#1B4332]">
+          <Link href={`/departments/${scheme.departmentSlug}`} className="hover:text-[#1B4332] whitespace-nowrap">
             {scheme.departmentName.replace(" Department", "")}
           </Link>
           <span>/</span>
-          <span className="text-gray-900 font-medium truncate">{scheme.name}</span>
+          <span className="text-gray-900 font-medium truncate max-w-full">{scheme.schemeName}</span>
         </nav>
 
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
-          <div>
-            <h1 className="text-4xl font-bold text-[#1B4332] mb-2">{scheme.name}</h1>
-            {scheme.hindiName && (
-              <p className="text-xl text-gray-500 italic font-serif">{scheme.hindiName}</p>
-            )}
+          <div className="flex-1 min-w-0">
+            <h1 className="text-4xl font-bold text-[#1B4332] mb-2 break-words">{scheme.schemeName}</h1>
           </div>
-          <div className="shrink-0 text-center">
-            <Badge className={`text-lg px-4 py-1 mb-1 ${getClassificationStyles(scheme.classification)}`}>
-              {scheme.classification}
+          <div className="shrink-0 text-center md:text-right">
+            <Badge className={`text-lg px-4 py-1 mb-1 shadow-sm border-transparent ${getClassificationStyles(scheme.classification?.value)}`}>
+              {scheme.classification?.value || "Unknown"}
             </Badge>
-            <p className="text-sm font-bold text-gray-500">Diagnostic Score: {scheme.score}/4</p>
+            <p className="text-sm font-bold text-gray-500 mt-2">Diagnostic Score: {score}/4</p>
           </div>
         </div>
 
-        {/* Objective Box */}
-        <div className="bg-white border-l-4 border-[#1B4332] p-6 rounded-r-lg shadow-sm mb-10">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-[#1B4332] mb-2">Scheme Objective</h3>
-          <p className="text-gray-700 leading-relaxed text-lg">{scheme.objective}</p>
-        </div>
-
-        {/* Metadata Strip */}
-        {(scheme.tier || scheme.nodalMinistry || scheme.budgetOutlay || scheme.reach || scheme.commonsType || scheme.commonsTrack) && (
-          <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Tier</p>
-                <p className="text-sm text-gray-700">{scheme.tier || 'Not classified'}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Nodal Ministry</p>
-                <p className="text-sm text-gray-700">{scheme.nodalMinistry || 'Not specified'}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Budget Outlay</p>
-                <p className="text-sm text-gray-700">{scheme.budgetOutlay || 'Not specified'}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Reach</p>
-                <p className="text-sm text-gray-700">{scheme.reach || 'Not specified'}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Commons Type</p>
-                <p className="text-sm text-gray-700">{scheme.commonsType || 'Not classified'}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Commons Track</p>
-                <p className="text-sm text-gray-700 capitalize">{scheme.commonsTrack || 'Not classified'}</p>
-              </div>
-            </div>
+        {scheme.classification?.reasoning && scheme.classification.reasoning.length > 0 && (
+          <div className="bg-white border border-[#CFDCD5] rounded-xl p-6 mb-8 shadow-sm">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D6A4F] mb-4">Classification Logic</h4>
+            <ul className="list-disc pl-5 text-[15px] text-gray-700 space-y-2">
+              {scheme.classification.reasoning.map((reason: string, idx: number) => (
+                <li key={idx} className="break-words leading-relaxed">{reason}</li>
+              ))}
+            </ul>
           </div>
         )}
 
-        {/* Governance Flags */}
+        {scheme.objectiveText && (
+          <div className="bg-white border-l-[6px] border-[#1B4332] p-6 rounded-xl shadow-sm mb-10">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#1B4332] mb-3">Scheme Objective</h3>
+            <p className="text-gray-800 leading-relaxed text-lg break-words">{scheme.objectiveText}</p>
+          </div>
+        )}
+
+        {/* Replaced Yellow Alert with Thematic Soft Green/Slate Alert */}
         {scheme.governanceFlags && scheme.governanceFlags.length > 0 && (
-          <Alert className="bg-[#FEF3C7] border-[#D97706] text-[#92400E] mb-8 print:mb-4 print:bg-yellow-50 print:border-yellow-300 print:text-yellow-900">
+          <Alert className="bg-[#E8EDE9] border-[#CFDCD5] text-[#1B4332] mb-8 shadow-sm rounded-xl">
             <AlertDescription>
-              <h3 className="font-bold mb-3 print:text-sm">Governance Flags</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 print:grid-cols-1 print:gap-1">
-                {scheme.governanceFlags.map((flag, idx) => {
+              <h3 className="font-bold text-[#082A1C] mb-4">Governance Observations</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {scheme.governanceFlags.map((flag: string, idx: number) => {
                   const { label, severity } = getFlagLabel(flag)
                   return (
-                    <div key={idx} className="flex items-start gap-3 print:gap-2 print:text-xs">
+                    <div key={idx} className="flex items-start gap-3 bg-white/60 p-3 rounded-lg border border-[#CFDCD5]/50">
                       <div 
-                        className="w-2 h-2 rounded-full mt-1 flex-shrink-0"
+                        className="w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0"
                         style={{ backgroundColor: getSeverityColor(severity) }}
                       />
-                      <div className="text-sm print:text-xs">
-                        <span className="font-semibold">{flag}:</span> {label}
+                      <div className="text-sm min-w-0 break-words text-gray-800">
+                        <span className="font-bold text-[#1B4332]">{flag}:</span> {label}
                       </div>
                     </div>
                   )
                 })}
               </div>
-              {scheme.classification === "SOC with Governance Gaps" && (
-                <p className="text-xs mt-3 italic print:text-[10px]">This scheme passes all 4 tests but has governance gaps. Addressing these would convert it to a clean SOC classification.</p>
-              )}
             </AlertDescription>
           </Alert>
         )}
 
-        {/* Evidence/Sub-Parameters Section */}
-        <div className="mb-12 print:mb-6 print:page-break-inside-avoid">
-          <h2 className="text-2xl font-bold text-[#1B4332] mb-6 print:text-xl print:mb-3">Diagnostic Evidence</h2>
-          
-          {/* Accordion View */}
-          {scheme.subParameters ? (
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-              <Accordion type="single" collapsible defaultValue="t1" className="w-full">
-                {[
-                  { test: 't1', label: 'T1: Resource is a Commons', pass: scheme.tests.t1 },
-                  { test: 't2', label: 'T2: Dwellers Benefit', pass: scheme.tests.t2 },
-                  { test: 't3', label: 'T3: Clear Economic Opportunity', pass: scheme.tests.t3 },
-                  { test: 't4', label: 'T4: Sustainability Lock', pass: scheme.tests.t4 },
-                ].map(({ test, label, pass }) => {
-                  const testKey = test as 't1' | 't2' | 't3' | 't4'
-                  const subParams = scheme.subParameters![testKey]
-                  
-                  return (
-                    <AccordionItem key={test} value={test} className="border-b last:border-0">
-                      <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 flex justify-between items-center">
-                        <span className="text-lg font-semibold text-gray-700">{label}</span>
-                        {pass ? (
-                          <Badge className="bg-[#D1FAE5] text-[#065F46]">PASS</Badge>
-                        ) : (
-                          <Badge className="bg-[#FEE2E2] text-[#991B1B]">FAIL</Badge>
-                        )}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 py-4 bg-gray-50">
-                        {/* Sub-parameters table */}
-                        <Table className="mb-4 print:text-xs print:mb-2">
-                          <TableHeader>
-                            <TableRow className="bg-white border-b-2 border-gray-200 print:bg-gray-50">
-                              <TableHead className="font-bold text-[#1B4332] w-1/4 print:text-[10px]">Sub-Parameter</TableHead>
-                              <TableHead className="font-bold text-[#1B4332] w-1/4 print:text-[10px]">Score</TableHead>
-                              <TableHead className="font-bold text-[#1B4332] w-1/4 print:text-[10px]">Status</TableHead>
-                              <TableHead className="font-bold text-[#1B4332] print:text-[10px]">Note</TableHead>
-                            </TableRow>
-                          </TableHeader>
-                          <TableBody>
-                            {Object.entries(subParams as Record<string, any>).map(([paramId, param]) => (
-                              <TableRow key={paramId} className="border-b border-gray-200 last:border-0">
-                                <TableCell className="font-mono text-xs font-semibold text-[#1B4332]">{paramId}</TableCell>
-                                <TableCell className="text-sm font-mono">
-                                  {typeof param.score === 'number' ? param.score.toFixed(2) : param.score}
-                                </TableCell>
-                                <TableCell>
-                                  {param.flag ? (
-                                    <span className="text-xs bg-[#FEF08A] text-[#92400E] px-2 py-1 rounded">Flag</span>
-                                  ) : param.pass ? (
-                                    <span className="text-xs bg-[#D1FAE5] text-[#065F46] px-2 py-1 rounded">✓</span>
-                                  ) : param.pass === false ? (
-                                    <span className="text-xs bg-[#FEE2E2] text-[#991B1B] px-2 py-1 rounded">✗</span>
-                                  ) : (
-                                    <span className="text-xs text-gray-500">—</span>
-                                  )}
-                                </TableCell>
-                                <TableCell className="text-xs text-gray-600">{param.note || ''}</TableCell>
-                              </TableRow>
-                            ))}
-                          </TableBody>
-                        </Table>
-                        
-                        {/* Evidence summary string */}
-                        <div className="bg-white border border-gray-200 p-3 rounded text-xs font-mono text-gray-600 whitespace-pre-wrap">
-                          {scheme.evidence[testKey]}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  )
-                })}
-              </Accordion>
-            </div>
-          ) : (
-            // Simple table view when sub-parameters are not available
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-              <Table>
-                <TableHeader className="bg-gray-50">
-                  <TableRow>
-                    <TableHead className="w-1/4 font-bold text-[#1B4332]">SOC Point</TableHead>
-                    <TableHead className="w-1/6 text-center font-bold text-[#1B4332]">Result</TableHead>
-                    <TableHead className="font-bold text-[#1B4332]">Evidence & Findings</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {[
-                    { label: "T1: Resource/Commons", result: scheme.tests.t1, text: scheme.evidence.t1 },
-                    { label: "T2: Dwellers/Inclusion", result: scheme.tests.t2, text: scheme.evidence.t2 },
-                    { label: "T3: Livelihood/Income", result: scheme.tests.t3, text: scheme.evidence.t3 },
-                    { label: "T4: Sustainability Lock", result: scheme.tests.t4, text: scheme.evidence.t4 },
-                  ].map((row) => (
-                    <TableRow key={row.label} className="align-top">
-                      <TableCell className="font-semibold text-gray-700 py-4">{row.label}</TableCell>
-                      <TableCell className="text-center py-4">{getPassFailBadge(row.result)}</TableCell>
-                      <TableCell className="text-sm text-gray-600 leading-relaxed py-4">{row.text}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          )}
-        </div>
-
-        {/* Upgrade Pathway */}
-        {scheme.upgradePathway && scheme.upgradePathway.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-[#1B4332] mb-6">
-              {scheme.classification === "SOC" && "Enhancement Opportunities"}
-              {scheme.classification === "SOC with Governance Gaps" && "Governance Gap Remediation"}
-              {scheme.classification === "Near-SOC (Operational)" && "Upgrade Pathway — Operational Fix Required"}
-              {scheme.classification === "Near-SOC (Structural)" && "Upgrade Pathway — Structural Redesign Required"}
-              {scheme.classification === "Non-SOC" && "Upgrade Pathway"}
-            </h2>
-
-            {scheme.classification === "Near-SOC (Structural)" && (
-              <Alert className="bg-[#FEE2E2] border-[#DC2626] text-[#991B1B] mb-6">
-                <AlertDescription>
-                  <p className="font-bold mb-2">Critical: T4 Failure Indicates Structural Extractive Loop</p>
-                  <p className="text-sm">This scheme is generating income from the commons without a structural guarantee the commons will survive. Scheme redesign, not operational adjustment, is required.</p>
-                </AlertDescription>
-              </Alert>
-            )}
-
-            <div className="grid gap-4">
-              {scheme.upgradePathway.map((step, index) => (
-                <Card 
-                  key={index} 
-                  className="border-l-4 border-l-[#1B4332] shadow-sm hover:shadow-md transition-shadow bg-white border-0"
-                >
-                  <CardContent className="p-6 flex gap-4">
-                    <div className="text-3xl font-bold text-[#1B4332] shrink-0 w-8 text-center">
-                      {index + 1}
-                    </div>
-                    <div className="text-gray-700 leading-relaxed">
-                      {step}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+        {/* Replaced Yellow Unverified Alert with Clean Slate/Gray Alert */}
+        {allUnverified.length > 0 && (
+          <Alert className="bg-gray-50 border-gray-200 mb-8 shadow-sm rounded-xl">
+            <AlertDescription className="text-sm text-gray-700 flex items-start gap-3 break-words">
+              <span className="text-lg shrink-0 mt-0.5 opacity-80">📋</span>
+              <div className="flex flex-col gap-1.5">
+                <strong className="text-gray-900">Pending Documentation</strong>
+                <span className="leading-relaxed">The following data points require further verification before this audit is finalized: <span className="font-mono bg-white text-gray-800 px-2 py-1 rounded-md border border-gray-200 shadow-sm ml-1 break-all">{allUnverified.join(", ")}</span></span>
+              </div>
+            </AlertDescription>
+          </Alert>
         )}
 
-        {/* References */}
-        {scheme.references && scheme.references.length > 0 && (
-          <div className="mb-12 print:mb-6">
-            <h2 className="text-2xl font-bold text-[#1B4332] mb-6 print:text-xl print:mb-3">Data Sources & References</h2>
-            <div className="space-y-4 print:space-y-2">
-              {scheme.references.map((ref) => (
-                <Card key={ref.id} className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                      <div className="flex-grow">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge className="bg-gray-200 text-gray-700">{ref.id}</Badge>
-                          {ref.verified && <Badge className="bg-[#D1FAE5] text-[#065F46]">Verified</Badge>}
-                          {!ref.verified && <Badge className="bg-[#FEF08A] text-[#92400E]">Pending</Badge>}
-                        </div>
-                        <a 
-                          href={ref.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-lg font-semibold text-[#1B4332] hover:underline block mb-2"
-                        >
-                          {ref.title} ↗
-                        </a>
-                        <div className="flex flex-wrap gap-2 items-center mb-2">
-                          <Badge variant="outline" className="capitalize text-xs">{ref.type.replace(/_/g, ' ')}</Badge>
-                          <span className="text-xs text-gray-500">Accessed: {ref.accessed}</span>
-                        </div>
-                        <p className="text-sm text-gray-600 mb-2">Supports:</p>
-                        <div className="flex flex-wrap gap-1">
-                          {ref.relevantTo.map((param) => (
-                            <Badge key={param} variant="outline" className="text-xs bg-gray-50">
-                              {param}
-                            </Badge>
-                          ))}
-                        </div>
+        {/* Redesigned Questionnaire Architecture - Open, Segmented, Breathable */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-[#1B4332] mb-6">Diagnostic Questionnaire</h2>
+          
+          {/* Changed from one giant dark box to an open layout using separated cards */}
+          <div className="space-y-4">
+            <Accordion type="multiple" className="w-full space-y-4">
+              {sortedQIDs.map((qid) => {
+                const data = allQuestions[qid as keyof typeof allQuestions] as any;
+                const questionLabel = QUESTION_LABELS[qid] || "Diagnostic Finding";
+                const isUnverified = allUnverified.includes(qid);
+                const meta = QUESTION_METADATA[qid] || {};
+
+                // Handle composite data safety
+                let displayVal = data.v !== undefined && data.v !== null && data.v !== "" ? String(data.v) : null;
+                if (!displayVal && qid === "Q22" && data["22a"]) displayVal = "Composite Check Performed";
+                if (!displayVal && qid === "Q26" && data.governing) displayVal = data.governing;
+
+                const isCurrency = ["Q9", "Q10", "Q11"].includes(qid);
+
+                return (
+                  <AccordionItem 
+                    key={qid} 
+                    value={qid} 
+                    className="bg-white border border-[#CFDCD5] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    
+                    {/* The Trigger - Clean White with Green Text, No Heavy Blocks */}
+                    <AccordionTrigger className="px-6 py-5 hover:bg-[#F0F5F2] group flex justify-between items-center transition-all duration-200 hover:no-underline">
+                      <div className="flex items-start gap-4 text-left w-full pr-4">
+                        <Badge variant="outline" className="bg-[#E8EDE9] text-[#1B4332] border-transparent font-mono text-[13px] font-bold mt-0.5 shrink-0 transition-colors group-hover:bg-[#CFDCD5]">
+                          {qid}
+                        </Badge>
+                        <span className="text-[16px] font-semibold text-[#1B4332] break-words leading-relaxed flex-1">
+                          {questionLabel}
+                        </span>
+                        {isUnverified && (
+                          <Badge variant="outline" className="bg-gray-100 text-gray-500 font-bold shrink-0 border-gray-200 mt-0.5 text-[10px] uppercase tracking-wider">
+                            Unverified
+                          </Badge>
+                        )}
                       </div>
+                    </AccordionTrigger>
+                    
+                    {/* The Content Panel - Soft Off-White separation */}
+                    <AccordionContent className="px-6 py-6 bg-[#FAFAF9] border-t border-[#CFDCD5]/50">
+                      <div className="flex flex-col gap-6">
+                        
+                        {/* 1. The Value Block */}
+                        <div className="relative">
+                          <div className="flex flex-wrap items-center gap-3 mb-2">
+                            <h4 className="text-[11px] tracking-widest uppercase text-gray-500 font-bold">Recorded Finding</h4>
+                            {meta.pass_threshold && (
+                              <Badge variant="outline" className="bg-white text-[#40916C] border-[#A3B18A] px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider shadow-sm">
+                                Target: {meta.pass_threshold}
+                              </Badge>
+                            )}
+                          </div>
+                          
+                          {/* Value Render Logic */}
+                          {isCurrency ? (
+                            <span className="text-3xl font-extrabold text-[#1B4332] break-words tracking-tight drop-shadow-sm">
+                              ₹ {displayVal || "—"} Cr
+                            </span>
+                          ) : (
+                            <p className="text-xl font-bold text-[#1B4332] break-words leading-snug">
+                              {displayVal || "No primary data recorded"}
+                              {data.unit && <span className="text-sm font-medium text-gray-500 ml-2">{data.unit}</span>}
+                            </p>
+                          )}
+
+                          {/* Valid Values Explainer Injection */}
+                          {meta.valid_values && displayVal && meta.valid_values[displayVal] && (
+                            <div className="mt-4 bg-white border border-[#E8EDE9] rounded-lg p-4 shadow-sm">
+                              <div className="flex gap-3 items-start">
+                                <div className="bg-[#E8EDE9] text-[#1B4332] p-1.5 rounded-md mt-0.5 shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                                </div>
+                                <p className="text-[14.5px] text-gray-700 leading-relaxed">
+                                  <strong className="font-bold text-[#1B4332] block mb-1">Framework Definition:</strong> 
+                                  {meta.valid_values[displayVal]}
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Include/Exclude Injection (Themed Softly) */}
+                          {meta.include && (
+                            <div className="mt-4 p-4 bg-white border-l-4 border-l-[#40916C] rounded-r-lg shadow-sm">
+                              <p className="text-[14px] text-gray-700 leading-relaxed"><strong className="text-[#1B4332] block mb-1 uppercase text-[11px] tracking-wider">Included in Scope</strong> {meta.include}</p>
+                            </div>
+                          )}
+                          {meta.exclude && (
+                            <div className="mt-3 p-4 bg-white border-l-4 border-l-gray-400 rounded-r-lg shadow-sm">
+                              <p className="text-[14px] text-gray-600 leading-relaxed"><strong className="text-gray-800 block mb-1 uppercase text-[11px] tracking-wider">Strictly Excluded</strong> {meta.exclude}</p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* 2. LaTeX-Style Formula Block */}
+                        {meta.formula && (
+                          <div className="bg-white border border-[#CFDCD5] px-8 py-6 rounded-xl flex items-center justify-center gap-6 w-full md:w-fit shadow-sm">
+                            <span className="font-serif italic text-3xl text-[#1B4332]">{meta.formula.lhs} =</span>
+                            <div className="flex flex-col items-center">
+                              <span className="border-b-[3px] border-[#2D6A4F] px-5 text-[16px] font-bold text-[#1B4332] pb-2 leading-none">{meta.formula.num}</span>
+                              <span className="px-5 text-[16px] font-bold text-[#1B4332] pt-2 leading-none">{meta.formula.den}</span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* 3. The Rationale Block */}
+                        {data.r && (
+                          <div className="bg-white p-5 rounded-xl border border-[#E8EDE9] shadow-sm">
+                            <h4 className="text-[11px] tracking-widest uppercase text-gray-500 font-bold mb-3 flex items-center gap-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                              Audit Rationale
+                            </h4>
+                            <p className="text-[15px] text-gray-700 leading-relaxed whitespace-pre-wrap break-words font-medium">
+                              {data.r}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* 4. The Source Block */}
+                        {data.src && (
+                          <div className="inline-flex items-start gap-3 bg-white px-5 py-4 rounded-xl border border-[#E8EDE9] shadow-sm mt-2 max-w-full">
+                            <div className="bg-gray-100 p-1.5 rounded-md mt-0.5 shrink-0 text-gray-600">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            </div>
+                            <div className="flex flex-col min-w-0">
+                              <span className="text-[10px] tracking-widest uppercase text-gray-500 font-bold mb-1">Verified Source Document</span>
+                              <span className="break-words leading-relaxed font-medium italic text-[#2D6A4F] min-w-0 max-w-full">
+                                {data.src}
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              })}
+            </Accordion>
+          </div>
+        </div>
+
+        {scheme.upgradePathway && scheme.upgradePathway.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-[#1B4332] mb-6">Upgrade Pathway</h2>
+            <div className="grid gap-4">
+              {scheme.upgradePathway.map((step: string, index: number) => (
+                <Card 
+                  key={index} 
+                  className="border border-[#CFDCD5] shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+                >
+                  <CardContent className="p-6 flex items-start gap-5 min-w-0">
+                    <div className="w-10 h-10 rounded-full bg-[#E8EDE9] text-[#1B4332] flex items-center justify-center text-xl font-black shrink-0">
+                      {index + 1}
+                    </div>
+                    <div className="text-gray-700 leading-relaxed font-medium min-w-0 break-words whitespace-normal pt-1">
+                      {step}
                     </div>
                   </CardContent>
                 </Card>

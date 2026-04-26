@@ -1,0 +1,57 @@
+{
+  "test_id": "T4a",
+  "scheme": "Kisan Samagra Vikas Yojana",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26; CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026); Chhattisgarh Economic Survey 2024-25",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "The scheme comprises crop insurance, 50% input subsidies (seeds and fertilizers), soil testing, extension training, equipment support, and market linkage — all targeted at individual private agricultural operations on private farmland. No mandatory replenishment, regeneration, or renewal rule for any commons resource is embedded in the scheme's design or official guidelines. Since T1.1 = C (no commons resource), there is no commons to replenish. The scheme contains no afforestation obligation, recharge structure mandate, closed grazing rotation, seed-bank renewal rule, knowledge-transmission requirement, or any equivalent sustainability lock as defined in the SOC framework T4.1 sub-parameter. Q30 = No → AUTOMATIC T4 FAIL (Near-SOC Structural classification if other tests pass).",
+      "src": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = 'C' (private land/property). T1.1 ≠ E → RhoRatio track applies. The scheme does not involve an intangible/knowledge/cultural/institutional commons, so the Vitality Index track is not applicable. Q32 is to be answered; Q33 is set to SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = 'C'"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ ratio is inapplicable. The scheme operates exclusively on private agricultural land (T1.1 = C); no commons resource is involved. There is no commons extraction to measure and no replenishment obligation exists (Q30 = No). Extraction-to-replenishment calculation requires both a commons extraction rate and a mandated replenishment rate — neither exists for this scheme. T1.5 = No (no boundary demarcation) would further require Estimated status, but ρ is not calculable in any form given the absence of a commons resource and replenishment obligation.>>",
+      "calc": "ρ = commons extraction rate ÷ commons replenishment rate — neither numerator nor denominator exists for this scheme (T1.1 = C, no commons; Q30 = No, no replenishment mandate)",
+      "status": "Estimated",
+      "interp": "FAIL — ρ inapplicable; Q30 = No renders T4 failed independently; even if ρ were calculable, no replenishment denominator exists",
+      "src": "",
+      "docs": []
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP — track = RhoRatio (T1.1 = C ≠ E); Vitality Index not applicable",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "Official Notification No. 2009/CGN-26/2009",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "t1_output.json (carry_for_later_tests)"
+  ],
+  "unverified_fields": ["Q32"]
+}

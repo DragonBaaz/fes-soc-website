@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "Godhan Nyay Yojana",
+  "department": "Agriculture Department, Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 26-C-2020/CGN dated 20.07.2020; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; Chhattisgarh Economic Survey 2024-25; National Portal; NDMA drought classification (for Q35)",
+  "carried_from_t4a": {
+    "C1_T4.1": "PASS",
+    "C2_rho_or_VI": "PASS",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "Godhan Nyay Yojana operates state-wide across Chhattisgarh. While several blocks in northern Chhattisgarh (Surguja division) and parts of central Chhattisgarh appear on NDMA drought-prone lists, the scheme's primary resource — the state-wide cooperative organic matter system and agricultural soil commons — spans the entire state and is not confined to NDMA-notified drought-prone blocks. No official notification designates the scheme's operational area as a whole as a climate-stressed zone (CGWB over-exploited block, NDMA drought-prone, or equivalent) in the documents consulted. Standard T4.3 threshold (≥1) applies; no upgrade triggered.",
+      "src": "Official Notification No. 26-C-2020/CGN (state-wide scheme scope); NDMA district drought classification (Chhattisgarh — partial drought-prone blocks, not state-wide designation)"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Annual monitoring is documented through three channels: (1) Outcome Budget 2025-26 tracks key resource health metrics annually — cow dung collected (3.8 lakh MT), processing units operational (280), organic manure produced (3.0 lakh MT), soil organic matter improvement (+2.3%), and farmer adoption (1.2 lakh ha); (2) CAG State Accounts Report 2024-25 conducts annual independent audit of fund management, procurement payments, and processing unit verification; (3) National Portal tracks procurement statistics, price data, and beneficiary metrics — update frequency not specified but includes live price tracking. Monitoring is by government agencies only (Agriculture Department, CAG, National Portal). No quarterly or real-time community-accessible disclosure documented. Since Q35 = No (no climate stress upgrade), T4.3 threshold is ≥1 — annual monitoring is sufficient to PASS.",
+      "src": "Outcome Budget 2025-26; CAG State Accounts Report 2024-25; National Portal (Agriculture > Organic Farming > Soil Health)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No explicit, documented financial penalty or sanction mechanism for violation of replenishment or use obligations is stated in Official Notification No. 26-C-2020/CGN or the Outcome Budget. The consequence for non-performance is implicit through the Outcome Budget framework (underperformance against mandated targets leads to budget revision in subsequent years) but this is a budget management mechanism, not a mandated scheme-level penalty for commons violation. No fine, benefit withdrawal, suspension of access, or legal sanction provision is articulated in scheme guidelines for failure to maintain processing units or meet procurement obligations. Note: Q37 is evaluated; C4 pass condition requires Q36 = Yes OR Q37 = Yes.",
+      "src": "Official Notification No. 26-C-2020/CGN; Outcome Budget 2025-26; CAG State Accounts Report 2024-25"
+    },
+    "Q37": {
+      "v": "Yes",
+      "r": "The scheme explicitly designs for post-subsidy continuity through two documented mechanisms: (1) Self-financing model: CAG State Accounts Report 2024-25 records 'Scheme sustainability: Self-financing through organic manure sales after subsidy phase.' The cooperative processing units are designed to generate revenue from organic manure sales (₹500/MT) sufficient to sustain operations after the state subsidy period ends — this is a financially designed continuity mechanism, not an assumption. (2) Cooperative institutional continuity: Implementation through cooperative societies (registered legal entities under Cooperative Societies Act) provides an institutional vehicle that persists after scheme intervention. The 280 processing units are physical assets belonging to cooperative societies that remain operational under the cooperative governance structure. The cooperative structure provides post-scheme institutional continuity without requiring ongoing state subsidy.",
+      "src": "CAG State Accounts Report 2024-25 (self-financing sustainability note); Official Notification No. 26-C-2020/CGN (cooperative implementation mandate); Chhattisgarh Cooperative Societies Act"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "No community-led monitoring mechanism is mandated in scheme design or documented in official sources. All monitoring is conducted by government agencies: Agriculture Department (Outcome Budget tracking), CAG (annual audit), and National Portal (government-managed statistics). No Social Audit provision, community monitoring committee, participatory resource assessment, or community-managed data platform is established under the scheme. The National Portal includes a 'procurement center locator and price tracking' but this is a government-managed tool, not a community monitoring instrument. The absence of community-led monitoring is the primary structural governance gap in the sustainability lock. Corrective action: mandate annual GP-level social audit of cooperative performance and procurement data, with results posted at GP noticeboard.",
+      "src": "Official Notification No. 26-C-2020/CGN; National Portal; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "PASS (from T4a)",
+    "C2_rho_or_VI": "PASS (from T4a — estimated ρ ≈ 0.60, soil organic matter net positive)",
+    "C3_T4.3": "PASS — Q34 = 1 (annual monitoring); Q35 = No (no stress-zone upgrade required); threshold ≥1 met",
+    "C4_T4.4_or_T4.5": "PASS — Q36 = No, Q37 = Yes; OR condition satisfied by cooperative self-financing continuity mechanism",
+    "enh_T4.6_flag": "GOVERNANCE GAP — T4.6 = No. Monitoring is entirely departmental (government only). Community-led monitoring (social audit, GP noticeboard disclosure, participatory assessment) is absent. This is the primary upgrade lever for sustainability governance. Corrective action: mandate annual GP social audit of cooperative operations and soil health data.",
+    "overall_T4": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 26-C-2020/CGN dated 20.07.2020",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh Economic Survey 2024-25",
+    "National Portal (Agriculture > Organic Farming > Soil Health)",
+    "Chhattisgarh Cooperative Societies Act"
+  ],
+  "unverified_fields": []
+}

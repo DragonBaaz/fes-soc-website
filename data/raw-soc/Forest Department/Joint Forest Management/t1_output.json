@@ -1,0 +1,104 @@
+{
+  "test_id": "T1",
+  "scheme": "Joint Forest Management",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Chhattisgarh State Budget 2025-26 (Demand No. 6); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 6-JFM/1999/CGN (est. April 1, 1999; updated 2023); CAG State Accounts Report 2024-25; State Forest Portal (JFM module)",
+  "answers": {
+    "Q1": {
+      "v": "Joint Forest Management",
+      "src": "Official Notification No. 6-JFM/1999/CGN; Chhattisgarh State Budget 2025-26, Demand for Grants No. 6"
+    },
+    "Q2": {
+      "v": "Forest Department, Government of Chhattisgarh; co-implemented with Joint Forest Management Committees (JFMCs) at village level",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023 update); Outcome Budget 2025-26"
+    },
+    "Q3": {
+      "v": "Official Notification No. 6-JFM/1999/CGN (April 1, 1999; updated 2023); Chhattisgarh State Budget 2025-26 (Demand No. 6); CAG State Accounts Report 2024-25; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; State Forest Portal",
+      "src": "Chhattisgarh State Budget 2025-26; CAG State Accounts Report 2024-25"
+    },
+    "Q4": {
+      "v": "A1",
+      "r": "The primary resource is state-owned forest land (285,000 hectares = 21% of Chhattisgarh state forest area) formally notified for community management through 850 JFMCs under Official Notification No. 6-JFM/1999/CGN (updated 2023). The state retains forest ownership while the JFMCs hold a formal, government-mandated community management and usufruct role. This is squarely within A1: state/public land formally notified for community use.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023); CAG State Accounts Report 2024-25 (285,000 ha confirmed via management MOU)"
+    },
+    "Q5": {
+      "v": "285,000 hectares of degraded state forest land across Chhattisgarh, distributed across 2,850 villages. Managed through 850 JFMCs under a community-government partnership model. Forest area represents 21% of total state forest area. Coverage includes degraded forest patches with documented regeneration potential. Resource includes the standing forest biomass (45 tons/hectare accumulated), biodiversity (185 wildlife corridors, tiger habitat), watershed functions, and NTFP/herb collection areas. Boundaries documented per JFMC-wise management MOU and forest department compartment/beat records.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; State Forest Portal"
+    },
+    "Q6": {
+      "v": "Yes",
+      "r": "Each of the 850 JFMC areas is documented in a management MOU specifying the forest area (verified by CAG at 285,000 ha total), and the forest area locator on the state forest portal provides spatial mapping of JFMC-wise areas. Forest department compartment and beat maps (standard forest department demarcation) establish the boundaries. CAG confirmed boundaries through MOU analysis.",
+      "src": "CAG State Accounts Report 2024-25 (MOU analysis, 285,000 ha confirmed); Official Notification No. 6-JFM/1999/CGN (2023); State Forest Portal (JFMC forest area locator)"
+    },
+    "Q7": {
+      "v": "2",
+      "r": "Community access right is statutory and legally enforceable. The scheme is founded on Official Notification No. 6-JFM/1999/CGN (government notification with defined membership and usufruct rights). Additionally reinforced by: Forest Rights Act 2006 (community forest rights), PESA 1996 (Gram Sabha powers over forests in scheduled areas applicable to many JFM villages), and Panchayat Raj Act provisions. The notification specifies gate fee rights, forest product rights (herb collection), and employment rights as defined entitlements — not discretionary grants.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023); Forest Rights Act 2006; PESA 1996; CAG State Accounts Report 2024-25"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, change-of-land-use notification, SEZ notification, or compulsory acquisition proceeding is reported for the 285,000 hectares under JFM management. The CAG report (2024-25) confirmed 92% JFMC renewal rate under 3-year renewable MOU, indicating uninterrupted community access. No encumbrance is indicated in any source document.",
+      "src": "CAG State Accounts Report 2024-25; Official Notification No. 6-JFM/1999/CGN (2023); State Forest Portal"
+    },
+    "Q9": {
+      "v": "115",
+      "unit": "₹Cr",
+      "period": "FY 2025-26 (allocated); FY 2024-25 actual: ₹110 cr spent per CAG",
+      "breakdown": "Committee support ₹45 cr; Livelihood initiatives ₹40 cr; Infrastructure ₹20 cr; Training ₹10 cr",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department); CAG State Accounts Report 2024-25 (₹110 cr spent, 96% utilisation)"
+    },
+    "Q10": {
+      "v": "115",
+      "unit": "₹Cr",
+      "r": "All four expenditure components are directed at the common forest resource and community institutions: (1) Committee support ₹45 cr — strengthens JFMCs as collective governance institutions for the commons; (2) Livelihood initiatives ₹40 cr — enables community income from the common forest (herb collection, gate fees, secondary employment); (3) Infrastructure ₹20 cr — common forest infrastructure (check posts, watchtowers, regeneration works) serving the entire community; (4) Training ₹10 cr — builds community capacity for commons stewardship. No expenditure flows exclusively to private assets.",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6; CAG State Accounts Report 2024-25"
+    },
+    "Q11": {
+      "v": "0",
+      "unit": "₹Cr",
+      "r": "The entire budget is directed at the common forest resource and JFMC institutions. No component funds private land improvement or assets exclusively benefiting a single household. Even the individual employment component (forest guards) is a community service role within a commons governance structure, not a private asset creation.",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6; Official Notification No. 6-JFM/1999/CGN (2023)"
+    },
+    "Q12": {
+      "v": "1.0",
+      "calc": "θ₁ = Q10 ÷ Q9 = 115 ÷ 115 = 1.00",
+      "interp": "PASS — θ₁ = 1.00 ≥ 0.50 threshold. 100% of scheme expenditure is directed at common/community forest resources and JFMC institutions.",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6"
+    },
+    "Q13": {
+      "docs": [
+        "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department) — budget allocation and breakdown",
+        "CAG State Accounts Report 2024-25 — ₹110 cr actual expenditure verified, 96% utilisation confirmed",
+        "Official Notification No. 6-JFM/1999/CGN (2023 update) — expenditure purpose and component authorisation",
+        "Outcome Budget 2025-26 — budget disbursed ₹115 cr, outputs verified"
+      ]
+    },
+    "Q14": {
+      "v": "1",
+      "r": "Benefits are partially excludable at two levels: (a) Livelihood benefits (gate fees, herb collection rights, forest guard employment) accrue to JFMC members — a defined group of 425,000 registered members from 2,850 villages; non-members from outside these villages are excluded from livelihood benefits. (b) Ecological/non-subtractable benefits (watershed protection, biodiversity, wildlife corridors, air quality from forest cover) are non-excludable and accrue to the broader region. Overall classification is Score 1 (partially excludable) because the primary direct economic benefits operate on a membership basis. Note: exclusion mechanism is membership-based (not fee-based), so T2 equity cross-check on fee suppression is not triggered, but marginalised beneficiary share (T2.2) should be verified.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023) — membership and benefit entitlements; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "pass_verification": {
+    "C1_T1.1": "PASS",
+    "C2_T1.2": "PASS",
+    "C3_theta1": "PASS",
+    "C4_T1.4": "PASS",
+    "C5_T1.6": "PASS",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-JFM/1999/CGN (April 1, 1999; updated 2023)",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "State Forest Portal (JFM module)"
+  ],
+  "unverified_fields": []
+}

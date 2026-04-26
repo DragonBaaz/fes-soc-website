@@ -1,0 +1,90 @@
+{
+  "test_id": "T2",
+  "scheme": "Vrikshopan Yojana (Sapling Distribution)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 6-VY/2018/CGN (2024); CAG State Accounts Report 2024-25; Vrikshopan Yojana State Forest Portal; t1_output.json (carry_for_later_tests.T1.1)",
+  "carried_from_t1": {
+    "T1.1": "A2"
+  },
+  "answers": {
+    "Q15": {
+      "v": 185000,
+      "src": "Chhattisgarh Economic Survey 2024-25 ('Participants: 185,000 households'); Outcome Budget 2025-26 ('Participants: 185,000 households'); CAG State Accounts Report 2024-25 ('Participants: 185,000 registered confirmed (enrollment database)')"
+    },
+    "Q16": {
+      "v": 185000,
+      "src": "The 185,000 registered household beneficiaries are Chhattisgarh residents. The primary resource (210 government and private registered nurseries) is distributed across the state. Under the 'local' definition applied at Q17, all 185,000 registered household beneficiaries qualify as local dwellers — each is within GP/block proximity of at least one of the 210 distributed nurseries. No non-local or out-of-state beneficiaries identified in source documents."
+    },
+    "Q17": {
+      "v": "Settled_communities — within GP/block of any of the 210 distributed nurseries across Chhattisgarh (effectively state-wide coverage)",
+      "r": "The scheme's primary resource (government and registered private nurseries) comprises 210 facilities distributed across the state of Chhattisgarh rather than a single geographic commons. All 185,000 registered beneficiary households are Chhattisgarh residents and thus within the GP/block proximity of at least one nursery location. The settled communities definition is applied; the geographic unit is Chhattisgarh state (beneficiaries are state residents accessing a state-distributed resource network).",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q18": {
+      "v": "1.00",
+      "calc": "θ₂ = Q16.v ÷ Q15.v = 185,000 ÷ 185,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00 ≥ 0.70 threshold. All 185,000 registered household beneficiaries are local Chhattisgarh residents with access to the distributed nursery network. The scheme does not channel benefits to distant or non-local actors.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No scheme-level disaggregation of beneficiaries by SC/ST/de-notified tribe/landless/women-headed/differently-abled-headed/elderly-headed household categories found in any source document. The scheme has no explicit marginalised-household targeting mechanism — it distributes saplings to all registered households, schools, and institutions without a beneficiary socio-economic screening criterion. CAG audit confirms enrollment database of 185,000 households but does not report social category breakdown. Economic Survey, Outcome Budget, and scheme notification are silent on marginalised beneficiary share.>>",
+      "r": "Scheme source documents do not contain beneficiary disaggregation by social category. Chhattisgarh's SC+ST population share (~44.8% per Census 2011) could serve as a demographic proxy, but applying a state demographic ratio to scheme beneficiaries without scheme-level data violates the verification requirement. Field survey or scheme MIS extraction with social category fields would be required to verify this parameter.",
+      "src": "CAG State Accounts Report 2024-25; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 6-VY/2018/CGN (2024)"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be computed — Q19 (numerator) is unverified>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v — Q19 is UNVERIFIED; calculation cannot be performed",
+      "interp": "FAIL — θ₃ cannot be verified against the 0.40 threshold. Unverified field Q19 prevents computation. Absent verified marginalised beneficiary data, the condition cannot be confirmed as met.",
+      "src": "see Q19"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Gram Panchayat is a formally constituted body under the 73rd Constitutional Amendment and the Chhattisgarh Panchayat Raj Act. It is explicitly named as an implementation body in Official Notification No. 6-VY/2018/CGN (2024): 'Implementation: Forest Department + Gram Panchayat + Community participation.'"
+      },
+      "22b": {
+        "v": "No",
+        "r": "The GP's role stated in the scheme notification is 'implementation' — logistics, distribution coordination, and community participation facilitation. No scheme guideline text mandates a GP decision-making role in scheme governance (e.g., beneficiary approval authority, target-setting, resource allocation decisions, oversight with binding resolutions). The GP functions as an administrative delivery channel, not as a scheme governance body with a decision-making mandate. An implementation role is distinct from a mandated governance/decision-making role per T2.3 requirements."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No documentation of scheme-specific GP or community body meetings (≥ 2 meetings with recorded resolutions in prior 12 months) found in source documents. CAG audit, Outcome Budget, and Portal do not reference scheme-specific governance meeting records. The GP may hold regular Gram Sabha meetings for other functions, but no evidence of scheme-specific governance meetings with resolutions for Vrikshopan Yojana is available."
+      },
+      "docs": [],
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); CAG State Accounts Report 2024-25; Vrikshopan Yojana Portal"
+    },
+    "Q23": {
+      "v": "<<UNVERIFIED: No formally constituted scheme-specific governance body established (T2.3 = 0); women's representation in scheme governance cannot be assessed. Chhattisgarh Panchayat Raj Act mandates 50% women's reservation in GP (exceeds 33% threshold), but the GP has not been established as a scheme governance body with a decision-making mandate.>>",
+      "r": "Since T2.3 = 0 (no functional governance body with a mandated scheme decision-making role exists), women's representation in a non-existent scheme governance body cannot be scored. If GP is recognised as the implementation body, CG's 50% women's reservation in GP would satisfy the ≥33% requirement — but this cannot be confirmed as scheme-specific governance representation without T2.3 being satisfied.",
+      "src": "Chhattisgarh Panchayat Raj Act (50% women's reservation provision); Official Notification No. 6-VY/2018/CGN (2024)"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal grievance or voice mechanism for non-beneficiaries is identified in scheme source documents. The scheme portal lists distribution and species information services but no grievance submission mechanism for excluded citizens. No Social Audit provision, MIS grievance portal, ombudsman, or Gram Sabha complaint process is mandated at scheme level for Vrikshopan Yojana. Since the scheme is open to all registered households (not an exclusive allocation to a limited group), the population of 'non-beneficiaries' is limited to non-registrants — but no mechanism exists for them to contest exclusion. FLAG: governance gap recorded.",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); Vrikshopan Yojana Portal; CAG State Accounts Report 2024-25"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS",
+    "C2_theta3": "FAIL",
+    "C3_T2.3": "FAIL",
+    "enh_T2.4_flag": "GOVERNANCE GAP: No formal grievance/voice mechanism for non-beneficiaries mandated at scheme level. Q24 = No.",
+    "enh_T2.5_flag": "UNVERIFIED: No scheme-specific governance body exists (T2.3 = 0); women's representation in scheme governance cannot be assessed.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "Official Notification No. 6-VY/2018/CGN (established April 1, 2018; amended 2024)",
+    "CAG State Accounts Report 2024-25",
+    "Vrikshopan Yojana State Forest Portal",
+    "Chhattisgarh Panchayat Raj Act (women's reservation provisions)"
+  ],
+  "unverified_fields": ["Q19", "Q20", "Q23"]
+}

@@ -1,0 +1,58 @@
+{
+  "test_id": "T4b",
+  "scheme": "Forest Rights Act (FRA)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "Yes",
+      "r": "Chhattisgarh forests are under documented and officially classified ecological stress. (1) ISFR 2023 (India State of Forest Report, Forest Survey of India — official government publication) records significant open-forest degradation and deforestation pressure in multiple Chhattisgarh districts including Bastar, Rajnandgaon, and Korba — categorised as high anthropogenic pressure zones. (2) NDMA drought-prone district lists classify several Chhattisgarh districts (Raipur, Bilaspur, Korba ranges) as drought-prone. (3) FRA areas in Chhattisgarh span forest-fringe and interior zones in these documented stress districts. Under the SOC framework T4.7 criterion, ISFR high deforestation-pressure district classification qualifies as climate/ecological stress for forest commons. This upgrades the Q34 monitoring threshold from ≥1 to ≥2.",
+      "src": "India State of Forest Report (ISFR) 2023, Forest Survey of India (official government publication); NDMA drought-prone district classification; Forest Rights Act 2006 — areas in Chhattisgarh"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "STRESS UPGRADE APPLIED (Q35 = Yes): Threshold = ≥ 2 (semi-annual or more). Actual score = 1. FRA scheme monitoring consists of annual government-level reporting only: (1) The state portal (https://cgvanadhikar.cgstate.gov.in/) and scheme MIS track administrative outputs (titles issued, hectares, pending claims, approval rates) — not forest resource health metrics (forest cover change, soil condition, NTFP availability, biodiversity indicators). (2) ISFR biennial reporting covers forest cover nationally/state-level — not accessible at GP/community level as required for score ≥ 2, and is not scheme-mandated community disclosure. (3) Outcome Budget 2025-26 and CAG 2024-25 confirm administrative metric tracking only. No quarterly/semi-annual community-accessible resource health dashboard exists for FRA areas. Score = 1 → FAIL under climate-stressed threshold of ≥ 2.",
+      "src": "State portal https://cgvanadhikar.cgstate.gov.in/; CAG State Accounts Report 2024-25; Outcome Budget 2025-26; ISFR 2023 (Forest Survey of India)"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No FRA scheme-specific penalty or sanction mechanism exists for violation of forest conservation or use rules. (1) FRA Section 5 imposes a general conservation duty on rights holders but attaches no specific financial penalty, scheme-benefit withdrawal, or access suspension consequence within FRA scheme design. (2) The Chhattisgarh FRA operational guidelines and state notification (programs.md) list no enforcement mechanism against conservation violation by rights holders. (3) The dispute resolution mechanism (₹5 cr budget line) addresses claim adjudication, not conservation enforcement. (4) External legal actions under Indian Forest Act/Wildlife Protection Act may theoretically apply, but these are not FRA scheme-level enforcement triggers — they are separate statutory regimes. No documented scheme-level sanction mechanism.",
+      "src": "Forest Rights Act 2006, Section 5; Chhattisgarh State implementation notification 2023; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6"
+    },
+    "Q37": {
+      "v": "Yes",
+      "r": "Post-scheme continuity of commons governance is legally vested and institutionally structured through FRA's permanent design. (1) FRA Section 4(3) provides that individual forest rights are heritable and cannot be alienated or transferred — they are permanently vested in rights holders, ensuring cultivated forest land remains within the community governance framework beyond any administrative scheme period. (2) Community forest rights (100,000 ha, 185 villages) are permanently vested in the Gram Sabha under FRA — the Forest Rights Committee (FRC) under the Gram Sabha continues as the ongoing governance institution with no sunset clause. (3) FRA Section 3(1)(i) establishes the community's right to protect, regenerate, conserve and manage community forest resources as a permanent mandate — constituting a legal continuity mechanism for commons stewardship. (4) The state portal and online registry ensure permanent institutional documentation. FRA's design inherently constitutes legal vesting of governance — qualifying under the T4.5 criterion of 'institutional vehicle beyond the scheme's project period'.",
+      "src": "Forest Rights Act 2006, Sections 3(1)(i), 4(3); Chhattisgarh State implementation notification 2023; State portal https://cgvanadhikar.cgstate.gov.in/"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Formal community-based resource monitoring is not mandated in FRA scheme design. (1) FRA Section 5 imposes a general conservation duty on rights holders but does not mandate a structured community monitoring system (no FRC patrol protocol, no social audit framework, no participatory resource mapping requirement in scheme guidelines). (2) The state portal MIS and CAG-verified monitoring track administrative outputs only — not community-participated resource health assessments. (3) Programs.md, Outcome Budget 2025-26, and state notification contain no reference to social audits, GP-level monitoring committees, Village Ecological Registers, or participatory biodiversity assessments as part of FRA implementation. Monitoring is departmental (Forest Department/CAG) only.",
+      "src": "Forest Rights Act 2006, Section 5; Chhattisgarh State implementation notification 2023; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (carried from T4a — no mandated replenishment rule with enforcement consequences in FRA scheme guidelines)",
+    "C2_rho_or_VI": "FAIL (carried from T4a — ρ unverifiable; replenishment denominator scheme-undefined due to C1 failure)",
+    "C3_T4.3": "FAIL (Q34 = 1; Q35 = Yes upgrades threshold to ≥ 2; 1 < 2 — annual government monitoring insufficient for climate-stressed forest commons)",
+    "C4_T4.4_or_T4.5": "PASS (Q36 = No; Q37 = Yes — permanent legal vesting of rights and FRC governance structure satisfies T4.5 continuity criterion)",
+    "enh_T4.6_flag": "GOVERNANCE GAP — Q38 = No; community-based monitoring entirely absent; this is the primary structural upgrade lever; for a climate-stressed forest commons in Chhattisgarh, government-only monitoring has high risk of delayed disclosure of forest degradation; FRC-led patrol and participatory mapping should be mandated to activate this enhancement",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "Forest Rights Act, 2006 (Central legislation)",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh State implementation notification 2023",
+    "India State of Forest Report (ISFR) 2023, Forest Survey of India",
+    "NDMA drought-prone district classification",
+    "State portal https://cgvanadhikar.cgstate.gov.in/"
+  ],
+  "unverified_fields": []
+}

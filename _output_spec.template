@@ -1,0 +1,52 @@
+{
+  "test_id": "<T1|T2|T3|T4a|T4b>",
+  "scheme": "<scheme name>",
+  "department": "<department name>",
+  "audit_date": "<YYYY-MM-DD>",
+  "data_source_summary": "<semicolon-separated primary sources consulted, if used by this test>",
+  "answers": {
+    "<QID>": {
+      "v": "<value>",
+      "r": "<rationale, if applicable>",
+      "src": "<citation>",
+      "unit": "<unit, if applicable>",
+      "period": "<period, if applicable>",
+      "breakdown": "<component split, if applicable>",
+      "calc": "<calculation, if applicable>",
+      "interp": "<PASS|FAIL or note, if applicable>",
+      "docs": [
+        "<supporting doc 1>",
+        "<supporting doc 2>"
+      ],
+      "observed": {
+        "v": "<number or NOT_AVAILABLE>",
+        "calc": "<method>",
+        "interp": "<PASS|FAIL|skip>",
+        "src": "<citation or empty>"
+      },
+      "projected": {
+        "v": "<number or NOT_AVAILABLE>",
+        "calc": "<method>",
+        "interp": "<PASS|FAIL-PROVISIONAL|skip>",
+        "src": "<citation or empty>"
+      },
+      "governing": "<Observed|Projected-Provisional>",
+      "observed_or_projected_note": "<which value governs and why>"
+    }
+  },
+  "carry_for_later_tests": {
+    "<carry_key>": "<value>"
+  },
+  "pass_verification": {
+    "<criterion_key>": "PASS|FAIL|PASS-PROVISIONAL",
+    "overall": "PASS|FAIL|PASS-PROVISIONAL"
+  },
+  "sources_verified": [
+    "<source 1>",
+    "<source 2>",
+  ],
+  "unverified_fields": [
+    "<field id 1>",
+    "<field id 2>"
+  ]
+}

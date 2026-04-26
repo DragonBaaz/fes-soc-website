@@ -1,0 +1,65 @@
+{
+  "test_id": "T3",
+  "scheme": "Rajiv Gandhi Kisan Nyay Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; rgkny.cg.nic.in",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme's official notification and operational guidelines explicitly mandate a direct income support output: a per-quintal cash payment to farmers based on their crop production. The Outcome Budget 2025-26 records 'Average benefit per farmer: ₹16,400 (annual)' and 'Farm income increased average 18–22%' as primary scheme output indicators. A mandatory income indicator (DBT per quintal of production, averaged to per-HH-per-year) is embedded in scheme design. T3.1 = Yes → PASS.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Outcome Budget 2025-26"
+    },
+    "Q26": {
+      "observed": {
+        "v": 16400,
+        "calc": "Outcome Budget 2025-26 records total DBT disbursement of ₹4,850 crores to 29.6 lakh farmers in FY 2024-25. Average per farmer = ₹4,850 crores ÷ 29.6 lakh = ₹16,385 ≈ ₹16,400/farmer/year. This is actual disbursed, MIS-verified data.",
+        "interp": "PASS",
+        "src": "Outcome Budget 2025-26; CAG State Accounts Report 2024-25 (payment accuracy 98.8%, zero duplicate payments)"
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No separate DPR income projection figure available in the verified sources consulted. Observed data governs.",
+        "interp": "skip",
+        "src": ""
+      },
+      "governing": "Observed",
+      "r": "Observed ΔY governs as MIS-verified actual disbursement data exists. Observed ΔY = ₹16,400/HH/year, well above the ₹3,000 observed threshold. PASS.",
+      "docs": [
+        "Outcome Budget 2025-26 — total DBT ₹4,850 crores to 29.6 lakh farmers",
+        "CAG State Accounts Report 2024-25 — payment accuracy 98.8%, bank reconciliation complete"
+      ]
+    },
+    "Q27": {
+      "v": "1",
+      "r": "One explicitly articulated livelihood pathway: direct cash income support (DBT) per quintal of crop production for paddy, maize, soybean, groundnut, and cotton. The scheme design documents do not articulate any other distinct livelihood pathway (no enterprise formation, no value-addition pathway, no NTFP, no cooperative income, no institutional market linkage — only direct cash transfer). Score = 1 (minimum PASS).",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q28": {
+      "v": "No",
+      "r": "RGKNY does not include a guaranteed buyer, government procurement mechanism, or institutional demand channel for the crops produced. The scheme pays a per-quintal income-support DBT to farmers after production, but it does not procure the crops itself. Farmers sell their produce in the open market or through separate state procurement systems (e.g., paddy MSP procurement under a distinct scheme). RGKNY's scheme design contains no MSP offtake agreement, no NAFED/TDCCOL/OMC offtake, no GI tag with buyer network, no fair trade certification, and no MGNREGS wage component. The scheme is purely a cash transfer programme — it is not a market or procurement mechanism. T3.4 = No → AUTOMATIC T3 FAIL.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "The scheme tracks exclusively monetary and DBT payment metrics: total disbursement amount, payment success rate (98.2%), average benefit per farmer (₹16,400), and farm income increase percentage (18–22%). No non-monetary livelihood indicators are tracked (no food security months, no nutritional diversity, no livestock feeding days, no medicinal plant access). Note: ΔY is ₹16,400 — well above the ₹3,000 observed threshold (ratio ≈ 5.5×), so the near-threshold under-measurement flag is not triggered.",
+      "src": "Outcome Budget 2025-26; CAG State Accounts Report 2024-25; rgkny.cg.nic.in"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "PASS",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "FAIL",
+    "enh_T3.5_flag": "ok — ΔY (₹16,400 observed) is 5.5× above the ₹3,000 threshold; no near-threshold concern despite T3.5 = No",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Government of Chhattisgarh",
+    "CAG State Accounts Report 2024-25",
+    "National Portal of India / rgkny.cg.nic.in"
+  ],
+  "unverified_fields": []
+}

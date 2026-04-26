@@ -1,0 +1,65 @@
+{
+  "test_id": "T3",
+  "scheme": "Dairy Development Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme's official documentation explicitly mandates livelihood output indicators and articulates economic pathways: (a) mandatory income outcome — 'Income generation documented' and 'Milk price realization improved for farmers' per OUTCOME entry; (b) explicit livelihood pathways — milk production, value-added product development (ghee, curd, paneer), and cooperative enterprise formation are articulated as scheme design outputs. The Economic Survey entry states 'livelihood improvement' as a scheme objective. These satisfy both sub-conditions under T3.1.",
+      "src": "programs.md — OUTCOME: 'Income generation documented', 'Milk price realization improved for farmers'; SURVEY: 'livelihood improvement and rural economy strengthening'; ANNOUNCEMENT: 'processing facility establishment support, cooperative formation guidelines'"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No evaluation study, independent assessment, or MIS-verified income-per-household figure cited in programs.md or available government source",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No DPR income projection or projected ΔY per household per year figure cited in programs.md, official notification, budget documents, or Economic Survey entry",
+        "interp": "skip",
+        "src": ""
+      },
+      "governing": "<<UNVERIFIED: neither Observed nor Projected ΔY data available>>",
+      "r": "Neither observed ΔY (from evaluation studies or MIS) nor projected ΔY (from DPR or scheme guidelines) is quantified in any available source. programs.md OUTCOME confirms 'Income generation documented' and 'Milk price realization improved' but no per-household per-year rupee figure is reproduced. CAG audit examines fund utilization, not beneficiary income impact. Without a ΔY figure, the T3.2 threshold (≥ ₹3,000 observed or ≥ ₹5,000 projected) cannot be assessed.",
+      "docs": [
+        "programs.md — OUTCOME (qualitative income confirmation only)",
+        "programs.md — CAG State Accounts 2024-25 (fund utilization, no income-per-HH data)"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways are explicitly articulated in scheme documents: (1) Direct milk sales — scheme supports milk production volume increase and cooperative milk price realization improvement; milk offtake through dairy cooperatives and milk chilling centres is the primary pathway explicitly designed into the scheme. (2) Value-added dairy product enterprise — ghee, curd, and paneer production are explicitly named as scheme outputs in OUTCOME entry, with 'dairy processing facility support' in the budget as the enabling investment. Both pathways are named in official scheme documentation, not coincidental outcomes.",
+      "src": "programs.md — OUTCOME: 'Milk production volume increased', 'Milk price realization improved', 'Value-added products developed (ghee, curd, paneer)'; BUDGET: 'dairy processing facility support'; SURVEY: 'value addition'"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "The scheme explicitly strengthens the dairy cooperative structure as a designed component ('Cooperative dairy structure strengthened' per OUTCOME; 'cooperative formation guidelines' per ANNOUNCEMENT; 'dairy cooperatives, milk chilling centers' per SURVEY). In the Indian dairy sector, state dairy cooperatives provide institutional milk procurement — functioning as a guaranteed buyer mechanism equivalent to government procurement for community produce. 'Milk price realization improved for farmers' is cited as a direct outcome, confirming the cooperative offtake channel is operational. The National Portal cross-references with the national dairy development mission, indicating alignment with the national cooperative procurement network.",
+      "src": "programs.md — OUTCOME: 'Cooperative dairy structure strengthened', 'Milk price realization improved'; SURVEY: 'dairy cooperatives, milk chilling centers'; ANNOUNCEMENT: 'cooperative formation guidelines'; PORTAL: 'cross-referenced with national dairy development mission'"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "programs.md documents only monetary and production-volume metrics: milk production volume, income generation, milk price realization, and value-added product development. No non-monetary livelihood indicators are mentioned — neither food sufficiency months, nutritional diversity, livestock feeding days, nor access to traditional/medicinal resources. Note: since Q26 ΔY is UNVERIFIED (no figure available), the near-threshold flag cannot be assessed quantitatively; however, the absence of non-monetary tracking is a governance gap that may understate total household benefit.",
+      "src": "programs.md — OUTCOME; BUDGET (no non-monetary indicators cited)"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "FAIL — UNVERIFIED: no ΔY figure (observed or projected) available in any cited source; T3.2 threshold cannot be confirmed as met; test cannot PASS without this condition",
+    "C3_T3.3": "PASS — 2 distinct pathways (milk sales; value-added dairy products) explicitly articulated in scheme documents",
+    "C4_T3.4": "PASS — cooperative dairy structure with institutional milk procurement constitutes operational offtake mechanism",
+    "enh_T3.5_flag": "T3.5 = 0 (no non-monetary indicators tracked); ΔY is unverified — near-threshold assessment not possible; flag: scheme likely under-measuring true household benefit by omitting fodder, food, and nutrition outputs from dairy livestock",
+    "overall": "FAIL — C2_deltaY unverified; ΔY pass condition (≥ ₹3,000 observed or ≥ ₹5,000 projected) cannot be confirmed"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET: State budget allocation for dairy enterprise development",
+    "programs.md — SURVEY: Economic Survey on dairy development",
+    "programs.md — OUTCOME: Implementation outcomes (income generation, milk price, value-added products)",
+    "programs.md — ANNOUNCEMENT: Official notification (cooperative formation guidelines, processing facility support)",
+    "programs.md — CAG: CAG State Accounts 2024-25 (fund utilization audit)",
+    "programs.md — PORTAL: National Portal Agriculture > Animal Husbandry > Value Added Products"
+  ],
+  "unverified_fields": ["Q26"]
+}

@@ -1,0 +1,65 @@
+{
+  "test_id": "T3",
+  "scheme": "Joint Forest Management",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The official notification (No. 6-JFM/1999/CGN, 2023 update) and scheme design explicitly mandate livelihood output indicators and pathways: (1) employment of 28,500 community forest guards as a scheme output; (2) ₹85,000 annual JFMC income from gate fees and forest products as a defined scheme benefit; (3) secondary worker livelihood (35,000 workers, ₹4,200/year) explicitly articulated in the scheme; (4) herb/NTFP collection rights as a defined livelihood pathway. The Economic Survey and Outcome Budget both confirm these as mandatory livelihood outputs, not incidental outcomes.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+    },
+    "Q26": {
+      "observed": {
+        "v": "4200",
+        "calc": "Worker income per beneficiary worker = ₹4,200/year as directly reported in Economic Survey 2024-25 and verified by CAG State Accounts Report 2024-25 (payment records analysis). Covers 63,500 direct workers (28,500 guards + 35,000 secondary workers). Per-household income for the working cohort = ₹4,200/HH/year.",
+        "interp": "PASS — ₹4,200 ≥ ₹3,000 observed threshold",
+        "src": "Chhattisgarh Economic Survey 2024-25 ('₹4,200/year income per worker'); CAG State Accounts Report 2024-25 (payment records verified)"
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No separate DPR projected income estimate is available in the source documents independent of the observed figure.",
+        "interp": "skip",
+        "src": ""
+      },
+      "governing": "Observed",
+      "r": "Observed ΔY of ₹4,200/HH/year governs as per the income rule. The Economic Survey 2024-25 reports this figure from MIS income tracking and it is independently verified by CAG payment records. Observed data takes precedence over any DPR projection. ₹4,200 exceeds the ₹3,000/HH/year observed threshold by 40% — no provisional flag required.",
+      "docs": [
+        "Chhattisgarh Economic Survey 2024-25 — worker income ₹4,200/year reported",
+        "CAG State Accounts Report 2024-25 — payment records verification of ₹4,200 average",
+        "Outcome Budget 2025-26 — worker income ₹4,200/year confirmed"
+      ]
+    },
+    "Q27": {
+      "v": "3",
+      "r": "Three distinct livelihood pathways are explicitly articulated in the scheme documents: (1) Community forest guard employment — 28,500 positions mandated by the notification as a scheme output (wage employment pathway from forest protection); (2) NTFP / herb collection rights — scheme notification specifies forest product rights (herb collection) as a defined member entitlement enabling direct sale income (NTFP pathway); (3) Gate fee / forest enterprise revenue — scheme design mandates ₹85,000 annual JFMC income from gate fees and forest product levies distributed to member villages (community enterprise pathway). Secondary employment in ecotourism (35,000 secondary workers) referenced in Economic Survey as a fourth pathway, though the scheme's own notification articulates three primary pathways.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023) — pathways 1, 2, 3 mandated; Chhattisgarh Economic Survey 2024-25 — secondary employment confirmed; Outcome Budget 2025-26"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "Two institutional offtake mechanisms exist: (1) State Forest Department employment contract — 28,500 community forest guards are on the Forest Department payroll (government agency offtake for forest protection services, institutionally guaranteed). This is equivalent to a government agency offtake agreement for community labour services. (2) MGNREGS integration — forest regeneration and NRM works are eligible MGNREGS activities, providing institutional wage payment backstop for forest labour. Additionally, the state portal's income tracker and the scheme's 3-year renewable MOU structure guarantee continuation of gate fee and herb collection access.",
+      "src": "Official Notification No. 6-JFM/1999/CGN (2023); CAG State Accounts Report 2024-25 (28,500 guards on payroll); Outcome Budget 2025-26"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "The scheme MIS and portal track monetary and ecological indicators: employment count, income per worker, gate fees, vegetation density, biomass accumulation, wildlife corridor count, tiger population. Non-monetary livelihood indicators specific to beneficiary household welfare (food security months, nutritional diversity, fodder availability, medicinal plant access in quantified terms) are not evidenced as tracked metrics in the scheme's MIS or evaluation framework. Ecological health metrics (biomass, vegetation density) are tracked but these are resource health indicators, not household non-monetary livelihood metrics. ΔY = ₹4,200 is 40% above the ₹3,000 threshold — not within 20% near-threshold zone — so potential under-measurement is not flagged as a concern.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; State Forest Portal (income tracker, forest health dashboard)"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "PASS",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "PASS",
+    "enh_T3.5_flag": "ok — ΔY (₹4,200) is 40% above observed threshold (₹3,000); no near-threshold under-measurement concern",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-JFM/1999/CGN (April 1, 1999; updated 2023)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "State Forest Portal (JFM module)"
+  ],
+  "unverified_fields": []
+}

@@ -1,0 +1,62 @@
+{
+  "test_id": "T4a",
+  "scheme": "Gaushan Palan Yojana",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (BUDGET, ANNOUNCEMENT, CAG, OUTCOME, SURVEY sections); CAG State Accounts 2024-25; Economic Survey",
+  "carried_from_t1": {
+    "T1.1": "B",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "<<UNVERIFIED: Existence of a mandatory replenishment/continuity rule with defined non-compliance consequences cannot be confirmed from available documentation>>",
+      "r": "programs.md references: (a) 'performance monitoring framework for cattle management' (ANNOUNCEMENT), (b) CAG audit of 'breed conservation program effectiveness' and 'beneficiary scheme compliance' (CAG section), and (c) 'breeding practices improved' as an outcome (OUTCOME). These elements indicate monitoring obligations and a breeding conservation component, which could constitute a de facto continuity rule. However, T4.1 requires a written obligation in scheme operational guidelines with a defined non-compliance consequence (fund withholding, disqualification, or reduced allocation). Aspirational or monitoring-only language does not qualify. Whether the performance monitoring framework includes such consequences is not confirmed in the available extract. Qualitative note: if CAG audit findings of non-compliance in 'breed conservation program effectiveness' trigger reduced allocations, T4.1 = Yes. Field audit must verify scheme operational guidelines for explicit consequence clause.",
+      "src": "programs.md — ANNOUNCEMENT ('performance monitoring framework'), CAG section ('scheme compliance', 'breed conservation program effectiveness'), OUTCOME ('breeding practices improved')"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "T1.1 carried from t1_output.json = 'B' (Community land/Common Pool Resource — community cattle shelters). T1.1 ≠ E (intangible/knowledge commons), therefore the ρ Ratio track applies. Q32 (ρ Ratio) is answered; Q33 (Vitality Index) is set to SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = 'B'; SOC Framework Section T4.2 track selection rule"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ ratio cannot be computed — no extraction rate or replenishment rate data available in source documentation>>",
+      "calc": "ρ = Annual extraction from commons (cattle offtake — sales, culling, mortality net of natural replenishment) ÷ Annual replenishment (new births, breeding stock supplied by scheme). Neither numerator nor denominator is quantified in programs.md or CAG extract.",
+      "status": "Estimated",
+      "interp": "<<UNVERIFIED: ρ ≤ 1.2 (PASS) or ρ > 1.2 (FAIL) cannot be determined. MANDATORY FLAG: T1.5 = No (resource boundary not demarcated in public document, carried from t1_output.json). Per framework rule, ρ MUST be classified as Estimated, not Measured. Even when financial/animal data become available, the ρ calculation will be based on proxy methods (scheme animal census × average offtake rate ÷ breeding program output), and uncertainty margin must be documented. Proxy method to be used: total Gaushala cattle census × annual sale/culling rate ÷ (natural calf birth rate + breeding stock supplied under scheme). Qualitative note: a cattle rearing scheme with active breeding stock supply and heritage breed conservation program is designed to maintain or increase population — this suggests ρ ≤ 1.0, but this requires verification from animal census and scheme offtake data.>>",
+      "src": "programs.md — BUDGET ('breeding stock supply'), OUTCOME ('Cattle shelters constructed; Heritage breed population preserved'); t1_output.json T1.5 = 'No'",
+      "docs": [
+        "programs.md — BUDGET section (breeding stock supply component)",
+        "programs.md — OUTCOME section (heritage breed population preserved)",
+        "CAG State Accounts 2024-25 (cattle procurement and breed conservation audit)"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "<<UNVERIFIED: Q30 unverified — mandatory replenishment rule existence with enforcement consequences not confirmed>>",
+    "C2_rho_or_VI": "<<UNVERIFIED: ρ ratio not computable from available data; track = RhoRatio, status = Estimated (T1.5 = No)>>",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET section",
+    "programs.md — ANNOUNCEMENT section",
+    "programs.md — OUTCOME section",
+    "programs.md — CAG section (CAG State Accounts 2024-25)",
+    "programs.md — SURVEY section",
+    "t1_output.json — carry_for_later_tests (T1.1 = B, T1.5 = No)"
+  ],
+  "unverified_fields": ["Q30", "Q32"]
+}

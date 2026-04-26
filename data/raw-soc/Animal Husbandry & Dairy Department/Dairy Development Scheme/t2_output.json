@@ -1,0 +1,93 @@
+{
+  "test_id": "T2",
+  "scheme": "Dairy Development Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": "<<UNVERIFIED: Total beneficiary count not stated in programs.md. PORTAL entry references 'beneficiary statistics' but no aggregate figure is reproduced. No MIS extract or scheme annual report with beneficiary headcount is available in the provided documents.>>",
+      "src": "programs.md — PORTAL: 'beneficiary statistics' cited but no figure reproduced; CAG: audit scope covers fund utilization, not beneficiary counts"
+    },
+    "Q16": {
+      "v": "<<UNVERIFIED: Count of local dwellers within the operational area not available. No MIS beneficiary register with address/GP-level data is reproduced in programs.md.>>",
+      "src": "programs.md — PORTAL; OUTCOME (no beneficiary location data)"
+    },
+    "Q17": {
+      "v": "Settled_communities — GP/block level",
+      "r": "Dairy farming is a settled livelihood activity tied to the beneficiary's residential holding. The scheme provides subsidies for dairy sheds constructed at the beneficiary's premises. 'Local' is appropriately defined as within the GP or block of the beneficiary's residence. No pastoral, mobile, or seasonal community element is identified in scheme documentation.",
+      "src": "programs.md — ANNOUNCEMENT: 'infrastructure requirements, beneficiary qualification'; BUDGET: 'dairy unit subsidy for shed construction'"
+    },
+    "Q18": {
+      "v": "<<UNVERIFIED>>",
+      "calc": "θ₂ = Q16 ÷ Q15 — both inputs unverified; calculation cannot be performed",
+      "interp": "UNVERIFIED — θ₂ threshold (≥ 0.70) cannot be assessed. However, since dairy farming subsidies are directed at individual farmers residing where their dairy unit is located, high local residency is structurally likely. The scheme has no design feature routing benefits to distant non-local actors. θ₂ is expected to be near 1.0 but cannot be confirmed without beneficiary register data.",
+      "src": "programs.md — OUTCOME; PORTAL"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: Marginalised beneficiary count (SC/ST/de-notified tribes/landless/women-headed/differently-abled-headed/elderly-headed households) not stated in programs.md. No SECC or PM-JANMAN cross-referenced figure reproduced. Scheme ANNOUNCEMENT describes 'beneficiary qualification' criteria but does not specify marginalised-category targets or actuals.>>",
+      "r": "Dairy development schemes in India often include SC/ST-specific sub-components or priority targeting, but no such provision is documented in the available programs.md entries for this scheme.",
+      "src": "programs.md — ANNOUNCEMENT: 'beneficiary qualification' (no marginalised-category breakdown); PORTAL: 'eligibility criteria' (no marginalised share cited)"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED>>",
+      "calc": "θ₃ = Q19 ÷ Q15 — both inputs unverified; calculation cannot be performed",
+      "interp": "UNVERIFIED — θ₃ threshold (≥ 0.40) cannot be assessed. No scheme-level marginalised beneficiary share data is available in provided documents.",
+      "src": "programs.md — ANNOUNCEMENT; PORTAL"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Dairy cooperatives are formally constituted bodies explicitly mentioned as a scheme component: 'dairy cooperatives, milk chilling centers' (SURVEY); 'cooperative formation guidelines' (ANNOUNCEMENT); 'cooperative dairy structure strengthened' (OUTCOME). These indicate formal cooperative entities exist as part of the scheme design."
+      },
+      "22b": {
+        "v": "<<UNVERIFIED: Whether the cooperative body has a mandated (not merely optional) role in scheme-level decision-making — such as approving beneficiary lists, allocating subsidies, or resolving grievances — is not confirmed in any available document. programs.md describes cooperatives primarily in their milk procurement role, not as scheme governance bodies with a mandated decision-making function under the scheme guidelines.>>",
+        "r": "Cooperative formation is guided by the scheme, but the operative mandate in scheme governance (beyond milk offtake) cannot be verified from available sources."
+      },
+      "22c": {
+        "v": "<<UNVERIFIED: No meeting minutes, recorded resolutions, or documented evidence of ≥2 meetings in the prior 12 months for any cooperative or scheme governance body are reproduced in programs.md or cited CAG audit. Functionality of any scheme-level governance body cannot be confirmed.>>",
+        "r": "CAG audit examines fund utilization, not governance meeting records. No social audit or GP resolution evidence available."
+      },
+      "docs": [
+        "programs.md — ANNOUNCEMENT: 'cooperative formation guidelines' (existence confirmed, mandate and functionality unverified)",
+        "programs.md — OUTCOME: 'Cooperative dairy structure strengthened' (operational claim, meeting records not reproduced)",
+        "CAG State Accounts 2024-25 (fund utilization scope — governance meeting records not in scope)"
+      ],
+      "src": "programs.md — SURVEY; ANNOUNCEMENT; OUTCOME; CAG"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No documentation of women's representation ≥33% in any cooperative or scheme governance body is available in programs.md. The scheme ANNOUNCEMENT and OUTCOME entries do not specify committee composition or women's representation ratios. Enhancement flag: women-headed households are included in the marginalised definition (Q19) but Q19 is itself unverified; the representation gap between potential women beneficiaries and governance body membership cannot be assessed. Flag as governance gap.",
+      "src": "programs.md — ANNOUNCEMENT; OUTCOME (no committee composition data)"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal grievance or voice mechanism for non-beneficiaries is documented in programs.md. The PORTAL entry mentions application process and eligibility criteria but no institutionally mandated grievance portal, Social Audit provision, Gram Sabha complaint process, or Ombudsman mechanism is cited for the Dairy Development Scheme. Absence of a grievance mechanism is a governance gap.",
+      "src": "programs.md — PORTAL; ANNOUNCEMENT (no grievance mechanism cited)"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "UNVERIFIED — beneficiary count and local-dweller count data unavailable; θ₂ cannot be calculated",
+    "C2_theta3": "UNVERIFIED — marginalised beneficiary count data unavailable; θ₃ cannot be calculated",
+    "C3_T2.3": "FAIL — UNVERIFIED: Q22b (mandate of cooperative in scheme decision-making) and Q22c (functional meeting record) both unverified; T2.3 = 1 requires all three sub-conditions confirmed as Yes; with 22b and 22c unconfirmed, T2.3 cannot be scored as 1",
+    "enh_T2.4_flag": "GOVERNANCE GAP — Q24 = No; no institutionally mandated grievance/voice mechanism for non-beneficiaries documented",
+    "enh_T2.5_flag": "GOVERNANCE GAP — Q23 = No; women's representation ≥33% in governance body not documented",
+    "overall": "FAIL — C3_T2.3 is unconfirmed (cannot be scored as PASS); C1_theta2 and C2_theta3 are unverified; multiple pass conditions cannot be confirmed"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET: State budget allocation for dairy enterprise development",
+    "programs.md — SURVEY: Economic Survey on dairy development",
+    "programs.md — OUTCOME: Implementation outcomes",
+    "programs.md — ANNOUNCEMENT: Official notification (cooperative formation guidelines, beneficiary qualification)",
+    "programs.md — CAG: CAG State Accounts 2024-25 (fund utilization audit)",
+    "programs.md — PORTAL: National Portal Agriculture > Animal Husbandry > Value Added Products"
+  ],
+  "unverified_fields": ["Q15", "Q16", "Q18", "Q19", "Q20", "Q22b", "Q22c"]
+}

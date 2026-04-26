@@ -1,0 +1,88 @@
+{
+  "test_id": "T2",
+  "scheme": "Chief Minister Plantation Scheme",
+  "department": "Forest Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-25",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 42000,
+      "src": "CAG State Accounts Report 2024-25 (42,000 farmers registered confirmed, enrollment database); Chhattisgarh Economic Survey 2024-25 (42,000 farmers); Outcome Budget 2025-26"
+    },
+    "Q16": {
+      "v": 42000,
+      "src": "All 42,000 registered beneficiaries are private landholders residing in Chhattisgarh who plant on their own land. Scheme eligibility requires physical land ownership (min 0.5 ha fruit / 2 ha timber) — landowners are by definition resident in or proximate to their private holdings. No non-resident/distant actors are eligible under scheme guidelines. Source: Official Notification No. 6-CMP/2015/CGN (eligibility criteria); CAG State Accounts Report 2024-25 (enrollment database)"
+    },
+    "Q17": {
+      "v": "Settled_communities — within district/GP of their private landholding across Chhattisgarh state",
+      "r": "The scheme has no bounded commons area to define 'local' against. Since T1.1 = C (private land), the applicable definition is settled communities: each beneficiary farmer resides within the GP/district where their private landholding is situated. All 42,000 enrolled farmers are Chhattisgarh residents holding land within the state. This is an inherent consequence of the scheme's private-land model: the landholder is co-located with the plantation site. Definition applied: Settled_communities (GP/district of private land holding).",
+      "src": "Official Notification No. 6-CMP/2015/CGN (private land eligibility); Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q18": {
+      "v": 1.0,
+      "calc": "θ₂ = Q16 ÷ Q15 = 42,000 ÷ 42,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00, well above 0.70 threshold. All registered beneficiaries are Chhattisgarh-resident private landholders. NOTE: This pass is structurally trivial for a private-land scheme — the locality condition is automatically met by scheme eligibility design, not by commons-area proximity.",
+      "src": "Derived from Q15 and Q16; Official Notification No. 6-CMP/2015/CGN; CAG State Accounts Report 2024-25"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No SC/ST/women-headed/landless household breakdown of the 42,000 enrolled farmers is provided in any available source (programs.md, Outcome Budget, Economic Survey, CAG Report, or Portal data). The scheme eligibility requires minimum landholding (0.5–2 ha), which structurally excludes landless households — one of the key marginalised groups under the SOC framework definition.>>",
+      "r": "Available sources confirm total enrollment (42,000 farmers) and physical outcomes but do not disaggregate beneficiary caste/category or household type. Chhattisgarh state demographics indicate ~31% ST and ~13% SC population share, but this cannot be applied directly to scheme beneficiaries without scheme-specific disaggregated data. The minimum landholding requirement (0.5 ha fruit / 2 ha timber) excludes landless households from eligibility, which structurally suppresses marginalised inclusion for that sub-group.",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be computed — Q19 (marginalised beneficiary count) is unverified. No disaggregated beneficiary data available.>>",
+      "calc": "θ₃ = Q19 ÷ Q15 = <<UNVERIFIED>> ÷ 42,000 = <<UNVERIFIED>>",
+      "interp": "UNVERIFIED — cannot assess PASS/FAIL without marginalised beneficiary count",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "No formally constituted community representative body (Gram Sabha, User Group, JFM Committee, Village Water Committee, SHG federation, BMC, or equivalent) exists in the scheme's governance structure. Implementation is through District Forest Officers and a state-run online portal. The scheme is administered as an individual farmer-level transaction: farmer registers online, books saplings, plants, and receives incentive via direct bank transfer. No collective community body is constituted or even mentioned in the official notification or any available scheme document."
+      },
+      "22b": {
+        "v": "No",
+        "r": "No community body's role is mandated in scheme guidelines, since no such body is constituted. Implementation mandate rests with District Forest Officers and the state Forest Department."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No community body exists to be functional. No meeting records, resolutions, or community governance evidence are present or applicable."
+      },
+      "docs": [],
+      "src": "Official Notification No. 6-CMP/2015/CGN (no mention of community governance body); State Forest Portal (farmer self-service model); Outcome Budget 2025-26 (implementation via DFO)"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community governance body exists (see Q22). There is therefore no governance body to assess women's representation in. Women-headed households may be beneficiaries (some of the 42,000 farmers could be women landholders) but no disaggregated data on women's participation is available, and no governance structure exists where representation can be assessed. Governance gap flagged.",
+      "src": "Official Notification No. 6-CMP/2015/CGN; <<UNVERIFIED for women beneficiary share>>"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal grievance or voice mechanism for non-beneficiaries is mandated in the scheme design. The state forest portal provides a farmer registration and incentive tracker service, but this is a beneficiary-facing administrative tool, not a grievance mechanism for those excluded from benefits. No social audit provision, Ombudsman reference, MIS grievance portal, or Gram Sabha complaint process is specified in the scheme guidelines (Official Notification No. 6-CMP/2015/CGN) or referenced in any available evaluation document. Governance gap flagged.",
+      "src": "Official Notification No. 6-CMP/2015/CGN; State Forest Portal; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS — θ₂ = 1.00 (all 42,000 registered farmers are local Chhattisgarh-resident landholders); exceeds 0.70 threshold",
+    "C2_theta3": "UNVERIFIED — marginalised beneficiary count (Q19) not available in any accessible source; θ₃ cannot be assessed. Structural eligibility concern: minimum landholding requirement (0.5–2 ha) excludes landless households from access, which structurally limits marginalised inclusion.",
+    "C3_T2.3": "FAIL — T2.3 = 0. No formally constituted community representative body exists; scheme uses DFO-to-farmer administrative channel only. All three sub-conditions (22a/22b/22c) = No.",
+    "enh_T2.4_flag": "GOVERNANCE GAP — Q24 = No. No formal grievance/voice mechanism for excluded non-beneficiaries is institutionally mandated in the scheme design. Non-beneficiaries (including landless households ineligible by design) have no structured recourse mechanism.",
+    "enh_T2.5_flag": "GOVERNANCE GAP — Q23 = No. No community governance body exists; women's representation at ≥33% is structurally impossible to assess or satisfy. Women landholders may participate as individual beneficiaries but no governance structure captures or mandates their representation.",
+    "overall": "FAIL — T2.3 = 0 (no functional community representative body mandated). Additionally, θ₃ is unverified; C2_theta3 cannot be confirmed as PASS."
+  },
+  "sources_verified": [
+    "Official Notification No. 6-CMP/2015/CGN (July 2015, updated 2024)",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "State Forest Portal"
+  ],
+  "unverified_fields": ["Q19", "Q20"]
+}

@@ -1,0 +1,90 @@
+{
+  "test_id": "T2",
+  "scheme": "Rajiv Gandhi Kisan Nyay Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "t1_output.json (carry_for_later_tests.T1.1 = C); Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; rgkny.cg.nic.in",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 2960000,
+      "src": "Outcome Budget 2025-26 (29.6 lakh beneficiaries); Chhattisgarh Economic Survey 2024-25 (21.4 lakh paddy + 8.2 lakh other crops = 29.6 lakh total)"
+    },
+    "Q16": {
+      "v": 2960000,
+      "src": "Derived: RGKNY is a Chhattisgarh state scheme requiring land ownership within the state and physical cultivation of registered agricultural land. By scheme design, all beneficiaries must be resident farmers in Chhattisgarh farming their own land. No non-local beneficiary category exists in scheme guidelines. All 29.6 lakh farmers are treated as local dwellers within the state's operational area."
+    },
+    "Q17": {
+      "v": "Settled_communities — state of Chhattisgarh (scheme operational boundary)",
+      "r": "RGKNY is a state-wide scheme with no sub-district commons boundary (T1.1 = C; no commons resource exists). 'Local' is defined as resident farmers within Chhattisgarh who own and cultivate the registered agricultural land for which they receive DBT. The scheme's beneficiary eligibility inherently requires physical presence on the land (production proof, land ownership in state records). Settled-community definition applied at state level.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020 (eligibility: land ownership + production proof within Chhattisgarh)"
+    },
+    "Q18": {
+      "v": 1.00,
+      "calc": "θ₂ = Q16 ÷ Q15 = 2,960,000 ÷ 2,960,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00, above the 0.70 threshold. All beneficiaries are Chhattisgarh-resident farmers farming their own registered land.",
+      "src": "Outcome Budget 2025-26; Official Notification No. 26-A-2020/CGN dated 21.05.2020"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: The available official sources for RGKNY (Notification 26-A-2020/CGN, Economic Survey 2024-25, Outcome Budget 2025-26, CAG Report 2024-25, scheme portal) do not provide a disaggregated beneficiary count by SC/ST/women-headed/landless category. The scheme is a universal crop-production income support without a targeted marginalised-category selection criterion; disaggregated data would require access to the beneficiary MIS database or a dedicated scheme evaluation report.>>",
+      "r": "No disaggregated marginalised household count is available in verified official sources. Chhattisgarh's rural SC+ST population is approximately 43% (Census 2011: ST 30.6%, SC 12.8%), suggesting θ₃ could approximate 0.43, but this cannot be confirmed from available RGKNY-specific sources.",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: Cannot compute θ₃ as Q19 (numerator) is unverified. Estimated from state demographic data only.>>",
+      "calc": "<<UNVERIFIED: θ₃ = Q19 ÷ Q15 = unverifiable numerator ÷ 2,960,000>>",
+      "interp": "<<UNVERIFIED: Cannot determine PASS/FAIL. If θ₃ ≈ 0.43 per state demographic proxy, this would be a marginal PASS (≥ 0.40); however, RGKNY has no land-ceiling or economic targeting — large landowners are eligible, which may suppress the true marginalised share below 0.40.>>",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "RGKNY is administered entirely through an automated e-governance system (state agriculture portal, DBT through bank accounts). The scheme guidelines and all available official documents make no provision for a formally constituted community representative body (Gram Sabha, User Group, JFM Committee, Water Committee, SHG federation, or equivalent) with any decision-making role. The scheme is a direct-transfer income support programme managed by the Agriculture Department and processed through banking/NEFT infrastructure."
+      },
+      "22b": {
+        "v": "No",
+        "r": "No scheme guidelines or official notification mandates the role of any community body in decision-making. Scheme eligibility and payment are determined by administrative verification of land records and production data, not community governance."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No community body exists in the scheme framework; therefore no meeting records or resolutions exist. T2.3 = 0 → T2 FAIL."
+      },
+      "docs": [],
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Chhattisgarh Economic Survey 2024-25 ('Processing: Automated through state agriculture portal'); Outcome Budget 2025-26"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community governance body exists in the scheme framework (Q22a = No), so women's representation in such a body cannot be assessed. T2.5 = 0. Governance gap flagged. Note: women-headed households may be significant among beneficiaries (the scheme covers all landholding farmers), but there is no governance body for them to be represented in.",
+      "src": "Official Notification No. 26-A-2020/CGN dated 21.05.2020; Outcome Budget 2025-26"
+    },
+    "Q24": {
+      "v": "Yes",
+      "r": "The scheme portal (rgkny.cg.nic.in) provides a grievance redressal mechanism described on the National Portal of India. The CAG report confirms the scheme's administrative compliance mechanisms. The grievance portal is institutionally maintained by the state government as part of the scheme's e-governance infrastructure. However, this mechanism is primarily oriented toward registered beneficiaries tracking payments; its accessibility to excluded non-beneficiaries (e.g., landless farmers, tenants) for raising objections is not explicitly mandated in scheme guidelines. Recorded as 'Yes' on the basis of the portal-based grievance mechanism, with a note that the exclusion-objection dimension is not specifically designed for non-beneficiaries.",
+      "src": "National Portal of India / rgkny.cg.nic.in (portal description: 'grievance redressal'); CAG State Accounts Report 2024-25"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS",
+    "C2_theta3": "<<UNVERIFIED: Q19 and Q20 unverified; cannot confirm PASS or FAIL — see unverified_fields>>",
+    "C3_T2.3": "FAIL",
+    "enh_T2.4_flag": "ok — scheme portal grievance mechanism present (rgkny.cg.nic.in); note: non-beneficiary exclusion-objection pathway not explicitly mandated",
+    "enh_T2.5_flag": "GOVERNANCE GAP — no community governance body exists; women's representation question is inapplicable but T2.5 = 0 recorded",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "t1_output.json — carry_for_later_tests.T1.1 = C",
+    "Official Notification No. 26-A-2020/CGN dated 21.05.2020, Government of Chhattisgarh",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Government of Chhattisgarh",
+    "CAG State Accounts Report 2024-25",
+    "National Portal of India / rgkny.cg.nic.in"
+  ],
+  "unverified_fields": ["Q19", "Q20"]
+}

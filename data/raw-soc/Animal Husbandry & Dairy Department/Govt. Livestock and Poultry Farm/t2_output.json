@@ -1,0 +1,90 @@
+{
+  "test_id": "T2",
+  "scheme": "Govt. Livestock and Poultry Farm",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations; SURVEY — Economic Survey; OUTCOME — Implementation outcome records; BUDGET — State budget allocation; CAG State Accounts Report Chhattisgarh 2024-25; PORTAL — National Portal listing",
+  "carried_from_t1": {
+    "T1.1": "A1"
+  },
+  "answers": {
+    "Q15": {
+      "v": "<<UNVERIFIED: Total beneficiary count for the government livestock and poultry farm scheme not specified in scheme documents reviewed. OUTCOME records confirm quality animal stock is supplied to farmers and training programs are active but does not enumerate total beneficiary households.>>",
+      "src": "OUTCOME; ANNOUNCEMENT"
+    },
+    "Q16": {
+      "v": "<<UNVERIFIED: Count of local-dweller beneficiaries not available; dependent on unverified Q15 total. Based on scheme design — government farm is a district-based facility serving the farming community in its operational area — local-dweller beneficiaries are expected to constitute near-totality (θ₂ inferred ≥ 0.95) of beneficiaries, as farmers must access the facility within reasonable proximity.>>",
+      "src": "ANNOUNCEMENT; PORTAL; OUTCOME"
+    },
+    "Q17": {
+      "v": "Settled_communities — within the district and administrative block of the government farm location",
+      "r": "Government livestock and poultry farms are district-level facilities. Beneficiary farmers who receive quality animal stock and training access the facility physically; they are settled farming communities residing within the farm's district/block. The ANNOUNCEMENT specifies farm location and capacity per district, implying a district-level service area. 'Local' is defined as farmers within the district or within reasonable travel distance of the farm (approximating GP/block radius).",
+      "src": "ANNOUNCEMENT; PORTAL"
+    },
+    "Q18": {
+      "v": "<<UNVERIFIED: Cannot compute θ₂ without verified Q15 and Q16 figures. Inferred θ₂ ≥ 0.95 from scheme design: government farm serves farmers in its immediate district/block; beneficiaries must physically access the facility for animals and training, precluding significant non-local participation.>>",
+      "calc": "θ₂ = Q16.v ÷ Q15.v = [unverified] ÷ [unverified]",
+      "interp": "PASS (inferred — beneficiary data unverified; specific MIS beneficiary register required to confirm)",
+      "src": "ANNOUNCEMENT; PORTAL; OUTCOME"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: No breakdown of beneficiaries by marginalised household category (SC/ST/landless/women-headed/differently-abled-headed) available in scheme documents reviewed. Chhattisgarh has high ST (~44%) and SC (~12%) population shares, suggesting significant marginalised community representation in the beneficiary pool is probable, but specific scheme-level disaggregated data not confirmed.>>",
+      "r": "SECC/PM-JANMAN data and scheme beneficiary categorisation records not available in reviewed documents. Scheme design (ANNOUNCEMENT) specifies eligibility criteria but disaggregated marginalised household count not reproduced in scheme overview.",
+      "src": "ANNOUNCEMENT; CAG"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: Cannot compute θ₃ without verified Q15 and Q19 figures. Given Chhattisgarh demographic profile (ST 44%, SC 12%), if the scheme serves the general farming population without exclusionary criteria, θ₃ is likely ≥ 0.40. However, wealthier farmers with capacity to maintain improved livestock breeds may be disproportionately represented, potentially suppressing θ₃. Specific data required.>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v = [unverified] ÷ [unverified]",
+      "interp": "<<UNVERIFIED: PASS or FAIL cannot be determined without verified beneficiary data>>",
+      "src": "ANNOUNCEMENT; CAG"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "The scheme is a government-operated farm managed by the Animal Husbandry & Dairy Department. The ANNOUNCEMENT specifies farmer access and eligibility criteria but does not establish a formally constituted community representative body (Gram Sabha, Farmers' User Group, Village Livestock Committee, or equivalent) with a mandated role in scheme governance or decision-making. Farm management decisions (animal distribution, breeding program design, training schedules) are under departmental authority. No community body is referenced in ANNOUNCEMENT, SURVEY, OUTCOME, BUDGET, CAG, or PORTAL documents."
+      },
+      "22b": {
+        "v": "No",
+        "r": "Scheme guidelines (ANNOUNCEMENT, operational framework) do not mandate any community representative body's role in farm decision-making. All governance is departmental: Animal Husbandry & Dairy Department officers (veterinary officers, farm managers, department officials) exercise decision-making authority. No community mandate exists."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No formally constituted community representative body exists; accordingly, community meeting records with documented resolutions are not applicable. CAG audit covers departmental operations, not community governance meetings."
+      },
+      "docs": [],
+      "src": "ANNOUNCEMENT; CAG; OUTCOME; PORTAL"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community governance body exists within this scheme's design structure. There is no committee, user group, or representative body for which women's representation can be assessed. The scheme governance structure is entirely departmental. Note: If women-headed households constitute a significant share of beneficiaries (probable given Chhattisgarh's marginalised household composition), the absence of any community governance body represents a broader equity gap beyond women's representation specifically.",
+      "src": "ANNOUNCEMENT; OUTCOME"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No scheme-specific, institutionally mandated grievance mechanism for non-beneficiaries of the government livestock and poultry farm is documented in reviewed scheme documents. PORTAL cross-references the National Portal (Agriculture > Animal Husbandry > Breeding Centers) and NITI Aayog livestock development initiatives; general government portals provide generic public grievance mechanisms, but these are not scheme-specific mandated mechanisms for this program. No social audit provision, scheme-level ombudsman, or MIS grievance portal specific to this scheme is mentioned.",
+      "src": "PORTAL; ANNOUNCEMENT"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS",
+    "C2_theta3": "FAIL",
+    "C3_T2.3": "FAIL",
+    "enh_T2.4_flag": "GOVERNANCE GAP: No scheme-specific grievance/voice mechanism for non-beneficiaries identified. T2.4 = 0.",
+    "enh_T2.5_flag": "GOVERNANCE GAP: No community governance body exists; women's representation cannot be assessed. T2.5 = 0.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations",
+    "SURVEY — Economic Survey on government livestock and poultry farms as breeding centers",
+    "OUTCOME — Implementation outcome records: quality stock supplied, training active",
+    "BUDGET — State budget allocation for government livestock and poultry farm infrastructure",
+    "CAG State Accounts Report Chhattisgarh 2024-25",
+    "PORTAL — National Portal listing under Agriculture > Animal Husbandry > Breeding Centers"
+  ],
+  "unverified_fields": ["Q15", "Q16", "Q18", "Q19", "Q20"]
+}

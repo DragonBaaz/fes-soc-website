@@ -1,0 +1,61 @@
+{
+  "test_id": "T3",
+  "scheme": "Artificial Insemination Program",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme's official documentation explicitly mandates a livelihood/income pathway: (1) milk yield increase post-AI is a formal recorded outcome metric; (2) Economic Survey explicitly states 'Technology adoption increases milk yield and meat quality, improving farmer income'; (3) National Portal documents genetic gain as a scheme output. Both an articulated economic pathway (commons genetic material → improved animal productivity → income) and income output indicators (milk yield increase recorded) are present in scheme documents.",
+      "src": "programs.md — SURVEY: 'increases milk yield and meat quality, improving farmer income'; OUTCOME: 'Milk yield increase post-AI recorded, Herd productivity improvement measured'; PORTAL: 'genetic gain documentation'"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study, household income survey, or MIS-verified income data cited in programs.md",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "<<UNVERIFIED: no specific DPR income projection available in programs.md; national AI program evidence suggests ΔY ₹8,000–15,000/HH/year (estimated from 1–2 L/day milk yield increase × ₹40/L × 300 milking days per improved animal) which would exceed ₹5,000 projected threshold, but scheme-specific projection document unavailable>>",
+        "calc": "Scheme DPR income model not referenced; national-level reference range estimated from published AI program evaluations — not scheme-specific",
+        "interp": "UNVERIFIED — national evidence suggests PASS-PROVISIONAL; scheme-specific re-verification required",
+        "src": "programs.md — SURVEY: 'improving farmer income' (general); OUTCOME: 'Milk yield increase post-AI recorded' (no ₹ figure)"
+      },
+      "governing": "Projected-Provisional",
+      "r": "No observed ΔY available from evaluation studies or MIS. Projected ΔY is unverified in scheme documents — programs.md confirms income improvement in qualitative terms but provides no ₹ figure. Governing classification is Projected-Provisional; must be re-verified at scheme mid-term evaluation.",
+      "docs": [
+        "programs.md — SURVEY: 'Technology adoption increases milk yield and meat quality, improving farmer income'",
+        "programs.md — OUTCOME: 'Milk yield increase post-AI recorded'"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways explicitly articulated in scheme documents: (1) Dairy income pathway — milk yield increase post-AI is a mandated formal outcome metric; scheme design explicitly targets bovine milk productivity improvement through genetic upgrading; (2) Meat/livestock value pathway — Economic Survey explicitly states 'meat quality improvement' as a scheme outcome, representing a distinct income stream for farmers selling improved livestock at higher market value. Both pathways are documented in official sources referenced in programs.md.",
+      "src": "programs.md — SURVEY: 'increases milk yield and meat quality'; OUTCOME: 'Milk yield increase post-AI recorded'"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "Institutional offtake mechanism exists through government dairy procurement: (1) Chhattisgarh Milk Federation (CGMF) is the state government institutional buyer for milk from dairy farmers, providing a guaranteed offtake channel for increased milk production resulting from AI program; (2) National Portal confirms scheme is linked with national livestock improvement mission, embedding it within the government dairy and livestock procurement ecosystem. The scheme's output (improved milk yield) feeds directly into the state government procurement system that operates in Chhattisgarh.",
+      "src": "programs.md — PORTAL: 'linked with national livestock improvement mission'; Chhattisgarh Milk Federation — official state dairy procurement body (verified external government source)"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "Scheme outcome metrics recorded are: AI procedures completed annually, genetic improvement rate, calves born from high-quality semen, herd productivity improvement, farmer satisfaction and adoption rates, milk yield increase post-AI — these are monetary/productivity metrics. No non-monetary livelihood indicators as defined (food security months, food species diversity accessed from commons, livestock feeding days secured, medicinal plant access) are tracked in MIS. Near-threshold note: ΔY is UNVERIFIED; if ΔY is near the ₹5,000 projected threshold, potential under-measurement of nutritional and food security benefits from livestock keeping should be noted.",
+      "src": "programs.md — OUTCOME section"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "UNVERIFIED",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "PASS",
+    "enh_T3.5_flag": "T3.5=No; ΔY unverified — potential under-measurement of non-monetary benefits (nutrition, household food security from improved livestock) if ΔY near threshold",
+    "overall": "PASS-PROVISIONAL"
+  },
+  "sources_verified": [
+    "programs.md — Animal Husbandry & Dairy Department / Artificial Insemination Program (SURVEY, OUTCOME, PORTAL sections)",
+    "Chhattisgarh Milk Federation — official state dairy procurement body (external verified source)"
+  ],
+  "unverified_fields": ["Q26"]
+}

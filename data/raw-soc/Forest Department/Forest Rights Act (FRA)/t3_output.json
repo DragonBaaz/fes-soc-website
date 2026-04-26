@@ -1,0 +1,67 @@
+{
+  "test_id": "T3",
+  "scheme": "Forest Rights Act (FRA)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The FRA scheme explicitly enables livelihood pathways through commons access. Outcome Budget 2025-26 records 'Livelihood security: 4.25 lakh persons (land-based security)' and 'Employment protection: Secured livelihood for 4.25 lakh persons (tribal protection)'. Individual cultivation rights (185,000 ha) provide an articulated agricultural/crop income pathway. Community forest rights (100,000 ha, 185 villages) enable NTFP collection as an articulated income pathway. FRA Section 3(1)(c) explicitly grants the right to own, use, and dispose of minor forest produce as a statutory livelihood mechanism. The economic mechanism from commons (forest land) to income (cultivation, NTFP sales) is articulated in the Act itself and in scheme design documents.",
+      "src": "Forest Rights Act 2006, Section 3; Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study or MIS-verified household income data cited in scheme documents or programs.md",
+        "interp": "skip",
+        "src": ""
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "Scheme documents record land asset value (₹85,000 cr estimated for 285,000 ha at ₹3 lakh/ha average) and livelihood security for 4.25 lakh persons, but no projected ΔY per household per year figure is stated in scheme guidelines, DPR, or Outcome Budget 2025-26",
+        "interp": "skip",
+        "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26"
+      },
+      "governing": "Projected-Provisional",
+      "r": "Neither observed nor projected ΔY per beneficiary household per year is available in the scheme data (programs.md section). FRA is primarily a tenure-security and rights-recognition scheme; its economic benefit is framed as livelihood protection (4.25 lakh persons) and land asset creation (₹85,000 cr total value), not as a per-household annual income increment. No evaluation study or DPR income model is cited in available scheme documents. This field cannot be verified.",
+      "docs": [
+        "Chhattisgarh Economic Survey 2024-25 (references lakh livelihood protection, no per-HH ΔY)",
+        "Outcome Budget 2025-26 (references land value ₹85,000 cr, no ΔY)"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways articulated in FRA scheme documents: (1) Cultivation on secured individual forest land patches — FRA Section 3(1)(a) grants individual forest dwellers the right to live in and cultivate land under occupation, explicitly enabling agricultural/crop income from 185,000 ha of individual rights (Outcome Budget 2025-26). (2) Collection, use, and sale of Minor Forest Produce (NTFP) — FRA Section 3(1)(c) explicitly grants the right to own, use, and dispose of minor forest produce from community forest areas (100,000 ha, 185 villages), enabling NTFP-based livelihood income. Both pathways are named in the statute and referenced in Outcome Budget outputs.",
+      "src": "Forest Rights Act 2006, Sections 3(1)(a) and 3(1)(c); Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "Institutional offtake mechanism exists and is operational for NTFP produced from FRA community forest areas. (1) Government of India MFP MSP Scheme (Van Dhan Yojana/TRIFED): provides Minimum Support Price for Minor Forest Produce including tendu patta, sal seed, mahua, etc., collected from FRA community forests — constitutes guaranteed government procurement. (2) Chhattisgarh State Minor Forest Produce Federation (CSMCL): state-level institutional procurement of MFP from tribal communities in Chhattisgarh. FRA Section 3(1)(c) rights explicitly link to this institutional procurement chain, providing a documented institutional demand channel for NTFP sourced from FRA-recognised community forests.",
+      "src": "Forest Rights Act 2006, Section 3(1)(c); MFP MSP Scheme, Government of India (TRIFED); Chhattisgarh State MFP Federation (CSMCL) mandate"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "Scheme MIS and state portal (https://cgvanadhikar.cgstate.gov.in/) track administrative and financial metrics only: titles issued (2.85 lakh), hectares recognised (285,000 ha), pending claims (1.65 lakh), digitisation rate (98%), approval rate (78%), processing time (18 months), budget spent (₹80 cr of ₹85 cr). No non-monetary livelihood indicators tracked — no food sufficiency months, food species count, NTFP species accessed, or medicinal plant availability metrics are referenced in Outcome Budget, Economic Survey, CAG report, or portal data.",
+      "src": "State portal https://cgvanadhikar.cgstate.gov.in/; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "FAIL",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "PASS",
+    "enh_T3.5_flag": "ΔY unverified — no per-HH annual income data available; T3.5=No further compounds under-measurement; true economic benefit of FRA (food security from secured cultivation land, NTFP nutritional value, medicinal plant access) is not captured in any tracked metric",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Forest Rights Act, 2006 (Central legislation)",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "MFP MSP Scheme, Government of India (TRIFED)",
+    "Chhattisgarh State Minor Forest Produce Federation (CSMCL)",
+    "State portal https://cgvanadhikar.cgstate.gov.in/"
+  ],
+  "unverified_fields": ["Q26"]
+}

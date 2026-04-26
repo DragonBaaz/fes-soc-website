@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "Gaushan Palan Yojana",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (ANNOUNCEMENT, CAG, OUTCOME, PORTAL sections); t4a_output.json (carried verdicts); CAG State Accounts 2024-25",
+  "carried_from_t4a": {
+    "C1_T4.1": "<<UNVERIFIED: Mandatory replenishment rule with enforcement consequences not confirmed from available documentation>>",
+    "C2_rho_or_VI": "<<UNVERIFIED: ρ ratio not computable; track = RhoRatio; status = Estimated (T1.5 = No)>>",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "<<UNVERIFIED: State/district of scheme implementation not specified in programs.md; cannot assess CGWB, DLCC, NBA, or NDMA stress classifications without geographic identification>>",
+      "r": "Q35 is answered first (before Q34) per protocol. The programs.md does not specify which state(s) or districts implement the scheme, and no CGWB over-exploited block status, DLCC drought-prone block listing, or NBA biodiversity-threatened habitat classification is referenced for the scheme area. Heritage cattle breeds can be considered biodiversity-threatened at the population level (declining indigenous breed populations), but the official NBA 'threatened species habitat' classification for livestock genetic resources is not commonly applied at block level in available databases. Without confirmed geographic coordinates or state name, climate stress classification cannot be formally applied. Conservative assumption for threshold purposes: if Q35 remains unverified, the base threshold (Q34 ≥ 1) is applied with a flag that Q35 must be verified at field audit.",
+      "src": "programs.md — no geographic/state data in any section; CGWB/NDMA/NBA databases not applicable without location"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "The scheme mandates a 'performance monitoring framework for cattle management' (ANNOUNCEMENT). CAG State Accounts 2024-25 audits 'breed conservation program effectiveness' and 'beneficiary scheme compliance' — this confirms annual departmental monitoring by an independent audit authority. Score = 1 (Annual monitoring by government/CAG). Semi-annual or higher frequency community-accessible monitoring (score ≥ 2) is not evidenced in available documentation. Threshold applied: since Q35 = UNVERIFIED, base threshold (Q34 ≥ 1) is applied → score of 1 meets base threshold. FLAG: If Q35 field audit confirms climate/ecological stress, threshold upgrades to ≥ 2, and score of 1 would FAIL.",
+      "src": "programs.md — ANNOUNCEMENT ('performance monitoring framework for cattle management'), CAG section ('breed conservation program effectiveness; beneficiary scheme compliance')"
+    },
+    "Q36": {
+      "v": "<<UNVERIFIED: No explicit penalty or sanction mechanism for replenishment/use rule violation is stated in available scheme documentation>>",
+      "r": "programs.md references CAG audit of 'scheme compliance' and 'breed conservation program effectiveness'. CAG non-compliance findings can trigger budgetary scrutiny and future allocation adjustments, but this is a post-facto accountability mechanism, not a scheme-guideline-mandated automatic penalty (fund withholding, disqualification, suspension of benefits). Whether the operational guidelines explicitly state a consequence for non-compliance with conservation obligations is not confirmed from the programs.md extract. Field audit must check scheme notification and operational guidelines for a defined penalty clause.",
+      "src": "programs.md — ANNOUNCEMENT, CAG sections"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No post-scheme continuity mechanism is mentioned in available documentation: no O&M fund, no institutional asset-transfer plan, no GP resolution with earmarked budget line, no continuity clause in scheme guidelines, and no legal vesting mechanism is referenced in programs.md (BUDGET, ANNOUNCEMENT, PORTAL sections). Animal health insurance is an ongoing benefit for enrolled beneficiaries but is not a designed institutional vehicle for post-scheme commons governance. Gaushala trusts as registered societies have their own continuing mandate, but this represents the institution's default operation, not a scheme-designed earmarked continuity mechanism — qualifying as score 0 per framework criteria ('continuity expected from general institutional operations without earmarking').",
+      "src": "programs.md — BUDGET, ANNOUNCEMENT, PORTAL sections (no continuity clause or O&M fund referenced)"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Available documentation does not reference any formal community monitoring mechanism: no social audit provision, no community monitoring committee, no participatory resource mapping, no Village Ecological Register, no GP-level performance review involving community members. The 'performance monitoring framework' in the ANNOUNCEMENT is departmental in nature (referenced alongside CAG audit). The scheme design as described in programs.md positions monitoring as a government/departmental function. FLAG: T4.6 = No is the single most important upgrade lever — if this scheme is otherwise Near-SOC (Structural), a community monitoring activation plan (e.g., Gaushala Management Committee with social audit mandate) should be the primary remediation recommendation.",
+      "src": "programs.md — ANNOUNCEMENT ('performance monitoring framework'), CAG section — no community monitoring referenced"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "<<UNVERIFIED: Carried from T4a — mandatory replenishment rule with enforcement consequences not confirmed>>",
+    "C2_rho_or_VI": "<<UNVERIFIED: Carried from T4a — ρ ratio not computable (Estimated status; RhoRatio track)>>",
+    "C3_T4.3": "PASS (base threshold: Q35 unverified → Q34 ≥ 1 applied; Q34 = 1 → PASS). CONDITIONAL FLAG: if Q35 field audit confirms climate/ecological stress, threshold upgrades to ≥ 2 and C3 becomes FAIL.",
+    "C4_T4.4_or_T4.5": "<<UNVERIFIED: Q36 (T4.4) is unverified; Q37 (T4.5) = No. If Q36 field audit confirms No penalty mechanism → C4 = FAIL (both T4.4 = 0 and T4.5 = 0). If Q36 confirms penalty mechanism → C4 = PASS. Currently indeterminate.>>",
+    "enh_T4.6_flag": "T4.6 = No — community monitoring is entirely absent; monitoring is departmental only. CRITICAL UPGRADE LEVER: Per framework guidance, T4.6 = 0 is the primary structural gap in the sustainability lock. For this scheme, the recommended activation pathway is: mandate Gaushala Management Committee participation in annual CAG scheme compliance review, with documented meeting resolutions and participatory cattle census. This is the lowest-cost corrective action for T4.6 compliance.",
+    "overall_T4": "<<UNVERIFIED: C1 (T4.1), C2 (ρ), and C4 (T4.4/T4.5) are unverified or conditionally failing. C3 (T4.3) = PASS under base threshold but conditional on Q35. Overall T4 cannot be determined from available documentation. Scenarios: (a) if C1, C2 confirmed PASS and Q36 confirms penalty mechanism → overall T4 = PASS (subject to Q35 check); (b) if any of C1 or C2 fail and C4 also fails → overall T4 = FAIL → Near-SOC (Structural). Field audit priority: verify Q30 (replenishment rule), Q36 (penalty mechanism), and Q35 (climate stress) in that order.>>"
+  },
+  "sources_verified": [
+    "programs.md — ANNOUNCEMENT section",
+    "programs.md — CAG section (CAG State Accounts 2024-25)",
+    "programs.md — OUTCOME section",
+    "programs.md — BUDGET section",
+    "programs.md — PORTAL section",
+    "t4a_output.json — carried_from_t4a (C1_T4.1, C2_rho_or_VI, track)"
+  ],
+  "unverified_fields": ["Q35", "Q36"]
+}

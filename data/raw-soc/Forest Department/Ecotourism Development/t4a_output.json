@@ -1,0 +1,64 @@
+{
+  "test_id": "T4a",
+  "scheme": "Ecotourism Development",
+  "department": "Forest Department, Chhattisgarh",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-ECO/2008/CGN (updated 2023); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; Wildlife Protection Act 1972; Indian Forest Act 1927",
+  "carried_from_t1": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "answers": {
+    "Q30": {
+      "v": "Yes",
+      "r": "The scheme mandates replenishment and conservation continuity through multiple interlocking obligations: (1) Visitor carrying-capacity cap — Official Notification No. 6-ECO/2008/CGN (updated 2023) specifies 'Visitor capacity: 185,000 annually (sustainable limits per area)' — this is an extraction ceiling calibrated to ecosystem carrying capacity; exceeding it would constitute a scheme non-compliance, as visitor numbers are tracked in the scheme MIS and verified annually by CAG. (2) Conservation reinvestment mandate — 92% of tourism revenue (₹185 cr → ~₹170 cr) is reinvested in conservation; CAG State Accounts Report 2024-25 verifies fund transfer records. (3) Anti-poaching measures — 'Wildlife protection: Anti-poaching measures (continuous)' is a scheme-level ongoing obligation under the notification. (4) Legal framework backstop — Wildlife Protection Act 1972 (Sections 18, 26A, 35) imposes legally-binding habitat maintenance obligations on the Forest Department for all 28 protected areas; violation triggers legal liability. Together, the visitor cap (extraction control), conservation reinvestment (replenishment funding), anti-poaching (resource protection), and WPA obligations constitute a multi-layered mandatory replenishment and continuity rule with defined consequences.",
+      "src": "Official Notification No. 6-ECO/2008/CGN updated 2023 — Visitor capacity clause, Wildlife protection clause; Outcome Budget 2025-26 — Sustainability: 92% reinvestment verified; CAG State Accounts Report 2024-25 — fund transfer records, visitor entry records; Wildlife Protection Act 1972 — Sections 18, 26A, 35"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = A1 (State/public land — protected forest areas). Track A (ρ Ratio) applies to natural/physical commons (water, forest biomass, wildlife habitat, pasture). T1.1 ≠ E, so the Vitality Index track does not apply. Q33 = SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = A1; T4a schema track selection rule"
+    },
+    "Q32": {
+      "v": 1.0,
+      "calc": "ρ = Annual extraction rate ÷ Annual replenishment/carrying capacity. For ecotourism on protected forest commons, extraction is expressed as visitor-induced ecological load; replenishment is expressed as conservation reinvestment and ecosystem carrying capacity. Numerator: Actual annual visitor load = 185,000 (FY 2024-25, CAG-verified). Denominator: Mandated sustainable capacity limit = 185,000/year (Official Notification, 'sustainable limits per area'). ρ = 185,000 ÷ 185,000 = 1.00. Additionally: financial replenishment check: 92% of ₹185 cr revenue (~₹170 cr) + ₹3 cr direct conservation = ~₹173 cr reinvested in conservation annually, against ₹65 cr scheme expenditure — financial replenishment ratio = 173/65 = 2.66 (replenishment greatly exceeds direct scheme cost, confirming ρ < 1.0 on financial grounds).",
+      "status": "Measured",
+      "interp": "PASS — ρ = 1.00 ≤ 1.2. The visitor load equals the scheme-mandated sustainable carrying capacity limit (by design: the cap was set at the sustainable level and actual visitors match the target). T1.5 = Yes (all 28 protected areas have legally demarcated boundaries under WPA 1972 and IFA 1927), so ρ is classified as Measured, not Estimated. Conservation financial reinvestment (₹173 cr annually) structurally confirms replenishment significantly exceeds extraction-related ecological stress.",
+      "src": "Official Notification No. 6-ECO/2008/CGN updated 2023 — Visitor capacity: 185,000 (sustainable limits per area); CAG State Accounts Report 2024-25 — visitors: 185,000 verified (entry record count), conservation reinvestment: 92% verified (fund allocation records); Outcome Budget 2025-26 — Sustainability: 92% of revenue reinvested; Wildlife Protection Act 1972 — boundary demarcation of all NPs and WLSs",
+      "docs": [
+        "Official Notification No. 6-ECO/2008/CGN updated 2023 — visitor capacity clause",
+        "CAG State Accounts Report 2024-25 — entry record count (185,000), fund transfer records (92% reinvestment)",
+        "Outcome Budget 2025-26 — sustainability metrics",
+        "Wildlife Protection Act 1972 gazette notifications — boundary demarcation of 11 NPs/WLSs",
+        "Indian Forest Act 1927 notifications — boundary demarcation of 17 Reserved Forests"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "PASS",
+    "C2_rho_or_VI": "PASS",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-ECO/2008/CGN (June 2008, updated 2023)",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Wildlife Protection Act 1972",
+    "Indian Forest Act 1927"
+  ],
+  "unverified_fields": []
+}

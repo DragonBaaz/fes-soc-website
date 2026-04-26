@@ -1,0 +1,91 @@
+{
+  "test_id": "T2",
+  "scheme": "National Food Security Mission",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Chhattisgarh State Budget 2025-26; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25 (Chhattisgarh); Outcome Budget 2025-26; NFSM Portal (nfsm.gov.in)",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 205000,
+      "src": "CAG State Accounts Report 2024-25 (Chhattisgarh): 'Beneficiaries supported: 2.05 lakh farmers (pulses + oilseeds)'; Economic Survey 2024-25: '1.2 lakh farmers in pulses, 85,000 in oilseeds'"
+    },
+    "Q16": {
+      "v": 205000,
+      "src": "All 2.05 lakh beneficiaries are farmers resident within NFSM's operational districts in Chhattisgarh (26 pulses districts, 12 oilseed districts). District agriculture offices and state MIS confirm beneficiaries are local residents within the operational area. Economic Survey 2024-25; NFSM Portal (state-wise beneficiary data)"
+    },
+    "Q17": {
+      "v": "Settled_communities — within the scheme's operational districts (26 districts for pulses, 12 districts for oilseeds) in Chhattisgarh. All beneficiaries are settled agricultural households registered with district agriculture offices.",
+      "r": "NFSM operates through district agriculture offices targeting settled farming communities. All beneficiaries are registered resident farmers within NFSM-covered districts. No pastoral or mobile community dimension identified.",
+      "src": "NFSM Portal; Chhattisgarh State Budget 2025-26 (district-wise coverage)"
+    },
+    "Q18": {
+      "v": 1.0,
+      "calc": "θ₂ = 205,000 ÷ 205,000 = 1.0",
+      "interp": "PASS — θ₂ = 1.0 >> 0.70 threshold. All beneficiaries are local settled farmers within the scheme's operational districts.",
+      "src": "CAG Report 2024-25; Economic Survey 2024-25 (all beneficiaries are district-resident farmers)"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: The programs.md data and all cited sources (State Budget 2025-26, Economic Survey 2024-25, CAG Report 2024-25, Outcome Budget 2025-26, NFSM Portal) report only total NFSM beneficiary count (2.05 lakh farmers) without a breakdown by SC/ST/de-notified tribes/landless/women-headed/differently-abled-headed categories. No SECC or PM-JANMAN data cross-linking with NFSM beneficiaries is available in the cited sources.>>",
+      "r": "Marginalised beneficiary count cannot be verified from available official sources. Note: Chhattisgarh's demographic profile (~32% ST, ~13% SC) and NFSM's targeting of small and marginal farmers suggests a likely significant marginalised share, but this cannot be confirmed without scheme MIS beneficiary categorisation data.",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be calculated — marginalised beneficiary count (Q19) is unverified. Estimated range: given Chhattisgarh SC+ST demographics (~45%) and NFSM's small/marginal farmer focus, θ₃ may plausibly exceed 0.40, but this cannot be confirmed from available sources.>>",
+      "calc": "θ₃ = Q19.v (unverified) ÷ 205,000",
+      "interp": "<<UNVERIFIED — cannot determine PASS or FAIL without verified marginalised beneficiary count>>",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "Yes",
+        "r": "Farmer Producer Groups (FPOs/farmer groups) are mentioned as implementation partners in NFSM operations. District agriculture offices operate with farmer groups for seed and input distribution."
+      },
+      "22b": {
+        "v": "No",
+        "r": "NFSM guidelines do not mandate a community representative body with a governance/decision-making role in scheme operations. The scheme is primarily administered top-down through district agriculture offices (government). Farmer producer groups participate in implementation (collective input procurement, distribution) but their role in scheme governance decisions is not mandated by NFSM operational guidelines. Gram Sabhas have no mandated governance role under NFSM. T2.3 = 0 → T2 FAIL condition triggered."
+      },
+      "22c": {
+        "v": "<<UNVERIFIED: No meeting records or documented resolutions for farmer groups in a governance capacity are available in the cited sources. Even if 22b were Yes, meeting records to confirm functional status are not available.>>",
+        "r": "Not determinable from available sources"
+      },
+      "docs": [],
+      "src": "NFSM National Guidelines (2007) — implementation structure (district agriculture offices); Chhattisgarh State Budget 2025-26 (implementation: district agriculture offices with farmer producer groups); NFSM Portal"
+    },
+    "Q23": {
+      "v": "<<UNVERIFIED: Women's representation in NFSM farmer producer groups or any governance body is not documented in the cited sources. No data on gender composition of implementation groups is available in State Budget 2025-26, Economic Survey 2024-25, CAG Report 2024-25, or NFSM Portal records.>>",
+      "r": "Enhancement gap — women's representation in governance/implementation bodies cannot be verified. Given that NFSM beneficiaries include women-headed households (likely a subset of the 2.05 lakh), the gap between benefit capture and governance representation cannot be assessed without composition data.",
+      "src": "<<UNVERIFIED>>"
+    },
+    "Q24": {
+      "v": "Yes",
+      "r": "NFSM Portal (nfsm.gov.in) provides a grievance/feedback mechanism at the national level. The Chhattisgarh Agriculture Portal (agriportal.cg.nic.in/nfsm) provides a state-level grievance interface. The NFSM Portal description confirms integration with National Portal grievance mechanisms. These are institutionally mandated at the scheme level through the Government of India's unified grievance framework (CPGRAMS).",
+      "src": "NFSM Portal (nfsm.gov.in — grievance section); Chhattisgarh Agriculture Portal (agriportal.cg.nic.in/nfsm)"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS — θ₂ = 1.0 >> 0.70; all 2.05 lakh beneficiaries are local settled farmers within operational districts",
+    "C2_theta3": "<<UNVERIFIED — θ₃ cannot be determined; Q19 and Q20 unverified. Classified as FAIL for conservative audit purposes pending verified SC/ST beneficiary breakdown data.>>",
+    "C3_T2.3": "FAIL — T2.3 = 0; community representative body's role in scheme decision-making not mandated (22b = No); primary governance through district agriculture offices only",
+    "enh_T2.4_flag": "ok — grievance mechanism exists via NFSM Portal and CPGRAMS",
+    "enh_T2.5_flag": "<<UNVERIFIED: Women's representation in governance bodies not documented. Enhancement gap cannot be assessed.>>",
+    "overall": "FAIL — C3_T2.3 = FAIL (T2.3 = 0); C2_theta3 UNVERIFIED (conservative FAIL pending data)"
+  },
+  "sources_verified": [
+    "Chhattisgarh State Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "CAG State Accounts Report 2024-25 (Chhattisgarh)",
+    "Outcome Budget 2025-26",
+    "NFSM Portal (nfsm.gov.in)",
+    "NFSM National Guidelines (2007)",
+    "Chhattisgarh Agriculture Portal (agriportal.cg.nic.in/nfsm)"
+  ],
+  "unverified_fields": ["Q19", "Q20", "Q22.22c", "Q23"]
+}

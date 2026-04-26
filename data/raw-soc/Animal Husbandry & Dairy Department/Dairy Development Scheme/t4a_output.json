@@ -1,0 +1,60 @@
+{
+  "test_id": "T4a",
+  "scheme": "Dairy Development Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "The scheme's primary resource is privately owned dairy livestock (T1.1 = C). The framework's T4.1 replenishment obligation is designed for a commons resource (water body, forest, pasture, fisheries, knowledge commons). No commons resource exists in this scheme to replenish. Veterinary health programs listed in the budget maintain the health of privately owned animals — this is private asset maintenance, not commons replenishment. 'Cooperative dairy structure strengthened' and milk collection infrastructure do not constitute a commons replenishment rule in the T4.1 sense (no afforestation ratio, no recharge obligation, no closed-grazing rotation, no seed-bank renewal, no knowledge-transmission mandate). No replenishment, regeneration, or renewal rule for any commons resource is mandated in scheme guidelines or budget descriptions. T4.1 = No → AUTOMATIC T4 FAIL.",
+      "src": "programs.md — BUDGET: 'veterinary health programs' (private animal maintenance only); ANNOUNCEMENT: 'dairy unit subsidy eligibility, infrastructure requirements' (no replenishment obligation cited); CAG: no commons replenishment obligation noted in fund utilization audit"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = 'C' (private resource). Track selection rule: T1.1 ≠ E → track = RhoRatio. Q32 is answered; Q33 is SKIP.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = C"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ ratio cannot be meaningfully computed. The scheme's primary resource is privately owned dairy livestock (T1.1 = C); there is no commons resource subject to communal extraction and replenishment. The ρ framework (annual commons extraction ÷ annual commons replenishment mandated by scheme) does not apply to private dairy animals. No commons extraction rate or commons replenishment rate exists to measure or estimate.>>",
+      "calc": "ρ = extraction ÷ replenishment — not applicable; no commons resource identified (T1.1 = C). Estimation would require a commons baseline that does not exist for this scheme.",
+      "status": "Estimated",
+      "interp": "FAIL — ρ cannot be assessed (no commons resource); T4.1 = No already constitutes automatic T4 FAIL. T1.5 = No mandates Estimated status; proxy method: not applicable as no commons boundary or extraction activity exists.",
+      "src": "programs.md — BUDGET; t1_output.json (T1.1 = C; T1.5 = No)",
+      "docs": [
+        "programs.md — BUDGET: dairy unit subsidy, animal purchase (private assets; no commons extraction data)",
+        "CAG State Accounts 2024-25 (fund utilization; no extraction/replenishment data for commons)"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP — track = RhoRatio (T1.1 = C ≠ E); Vitality Index does not apply",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL — ρ unverifiable; no commons resource; T4.1 = No is primary failure",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "programs.md — BUDGET: State budget allocation for dairy enterprise development",
+    "programs.md — SURVEY: Economic Survey on dairy development",
+    "programs.md — OUTCOME: Implementation outcomes",
+    "programs.md — ANNOUNCEMENT: Official notification",
+    "programs.md — CAG: CAG State Accounts 2024-25",
+    "t1_output.json: carry_for_later_tests.T1.1 = C; carry_for_later_tests.T1.5 = No"
+  ],
+  "unverified_fields": ["Q32"]
+}

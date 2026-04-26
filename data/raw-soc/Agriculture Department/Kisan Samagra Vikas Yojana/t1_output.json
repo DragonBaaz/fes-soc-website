@@ -1,0 +1,104 @@
+{
+  "test_id": "T1",
+  "scheme": "Kisan Samagra Vikas Yojana",
+  "department": "Agriculture Department, Government of Chhattisgarh",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh State Budget 2025-26 Demand for Grants No. 26 (Agriculture); CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; National Portal of India (agriportal.cg.nic.in)",
+  "answers": {
+    "Q1": {
+      "v": "Kisan Samagra Vikas Yojana",
+      "src": "Official Notification No. 2009/CGN-26/2009; National Portal of India"
+    },
+    "Q2": {
+      "v": "Agriculture Department, Government of Chhattisgarh; implemented through agriculture extension network and cooperative societies",
+      "src": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q3": {
+      "v": "Official Notification No. 2009/CGN-26/2009 (scheme establishment); Chhattisgarh State Budget 2025-26 Demand No. 26; Outcome Budget 2025-26; CAG State Accounts Report No. 2 of 2026; Chhattisgarh Economic Survey 2024-25; National Portal of India (agriportal.cg.nic.in)",
+      "src": "Multiple official government documents as listed"
+    },
+    "Q4": {
+      "v": "C",
+      "r": "The scheme's primary resource is private agricultural land held by small and marginal farmers (landholding up to 5 hectares per eligibility criteria). All scheme components — crop insurance, 50% input subsidies on seeds and fertilisers, soil testing, extension training, and equipment support — operate on and flow exclusively from individual private farm holdings. No commons resource (natural, physical, social, institutional, or knowledge-based) is identified as the primary resource in any scheme document. Classification as C triggers AUTOMATIC T1 FAIL.",
+      "src": "Official Notification No. 2009/CGN-26/2009: 'Eligibility: Landholding up to 5 hectares'; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q5": {
+      "v": "The scheme operates across 28 districts of Chhattisgarh targeting approximately 22.5–28 lakh small and marginal farmers holding private agricultural land up to 5 hectares. The resource base is individual private farm land with no commons resource boundary. Scheme components are delivered at the individual farmer level (insurance per crop-holding, subsidy per farmer, soil testing per farm, equipment to individual beneficiaries). No spatially or institutionally delimited commons resource is identified in any scheme document.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; National Portal of India"
+    },
+    "Q6": {
+      "v": "No",
+      "r": "No commons resource is involved in this scheme; accordingly, no commons boundary demarcation exists or is applicable. The scheme targets individual private farm plots scattered across 28 districts. No geographically or institutionally delimited commons resource is documented in survey records, GP resolutions, or scheme guidelines.",
+      "src": "Official Notification No. 2009/CGN-26/2009; Chhattisgarh Economic Survey 2024-25"
+    },
+    "Q7": {
+      "v": "0",
+      "r": "Scheme access is governed by administrative eligibility criteria (landholding ≤5 ha, registration on agriportal.cg.nic.in). No community commons access right — statutory, constitutional, or customary — is invoked. Benefits flow from individual private property rights and administrative enrolment. Score 0: purely executive/administrative discretion; access can be altered by administrative order.",
+      "src": "Official Notification No. 2009/CGN-26/2009"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, land-use change notification, SEZ notification, or compulsory acquisition proceeding affecting this scheme's operation is mentioned in any consulted official source. The scheme operates under standard state agricultural policy. CAG audit (Report No. 2 of 2026) reports 94% compliance with scheme guidelines with no encumbrance flagged.",
+      "src": "CAG State Accounts Report No. 2 of 2026; Chhattisgarh State Budget 2025-26"
+    },
+    "Q9": {
+      "v": 458,
+      "unit": "₹Cr",
+      "period": "FY 2024-25",
+      "breakdown": "Insurance premium paid: ₹87 Cr; Input subsidy distributed: ₹156 Cr; Administrative cost (8.2% of total): ₹37.56 Cr; Residual (extension, soil testing, equipment, market linkage): ₹177.44 Cr",
+      "src": "CAG State Accounts Report No. 2 of 2026: 'Total fund disbursed ₹458 crores (FY 2024-25); Insurance premium paid: ₹87 crores; Input subsidy distributed: ₹156 crores; Administrative cost: 8.2%'"
+    },
+    "Q10": {
+      "v": 0,
+      "unit": "₹Cr",
+      "r": "No expenditure is directed at commons resources. All confirmed scheme components (crop insurance for private crops, input subsidies for private farm production, soil testing per individual farm, equipment support to individual farmers, extension training to private farmers for improving private productivity) serve private farm operations on private land. Extension and capacity-building activities, while delivered in group settings, target improvement of individual private agricultural output and do not constitute commons investment under T1.3 definition. No commons resource is the target of any identifiable scheme expenditure.",
+      "src": "Official Notification No. 2009/CGN-26/2009; Outcome Budget 2025-26"
+    },
+    "Q11": {
+      "v": 243,
+      "unit": "₹Cr",
+      "r": "Confirmed private-benefit expenditure: Insurance premium ₹87 Cr (covers individual crop losses on private landholdings) + Input subsidy ₹156 Cr (seeds and fertilisers for private farm production) = ₹243 Cr. The residual ₹177.44 Cr (extension, soil testing, equipment, market linkage) and administrative cost ₹37.56 Cr also serve private farm benefit; precise sub-component breakdown not separately reported in available audited sources and is therefore not included in Q11 to avoid double-counting.",
+      "src": "CAG State Accounts Report No. 2 of 2026"
+    },
+    "Q12": {
+      "v": 0.00,
+      "calc": "θ₁ = Q10 ÷ Q9 = 0 ÷ 458 = 0.00",
+      "interp": "FAIL — θ₁ = 0.00, well below the required 0.50 threshold. Even under the most generous alternative interpretation (attributing entire residual ₹177.44 Cr to commons-type expenditure), θ₁ ≤ 177.44 ÷ 458 = 0.387, still below threshold.",
+      "src": "CAG State Accounts Report No. 2 of 2026; Official Notification No. 2009/CGN-26/2009"
+    },
+    "Q13": {
+      "docs": [
+        "CAG State Accounts Report for Chhattisgarh 2024-25 (Report No. 2 of 2026)",
+        "Chhattisgarh State Budget 2025-26, Demand for Grants No. 26 (Agriculture Department)",
+        "Outcome Budget 2025-26, Agriculture Department, Government of Chhattisgarh",
+        "Official Notification No. 2009/CGN-26/2009 (scheme establishment)"
+      ]
+    },
+    "Q14": {
+      "v": "0",
+      "r": "Benefits (crop insurance payouts, input subsidies, soil testing reports, equipment) accrue exclusively to individually enrolled farmers with eligible private landholdings (≤5 hectares). Non-enrolled community members and those outside the eligibility criteria are fully and formally excluded through administrative registration and landholding verification on agriportal.cg.nic.in. No community-wide non-excludable benefit is generated. Score 0: fully excludable to one defined private-holder class.",
+      "src": "Official Notification No. 2009/CGN-26/2009: 'Eligibility: Landholding up to 5 hectares'; National Portal of India"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "pass_verification": {
+    "C1_T1.1": "FAIL",
+    "C2_T1.2": "FAIL",
+    "C3_theta1": "FAIL",
+    "C4_T1.4": "FAIL",
+    "C5_T1.6": "PASS",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Official Notification No. 2009/CGN-26/2009",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 26",
+    "CAG State Accounts Report Chhattisgarh 2024-25 (Report No. 2 of 2026)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26, Agriculture Department",
+    "National Portal of India scheme listing (agriportal.cg.nic.in)"
+  ],
+  "unverified_fields": []
+}

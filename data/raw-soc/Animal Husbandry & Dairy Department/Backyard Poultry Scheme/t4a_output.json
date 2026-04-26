@@ -1,0 +1,62 @@
+{
+  "test_id": "T4a",
+  "scheme": "Backyard Poultry Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Scheme official notification (ANNOUNCEMENT); National Portal listing (PORTAL); CAG State Accounts 2024-25 (CAG); Economic Survey entry (SURVEY); Implementation outcomes record (OUTCOME); T1 output (carry)",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "No replenishment, regeneration, or renewal obligation is mandated in scheme design for any commons resource. The scheme distributes chicks to individual households as a one-time or periodic input subsidy. No scheme document (ANNOUNCEMENT, PORTAL, SURVEY, OUTCOME, CAG) mandates any of the qualifying replenishment rules — no afforestation obligation, no water recharge structure, no rotational grazing protocol, no re-seeding obligation, no knowledge documentation mandate, no seed-bank replenishment, no youth knowledge-transfer component, no cultural institution strengthening measurable output. The 'disease prevention programs' and 'veterinary extension service' mentioned in the BUDGET are operational services, not a structurally mandated commons-replenishment rule with a defined enforcement consequence. T4.1 = No → AUTOMATIC T4 FAIL (Near-SOC Structural); this indicates a design flaw — if a commons resource were being operated on, there is no structural lock against depletion. The absence of T4.1 is compounded by the T1 FAIL (no commons resource identified), rendering T4 assessment structurally moot, but evaluated per procedure.",
+      "src": "ANNOUNCEMENT; BUDGET; PORTAL; SURVEY; OUTCOME — no replenishment rule identified in any document"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = C (private land/property). The selection rule states: T1.1 ≠ E → track = RhoRatio. Track RhoRatio applies. However, note structural limitation: T1.1 = C identifies no commons resource; the ρ ratio concept (extraction vs replenishment of a natural/physical commons) is therefore not meaningful for this scheme's primary resource (private household birds in individual backyards). The RhoRatio track is formally applied per the schema rule, but Q32 findings reflect this structural inapplicability.",
+      "src": "t1_output.json carry_for_later_tests.T1.1 = C"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ ratio cannot be computed. T1.1 = C identifies private household property as the primary resource; there is no natural or physical commons with measurable extraction and replenishment dynamics. Private household birds are privately owned assets — the extraction/replenishment framework for commons resources does not apply. No commons stock, no commons extraction rate, and no commons replenishment rate are definable for this scheme's resource.>>",
+      "calc": "ρ = (Annual extraction from commons) ÷ (Annual replenishment of commons). Neither numerator nor denominator is defined for private household poultry. Computation not possible.",
+      "status": "Estimated",
+      "interp": "FAIL — ρ not computable; no commons resource with extractable natural stock identified. If a commons were the primary resource, T1.5 = No (no boundary demarcation) would also require Estimated classification with documented proxy method. T4.1 = No compounds this failure.",
+      "src": "t1_output.json; ANNOUNCEMENT — no commons resource baseline or extraction/replenishment data available",
+      "docs": [
+        "ANNOUNCEMENT — scheme design; no extraction or replenishment data for a commons",
+        "CAG State Accounts 2024-25 — expenditure audit; no resource stock or replenishment data"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate":         "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment":              "SKIP"
+      },
+      "calc": "SKIP — T1.1 = C, track = RhoRatio; VitalityIndex not applicable",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1":      "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track":        "RhoRatio"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official scheme notification",
+    "SURVEY — Economic Survey entry",
+    "OUTCOME — Implementation outcomes",
+    "BUDGET — Budget allocation description",
+    "CAG — CAG State Accounts 2024-25",
+    "PORTAL — National Portal listing",
+    "t1_output.json — carried T1.1 = C, T1.5 = No"
+  ],
+  "unverified_fields": ["Q32"]
+}

@@ -1,0 +1,67 @@
+{
+  "test_id": "T3",
+  "scheme": "Vrikshopan Yojana (Sapling Distribution)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 6-VY/2018/CGN (2024); CAG State Accounts Report 2024-25; Vrikshopan Yojana State Forest Portal",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "The scheme's Economic Survey entry and Outcome Budget explicitly record employment generation as a scheme output: 'Nursery workers (12,500) + distribution support (8,500)' = 21,000 total workers. The Official Notification (2024 amendment) identifies implementation through Forest Department + Gram Panchayat + community participation, with nursery operations and distribution logistics creating wage employment. The scheme thus mandates an explicit livelihood pathway (wage employment in nursery production and sapling distribution) articulated in official scheme documents, satisfying condition (b) of T3.1 — an explicit livelihood pathway articulated in scheme design, even if expressed in terms of worker headcount rather than a formal log-frame income indicator.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Official Notification No. 6-VY/2018/CGN (2024); Outcome Budget 2025-26"
+    },
+    "Q26": {
+      "observed": {
+        "v": "NOT_AVAILABLE",
+        "calc": "No independent evaluation study, MIS income tracking, or household income survey for beneficiary households or nursery workers found in source documents. CAG audit verifies distribution and survival metrics only — no income per household data recorded.",
+        "interp": "skip",
+        "src": "CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "Scheme guidelines (Notification No. 6-VY/2018/CGN) and DPR-equivalent budget document do not contain a projected income per beneficiary household per year (ΔY). The Outcome Budget tracks environmental outputs (survival rate, hectares, CO2 potential) and scheme throughput (saplings distributed, households reached) but provides no income projection for the 185,000 beneficiary households. Employment headcount (21,000 workers) is recorded but wage rate and annual income per worker are not specified in any source document.",
+        "interp": "skip",
+        "src": "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; Official Notification No. 6-VY/2018/CGN (2024); Outcome Budget 2025-26"
+      },
+      "governing": "Projected-Provisional",
+      "r": "Neither Observed nor Projected ΔY is available in scheme source documents. All source documents track environmental outputs (survival, green cover, CO2) and scheme throughput (saplings, households, species). No income-per-household data — observed or projected — is recorded for the 185,000 beneficiary families or the 21,000 employed workers. Q26 is UNVERIFIED and cannot be assessed against either threshold (₹3,000 observed or ₹5,000 projected).",
+      "docs": [
+        "Chhattisgarh Economic Survey 2024-25 — employment headcount only, no ΔY",
+        "Outcome Budget 2025-26 — environmental and throughput metrics only",
+        "CAG State Accounts Report 2024-25 — distribution and survival verification only"
+      ]
+    },
+    "Q27": {
+      "v": "1",
+      "r": "One distinct livelihood pathway explicitly articulated in scheme documents: (1) Wage employment in nursery production and sapling distribution operations — Economic Survey records 12,500 nursery workers and 8,500 distribution support workers = 21,000 total; Outcome Budget confirms 'Workers: 21,000 (nursery + distribution).' This is a single pathway category (wage employment in scheme operations). Potential long-term income from fruit/timber/medicinal trees planted by the 185,000 beneficiary households is not articulated as a current income pathway in scheme guidelines or DPR — the scheme documents do not project or mandate a produce-income mechanism for planted trees. Score = 1.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Official Notification No. 6-VY/2018/CGN (2024)"
+    },
+    "Q28": {
+      "v": "No",
+      "r": "No market or institutional offtake mechanism exists or is mandated for any produce or services generated through this scheme. The scheme distributes saplings for environmental objectives; it does not establish: MSP procurement for produce from planted trees, government agency offtake agreement (TDCCOL/OMC/NAFED) for fruit/timber/medicinal produce, MGNREGS wage payment linkage for nursery workers, GI tag or certification with documented buyer network, BMC access and benefit-sharing agreement, community seed distribution network, fair trade or organic certification with institutional buyer, or state procurement for community produce. Marketing of produce from privately planted trees is left entirely to individual households on open market with no institutional backstop. AUTOMATIC T3 FAIL on this gate.",
+      "src": "Official Notification No. 6-VY/2018/CGN (2024); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; Vrikshopan Yojana Portal"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "Scheme MIS and evaluation framework track environmental metrics only: sapling survival rate (65% at 1-year), green cover (62,500 ha equivalent), CO2 sequestration potential (75 lakh tons, 30-year), species diversity (185 varieties), and nursery quality (92% compliance). No non-monetary livelihood indicators are tracked: food security months, nutritional diversity (food species accessed from trees), livestock feeding days, or access to medicinal plants for beneficiary households. Since Q26 ΔY is UNVERIFIED (cannot establish proximity to threshold), the near-threshold flag for potential under-measurement is noted as a general concern: the scheme's fruit, timber, and medicinal tree distribution likely produces non-monetary livelihood value that is entirely unmeasured.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; Vrikshopan Yojana Portal"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "FAIL",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "FAIL",
+    "enh_T3.5_flag": "Non-monetary benefits from fruit, timber, and medicinal trees distributed to 185,000 households are entirely unmeasured; ΔY itself is unverified — true economic value is likely significantly under-measured by available scheme metrics.",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "Official Notification No. 6-VY/2018/CGN (established April 1, 2018; amended 2024)",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Vrikshopan Yojana State Forest Portal"
+  ],
+  "unverified_fields": ["Q26"]
+}

@@ -1,0 +1,90 @@
+{
+  "test_id": "T2",
+  "scheme": "Backyard Poultry Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Scheme official notification (ANNOUNCEMENT); National Portal listing (PORTAL); CAG State Accounts 2024-25 (CAG); Economic Survey entry (SURVEY); Implementation outcomes record (OUTCOME); T1 output (carry)",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": "<<UNVERIFIED: Total beneficiary count not specified in programs.md. OUTCOME states 'Beneficiaries enrolled in scheme' and 'Chicks distributed and birds reared successfully' without a numerical total. CAG audit covers disbursements but provides no aggregate beneficiary count in the available extract.>>",
+      "src": "OUTCOME; CAG — no aggregate count available"
+    },
+    "Q16": {
+      "v": "<<UNVERIFIED: Absolute count of local-dweller beneficiaries not available. However, scheme design targets rural households in their residential villages; all enrolled beneficiaries are rural residents in the operational area by scheme design, making θ₂ structurally high. No non-local beneficiary category exists in scheme eligibility.>>",
+      "src": "ANNOUNCEMENT (eligibility: marginal farmers, landless labor — rural residents); SURVEY"
+    },
+    "Q17": {
+      "v": "Settled_communities — within GP/block of scheme operation",
+      "r": "Backyard Poultry Scheme targets settled rural households (marginal farmers, landless laborers) at the village/block level. Beneficiaries rear birds at their own household premises within their residential GP. All eligible beneficiaries are settled rural residents in their home GP. Pastoral/mobile definition does not apply.",
+      "src": "ANNOUNCEMENT; SURVEY"
+    },
+    "Q18": {
+      "v": "<<UNVERIFIED: θ₂ cannot be computed without Q15 and Q16 verified figures.>>",
+      "calc": "θ₂ = Q16.v ÷ Q15.v — both inputs unverified",
+      "interp": "PASS (assessed) — Scheme design restricts eligibility to rural households in the operational area (marginal farmers, landless labor) who rear birds at their own household premises. No external or non-local beneficiary category exists. All enrolled beneficiaries are, by design, local dwellers within the GP/block operational area. θ₂ is structurally at or near 1.00. Formal computation requires beneficiary MIS data.",
+      "src": "ANNOUNCEMENT; SURVEY"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: Absolute count of marginalised beneficiaries not available. However, ANNOUNCEMENT and SURVEY explicitly state the scheme targets 'marginal farmers and landless laborers' — both are marginalised categories under the framework definition (landless households = marginalised; marginal farmers are typically SC/ST/OBC). Exact household categorisation by SC/ST/women-headed/differently-abled-headed not available from available sources.>>",
+      "r": "Scheme eligibility criteria (marginal farmers, landless laborers) correspond closely to marginalised household categories. Marginal farmers in India are predominantly smallholder and often SC/ST/OBC households. Landless laborers are a core marginalised category. Framework's 'marginalised' definition includes landless, SC, ST, women-headed. SECC or scheme MIS data required for exact θ₃ computation.",
+      "src": "ANNOUNCEMENT; SURVEY"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be computed without verified Q15 and Q19 figures.>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v — both inputs unverified",
+      "interp": "PASS (assessed) — Scheme targets 'marginal farmers and landless laborers' exclusively. These beneficiary categories are substantially overlapping with the framework's marginalised definition (landless = marginalised; marginal farmers predominantly SC/ST/OBC). θ₃ is structurally very high, likely ≥ 0.70. Formal computation requires SECC or PM-JANMAN beneficiary categorisation data.",
+      "src": "ANNOUNCEMENT; SURVEY"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "No formally constituted community representative body (Gram Sabha committee, User Group, JFM Committee, Village Water Committee, SHG federation, or equivalent) is mentioned in any available scheme document as part of scheme governance. ANNOUNCEMENT mentions 'veterinary service access' and 'training and extension provision' but these refer to departmental extension services, not community governance bodies. PORTAL, SURVEY, OUTCOME, and CAG documents do not reference a community body with decision-making mandate in scheme operations."
+      },
+      "22b": {
+        "v": "No",
+        "r": "No scheme guideline mandating a community body's decision-making role is identified in available documents."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No community body exists in scheme design; therefore functional verification not applicable."
+      },
+      "docs": [],
+      "src": "ANNOUNCEMENT; PORTAL; SURVEY; OUTCOME — no community body referenced in any document"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community governance body is identified (Q22a = No). Women's representation in a governance body cannot be assessed. Enhancement variable T2.5 = 0. Note: Women-headed households are included in the marginalised beneficiary definition and likely enrolled as beneficiaries, but no governance structure with women's representation is established in the scheme. Flag: gap between women's benefit capture and governance representation.",
+      "src": "ANNOUNCEMENT; PORTAL — no governance body or women's representation structure mentioned"
+    },
+    "Q24": {
+      "v": "No",
+      "r": "No formal grievance or voice mechanism for non-beneficiaries is identified in scheme documents. ANNOUNCEMENT, PORTAL, SURVEY, OUTCOME, and CAG documents do not reference a Social Audit provision, Gram Sabha complaint process, MIS grievance portal, or Ombudsman mechanism at the scheme level. Enhancement variable T2.4 = 0. Flag: governance gap — excluded households have no institutionally mandated channel to raise objections.",
+      "src": "ANNOUNCEMENT; PORTAL — no grievance mechanism referenced"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS (assessed) — θ₂ structurally at or near 1.00; all enrolled beneficiaries are rural residents in the operational GP/block by scheme eligibility design; unverified in absolute figures",
+    "C2_theta3": "PASS (assessed) — θ₃ structurally high (≥ 0.70 assessed); scheme targets marginal farmers and landless laborers exclusively, both qualifying as marginalised; unverified in absolute figures",
+    "C3_T2.3": "FAIL — T2.3 = 0; no formally constituted community representative body identified in scheme documents; no body, no mandate, no meeting records",
+    "enh_T2.4_flag": "GOVERNANCE GAP — T2.4 = 0; no formal grievance/voice mechanism for non-beneficiaries identified",
+    "enh_T2.5_flag": "GOVERNANCE GAP — T2.5 = 0; no governance body exists; women's representation in scheme governance cannot be assessed; gap between women beneficiary inclusion and governance representation",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official scheme notification",
+    "SURVEY — Economic Survey entry",
+    "OUTCOME — Implementation outcomes",
+    "CAG — CAG State Accounts 2024-25",
+    "PORTAL — National Portal listing",
+    "t1_output.json — carry_for_later_tests.T1.1 = C"
+  ],
+  "unverified_fields": ["Q15", "Q16", "Q18", "Q19", "Q20"]
+}

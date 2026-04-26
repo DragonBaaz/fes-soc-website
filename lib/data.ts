@@ -1,27 +1,63 @@
-// 1. Import all 8 JSON files from the data/ folder
-import agriculture from "../data/agriculture.json";
-import animalHusbandry from "../data/animal-husbandry.json";
-import fisheries from "../data/fisheries.json";
-import forest from "../data/forest.json";
-import panchayatRuralEngineering from "../data/panchayat-rural-engineering.json";
-import ruralDevelopment from "../data/rural-development.json";
-import tribalAffairs from "../data/tribal-affairs.json";
-import waterResources from "../data/water-resources.json";
+import canonicalSchemesRaw from "@/data/generated/canonical-schemes.json";
+import departmentAggregatesRaw from "@/data/generated/department-aggregates.json";
 
 // ============================================================================
 // SOC Framework TypeScript Interfaces
 // Extended fields are marked optional (?) for backward compatibility
 // ============================================================================
 
-// 2a. Classification type
 export type Classification = 
   | 'SOC' 
   | 'SOC with Governance Gaps' 
   | 'Near-SOC (Operational)' 
   | 'Near-SOC (Structural)' 
-  | 'Non-SOC';
+  | 'Non-SOC'
+  | 'Unknown';
 
-// 2b. Reference interface
+type CanonicalStatus = 'PASS' | 'FAIL' | 'PASS-PROVISIONAL' | 'UNKNOWN';
+
+interface CanonicalTest {
+  status: CanonicalStatus;
+  criteria?: Record<string, string>;
+  enhancements?: Record<string, string>;
+  questionValues?: Record<string, unknown>;
+  unverifiedFields?: string[];
+}
+
+interface CanonicalScheme {
+  schemeId: string;
+  schemeName: string;
+  departmentName: string;
+  departmentSlug: string;
+  classification?: {
+    value: string;
+    derived?: boolean;
+    reasoning?: string[];
+  };
+  tests?: {
+    t1?: CanonicalTest;
+    t2?: CanonicalTest;
+    t3?: CanonicalTest;
+    t4?: CanonicalTest;
+  };
+  governanceFlags?: string[];
+  objectiveText?: string | null;
+  upgradePathway?: string[];
+  narrative?: Record<string, string | null | undefined>;
+  raw?: {
+    programsMd?: string;
+  };
+}
+
+interface DepartmentAggregate {
+  departmentSlug: string;
+  departmentName: string;
+  dominantFindings?: {
+    topFailurePattern?: string | null;
+    topUpgradeLever?: string | null;
+  };
+}
+
 export interface Reference {
   id: string;
   title: string;
@@ -32,7 +68,6 @@ export interface Reference {
   relevantTo: string[];
 }
 
-// 2c. Sub-parameter interfaces
 export interface SubParametersT1 {
   T1_1: { score: 'A1' | 'A2' | 'B' | 'C' | 'D' | 'E'; pass: boolean; note: string };
   T1_2: { score: 0 | 1 | 2; pass: boolean; note: string };
@@ -68,37 +103,6 @@ export interface SubParametersT4 {
   T4_7?: { triggered: boolean; stressType?: 'groundwater' | 'forest' | 'dryland' | 'coastal' | 'outmigration' | null; note: string };
 }
 
-// 2d. Department interface
-export interface Department {
-  department: string;
-  slug: string;
-  state?: string;
-  totalSchemes: number;
-  summary: {
-    soc: number;
-    nearSoc?: number;
-    socWithGaps?: number;
-    nearSocOperational?: number;
-    nearSocStructural?: number;
-    nonSoc: number;
-  };
-  dominantFinding?: string;
-  dominantFailure?: string;
-  commonsProfile?: {
-    primaryCommonsTypes?: string[];
-    climateStressedZones?: boolean;
-    keyEcologicalContext?: string;
-  };
-  structuralFindings: {
-    dominantProblem: string;
-    socException: string;
-    crossCuttingPriorities: string[];
-    contextualFactors: string[];
-  };
-  schemes: Scheme[];
-}
-
-// 2e. Scheme interface
 export interface Scheme {
   id: string;
   name: string;
@@ -133,46 +137,203 @@ export interface Scheme {
   };
   upgradePathway: string[];
   references?: Reference[];
+  canonicalData?: CanonicalScheme; // Injecting the rich data bypass
 }
 
-// 4. Export a constant "allDepartments" array containing all 8 imported JSON objects
-export const allDepartments: Department[] = [
-  agriculture as Department,
-  animalHusbandry as Department,
-  fisheries as Department,
-  forest as Department,
-  panchayatRuralEngineering as Department,
-  ruralDevelopment as Department,
-  tribalAffairs as Department,
-  waterResources as Department,
-];
+function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
-// 5. Export a helper function "getDepartmentBySlug(slug: string): Department | undefined"
+function isPass(status?: CanonicalStatus): boolean {
+  return status === "PASS" || status === "PASS-PROVISIONAL";
+}
+
+function normalizeClassification(value?: string): Classification {
+  switch (value) {
+    case "SOC":
+    case "SOC with Governance Gaps":
+    case "Near-SOC (Operational)":
+    case "Near-SOC (Structural)":
+    case "Non-SOC":
+      return value;
+    case "Adjacent / Non-SOC":
+      return "Non-SOC";
+    default:
+      return "Unknown";
+  }
+}
+
+function toEvidenceString(test?: CanonicalTest): string {
+  if (!test) {
+    return "No evidence available.";
+  }
+
+  const criteria = Object.entries(test.criteria || {})
+    .map(([key, value]) => `${key}: ${value}`)
+    .join("; ");
+  const enhancements = Object.entries(test.enhancements || {})
+    .map(([key, value]) => `${key}: ${value}`)
+    .join("; ");
+  const unverified = (test.unverifiedFields || []).join(", ");
+
+  return [
+    `Status: ${test.status}`,
+    criteria ? `Criteria: ${criteria}` : "",
+    enhancements ? `Enhancements: ${enhancements}` : "",
+    unverified ? `Unverified: ${unverified}` : "",
+  ]
+    .filter(Boolean)
+    .join(" | ");
+}
+
+function parseCanonicalSchemes(): CanonicalScheme[] {
+  if (Array.isArray(canonicalSchemesRaw)) {
+    return canonicalSchemesRaw as CanonicalScheme[];
+  }
+
+  const container = canonicalSchemesRaw as { schemes?: CanonicalScheme[] };
+  return Array.isArray(container.schemes) ? container.schemes : [];
+}
+
+function parseDepartmentAggregates(): DepartmentAggregate[] {
+  if (Array.isArray(departmentAggregatesRaw)) {
+    return departmentAggregatesRaw as DepartmentAggregate[];
+  }
+
+  const container = departmentAggregatesRaw as { departments?: DepartmentAggregate[] };
+  return Array.isArray(container.departments) ? container.departments : [];
+}
+
+const canonicalSchemes = parseCanonicalSchemes();
+const departmentAggregates = parseDepartmentAggregates();
+const aggregateBySlug = new Map(
+  departmentAggregates.map((aggregate) => [aggregate.departmentSlug, aggregate])
+);
+
+function toLegacyScheme(canonical: CanonicalScheme): Scheme {
+  const tests = {
+    t1: isPass(canonical.tests?.t1?.status),
+    t2: isPass(canonical.tests?.t2?.status),
+    t3: isPass(canonical.tests?.t3?.status),
+    t4: isPass(canonical.tests?.t4?.status),
+  };
+
+  const score = [tests.t1, tests.t2, tests.t3, tests.t4].filter(Boolean).length;
+  const classification = normalizeClassification(canonical.classification?.value);
+
+  return {
+    id: canonical.schemeId,
+    name: canonical.schemeName,
+    hindiName: null,
+    objective: canonical.objectiveText || canonical.narrative?.budget || "No objective available.",
+    tests,
+    score,
+    classification,
+    governanceFlags: canonical.governanceFlags || [],
+    evidence: {
+      t1: toEvidenceString(canonical.tests?.t1),
+      t2: toEvidenceString(canonical.tests?.t2),
+      t3: toEvidenceString(canonical.tests?.t3),
+      t4: toEvidenceString(canonical.tests?.t4),
+    },
+    upgradePathway: canonical.upgradePathway || [],
+    canonicalData: canonical, // Passing the rich data through
+  };
+}
+
+function buildDepartments(schemes: CanonicalScheme[]): Department[] {
+  const grouped = new Map<string, CanonicalScheme[]>();
+
+  for (const scheme of schemes) {
+    const slug = scheme.departmentSlug || slugify(scheme.departmentName || "unknown");
+    const existing = grouped.get(slug);
+    if (existing) {
+      existing.push(scheme);
+    } else {
+      grouped.set(slug, [scheme]);
+    }
+  }
+
+  return Array.from(grouped.entries())
+    .map(([slug, deptSchemes]) => {
+      const legacySchemes = deptSchemes.map(toLegacyScheme);
+      const totalSchemes = legacySchemes.length;
+
+      const soc = legacySchemes.filter((s) => s.classification === "SOC").length;
+      const socWithGaps = legacySchemes.filter((s) => s.classification === "SOC with Governance Gaps").length;
+      const nearSocOperational = legacySchemes.filter((s) => s.classification === "Near-SOC (Operational)").length;
+      const nearSocStructural = legacySchemes.filter((s) => s.classification === "Near-SOC (Structural)").length;
+      const nonSoc = legacySchemes.filter((s) => s.classification === "Non-SOC" || s.classification === "Unknown").length;
+
+      const departmentName = deptSchemes[0]?.departmentName || slug;
+      const aggregate = aggregateBySlug.get(slug);
+
+      return {
+        department: departmentName,
+        slug,
+        totalSchemes,
+        summary: {
+          soc,
+          nearSoc: nearSocOperational + nearSocStructural,
+          socWithGaps,
+          nearSocOperational,
+          nearSocStructural,
+          nonSoc,
+        },
+        dominantFinding: aggregate?.dominantFindings?.topFailurePattern || undefined,
+        structuralFindings: {
+          dominantProblem: aggregate?.dominantFindings?.topFailurePattern || "Data generation in progress.",
+          socException: aggregate?.dominantFindings?.topUpgradeLever || "No SOC exception identified yet.",
+          crossCuttingPriorities: [
+            "Strengthen evidence quality and source verification for all tests.",
+            "Improve governance safeguards where enhancement flags are absent.",
+          ],
+          contextualFactors: [
+            "Classification and priorities are derived from generated canonical data.",
+          ],
+        },
+        schemes: legacySchemes,
+      } satisfies Department;
+    })
+    .sort((a, b) => a.department.localeCompare(b.department));
+}
+
+export const allDepartments: Department[] = buildDepartments(canonicalSchemes);
+
 export function getDepartmentBySlug(slug: string): Department | undefined {
   return allDepartments.find((dept) => dept.slug === slug);
 }
 
-// 6. Export a helper function "getAllSchemes()"
-export function getAllSchemes(): Array<Scheme & { departmentName: string; departmentSlug: string }> {
+export function getAllSchemes(): Array<
+  Scheme & {
+    departmentName: string;
+    departmentSlug: string;
+    t1: boolean;
+    t2: boolean;
+    t3: boolean;
+    t4: boolean;
+  }
+> {
   return allDepartments.flatMap((dept) =>
     dept.schemes.map((scheme) => ({
       ...scheme,
       departmentName: dept.department,
       departmentSlug: dept.slug,
+      t1: scheme.tests.t1,
+      t2: scheme.tests.t2,
+      t3: scheme.tests.t3,
+      t4: scheme.tests.t4,
     }))
   );
 }
 
-// ============================================================================
-// Helper Functions
-// ============================================================================
-
-// 7. Get all schemes by classification
 export function getAllSchemesByClassification(classification: string): Array<Scheme & { departmentName: string; departmentSlug: string }> {
   return getAllSchemes().filter((s) => s.classification === classification);
 }
 
-// 8. Get departments with Near-SOC (Structural) schemes
 export function getDepartmentsWithNearSocStructural(): Department[] {
   return allDepartments.filter((d) => {
     const nearSocStructural = d.summary.nearSocStructural || 0;
@@ -180,17 +341,14 @@ export function getDepartmentsWithNearSocStructural(): Department[] {
   });
 }
 
-// 9. Get governance flag count for a scheme
 export function getGovernanceFlagCount(scheme: Scheme): number {
   return scheme.governanceFlags?.length || 0;
 }
 
-// 10. Get total count by classification
-export function getTotalByClassification(classification: Classification): number {
+export function getTotalByClassification(classification: string): number {
   return getAllSchemes().filter((s) => s.classification === classification).length;
 }
 
-// 11. Get total schemes with any governance flags
 export function getTotalSchemesWithFlags(): number {
   return getAllSchemes().filter((s) => getGovernanceFlagCount(s) > 0).length;
 }

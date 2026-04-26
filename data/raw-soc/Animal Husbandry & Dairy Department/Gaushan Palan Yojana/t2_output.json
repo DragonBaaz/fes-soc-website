@@ -1,0 +1,89 @@
+{
+  "test_id": "T2",
+  "scheme": "Gaushan Palan Yojana",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "programs.md (OUTCOME, ANNOUNCEMENT, CAG, PORTAL sections); CAG State Accounts 2024-25; National Portal listing",
+  "carried_from_t1": {
+    "T1.1": "B"
+  },
+  "answers": {
+    "Q15": {
+      "v": "<<UNVERIFIED: programs.md states 'Beneficiaries enrolled in cattle rearing support' but provides no numerical count of total enrolled beneficiaries>>",
+      "src": "programs.md — OUTCOME section"
+    },
+    "Q16": {
+      "v": "<<UNVERIFIED: Count of local dwellers among beneficiaries cannot be determined without total beneficiary data and address/GP-level MIS records>>",
+      "src": "programs.md — OUTCOME section (no disaggregated geographic data)"
+    },
+    "Q17": {
+      "v": "Settled_communities — within GP/block operational area of each Gaushala unit",
+      "r": "Gaushan Palan Yojana supports settled farming communities who maintain cattle within their village/GP area. The scheme operates through physical cattle shelters (Gaushalas) that are geographically fixed within specific GPs or blocks. The 10 km radius / GP boundary definition for settled communities is the applicable standard. Pastoral or mobile community definition does not apply as cattle are housed in fixed Gaushalas.",
+      "src": "programs.md — ANNOUNCEMENT ('Beneficiary eligibility criteria'); SURVEY ('supports farmers in cattle management'); scheme design implies settled agricultural community context"
+    },
+    "Q18": {
+      "v": "<<UNVERIFIED: θ₂ = Q16 ÷ Q15 cannot be computed — both numerator and denominator unverified>>",
+      "calc": "θ₂ = Q16.v ÷ Q15.v — computation not possible without beneficiary count data",
+      "interp": "<<UNVERIFIED: PASS or FAIL cannot be determined. Qualitative note: Cattle rearing schemes of this type typically serve geographically proximate farming households, suggesting θ₂ is likely high (>0.70). However, this must be confirmed from MIS beneficiary register with GP-level address data.>>",
+      "src": "programs.md — OUTCOME section"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: Number of SC/ST/landless/women-headed/differently-abled-headed/elderly-headed beneficiary households not specified in available scheme documentation>>",
+      "r": "programs.md does not disaggregate beneficiaries by social category. SECC or PM-JANMAN data for this scheme is not available in cited sources. The ANNOUNCEMENT specifies 'Beneficiary eligibility criteria' but the eligibility parameters (whether SC/ST preference or marginalisation weighting is included) are not detailed in the programs.md extract.",
+      "src": "programs.md — ANNOUNCEMENT, OUTCOME sections"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ = Q19 ÷ Q15 cannot be computed — both numerator and denominator unverified>>",
+      "calc": "θ₃ = Q19.v ÷ Q15.v — computation not possible",
+      "interp": "<<UNVERIFIED: PASS or FAIL cannot be determined without marginalised beneficiary count. Note: animal husbandry schemes in rural India typically have significant SC/ST and small/marginal farmer participation (often 40–60%), but this must be verified from scheme MIS or SECC data.>>",
+      "src": "programs.md — OUTCOME, ANNOUNCEMENT sections"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "<<UNVERIFIED: programs.md does not explicitly name a formally constituted community representative body (e.g., Gaushala Management Committee, User Group, or equivalent) as part of scheme governance structure>>",
+        "r": "The scheme notification specifies a 'performance monitoring framework for cattle management' (programs.md ANNOUNCEMENT) and CAG audits 'beneficiary scheme compliance' (programs.md CAG), but these do not confirm the existence of a formally constituted community body with mandated decision-making authority per T2.3 criteria. Gaushalas typically have management trusts/committees but their mandated role in scheme decision-making is not confirmed."
+      },
+      "22b": {
+        "v": "<<UNVERIFIED: Mandate of community body's role in scheme decision-making cannot be assessed without confirming 22a>>",
+        "r": "Conditional on 22a verification."
+      },
+      "22c": {
+        "v": "<<UNVERIFIED: Evidence of ≥2 documented meetings with resolutions in prior 12 months is not available in source documents>>",
+        "r": "No meeting records, minutes, or resolutions referenced in programs.md, CAG extract, or Portal listing."
+      },
+      "docs": [],
+      "src": "programs.md — ANNOUNCEMENT ('performance monitoring framework'), CAG section ('beneficiary scheme compliance')"
+    },
+    "Q23": {
+      "v": "<<UNVERIFIED: Women's representation in governance body cannot be assessed without confirming body existence (Q22a) and its composition data>>",
+      "r": "No governance body composition data (gender breakdown) available in programs.md. If scheme targets women-headed households as eligible beneficiaries (a common provision in animal husbandry schemes), a governance representation gap would be flagged.",
+      "src": "programs.md — no gender composition data in available sections"
+    },
+    "Q24": {
+      "v": "<<UNVERIFIED: No formal grievance or voice mechanism for non-beneficiaries is explicitly mentioned in available scheme documentation>>",
+      "r": "programs.md does not reference a Gram Sabha complaint process, Social Audit provision, MIS grievance portal, or Ombudsman mechanism specifically for this scheme. The National Portal lists scheme details but does not confirm a mandated grievance mechanism. Absence of mention does not conclusively confirm absence of mechanism — field audit required.",
+      "src": "programs.md — PORTAL, ANNOUNCEMENT sections reviewed; no grievance mechanism found"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "<<UNVERIFIED: θ₂ cannot be computed without beneficiary count data (Q15, Q16 both unverified)>>",
+    "C2_theta3": "<<UNVERIFIED: θ₃ cannot be computed without marginalised beneficiary data (Q19, Q20 both unverified)>>",
+    "C3_T2.3": "<<UNVERIFIED: Community representative body existence and functionality cannot be confirmed from available sources (Q22 all sub-components unverified)>>",
+    "enh_T2.4_flag": "<<UNVERIFIED: Grievance mechanism status not determinable — field audit required to confirm presence or absence>>",
+    "enh_T2.5_flag": "<<UNVERIFIED: Women's representation in governance body cannot be assessed without body composition data>>",
+    "overall": "<<UNVERIFIED: All three hard-gate conditions (θ₂, θ₃, T2.3) are unverified from available documentation. Test 2 classification pending field verification of: (a) beneficiary count and geographic data, (b) marginalised category data, (c) governance body mandate and functionality. Qualitative assessment suggests likely PASS for θ₂ (geographically proximate farming community), uncertain for θ₃ and T2.3.>>"
+  },
+  "sources_verified": [
+    "programs.md — OUTCOME section",
+    "programs.md — ANNOUNCEMENT section",
+    "programs.md — CAG section (CAG State Accounts 2024-25)",
+    "programs.md — PORTAL section",
+    "programs.md — SURVEY section"
+  ],
+  "unverified_fields": ["Q15", "Q16", "Q18", "Q19", "Q20", "Q22", "Q23", "Q24"]
+}

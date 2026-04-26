@@ -1,0 +1,56 @@
+{
+  "test_id": "T4b",
+  "scheme": "Govt. Livestock and Poultry Farm",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "ANNOUNCEMENT — Official notification; SURVEY — Economic Survey; OUTCOME — Implementation outcome records; BUDGET — State budget allocation; CAG State Accounts Report Chhattisgarh 2024-25; PORTAL — National Portal listing",
+  "carried_from_t4a": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "answers": {
+    "Q35": {
+      "v": "No",
+      "r": "Government livestock and poultry farms operate across districts in Chhattisgarh. The scheme involves managed government farm infrastructure (buildings, breeding stock, veterinary facilities) — not open pasture, groundwater commons, or unmanaged dryland. For government farm infrastructure, the relevant climate stress indicators (CGWB over-exploited block for groundwater, NDMA drought-prone block for dryland/pasture) are not directly applicable to a managed, irrigated, and provisioned government facility. No official notification of climate/ecological stress classification specifically applicable to the government farm sites is identified in reviewed documents. The farm operates across multiple districts; without identified specific stress-zone classification for these sites, Q35 = No applies. Standard Q34 threshold (≥ 1) governs.",
+      "src": "ANNOUNCEMENT; PORTAL; OUTCOME"
+    },
+    "Q34": {
+      "v": "1",
+      "r": "Q35 = No → threshold is Q34 ≥ 1 (standard). The OUTCOME records confirm 'production metrics tracked through farm records and animal performance data' — this constitutes ongoing farm-level monitoring. The CAG State Accounts Report Chhattisgarh 2024-25 audits farm operations annually, covering infrastructure maintenance, animal care, feed procurement, staff salary, and genetic program effectiveness — constituting annual government-agency monitoring of commons resource health and operational compliance. This meets the minimum threshold (Score 1: annual reporting by government agency). No evidence of community-accessible quarterly disclosure or real-time monitoring dashboard; Score 2 or 3 cannot be confirmed.",
+      "src": "OUTCOME; CAG; BUDGET"
+    },
+    "Q36": {
+      "v": "No",
+      "r": "No scheme-specific, documented penalty or sanction mechanism for violation of replenishment or farm-use rules is identified in reviewed documents. The ANNOUNCEMENT establishes farm operations and eligibility criteria but no explicit penalty clause (fine, suspension of farmer access, scheme-benefit withdrawal, legal action) for non-compliance with replenishment or conservation obligations is documented. General financial accountability (CAG audit flagging misuse, budget controls) applies to the scheme but constitutes general government financial management, not a scheme-specific enforcement mechanism meeting the T4.4 standard. Departmental disciplinary action against errant officials may apply but is not documented in scheme design.",
+      "src": "ANNOUNCEMENT; CAG; BUDGET"
+    },
+    "Q37": {
+      "v": "No",
+      "r": "No explicit post-scheme continuity mechanism is documented in reviewed materials. The scheme is an ongoing government facility (not a time-bound project), relying on annual state budget allocation (BUDGET) and institutional continuity through the Animal Husbandry & Dairy Department for its continued operation. However, the framework requires an explicitly designed continuity mechanism (O&M fund, asset transfer to GP/community cooperative, legal vesting, continuity clause in guidelines). Annual budget allocation without earmarked O&M provisions, and departmental continuity without a community institutional handover plan, do not meet the T4.5 standard. No reference to earmarked continuity fund or post-project community governance arrangement is found in reviewed documents.",
+      "src": "ANNOUNCEMENT; BUDGET; PORTAL"
+    },
+    "Q38": {
+      "v": "No",
+      "r": "Monitoring of farm operations is entirely departmental: production metrics are tracked through government farm records and animal performance data (OUTCOME), and the CAG audit provides annual oversight (CAG). No community-based monitoring role is mandated: no GP social audit for farm operations, no community monitoring committee, no participatory resource assessment, no Village Ecological Register or community dashboard for farm data. The scheme has no community governance body (per T2 analysis, T2.3 = FAIL), so community monitoring cannot be operational. This is the primary structural upgrade lever: establishing community-based monitoring (social audit, farmer committee review) would be the most impactful governance improvement for this scheme.",
+      "src": "OUTCOME; CAG; ANNOUNCEMENT"
+    }
+  },
+  "pass_verification": {
+    "C1_T4.1": "FAIL (from T4a — replenishment mandate with enforcement trigger not confirmed in scheme guidelines)",
+    "C2_rho_or_VI": "FAIL (from T4a — ρ ratio not calculable from available documents; farm records exist but figures not extracted)",
+    "C3_T4.3": "PASS (Q34 = 1; Q35 = No so threshold ≥ 1 applies; annual CAG audit and farm production metrics tracking confirmed)",
+    "C4_T4.4_or_T4.5": "FAIL (Q36 = No AND Q37 = No — no penalty mechanism and no post-scheme continuity mechanism documented)",
+    "enh_T4.6_flag": "GOVERNANCE GAP — CRITICAL: T4.6 = 0. Community-based monitoring entirely absent; monitoring is purely departmental (CAG + farm records). This is the single most important structural upgrade lever. Establishing GP social audit or farmer committee monitoring would address the primary governance gap.",
+    "overall_T4": "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official notification establishing government livestock and poultry farm operations",
+    "SURVEY — Economic Survey: farm as breeding center with genetic improvement programs",
+    "OUTCOME — Implementation outcome records: production metrics tracked via farm records and animal performance data",
+    "BUDGET — State budget allocation: annual allocation for farm construction, maintenance, genetic improvement",
+    "CAG State Accounts Report Chhattisgarh 2024-25 — annual audit covering farm infrastructure, animal care, staff, genetic program effectiveness",
+    "PORTAL — National Portal listing under Agriculture > Animal Husbandry > Breeding Centers"
+  ],
+  "unverified_fields": []
+}

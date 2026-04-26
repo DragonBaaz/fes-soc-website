@@ -1,0 +1,60 @@
+{
+  "test_id": "T4a",
+  "scheme": "PM-KISAN (Chhattisgarh Component)",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "PM-KISAN Central Notification (December 1, 2018); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; pmkisan.gov.in portal",
+  "carried_from_t1": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "PM-KISAN is a Direct Benefit Transfer (DBT) cash scheme with no physical or intangible commons resource. Scheme guidelines mandate no replenishment, regeneration, or renewal rule of any kind — no afforestation obligation, no recharge structure requirement, no grazing rotation mandate, no seed bank renewal obligation, no knowledge-transmission cadre, and no BMC ABS reinvestment clause. The scheme's sole operational mandate is to disburse ₹6,000/year to eligible landholding farmers. No conservation or stewardship obligation is attached to beneficiary receipt. Score = No → AUTOMATIC T4 FAIL (Near-SOC Structural classification).",
+      "src": "PM-KISAN Official Notification December 1, 2018 (scheme obligations: farmer verification, Aadhaar/bank linkage, DBT only); Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "T1.1 = 'C' (private land) ≠ 'E'. Per track selection rule, T1.1 ≠ E → RhoRatio track applies. Q32 is answered; Q33 is set to SKIP.",
+      "src": "Carried from t1_output.json (carry_for_later_tests.T1.1 = 'C')"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: ρ cannot be computed. PM-KISAN (T1.1 = C) involves no commons resource. There is no extraction of any commons enabled by the scheme, and no replenishment mechanism exists (Q30 = No). Annual extraction rate = 0 (no commons to extract from); annual replenishment rate = 0 (none mandated). ρ = 0/0 is mathematically undefined. No proxy measurement methodology applicable.>>",
+      "calc": "ρ = extraction ÷ replenishment = 0 ÷ 0 = undefined. No commons resource exists under this scheme; extraction and replenishment rates are both zero. Numerator and denominator both collapse to zero, making ρ undefined rather than a computed ratio.",
+      "status": "Estimated",
+      "interp": "FAIL — ρ is undefined (no commons resource; no extraction; no replenishment mandated). T4 fails by virtue of Q30 = No (T4.1 = 0) and the absence of any sustainability structure.",
+      "src": "PM-KISAN Official Notification; CAG State Accounts Report 2024-25 (no NRM, replenishment, or commons expenditure recorded)",
+      "docs": [
+        "PM-KISAN Official Notification December 1, 2018",
+        "CAG State Accounts Report 2024-25 (fund flow: 100% DBT, zero NRM/commons expenditure)"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "PM-KISAN Official Notification, December 1, 2018",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "pmkisan.gov.in portal"
+  ],
+  "unverified_fields": ["Q32"]
+}

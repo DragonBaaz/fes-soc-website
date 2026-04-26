@@ -1,0 +1,65 @@
+{
+  "test_id": "T3",
+  "scheme": "Bamboo Development Program",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Official Notification No. 6-BD/2010/CGN (updated 2023); Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26; State Forest Portal",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "Official Notification No. 6-BD/2010/CGN (2023 update) explicitly mandates: (a) employment goal of 85,000 artisans; (b) income support of ₹3,500/hectare for farmers; (c) market development targets (₹185cr export + ₹95cr domestic). Outcome Budget 2025-26 tracks income (₹2.1 lakh/artisan/year), employment (85,000 artisans), and production (4.85 lakh MT) as output indicators. Both livelihood output indicators and explicit income pathways are articulated.",
+      "src": "Official Notification No. 6-BD/2010/CGN items 3, 6, 7; Outcome Budget 2025-26"
+    },
+    "Q26": {
+      "observed": {
+        "v": 90000,
+        "calc": "ΔY = Average income per artisan (post-scheme) − Baseline income = ₹2,10,000/year − ₹1,20,000/year = ₹90,000/HH/year",
+        "interp": "PASS",
+        "src": "Chhattisgarh Economic Survey 2024-25 — 'Average income per artisan: ₹2.1 lakhs annually (vs ₹1.2 lakh baseline)'; CAG State Accounts Report 2024-25 — income figure calculated from payment records"
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "skip — Observed data available and governs",
+        "interp": "skip",
+        "src": ""
+      },
+      "governing": "Observed",
+      "r": "Observed data from Economic Survey 2024-25 and CAG 2024-25 exists; Observed governs per _income_rule. ΔY = ₹90,000/HH/year far exceeds the ₹3,000 Observed threshold.",
+      "docs": [
+        "Chhattisgarh Economic Survey 2024-25 — artisan income data (₹2.1 lakh vs ₹1.2 lakh baseline)",
+        "CAG State Accounts Report 2024-25 — income calculated from payment records"
+      ]
+    },
+    "Q27": {
+      "v": "3",
+      "r": "Three distinct officially documented pathways: (1) Bamboo cultivation/farming — farmer income ₹3,500/hectare/crop cycle, explicitly mandated in Notification No. 6-BD/2010/CGN item 6 and tracked in Outcome Budget; (2) Artisan craft and processing — handicrafts, construction material, furniture, textiles employing 85,000 artisans, mandated in Notification items 3–4 and Economic Survey; (3) Market/export supply chain — 28,500 supply chain workers (collection, transport, retail) and ₹185cr export channel, mandated in Notification item 7 and verified by customs (CAG 2024-25). Each pathway is named and described in official scheme documents.",
+      "src": "Official Notification No. 6-BD/2010/CGN items 3, 4, 6, 7; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "SFFC (State Forest Federation Corporation) is the institutional offtake mechanism: manages processing infrastructure (285 units), provides procurement/market linkage, and operates alongside a state-supported export channel (₹185cr, 45% growth verified by customs data in CAG 2024-25). State portal operates as a marketplace with product showcase. Government-backed processing unit licensing ensures institutional demand channel is operational.",
+      "src": "Official Notification No. 6-BD/2010/CGN — 'Implementation: SFFC'; CAG State Accounts Report 2024-25 — export growth verified via customs; State Forest Portal — product marketplace"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "Scheme MIS tracks monetary metrics (income ₹2.1 lakh/artisan, export value ₹185cr, budget utilisation 96%) and quantitative employment counts (85,000 artisans enrolled, 42,000 trained). None of the specified non-monetary categories — food sufficiency months, food species count, livestock feeding days, access to medicinal plants — are tracked. Near-threshold flag: NOT triggered — governing ΔY = ₹90,000/HH/year is 3,000% of the ₹3,000 Observed threshold, far outside the 20% proximity band.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; Outcome Budget 2025-26"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS",
+    "C2_deltaY": "PASS",
+    "C3_T3.3": "PASS",
+    "C4_T3.4": "PASS",
+    "enh_T3.5_flag": "ok",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "Official Notification No. 6-BD/2010/CGN (January 2010, updated 2023)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "CAG State Accounts Report 2024-25",
+    "Outcome Budget 2025-26",
+    "State Forest Portal"
+  ],
+  "unverified_fields": []
+}

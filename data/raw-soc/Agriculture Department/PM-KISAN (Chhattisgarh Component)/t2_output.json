@@ -1,0 +1,89 @@
+{
+  "test_id": "T2",
+  "scheme": "PM-KISAN (Chhattisgarh Component)",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "PM-KISAN Central Notification (December 1, 2018); Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25; pmkisan.gov.in portal",
+  "carried_from_t1": {
+    "T1.1": "C"
+  },
+  "answers": {
+    "Q15": {
+      "v": 3240000,
+      "src": "Chhattisgarh Economic Survey 2024-25 (32.4 lakh farmers); Outcome Budget 2025-26 (32.4 lakh beneficiaries, FY 2024-25); CAG State Accounts Report 2024-25"
+    },
+    "Q16": {
+      "v": 3240000,
+      "src": "All 32.4 lakh PM-KISAN beneficiaries are landholding farming families residing within Chhattisgarh. The scheme (Chhattisgarh Component) covers all 28 districts of the state. No out-of-state beneficiaries are enrolled under this state-component MIS. Outcome Budget 2025-26; CAG State Accounts Report 2024-25."
+    },
+    "Q17": {
+      "v": "Settled_communities — Chhattisgarh state boundary is the operational area for this state-component DBT scheme. All beneficiaries are settled farming households resident in Chhattisgarh's 28 districts. There is no commons resource area to define a narrower locality, as PM-KISAN operates on private agricultural land across the state.",
+      "r": "PM-KISAN (Chhattisgarh Component) is a statewide scheme. Since there is no commons resource or commons boundary, the scheme's operational area is the state itself. All enrolled beneficiaries are resident farming families within Chhattisgarh's administrative boundary. The settled-communities definition (within GP/block/state) applies; all beneficiaries qualify as 'local' relative to the statewide operational area.",
+      "src": "Outcome Budget 2025-26; CAG State Accounts Report 2024-25 (operational in all 28 districts)"
+    },
+    "Q18": {
+      "v": 1.00,
+      "calc": "θ₂ = Q16 ÷ Q15 = 3,240,000 ÷ 3,240,000 = 1.00",
+      "interp": "PASS — θ₂ = 1.00 ≥ threshold of 0.70. All PM-KISAN beneficiaries in the Chhattisgarh Component are residents of Chhattisgarh. Note: this pass is technically correct but of limited SOC-analytical value since there is no commons resource area; the entire state is the reference geography.",
+      "src": "Outcome Budget 2025-26; CAG State Accounts Report 2024-25; pmkisan.gov.in"
+    },
+    "Q19": {
+      "v": "<<UNVERIFIED: PM-KISAN beneficiary database in Chhattisgarh does not publish category-wise breakdown (SC/ST/women-headed/landless/differently-abled-headed) in publicly available official sources consulted (programs.md, CAG Report 2024-25, Outcome Budget 2025-26, Economic Survey 2024-25, pmkisan.gov.in). The MIS tracks Aadhaar, bank account, and land records — not social category. No PM-JANMAN or SECC-linked disaggregation is reported at state level in verified documents.>>",
+      "r": "No verified category-wise PM-KISAN beneficiary data for Chhattisgarh is available in official sources consulted. Chhattisgarh's rural demographic profile (ST ~32%, SC ~12% of total population per Census) suggests a significant proportion of farming households would fall in marginalised categories, but this cannot be used as a substitute for scheme-specific verified data.",
+      "src": "<<UNVERIFIED — CAG State Accounts Report 2024-25; Outcome Budget 2025-26; pmkisan.gov.in; Chhattisgarh Economic Survey 2024-25 — none provide marginalised beneficiary count>>"
+    },
+    "Q20": {
+      "v": "<<UNVERIFIED: θ₃ cannot be calculated as Q19 (numerator) is unverified. No verified marginalised beneficiary count is available in official sources consulted.>>",
+      "calc": "θ₃ = Q19 ÷ Q15 = UNVERIFIED ÷ 3,240,000 = UNVERIFIED",
+      "interp": "UNVERIFIED — pass/fail determination not possible",
+      "src": "<<UNVERIFIED — derived from Q19>>"
+    },
+    "Q21": {
+      "v": "SKIP",
+      "r": "",
+      "src": ""
+    },
+    "Q22": {
+      "22a": {
+        "v": "No",
+        "r": "PM-KISAN scheme guidelines mandate no community representative body (Gram Sabha, User Group, JFM Committee, Village Water Committee, SHG federation, or equivalent) for scheme decision-making. The scheme is administered entirely by central and state agriculture departments through a DBT payment mechanism, with banks and cooperative societies as payment channels. No community governance structure is built into scheme design."
+      },
+      "22b": {
+        "v": "No",
+        "r": "No community body exists; hence no mandated governance role in scheme guidelines. PM-KISAN guidelines specify state agriculture department responsibilities (farmer verification, database management, grievance resolution) and bank/payment channel roles — no community body role is described or mandated."
+      },
+      "22c": {
+        "v": "No",
+        "r": "No community body exists or convenes. Meeting records are not applicable. T2.3 = 0 → T2 FAIL."
+      },
+      "docs": [],
+      "src": "PM-KISAN Official Notification December 1, 2018; Chhattisgarh Economic Survey 2024-25 (scheme description: department-led DBT); pmkisan.gov.in (portal: government-administered with no community governance layer)"
+    },
+    "Q23": {
+      "v": "No",
+      "r": "No community representative governance body exists under PM-KISAN. Women's representation within such a body therefore cannot be assessed. Score = No (not documented; body absent). Note: PM-KISAN does not specifically exclude women farmers from benefits — women landholders are eligible — but there is no governance body in which women's representation can be measured.",
+      "src": "PM-KISAN Official Notification; pmkisan.gov.in"
+    },
+    "Q24": {
+      "v": "Yes",
+      "r": "A formal grievance mechanism is institutionally mandated and operational: pmkisan.gov.in portal provides grievance registration for any farmer (including those excluded from the beneficiary database). State agriculture department grievance resolution is mandated in Chhattisgarh implementation. CAG confirms 0.8% rejection rate through fraud/ineligibility screening, implying a verification review process accessible to affected parties. The portal's beneficiary status check function allows excluded farmers to verify and contest their absence from the database. This qualifies as an 'MIS grievance portal' per T2.4 definition.",
+      "src": "pmkisan.gov.in (portal features: grievance registration); CAG State Accounts Report 2024-25 (0.8% rejection rate with fraud prevention); PM-KISAN Official Notification (state grievance coordination mandate)"
+    }
+  },
+  "pass_verification": {
+    "C1_theta2": "PASS — θ₂ = 1.00 ≥ 0.70 (all 32.4 lakh beneficiaries are Chhattisgarh residents within the statewide operational area)",
+    "C2_theta3": "UNVERIFIED — marginalised beneficiary count (Q19) not available in verified official sources; θ₃ cannot be computed",
+    "C3_T2.3": "FAIL — T2.3 = 0; no formally constituted community representative body with mandated decision-making role exists under PM-KISAN; all three sub-conditions (22a, 22b, 22c) = No",
+    "enh_T2.4_flag": "ok — formal grievance mechanism exists via pmkisan.gov.in portal and state-level grievance resolution (institutionally mandated)",
+    "enh_T2.5_flag": "governance gap — no community governance body exists at all under PM-KISAN; women's representation within any body cannot be assessed or enforced",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "PM-KISAN Official Notification, December 1, 2018",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26 (national-state coordination)",
+    "CAG State Accounts Report 2024-25",
+    "pmkisan.gov.in portal"
+  ],
+  "unverified_fields": ["Q19", "Q20"]
+}

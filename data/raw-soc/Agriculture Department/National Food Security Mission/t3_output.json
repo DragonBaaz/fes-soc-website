@@ -1,0 +1,68 @@
+{
+  "test_id": "T3",
+  "scheme": "National Food Security Mission",
+  "department": "Agriculture Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25 (Chhattisgarh); NFSM Portal (nfsm.gov.in); NFSM National Guidelines (2007)",
+  "answers": {
+    "Q25": {
+      "v": "Yes",
+      "r": "NFSM's official guidelines and scheme design mandate livelihood and income output indicators. The scheme's log-frame explicitly includes: (a) farmer income from supported crops (pulses and oilseeds), (b) productivity improvement per hectare, (c) employment days generated through enhanced agricultural activity, and (d) number of households adopting improved varieties. The Outcome Budget 2025-26 confirms income per household as a tracked output indicator (₹28,400/HH/year from pulses/oilseeds). The scheme's purpose — food security through income enhancement — articulates a clear economic pathway from improved inputs to crop income for beneficiary households.",
+      "src": "NFSM National Guidelines (2007); Outcome Budget 2025-26 (results tracked); Economic Survey 2024-25 (Chhattisgarh)"
+    },
+    "Q26": {
+      "observed": {
+        "v": 28400,
+        "calc": "Outcome Budget 2025-26 records average farmer income from NFSM-supported pulses and oilseeds at ₹28,400/HH/year. For incremental ΔY: scheme-enabled 18% productivity improvement implies incremental attribution ≈ 18% × ₹28,400 = ₹5,112/HH/year (conservative lower bound). Either interpretation (total scheme-linked income ₹28,400 or conservative incremental ₹5,112) exceeds the ₹3,000 observed threshold.",
+        "interp": "PASS — observed ΔY ≥ ₹3,000/HH/year",
+        "src": "Outcome Budget 2025-26 (Chhattisgarh NFSM results); CAG State Accounts Report 2024-25 (productivity improvement: 18% verified)"
+      },
+      "projected": {
+        "v": "NOT_AVAILABLE",
+        "calc": "Projected DPR estimate not separately reported; observed data governs",
+        "interp": "skip — observed data available and governs",
+        "src": ""
+      },
+      "governing": "Observed",
+      "r": "Observed ΔY governs as evaluation data is available from Outcome Budget 2025-26 and CAG-verified productivity improvements. Observed ₹28,400/HH/year (full scheme-linked income) or conservative incremental ₹5,112/HH/year (18% productivity × base income) both exceed ₹3,000 threshold. Lower conservative figure used for threshold determination.",
+      "docs": [
+        "Outcome Budget 2025-26 — NFSM results (Chhattisgarh)",
+        "CAG State Accounts Report 2024-25 — productivity improvement verification",
+        "Economic Survey 2024-25 — farmer income data"
+      ]
+    },
+    "Q27": {
+      "v": "2",
+      "r": "Two distinct livelihood pathways explicitly articulated in NFSM scheme design with separate budget allocations and beneficiary targets: (1) Pulse cultivation pathway — toor, urad, moong production with improved HYV seeds and input support; ₹45 Cr allocated; 1.2 lakh beneficiary farmers; explicit output target (18.5 lakh MT pulses, 6% YoY increase). (2) Oilseed cultivation pathway — groundnut, mustard, soybean production with improved inputs; ₹35 Cr allocated; 85,000 beneficiary farmers; explicit output target (4.2 lakh MT oilseeds, 8% YoY increase). Both pathways are independently delineated in scheme guidelines, state budget allocations, and Outcome Budget result frameworks.",
+      "src": "Chhattisgarh State Budget 2025-26 (component-wise allocations); NFSM National Guidelines (crop-wise components); Outcome Budget 2025-26 (separate pulse and oilseed result chains)"
+    },
+    "Q28": {
+      "v": "Yes",
+      "r": "Institutional offtake mechanism exists and is operational for NFSM-supported crops: (1) MSP procurement — Government of India announces annual Minimum Support Price for pulses (toor, urad, moong, masoor) and oilseeds (groundnut, mustard, sunflower, soybean) — all crops supported under NFSM. (2) NAFED and state agency procurement — NAFED (National Agricultural Cooperative Marketing Federation) and state procurement agencies conduct price support operations for pulses and oilseeds. (3) Chhattisgarh state government procurement schemes for pulses are operational. These mechanisms provide a guaranteed price backstop, qualifying as an institutional offtake mechanism under T3.4 criteria.",
+      "src": "NFSM Portal (cross-reference with MSP policy); Economic Survey 2024-25 (NAFED offtake noted); NFSM Guidelines (crop list matching MSP schedule)"
+    },
+    "Q29": {
+      "v": "No",
+      "r": "NFSM's scheme MIS and evaluation framework track monetary and production metrics only: production volume (MT), productivity (MT/ha), income per household (₹), seed adoption rate (%), fund utilization (%). Non-monetary livelihood indicators — food sufficiency months, nutritional diversity (food species count from scheme), livestock feeding days, or medicinal plant access — are not explicitly tracked in NFSM's scheme MIS. Food security contribution (pulse protein access) is an indirect benefit not systematically captured. Enhancement gap noted. Near-threshold flag: NOT triggered — governing ΔY (₹5,112 incremental or ₹28,400 total) is well above the ₹3,000 threshold, so T3.5 = No does not raise an under-measurement concern for pass determination.",
+      "src": "Outcome Budget 2025-26 (MIS indicators listed); NFSM Portal (performance dashboard — monetary metrics only)"
+    }
+  },
+  "pass_verification": {
+    "C1_T3.1": "PASS — Scheme mandates income and livelihood output indicators in guidelines and log-frame",
+    "C2_deltaY": "PASS — Observed ΔY ≥ ₹3,000/HH/year (conservative incremental ≈ ₹5,112; full scheme-linked income ₹28,400); governing = Observed",
+    "C3_T3.3": "PASS — T3.3 = 2 (pulse pathway + oilseed pathway, both explicitly delineated in scheme documents with separate budget lines)",
+    "C4_T3.4": "PASS — MSP procurement + NAFED institutional offtake operational for all NFSM-supported crops",
+    "enh_T3.5_flag": "T3.5 = No (enhancement gap). Near-threshold flag NOT triggered — ΔY well above threshold. Enhancement gap noted for audit record.",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "NFSM National Guidelines (2007)",
+    "Chhattisgarh State Budget 2025-26",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26 (Chhattisgarh NFSM results)",
+    "CAG State Accounts Report 2024-25 (Chhattisgarh)",
+    "NFSM Portal (nfsm.gov.in)",
+    "Chhattisgarh Agriculture Portal (agriportal.cg.nic.in/nfsm)"
+  ],
+  "unverified_fields": []
+}

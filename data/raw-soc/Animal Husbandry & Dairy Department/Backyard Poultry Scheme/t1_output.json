@@ -1,0 +1,106 @@
+{
+  "test_id": "T1",
+  "scheme": "Backyard Poultry Scheme",
+  "department": "Animal Husbandry & Dairy Department",
+  "audit_date": "2026-04-26",
+  "data_source_summary": "Scheme official notification (ANNOUNCEMENT); National Portal listing (PORTAL); CAG State Accounts 2024-25 (CAG); Economic Survey entry (SURVEY); Implementation outcomes record (OUTCOME)",
+  "answers": {
+    "Q1": {
+      "v": "Backyard Poultry Scheme",
+      "src": "PORTAL — National Portal listing under Agriculture > Animal Husbandry > Rural Livelihood"
+    },
+    "Q2": {
+      "v": "Animal Husbandry & Dairy Department",
+      "src": "ANNOUNCEMENT — Official notification for Backyard Poultry Scheme"
+    },
+    "Q3": {
+      "v": "Official scheme notification (ANNOUNCEMENT); National Portal listing (PORTAL); CAG State Accounts 2024-25 audit (CAG); Economic Survey entry (SURVEY); Implementation outcomes record (OUTCOME)",
+      "src": "programs.md — Backyard Poultry Scheme section"
+    },
+    "Q4": {
+      "v": "C",
+      "r": "The primary resource operated upon by the scheme is private household property. The scheme distributes chicks to individual enrolled beneficiaries (marginal farmers, landless laborers) for rearing in individual household backyards. The infrastructure created (shelter) is on private household land. The output (eggs, birds) accrues exclusively to individual private households. There is no commons resource — natural, physical, social, or knowledge-based — that is central to scheme operation. The birds distributed become private property of individual beneficiaries upon receipt. Backyard rearing as described is individual-household-level, not a community or collective livestock system that would qualify under Social/Livelihood commons (B or E). No community pasture, village pond, shared grazing land, or intangible knowledge commons is identified as the primary resource in any scheme document.",
+      "src": "ANNOUNCEMENT (scheme design); SURVEY (describes household food production model); OUTCOME (individual household outcomes listed)"
+    },
+    "Q5": {
+      "v": "Chicks distributed to individual enrolled households (marginal farmers, landless laborers) for rearing in private household backyards. Birds are privately owned by the receiving household post-distribution. Shelter construction assistance supports individual household-level poultry enclosures on private premises. Feed supplements and veterinary services are delivered to individual households. Resource location: individual private homesteads in rural areas. No specific geographic boundary or common land is demarcated as the operating resource. Scheme scale: state-wide, with individual household units as the operative resource unit.",
+      "src": "ANNOUNCEMENT; OUTCOME; SURVEY"
+    },
+    "Q6": {
+      "v": "No",
+      "r": "Individual household backyards and private premises are not demarcated as commons in any public document. The resource is private property; demarcation in the commons sense (GP resolution, survey number, watershed boundary map) does not apply. No public boundary document exists for this scheme's primary resource.",
+      "src": "ANNOUNCEMENT; PORTAL — no boundary document referenced"
+    },
+    "Q7": {
+      "v": "0",
+      "r": "T1.1 = C (private land/property); there is no community access right to the primary resource (private household backyards and individually-owned birds). Access is solely by individual household ownership. No statutory, customary, or legally recognised community right to the resource exists or is claimed. Score 0: purely administrative scheme eligibility — community access can be determined by administrative criteria.",
+      "src": "ANNOUNCEMENT (eligibility criteria: marginal farmers, landless labor — administrative selection, not community right)"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "No active diversion order, mining lease, change-of-land-use notification, SEZ notification, or compulsory acquisition proceeding has been identified on individual private household properties. This question is effectively moot given T1.1 = C (private resource), but no encumbrance is noted.",
+      "src": "CAG; PORTAL — no encumbrance mentioned"
+    },
+    "Q9": {
+      "v": "<<UNVERIFIED: Specific annual budget or total expenditure figures (in ₹ Crores) are not provided in the programs.md source. CAG audit covers expenditure line items but provides no aggregate figure in the available extract.>>",
+      "unit": "₹Cr",
+      "period": "<<UNVERIFIED: Financial year not specified>>",
+      "breakdown": "Budget includes: chick distribution subsidy, shelter construction assistance, feed supplement provision, veterinary extension service, disease prevention programs, farmer training — per BUDGET entry in programs.md",
+      "src": "BUDGET; CAG — no aggregate rupee figure available in source"
+    },
+    "Q10": {
+      "v": "<<UNVERIFIED: Specific expenditure amount on common/community resources not available. Veterinary extension services and disease prevention programs could partially qualify as community-level (non-private) expenditure. Exact amounts not verifiable from available source.>>",
+      "unit": "₹Cr",
+      "r": "Veterinary extension services and disease prevention programs serve a community-level purpose (reduce disease spread across multiple households) and could count toward commons expenditure. However, chick subsidy, shelter, and feed — which dominate the budget description — are individual private-asset expenditures. Without a financial breakdown, θ₁ cannot be reliably computed.",
+      "src": "BUDGET; CAG"
+    },
+    "Q11": {
+      "v": "<<UNVERIFIED: Specific private-asset expenditure figure not available. However, chick distribution subsidy, shelter construction assistance, and feed supplement provision are clearly individual-household private-benefit expenditures. These categories appear to constitute the dominant share of scheme spending per the BUDGET description.>>",
+      "unit": "₹Cr",
+      "r": "Chick subsidy: direct transfer to private individual → private. Shelter construction: on private household land → private. Feed supplements: to individual households → private. These three categories together represent the bulk of the described budget.",
+      "src": "BUDGET; CAG"
+    },
+    "Q12": {
+      "v": "<<UNVERIFIED: θ₁ cannot be computed without verified Q9 and Q10 figures.>>",
+      "calc": "θ₁ = Q10.v ÷ Q9.v — both inputs unverified",
+      "interp": "FAIL (assessed) — Even without exact figures, the dominant budget components (chick subsidy, shelter construction, feed supplements) are individual private-asset expenditures. Community-benefit expenditure (veterinary extension, disease prevention) is a minority component. θ₁ is assessed to be well below 0.50. Formal computation requires CAG financial breakdown.",
+      "src": "BUDGET; CAG — insufficient detail for computation"
+    },
+    "Q13": {
+      "docs": [
+        "ANNOUNCEMENT — Official scheme notification",
+        "CAG State Accounts 2024-25 — Expenditure audit",
+        "BUDGET — Annual budget allocation description",
+        "PORTAL — National Portal scheme listing",
+        "SURVEY — Economic Survey entry",
+        "OUTCOME — Implementation outcomes record"
+      ]
+    },
+    "Q14": {
+      "v": "1",
+      "r": "Benefits (chicks, shelter assistance, feed, veterinary support) are partially excludable. They accrue only to enrolled eligible beneficiaries (marginal farmers, landless laborers meeting scheme criteria). Non-enrolled households are excluded from direct benefits. Exclusion mechanism is administrative eligibility (not fee-based). Note: T1.4 = 1 triggers cross-flag to verify T2.2 equity check, though T1.1 = C has already triggered automatic T1 FAIL.",
+      "src": "ANNOUNCEMENT (eligibility criteria); PORTAL (scheme beneficiary eligibility details)"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "C",
+    "T1.5": "No"
+  },
+  "pass_verification": {
+    "C1_T1.1": "FAIL — T1.1 = C (private land/property); automatic Test 1 FAIL; no commons resource identified as primary resource",
+    "C2_T1.2": "FAIL — T1.2 = 0; no community access right to private household property",
+    "C3_theta1": "FAIL — θ₁ unverified but assessed < 0.50; dominant expenditure is on private assets (chick subsidy, shelter, feed)",
+    "C4_T1.4": "PASS — T1.4 = 1 (partially excludable; enrolled beneficiaries only)",
+    "C5_T1.6": "PASS — No active legal encumbrance on private household property",
+    "overall": "FAIL"
+  },
+  "sources_verified": [
+    "ANNOUNCEMENT — Official scheme notification",
+    "SURVEY — Economic Survey description",
+    "OUTCOME — Implementation outcomes",
+    "BUDGET — Budget allocation description",
+    "CAG — CAG State Accounts 2024-25",
+    "PORTAL — National Portal listing"
+  ],
+  "unverified_fields": ["Q9", "Q10", "Q11", "Q12"]
+}

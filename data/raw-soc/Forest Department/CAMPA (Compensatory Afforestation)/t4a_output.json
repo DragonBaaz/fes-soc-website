@@ -1,0 +1,63 @@
+{
+  "test_id": "T4a",
+  "scheme": "CAMPA (Compensatory Afforestation)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "carried_from_t1": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "answers": {
+    "Q30": {
+      "v": "Yes",
+      "r": "The CAMPA scheme is structurally a mandatory replenishment mechanism. The Forest Conservation Act 1980 and CAMPA Act 2016 impose a legal obligation that for every hectare of forest diverted, compensatory afforestation must be undertaken. The 2023 state notification specifies: (1) Afforestation target: 45,000 hectares; (2) Sapling survival minimum: 70% at 3-year stage (with CAG-monitored compliance); (3) 3-year survival checks and 10-year ecosystem health assessment mandated; (4) Species composition requirement: 125 native species for ecological integrity. Non-compliance has defined consequences: forest diversion clearance from MoEFCC is conditional on CAMPA fund deposit and state CAMPA compliance record. CAG confirms 100% compliance with national CAMPA guidelines.",
+      "src": "CAMPA Act 2016; Forest Conservation Act 1980; Official Notification No. 6-CAMPA/2009/CGN (2023 update); CAG State Accounts Report 2024-25 — compliance verified"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "T1.1 = A1 (State/public forest land — natural/physical commons). This is a subtractable natural commons (forest biomass, land cover). The ρ Ratio track applies. Track VitalityIndex (Q33) is SKIP.",
+      "src": "T1 output carry_for_later_tests.T1.1 = A1; SOC Framework Section 4, T4.2 Track A selection rule"
+    },
+    "Q32": {
+      "v": 3.67,
+      "calc": "ρ = Annual extraction (forest diverted, enabled by CAMPA clearance pathway, FY 2024-25) ÷ Annual replenishment (new afforestation from CAMPA budget FY 2024-25). Extraction: 8,500 ha diverted FY 2024-25 (CAG/Economic Survey). Replenishment: ₹95 cr (afforestation component) ÷ ₹4.1 lakh/ha (scheme-verified cost) = 2,317 ha new planting. ρ = 8,500 ÷ 2,317 = 3.67.",
+      "status": "Estimated",
+      "interp": "FAIL — ρ = 3.67 > 1.2 threshold. Annual forest diversion enabled by CAMPA clearance mechanism (8,500 ha) significantly exceeds annual compensatory afforestation planted (est. ~2,317 ha) in the same FY. METHODOLOGY NOTE: T1.5 = Yes (site mapping exists), so ρ could in principle be Measured; however, direct annual extraction/replenishment volume data is not reported separately in available documents — budget-derived estimation was used. IMPORTANT CAVEAT: CAMPA operates on a multi-year restoration cycle. The 45,000 ha cumulative restoration since 2009 (at ~2,813 ha/yr average) compared with average annual diversion unknown — if average annual diversion is ≤2,813 ha over the 16-year period, ρ(cumulative) could approach 1.0. FY 2024-25 diversion of 8,500 ha appears atypically high (large infrastructure year). Neither interpretation brings ρ below 1.2 for the reported FY 2024-25 data. RECOMMENDATION: Compute ρ using 5-year rolling average extraction and replenishment data from Forest Department annual returns for a more representative assessment.",
+      "src": "CAG State Accounts Report 2024-25 (8,500 ha diversion; ₹175 cr spent); Chhattisgarh Economic Survey 2024-25 (8,500 ha diverted, ₹4.1 lakh/ha cost); Chhattisgarh State Budget 2025-26 (₹95 cr afforestation component); Official Notification No. 6-CAMPA/2009/CGN",
+      "docs": [
+        "CAG State Accounts Report 2024-25 — land diversion 8,500 ha verified",
+        "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6 — ₹95 cr afforestation component",
+        "Chhattisgarh Economic Survey 2024-25 — ₹4.1 lakh/ha cost parameter",
+        "Outcome Budget 2025-26 — cumulative 45,000 ha afforestation since 2009"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "PASS",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "CAMPA Act 2016",
+    "Forest Conservation Act 1980",
+    "Official Notification No. 6-CAMPA/2009/CGN (2009, updated 2023)",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6",
+    "Outcome Budget 2025-26"
+  ],
+  "unverified_fields": []
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "T4a",
+  "scheme": "Forest Rights Act (FRA)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "carried_from_t1": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "answers": {
+    "Q30": {
+      "v": "No",
+      "r": "FRA scheme operational guidelines and budget structure do not include a quantified replenishment or regeneration mandate with defined financial consequences for non-compliance. (1) FRA Section 5 imposes a general conservation duty on rights holders ('the holders of any forest right shall have the responsibility to protect the wildlife, forest and biodiversity') but does not specify a quantified afforestation ratio, regeneration norm, or NRM spend mandate. (2) No financial consequence (fund withholding, disqualification, reduced allocation) is attached to conservation duties under FRA scheme guidelines. (3) The Chhattisgarh FRA budget (₹85 cr) has no afforestation/regeneration budget line — all spend is on rights recognition and administration. (4) Programs.md state notification lists no forest management plan or restoration requirement. FRA Section 5 duty qualifies as aspirational conservation language without an enforcement trigger, which per the framework definition = 0.",
+      "src": "Forest Rights Act 2006, Section 5; Chhattisgarh State Budget 2025-26 Demand for Grants No. 6; Chhattisgarh State implementation notification 2023; Outcome Budget 2025-26"
+    },
+    "Q31": {
+      "v": "RhoRatio",
+      "r": "Carried T1.1 = 'A1' (State/public forest land). A1 is not category E (intangible/knowledge/cultural commons). Per track rule: T1.1 ≠ E → track = RhoRatio (Track A — subtractable natural commons). Forest land is a natural/physical commons subject to extraction (cultivation, NTFP collection) and replenishment (natural regeneration, restoration). ρ ratio applies. Q33 Vitality Index is not applicable.",
+      "src": "T1 output carry_for_later_tests.T1.1 = 'A1'; Forest Rights Act 2006 (forest land = natural commons)"
+    },
+    "Q32": {
+      "v": "<<UNVERIFIED: No quantified annual extraction rate or scheme-mandated annual replenishment rate available in FRA scheme documents, Outcome Budget 2025-26, Economic Survey 2024-25, or CAG State Accounts Report 2024-25>>",
+      "calc": "ρ = Annual extraction ÷ Annual replenishment. Extraction from FRA areas: FRA recognises existing cultivation on 185,000 ha (individual rights — status quo, not new clearings) and NTFP collection from 100,000 ha community forests. No quantified annual extraction volume (tonnes of biomass, hectares cleared, NTFP kg) is reported in scheme documents. Replenishment: Q30 = No (no scheme-mandated replenishment rate); natural forest regeneration rate for Chhattisgarh forests not cited in scheme data. ρ cannot be computed.",
+      "status": "Estimated",
+      "interp": "FAIL — ρ cannot be verified as ≤ 1.2. The scheme provides no quantified extraction data and no mandated replenishment denominator (Q30 = No). Even under Estimated status, the absence of any replenishment mandate means the denominator is effectively scheme-undefined, rendering ρ structurally uncomputable and presumptively > 1.2 for scheme evaluation purposes. C1_T4.1 = FAIL already renders T4a a structural fail independent of ρ.",
+      "src": "Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAG State Accounts Report 2024-25 (none contain ρ-relevant data)",
+      "docs": [
+        "Chhattisgarh State Budget 2025-26 Demand for Grants No. 6 — no extraction/replenishment data",
+        "CAG State Accounts Report 2024-25 — verifies administrative metrics only",
+        "Outcome Budget 2025-26 — land area data only (no extraction rate)"
+      ]
+    },
+    "Q33": {
+      "v": "SKIP",
+      "components_scored": {
+        "active_practitioner_count": "SKIP",
+        "transmission_rate": "SKIP",
+        "institutional_recognition": "SKIP",
+        "reinvestment": "SKIP"
+      },
+      "calc": "SKIP",
+      "interp": "SKIP",
+      "src": "",
+      "docs": []
+    }
+  },
+  "carry_for_t4b": {
+    "C1_T4.1": "FAIL",
+    "C2_rho_or_VI": "FAIL",
+    "track": "RhoRatio"
+  },
+  "sources_verified": [
+    "Forest Rights Act, 2006 (Central legislation)",
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh State implementation notification 2023"
+  ],
+  "unverified_fields": ["Q32"]
+}

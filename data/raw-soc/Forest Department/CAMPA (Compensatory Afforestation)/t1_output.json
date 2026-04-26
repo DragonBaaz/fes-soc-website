@@ -1,0 +1,105 @@
+{
+  "test_id": "T1",
+  "scheme": "CAMPA (Compensatory Afforestation)",
+  "department": "Forest Department",
+  "audit_date": "2026-04-25",
+  "data_source_summary": "Chhattisgarh State Budget 2025-26 (Demand for Grants No. 6); Official Notification No. 6-CAMPA/2009/CGN (and 2023 update); CAG State Accounts Report 2024-25; Chhattisgarh Economic Survey 2024-25; Outcome Budget 2025-26; CAMPA State Forest Portal (https://forest.cg.gov.in/campa/)",
+  "answers": {
+    "Q1": {
+      "v": "CAMPA (Compensatory Afforestation)",
+      "src": "Official Notification No. 6-CAMPA/2009/CGN; Chhattisgarh State Budget 2025-26, Demand for Grants No. 6"
+    },
+    "Q2": {
+      "v": "Forest Department, Chhattisgarh / Ministry of Environment, Forest and Climate Change (national oversight)",
+      "src": "Official Notification No. 6-CAMPA/2009/CGN; Outcome Budget 2025-26"
+    },
+    "Q3": {
+      "v": "Official Notification No. 6-CAMPA/2009/CGN (2009, updated 2023); National CAMPA Guidelines; Forest Conservation Act 1980; CAMPA Act 2016; Chhattisgarh State Budget 2025-26; CAG State Accounts Report 2024-25",
+      "src": "programs.md — ANNOUNCEMENT, CAG sections"
+    },
+    "Q4": {
+      "v": "A1",
+      "r": "The primary resource is state/public forest land (diverted forest land and compensatory afforestation sites on government/revenue land) formally notified for community-based afforestation. The scheme operates through Joint Forest Management Committees (JFMC) mandated in the 2023 notification, ensuring the resource is governed with community participation rather than purely for state revenue. The ecological outputs (watershed, biodiversity, wildlife corridor) are explicitly designed for community and ecosystem benefit, not commercial state revenue extraction.",
+      "src": "Official Notification No. 6-CAMPA/2009/CGN (2023 update) — Implementation clause; CAMPA Forest Portal site mapping; CAG State Accounts Report 2024-25"
+    },
+    "Q5": {
+      "v": "Compensatory afforestation sites across Chhattisgarh state on government and revenue land. Cumulative area: 45,000 hectares restored since 2009. Annual diversion offset: 8,500 hectares (FY 2024-25) with compensatory planting. 125 native tree species used. Includes 850 hectares of wildlife corridor habitat. Afforestation site maps available on CAMPA portal with location-specific tracking. Sites spread across forested districts of Chhattisgarh.",
+      "src": "Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25; CAMPA Portal (https://forest.cg.gov.in/campa/)"
+    },
+    "Q6": {
+      "v": "Yes",
+      "r": "CAMPA portal shows afforestation site mapping for all 45,000 hectares with location-specific tracking. CAG audit verified plantation records with site-level data. The 2023 notification specifies afforestation targets per site. Each site is identified through Forest Department compartment maps and plantation records verified by CAG. Sufficient boundary documentation exists in public records.",
+      "src": "CAMPA Portal afforestation site mapping; CAG State Accounts Report 2024-25 (plantation records verified)"
+    },
+    "Q7": {
+      "v": "2",
+      "r": "JFMC (Joint Forest Management Committee) involvement is mandated by the 2023 state notification under the scheme. JFMC is constituted under state Forest Department orders and has statutory recognition. Forest dwellers' right to participate and benefit from plantation work is mandated in the scheme guidelines. This constitutes a statutory/legally enforceable right to engage with and benefit from the commons resource.",
+      "src": "Official Notification No. 6-CAMPA/2009/CGN (2023 update) — Implementation clause: 'Joint Forest Management Committee + District Forest Officer coordination'; Outcome Budget 2025-26 — employment mandate"
+    },
+    "Q8": {
+      "v": "No",
+      "r": "The compensatory afforestation sites are government/revenue land earmarked specifically for ecological restoration. The diverted forest land (8,500 ha FY 2024-25) is a separate category from the afforestation sites. No mining lease, SEZ notification, or change-of-land-use order is active on the compensatory afforestation sites themselves. CAG audit confirmed compliance with national CAMPA guidelines with no encumbrance flags.",
+      "src": "CAG State Accounts Report 2024-25 — Compliance: 100% with national CAMPA guidelines verified; Official Notification No. 6-CAMPA/2009/CGN"
+    },
+    "Q9": {
+      "v": 185,
+      "unit": "₹Cr",
+      "period": "FY 2024-25",
+      "breakdown": "Afforestation on diverted forest land: ₹95 cr; Sapling procurement and maintenance: ₹50 cr; Monitoring and protection: ₹25 cr; Capacity building: ₹15 cr",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department); CAG State Accounts Report 2024-25 (₹175 cr spent of ₹185 cr allocated)"
+    },
+    "Q10": {
+      "v": 185,
+      "unit": "₹Cr",
+      "r": "All expenditure components are on public/community forest resource restoration: afforestation on state forest/government land (₹95 cr), sapling procurement for common land planting (₹50 cr), monitoring of common forest assets (₹25 cr), and capacity building for community/JFMC engagement (₹15 cr). No expenditure flows exclusively to private assets — plantation outputs (forests, watershed, biodiversity) are public/community goods. Private benefit (wages to forest dwellers) is a labour cost within a commons-restoration activity, not an asset transfer to private property.",
+      "src": "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6; Outcome Budget 2025-26"
+    },
+    "Q11": {
+      "v": 0,
+      "unit": "₹Cr",
+      "r": "No expenditure component in CAMPA creates or transfers assets to private land or exclusively private benefit. All physical outputs (planted trees, restored forests, wildlife corridors, watersheds) are on government/common land. Wages paid to forest dwellers are compensation for labour on common land, not investment in private property.",
+      "src": "Chhattisgarh State Budget 2025-26 (budget breakdown); Official Notification No. 6-CAMPA/2009/CGN (implementation scope)"
+    },
+    "Q12": {
+      "v": 1.0,
+      "calc": "θ₁ = Q10.v ÷ Q9.v = 185 ÷ 185 = 1.00",
+      "interp": "PASS — θ₁ = 1.00 ≥ 0.50. All scheme expenditure is on common/public resources (forest land restoration, ecosystem services). No private asset expenditure identified.",
+      "src": "Derived from Q9 and Q10; Chhattisgarh State Budget 2025-26"
+    },
+    "Q13": {
+      "docs": [
+        "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department) — budget breakdown",
+        "CAG State Accounts Report 2024-25 — expenditure verification (₹175 cr of ₹185 cr spent)",
+        "Official Notification No. 6-CAMPA/2009/CGN (2023 update) — cost per hectare: ₹4.1 lakhs",
+        "Outcome Budget 2025-26 — component-wise results",
+        "Chhattisgarh Economic Survey 2024-25 — cost-per-hectare data"
+      ]
+    },
+    "Q14": {
+      "v": "2",
+      "r": "CAMPA's primary outputs are ecological commons goods: carbon sequestration (3.25 lakh MT CO2/year), watershed improvement (25 cm water table rise in restored areas), biodiversity enhancement (bird species +18%, vegetation density +35%), wildlife corridor habitat (850 ha). These ecosystem services are non-excludable — they benefit the entire region without practical exclusion of any community member. The forest resource itself (afforested land) remains state/community land open to all. No fee or membership mechanism restricts access to these benefits.",
+      "src": "Outcome Budget 2025-26; Chhattisgarh Economic Survey 2024-25; CAG State Accounts Report 2024-25"
+    }
+  },
+  "carry_for_later_tests": {
+    "T1.1": "A1",
+    "T1.5": "Yes"
+  },
+  "pass_verification": {
+    "C1_T1.1": "PASS",
+    "C2_T1.2": "PASS",
+    "C3_theta1": "PASS",
+    "C4_T1.4": "PASS",
+    "C5_T1.6": "PASS",
+    "overall": "PASS"
+  },
+  "sources_verified": [
+    "Chhattisgarh State Budget 2025-26, Demand for Grants No. 6 (Forest Department)",
+    "Official Notification No. 6-CAMPA/2009/CGN (established 2009, updated 2023)",
+    "CAG State Accounts Report 2024-25",
+    "Chhattisgarh Economic Survey 2024-25",
+    "Outcome Budget 2025-26",
+    "CAMPA State Forest Portal (https://forest.cg.gov.in/campa/)"
+  ],
+  "unverified_fields": []
+}
